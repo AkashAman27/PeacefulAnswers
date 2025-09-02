@@ -1,18 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
     if (!supabaseAdmin) {
       // Return empty array if no admin client available
       return NextResponse.json([])
     }
 
-    const { data, error } = await supabaseAdmin
+    const { searchParams } = new URL(request.url)
+    const admin = searchParams.get('admin')
+    
+    let query = (supabaseAdmin as any)
+      .schema('hindu')
       .from('hindu_festival_announcements')
       .select('*')
-      .eq('is_active', true)
       .order('created_at', { ascending: false })
+    
+    // If not admin request, only show active announcements
+    if (!admin) {
+      query = query.eq('is_active', true)
+    }
+
+    const { data, error } = await query
 
     if (error) {
       console.error('Error fetching festival announcements:', error)
@@ -37,7 +47,8 @@ export async function POST(request: NextRequest) {
 
     const body = await request.json()
     
-    const { data, error } = await supabaseAdmin
+    const { data, error } = await (supabaseAdmin as any)
+      .schema('hindu')
       .from('hindu_festival_announcements')
       .insert([{
         festival_name: body.festival_name,
@@ -89,7 +100,8 @@ export async function PUT(request: NextRequest) {
       )
     }
 
-    const { data, error } = await supabaseAdmin
+    const { data, error } = await (supabaseAdmin as any)
+      .schema('hindu')
       .from('hindu_festival_announcements')
       .update(updateData)
       .eq('id', id)
@@ -133,7 +145,8 @@ export async function DELETE(request: NextRequest) {
       )
     }
 
-    const { error } = await supabaseAdmin
+    const { error } = await (supabaseAdmin as any)
+      .schema('hindu')
       .from('hindu_festival_announcements')
       .delete()
       .eq('id', id)

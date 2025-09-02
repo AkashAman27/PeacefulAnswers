@@ -127,13 +127,13 @@ export default function JivitPutrikaStoriesPage() {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-medium text-orange-600">Story {index + 1} of 3</span>
-                      <button 
-                        onClick={() => document.getElementById(story.id)?.scrollIntoView({ behavior: 'smooth' })}
+                      <a 
+                        href={`#${story.id}`}
                         className="text-orange-600 hover:text-orange-700 font-semibold text-sm flex items-center gap-2"
                       >
                         Read Full Story
                         <BookOpen className="w-4 h-4" />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ import {
   Heart, 
   Calendar,
   MapPin,
-  Bow,
+  Sword,
   ChevronLeft,
   Flower2,
   Gift,

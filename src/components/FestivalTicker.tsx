@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { FestivalTickerProps } from '@/types/festival'
 
 interface TickerAnnouncement {
   id: string
@@ -15,7 +16,7 @@ interface TickerAnnouncement {
   is_active: boolean
 }
 
-export default function FestivalTicker() {
+export default function FestivalTicker({ announcements: propAnnouncements, speed, pauseOnHover = true, className }: FestivalTickerProps) {
   const [announcements, setAnnouncements] = useState<TickerAnnouncement[]>([])
 
   // Fallback static data
@@ -34,6 +35,12 @@ export default function FestivalTicker() {
   ]
 
   useEffect(() => {
+    // If announcements are passed as props, use them
+    if (propAnnouncements && propAnnouncements.length > 0) {
+      setAnnouncements(propAnnouncements)
+      return
+    }
+
     const fetchAnnouncements = async () => {
       try {
         const response = await fetch('/api/festival-announcements')
@@ -57,7 +64,7 @@ export default function FestivalTicker() {
     }
 
     fetchAnnouncements()
-  }, [fallbackAnnouncements])
+  }, [propAnnouncements, fallbackAnnouncements])
 
   if (announcements.length === 0) {
     return null
@@ -75,10 +82,12 @@ export default function FestivalTicker() {
     return null
   }
 
+  const animationDuration = speed || 60
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-white py-2 shadow-md">
+    <div className={`relative overflow-hidden bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500 text-white py-2 shadow-md ${className || ''}`}>
       <div className="ticker-wrapper">
-        <div className="ticker-content">
+        <div className="ticker-content" style={{ animationDuration: `${animationDuration}s` }}>
           {/* Repeat content for seamless loop */}
           {[...Array(3)].map((_, repeatIndex) => (
             <div key={repeatIndex} className="ticker-items">
@@ -104,12 +113,14 @@ export default function FestivalTicker() {
         
         .ticker-content {
           display: flex;
-          animation: scroll-left 60s linear infinite;
+          animation: scroll-left ${animationDuration}s linear infinite;
         }
         
+        ${pauseOnHover ? `
         .ticker-content:hover {
           animation-play-state: paused;
         }
+        ` : ''}
         
         .ticker-items {
           display: flex;
@@ -140,7 +151,7 @@ export default function FestivalTicker() {
           }
           
           .ticker-content {
-            animation: scroll-left 45s linear infinite;
+            animation: scroll-left ${Math.max(animationDuration * 0.75, 30)}s linear infinite;
           }
         }
         

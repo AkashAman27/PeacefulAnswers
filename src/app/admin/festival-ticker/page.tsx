@@ -26,7 +26,7 @@ export default function FestivalTickerAdmin() {
   const fetchAnnouncements = async () => {
     try {
       setLoading(true)
-      const response = await fetch('/api/admin/festival-announcements')
+      const response = await fetch('/api/festival-announcements?admin=true')
       
       if (!response.ok) {
         throw new Error('Failed to fetch announcements')

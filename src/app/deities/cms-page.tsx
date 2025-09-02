@@ -144,7 +144,7 @@ export default async function DeitiesPage() {
 
                 {/* Deities Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.deities.map((deity: any, deityIndex) => (
+                  {category.deities.map((deity: any, deityIndex: number) => (
                     <Link 
                       key={deity.id}
                       href={`/deities/${deity.slug}`}

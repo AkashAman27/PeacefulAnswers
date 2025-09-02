@@ -1,4 +1,4 @@
-import { Badge } from '@/components/ui/badge';
+
 import { BookOpen, TreePine, Users, Eye, Crown, Sparkles, MapPin, Calendar, Scroll, GraduationCap, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';

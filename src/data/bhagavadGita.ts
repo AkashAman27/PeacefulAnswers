@@ -1207,9 +1207,7 @@ export const bhagavadGitaData: Chapter[] = [
           "कर्म एव": "prescribed duties",
           "तस्मात्": "therefore",
           "त्वम्": "you",
-          "पूर्वैः": "by the predecessors",
-          "पूर्वतरम्": "in ancient times",
-          "कृतम्": "as performed"
+          "पूर्वतरम्": "in ancient times"
         }
       },
       {
@@ -1221,7 +1219,6 @@ export const bhagavadGitaData: Chapter[] = [
         wordMeaning: {
           "किम्": "what is",
           "कर्म": "action",
-          "किम्": "what is",
           "अकर्म": "inaction",
           "इति": "thus",
           "कवयः": "the intelligent",
@@ -1252,7 +1249,6 @@ export const bhagavadGitaData: Chapter[] = [
           "च": "and",
           "अकर्मणः": "of inaction",
           "गहना": "very difficult to understand",
-          "कर्मणः": "of work",
           "गतिः": "the entrance"
         }
       },
@@ -1537,7 +1533,6 @@ export const bhagavadGitaData: Chapter[] = [
           "विद्धि": "you should know",
           "तान्": "them",
           "सर्वान्": "all",
-          "एवम्": "thus",
           "ज्ञात्वा": "knowing",
           "विमोक्ष्यसे": "you will be liberated"
         }
@@ -1680,7 +1675,6 @@ export const bhagavadGitaData: Chapter[] = [
           "ज्ञानम्": "knowledge",
           "तत्परः": "very much attached to it",
           "संयतेन्द्रियः": "controlled senses",
-          "ज्ञानम्": "knowledge",
           "लब्ध्वा": "achieving",
           "पराम्": "transcendental",
           "शान्तिम्": "peace",
@@ -1698,16 +1692,13 @@ export const bhagavadGitaData: Chapter[] = [
           "अज्ञः": "a fool who has no knowledge",
           "च": "and",
           "अश्रद्दधानः": "without faith in revealed scriptures",
-          "च": "also",
           "संशयात्मा": "a doubting nature",
           "विनश्यति": "falls back",
           "न": "never",
           "अयम्": "in this",
           "लोकः": "world",
           "अस्ति": "there is",
-          "न": "nor",
           "परः": "in the next life",
-          "न": "not",
           "सुखम्": "happiness",
           "संशयात्मनः": "of the doubting soul"
         }

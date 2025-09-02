@@ -28,9 +28,6 @@ if (typeof window === 'undefined') {
       auth: {
         autoRefreshToken: false,
         persistSession: false
-      },
-      db: {
-        schema: 'hindu'
       }
     })
   }
