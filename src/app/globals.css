@@ -24,3 +24,364 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom animation classes */
+.animate-fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.animate-fade-in-left {
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) rotate(1deg) !important;
+}
+
+.animate-fade-in-right {
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) rotate(-1deg) !important;
+}
+
+/* Sanskrit font styling (updated) */
+.font-sanskrit {
+  font-family: var(--font-devanagari), 'Mangal', 'Kokila', 'Devanagari Sangam MN', 'Noto Sans Devanagari', serif;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* Line clamp utilities */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Avatar page animations */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+/* Typewriter animations */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from, to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: currentColor;
+  }
+}
+
+/* Typewriter utility classes */
+.typewriter {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid currentColor;
+  white-space: nowrap;
+  animation: typewriter var(--duration, 2s) steps(var(--steps, 30), end) var(--delay, 0s) forwards,
+             blinkTextCursor 500ms steps(var(--steps, 30)) infinite normal;
+  width: 0;
+  max-width: 100%;
+}
+
+.typewriter-no-cursor {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter var(--duration, 2s) steps(var(--steps, 30), end) var(--delay, 0s) forwards;
+  width: 0;
+  max-width: 100%;
+}
+
+/* For multi-line typewriter effect */
+.typewriter-multiline {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid currentColor;
+  animation: typewriter var(--duration, 2s) steps(var(--steps, 30), end) var(--delay, 0s) forwards,
+             blinkTextCursor 500ms steps(var(--steps, 30)) infinite normal;
+  width: 0;
+  max-width: 100%;
+}
+
+/* New deity page animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-bounceIn {
+  animation: bounceIn 0.8s ease-out forwards;
+}
+
+/* Hindi/Devanagari font styling - Updated with Google Fonts */
+.font-hindi {
+  font-family: 'Noto Sans Devanagari', 'Mangal', 'Kokila', 'Devanagari Sangam MN', serif;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Hover animations for interactive elements */
+.hover-lift {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Parallax scroll effect */
+.parallax {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient text utilities */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Staggered animation delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Festival Ticker Animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+}
+
+/* Festival ticker specific styles */
+.festival-ticker-container {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Hindi/Devanagari font styling */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap');
+
+.font-hindi, .font-devanagari {
+  font-family: 'Noto Sans Devanagari', 'Mangal', 'Kokila', 'Devanagari Sangam MN', serif;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Ticker pause on hover */
+.festival-ticker-wrapper:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+/* Accessibility - Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll {
+    animation: none !important;
+  }
+  
+  .festival-ticker-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .festival-ticker-content {
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+    width: max-content;
+  }
+
+  .ticker-item {
+    flex-shrink: 0;
+    margin: 0 !important;
+  }
+}
+
+/* Responsive ticker adjustments */
+@media (max-width: 640px) {
+  .festival-ticker-content {
+    font-size: 0.875rem;
+  }
+  
+  .ticker-item {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+/* Enhanced gradient backgrounds for spiritual theme */
+.bg-divine-dawn {
+  background: linear-gradient(135deg, #E97400 0%, #FFD700 50%, #FFFFFF 100%);
+}
+
+.bg-cosmic {
+  background: linear-gradient(135deg, #1E3A8A 0%, #4C1D95 50%, #000000 100%);
+}
+
+.bg-festive {
+  background: linear-gradient(135deg, #B91C1C 0%, #E97400 50%, #166534 100%);
+}
+
+/* Text shadow for better readability on gradients */
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+

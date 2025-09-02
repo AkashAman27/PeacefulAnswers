@@ -1,0 +1,213 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+import { Book, Heart, Users, Calendar, MapPin, MessageCircle } from 'lucide-react'
+
+const FeaturesSection = () => {
+  const sectionRef = useRef<HTMLElement>(null)
+  const titleRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (isVisible) {
+      // Title animation
+      setTimeout(() => {
+        if (titleRef.current) {
+          titleRef.current.style.opacity = '1'
+          titleRef.current.style.transform = 'translateY(0px)'
+          titleRef.current.style.transition = 'all 0.8s ease-out'
+        }
+      }, 200)
+
+      // First row cards (0, 1, 2) - animate from bottom up
+      const firstRowCards = document.querySelectorAll('.feature-card-row1')
+      firstRowCards.forEach((card, index) => {
+        const element = card as HTMLElement
+        // Ensure initial state
+        element.style.opacity = '0'
+        element.style.transform = 'translateY(60px)'
+        element.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)'
+        
+        setTimeout(() => {
+          element.style.opacity = '1'
+          element.style.transform = 'translateY(0px)'
+        }, 500 + (index * 200))
+      })
+
+      // Second row cards (3, 4, 5) - animate from bottom up
+      const secondRowCards = document.querySelectorAll('.feature-card-row2')
+      secondRowCards.forEach((card, index) => {
+        const element = card as HTMLElement
+        // Ensure initial state
+        element.style.opacity = '0'
+        element.style.transform = 'translateY(60px)'
+        element.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)'
+        
+        setTimeout(() => {
+          element.style.opacity = '1'
+          element.style.transform = 'translateY(0px)'
+        }, 1100 + (index * 200))
+      })
+
+      // CTA section
+      setTimeout(() => {
+        const ctaSection = document.querySelector('.cta-section') as HTMLElement
+        if (ctaSection) {
+          ctaSection.style.transition = 'all 0.8s ease-out'
+          ctaSection.style.opacity = '1'
+          ctaSection.style.transform = 'translateY(0px)'
+        }
+      }, 1800)
+    }
+  }, [isVisible])
+
+  const features = [
+    {
+      icon: Book,
+      title: 'Sacred Scriptures',
+      description: 'Explore the Vedas, Upanishads, Bhagavad Gita, and Puranas with authentic translations and insightful commentary.',
+      gradient: 'from-blue-500 to-blue-600',
+      bgColor: 'bg-blue-50',
+      iconColor: 'text-blue-600'
+    },
+    {
+      icon: Heart,
+      title: 'Daily Practices',
+      description: 'Learn meditation, pranayama, puja rituals, and vratas to deepen your spiritual journey.',
+      gradient: 'from-orange-500 to-orange-600',
+      bgColor: 'bg-orange-50',
+      iconColor: 'text-orange-600'
+    },
+    {
+      icon: Users,
+      title: 'Deities & Avatars',
+      description: 'Understand the Trimurti, Devi, Ganesha, and the Dashavatara with their stories and significance.',
+      gradient: 'from-red-500 to-red-600',
+      bgColor: 'bg-red-50',
+      iconColor: 'text-red-600'
+    },
+    {
+      icon: MessageCircle,
+      title: 'Life Guidance',
+      description: 'Get answers to questions about dharma, relationships, ethics, and modern spiritual living.',
+      gradient: 'from-green-500 to-green-600',
+      bgColor: 'bg-green-50',
+      iconColor: 'text-green-600'
+    },
+    {
+      icon: Calendar,
+      title: 'Festivals & Time',
+      description: 'Discover the spiritual significance of festivals, panchang, and auspicious timings.',
+      gradient: 'from-yellow-500 to-yellow-600',
+      bgColor: 'bg-yellow-50',
+      iconColor: 'text-yellow-600'
+    },
+    {
+      icon: MapPin,
+      title: 'Sacred Places',
+      description: 'Explore pilgrimage sites, temples, and the spiritual geography of Bharatvarsha.',
+      gradient: 'from-purple-500 to-purple-600',
+      bgColor: 'bg-purple-50',
+      iconColor: 'text-purple-600'
+    }
+  ]
+
+  return (
+    <section ref={sectionRef} className="py-16 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div ref={titleRef} className="text-center mb-16" style={{ opacity: 0, transform: 'translateY(40px)' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+            Explore the{' '}
+            <span className="bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent">
+              eternal wisdom
+            </span>
+          </h2>
+          <p className="text-xl text-blue-700 max-w-3xl mx-auto leading-relaxed">
+            Dive deep into the rich spiritual heritage of Sanātana Dharma with comprehensive resources, 
+            practical guidance, and authentic teachings.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon
+            const isFirstRow = index < 3
+            const rowClass = isFirstRow ? 'feature-card-row1' : 'feature-card-row2'
+            
+            return (
+              <div
+                key={feature.title}
+                className={`feature-card ${rowClass} group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-orange-200 hover:-translate-y-2`}
+                style={{ opacity: 0, transform: 'translateY(60px)' }}
+              >
+                {/* Background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className={`feature-icon w-14 h-14 ${feature.bgColor} rounded-xl flex items-center justify-center mb-6 transition-transform duration-200`}>
+                    <IconComponent className={`h-7 w-7 ${feature.iconColor}`} />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="feature-title text-xl font-bold text-blue-900 mb-4 transition-colors duration-200">
+                    {feature.title}
+                  </h3>
+                  <p className="text-blue-700 leading-relaxed mb-6">
+                    {feature.description}
+                  </p>
+
+                  {/* Learn More Link */}
+                  <div className="feature-link flex items-center text-sm font-semibold text-orange-600 group-hover:text-orange-700">
+                    <span>Explore now</span>
+                    <svg className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Decorative element */}
+                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity"></div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Call to Action */}
+        <div className="cta-section mt-16 text-center" style={{ opacity: 0, transform: 'translateY(40px)' }}>
+          <div className="inline-flex items-center gap-4">
+            <button className="bg-gradient-to-r from-orange-600 to-yellow-400 text-white font-semibold rounded-full px-8 py-4 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+              Start exploring wisdom
+            </button>
+            <span className="text-blue-700">or</span>
+            <button className="text-blue-900 font-semibold hover:text-orange-600 transition-colors">
+              Browse all sections →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default FeaturesSection

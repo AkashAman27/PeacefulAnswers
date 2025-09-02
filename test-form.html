@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Test</title>
+</head>
+<body>
+    <h1>Form Test Status</h1>
+    <p>If you can see this page, the development server is running properly.</p>
+    
+    <h2>Test Links:</h2>
+    <ul>
+        <li><a href="http://localhost:3000/admin/deities" target="_blank">Admin Deities List</a></li>
+        <li><a href="http://localhost:3000/admin/deities/d74ea200-cbec-48f8-a12d-ee51091161a3/edit" target="_blank">Edit Vishnu (with avatars)</a></li>
+    </ul>
+    
+    <h2>Expected Results:</h2>
+    <ul>
+        <li>✅ Form loads with populated data (no empty fields if data exists)</li>
+        <li>✅ New "Avatars" tab appears between "Places" and "Relations"</li>
+        <li>✅ Vishnu should have 10 avatars loaded in the Avatars tab</li>
+        <li>✅ All JSONB fields (mantras, divine_attributes, festivals, sacred_places) display correctly</li>
+        <li>✅ Empty sections show helpful placeholder messages</li>
+    </ul>
+    
+    <script>
+        // Auto-refresh to check server status
+        setTimeout(() => {
+            fetch('http://localhost:3000/admin/deities')
+                .then(response => response.ok ? 
+                    document.body.style.backgroundColor = '#d4edda' : 
+                    document.body.style.backgroundColor = '#f8d7da'
+                )
+                .catch(() => document.body.style.backgroundColor = '#f8d7da');
+        }, 1000);
+    </script>
+</body>
+</html>
