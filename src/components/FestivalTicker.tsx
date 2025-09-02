@@ -57,7 +57,7 @@ export default function FestivalTicker() {
     }
 
     fetchAnnouncements()
-  }, [])
+  }, [fallbackAnnouncements])
 
   if (announcements.length === 0) {
     return null

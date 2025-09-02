@@ -17,7 +17,7 @@ export const hinduSupabase = createClient(supabaseUrl, supabaseAnonKey, {
 })
 
 // For server-side operations - only create if we have the service role key
-let supabaseAdmin: any = null
+let supabaseAdmin: ReturnType<typeof createClient> | null = null
 
 if (typeof window === 'undefined') {
   // Only on server side

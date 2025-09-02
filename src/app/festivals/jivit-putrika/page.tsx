@@ -1,6 +1,5 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Calendar, MapPin, Heart, Star } from 'lucide-react'
+import { ArrowLeft, Heart, Star } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -130,7 +129,7 @@ export default function JivitPutrikaPage() {
               </div>
               <p className="text-gray-700 mb-4">
                 After the Kurukshetra war, Ashwatthama sought revenge by hurling the Brahmastra at Arjuna's unborn grandson. 
-                Lord Krishna intervened to save the fetus, reviving the child who was aptly named "Jivitputrika" (living son).
+                Lord Krishna intervened to save the fetus, reviving the child who was aptly named &ldquo;Jivitputrika&rdquo; (living son).
               </p>
               <p className="text-gray-700">
                 That child, Parikshit, survived to continue the Pandava lineage. Ever since, mothers have observed this sacred 
@@ -144,11 +143,11 @@ export default function JivitPutrikaPage() {
                 <h3 className="text-2xl font-bold text-orange-700">King Jimutvahana Legend</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                King Jimutvahana, a compassionate ruler, offered himself to Garuda to save a Naga mother's only son. 
+                King Jimutvahana, a compassionate ruler, offered himself to Garuda to save a Naga mother&rsquo;s only son. 
                 Moved by his sacrifice, Garuda spared him and vowed to stop taking serpent lives.
               </p>
               <p className="text-gray-700">
-                This legend celebrates ultimate sacrifice and divine reward, inspiring mothers to fast for their children's 
+                This legend celebrates ultimate sacrifice and divine reward, inspiring mothers to fast for their children&rsquo;s 
                 wellbeing with unwavering devotion.
               </p>
             </div>
@@ -176,15 +175,15 @@ export default function JivitPutrikaPage() {
               <div className="bg-gradient-to-r from-pink-100 to-orange-100 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-orange-800 mb-4">Etymology</h3>
                 <p className="text-gray-700">
-                  In Sanskrit, "Jīvit-putrikā" literally means "living son" - from jīvit (alive) and putra (son). 
-                  The name embodies a mother's prayer for her child's continued life.
+                  In Sanskrit, &ldquo;Jīvit-putrikā&rdquo; literally means &ldquo;living son&rdquo; - from jīvit (alive) and putra (son). 
+                  The name embodies a mother&rsquo;s prayer for her child&rsquo;s continued life.
                 </p>
               </div>
               
               <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-orange-800 mb-4">Sacred Purpose</h3>
                 <p className="text-gray-700">
-                  The vrat seeks divine blessings for children's protection from all dangers and ensures their 
+                  The vrat seeks divine blessings for children&rsquo;s protection from all dangers and ensures their 
                   prosperity and happiness throughout life.
                 </p>
               </div>
@@ -232,7 +231,7 @@ export default function JivitPutrikaPage() {
                     <h4 className="text-lg font-bold text-orange-700">Special Pre-Fast Meal</h4>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    "Ongthān" or "Datkhat" is prepared - often including fish and millet bread (ragi chapatti). 
+                    &ldquo;Ongthān&rdquo; or &ldquo;Datkhat&rdquo; is prepared - often including fish and millet bread (ragi chapatti). 
                     Mothers ensure their children eat until full before the strict fast begins at midnight.
                   </p>
                 </div>
@@ -300,7 +299,7 @@ export default function JivitPutrikaPage() {
                     <h4 className="text-lg font-bold text-green-700">Dawn Conclusion</h4>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Ritual bath and prayers to Surya as Ashtami tithi ends. Only after praying for children's wellbeing 
+                    Ritual bath and prayers to Surya as Ashtami tithi ends. Only after praying for children&rsquo;s wellbeing 
                     do mothers ceremonially break their fast with prasad and water.
                   </p>
                 </div>
@@ -355,7 +354,7 @@ export default function JivitPutrikaPage() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 mt-1">•</span>
-                  Extended 8-day celebration called "Jitia" 
+                  Extended 8-day celebration called &ldquo;Jitia&rdquo; 
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 mt-1">•</span>
@@ -376,7 +375,7 @@ export default function JivitPutrikaPage() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
-                  Called "Jitiya Parva" in Terai region
+                  Called &ldquo;Jitiya Parva&rdquo; in Terai region
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-blue-600 mt-1">•</span>
@@ -397,11 +396,11 @@ export default function JivitPutrikaPage() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-purple-600 mt-1">•</span>
-                  Known as "Pua Jiuntia" in Western Odisha
+                  Known as &ldquo;Pua Jiuntia&rdquo; in Western Odisha
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-600 mt-1">•</span>
-                  Worship deity called "Dutibahana"
+                  Worship deity called &ldquo;Dutibahana&rdquo;
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-purple-600 mt-1">•</span>
@@ -459,7 +458,7 @@ export default function JivitPutrikaPage() {
               <div>
                 <div className="text-3xl mb-3">👑</div>
                 <h3 className="font-bold text-lg mb-2">Jimutvahana Legend</h3>
-                <p className="text-orange-100 text-sm">The compassionate king's ultimate sacrifice</p>
+                <p className="text-orange-100 text-sm">The compassionate king&rsquo;s ultimate sacrifice</p>
               </div>
               <div>
                 <div className="text-3xl mb-3">🦅</div>
@@ -469,7 +468,7 @@ export default function JivitPutrikaPage() {
               <div>
                 <div className="text-3xl mb-3">📖</div>
                 <h3 className="font-bold text-lg mb-2">Mahabharata Connection</h3>
-                <p className="text-orange-100 text-sm">Krishna's divine intervention for Parikshit</p>
+                <p className="text-orange-100 text-sm">Krishna&rsquo;s divine intervention for Parikshit</p>
               </div>
             </div>
           </div>
@@ -540,7 +539,7 @@ export default function JivitPutrikaPage() {
                 <h3 className="font-bold text-blue-700">Sacred Thread</h3>
               </div>
               <p className="text-gray-700 text-sm">
-                Red-yellow "Jiutiya" thread worn around neck or wrist during vrat. 
+                Red-yellow &ldquo;Jiutiya&rdquo; thread worn around neck or wrist during vrat. 
                 Received during puja as sign of completed vow and protection talisman.
               </p>
             </div>
@@ -551,7 +550,7 @@ export default function JivitPutrikaPage() {
                 <h3 className="font-bold text-purple-700">Cultural Heritage</h3>
               </div>
               <p className="text-gray-700 text-sm">
-                Appears in 7th-century Sanskrit play "Nagananda" by Emperor Harsha. 
+                Appears in 7th-century Sanskrit play &ldquo;Nagananda&rdquo; by Emperor Harsha. 
                 Rich folklore tradition passed down through generations.
               </p>
             </div>
@@ -567,14 +566,14 @@ export default function JivitPutrikaPage() {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <Heart className="w-12 h-12 text-pink-600 mx-auto mb-6" />
               <p className="text-lg text-gray-700 italic mb-4">
-                "May this sacred vrat bring divine blessings to all mothers and their children. May every son be blessed with long life and prosperity."
+                &ldquo;May this sacred vrat bring divine blessings to all mothers and their children. May every son be blessed with long life and prosperity.&rdquo;
               </p>
               <p className="text-sm text-gray-500">Traditional Blessing</p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <Star className="w-12 h-12 text-orange-600 mx-auto mb-6" />
               <p className="text-lg text-gray-700 italic mb-4 font-sanskrit">
-                "पुत्रस्य दीर्घायुः भवतु। मातृभक्तिः सदैव वर्धतु।"
+                &ldquo;पुत्रस्य दीर्घायुः भवतु। मातृभक्तिः सदैव वर्धतु।&rdquo;
               </p>
               <p className="text-sm text-gray-500">Sanskrit Prayer</p>
             </div>
