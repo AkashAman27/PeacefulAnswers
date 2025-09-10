@@ -24,6 +24,9 @@ export default function AdminLayout({
               <a href="/admin" className="block px-4 py-2 rounded-lg bg-orange-600 text-white">
                 Dashboard
               </a>
+              <a href="/admin/questions" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
+                Questions (FAQ)
+              </a>
               <a href="/admin/pages" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 Pages
               </a>

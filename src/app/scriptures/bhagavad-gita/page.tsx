@@ -4,9 +4,11 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Book, Clock, Users, Star, ChevronRight, Play } from 'lucide-react'
 import { bhagavadGitaData } from '@/data/bhagavadGita'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const BhagavadGitaPage = () => {
   const [activeChapter, setActiveChapter] = useState<number | null>(null)
+  const { language, t } = useLanguage()
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-blue-50">
@@ -16,17 +18,16 @@ const BhagavadGitaPage = () => {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 rounded-full px-4 py-2 text-sm font-medium mb-6">
               <Book className="w-4 h-4" />
-              Sacred Scripture
+              {t('gita.badge')}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6">
-              Bhagavad Gita
+              {t('gita.title')}
               <div className="text-2xl md:text-3xl text-orange-600 font-normal mt-2">
                 श्रीमद् भगवद्गीता
               </div>
             </h1>
             <p className="text-xl text-blue-800 max-w-3xl mx-auto leading-relaxed">
-              The timeless dialogue between Prince Arjuna and Lord Krishna on the battlefield of Kurukshetra. 
-              Discover the profound wisdom that has guided seekers for millennia.
+              {t('gita.subtitle')}
             </p>
           </div>
 
@@ -35,22 +36,22 @@ const BhagavadGitaPage = () => {
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
               <Book className="w-8 h-8 text-orange-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-blue-900">18</div>
-              <div className="text-sm text-blue-700">Chapters</div>
+              <div className="text-sm text-blue-700">{t('gita.stats.chapters')}</div>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
               <Star className="w-8 h-8 text-orange-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-blue-900">700</div>
-              <div className="text-sm text-blue-700">Verses</div>
+              <div className="text-sm text-blue-700">{t('gita.stats.verses')}</div>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
               <Clock className="w-8 h-8 text-orange-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-blue-900">5000+</div>
-              <div className="text-sm text-blue-700">Years Old</div>
+              <div className="text-sm text-blue-700">{t('gita.stats.years_old')}</div>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-sm">
               <Users className="w-8 h-8 text-orange-600 mx-auto mb-2" />
               <div className="text-2xl font-bold text-blue-900">∞</div>
-              <div className="text-sm text-blue-700">Lives Changed</div>
+              <div className="text-sm text-blue-700">{t('gita.stats.lives_changed')}</div>
             </div>
           </div>
         </div>
@@ -61,10 +62,10 @@ const BhagavadGitaPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Explore All 18 Chapters
+              {t('gita.explore.title')}
             </h2>
             <p className="text-lg text-blue-700 max-w-2xl mx-auto">
-              Each chapter reveals profound teachings on dharma, karma, devotion, and the path to liberation.
+              {t('gita.explore.subtitle')}
             </p>
           </div>
 
@@ -82,29 +83,29 @@ const BhagavadGitaPage = () => {
                     <span className="text-white font-bold">{chapter.number}</span>
                   </div>
                   <div className="text-sm text-blue-600 bg-blue-50 rounded-full px-3 py-1">
-                    {chapter.verseCount} verses
+                    {chapter.verseCount} {t('gita.card.verses')}
                   </div>
                 </div>
 
                 {/* Content */}
                 <h3 className="text-xl font-bold text-blue-900 mb-2">
-                  {chapter.title}
+                  {language === 'hi' && (chapter as any).titleHi ? (chapter as any).titleHi : chapter.title}
                 </h3>
                 <div className="text-sm text-orange-600 font-medium mb-3 font-sanskrit">
                   {chapter.sanskrit}
                 </div>
                 <div className="text-xs uppercase text-blue-600 font-semibold tracking-wider mb-2">
-                  {chapter.theme}
+                  {language === 'hi' && (chapter as any).themeHi ? (chapter as any).themeHi : chapter.theme}
                 </div>
                 <p className="text-blue-700 text-sm leading-relaxed mb-4">
-                  {chapter.summary}
+                  {language === 'hi' && (chapter as any).summaryHi ? (chapter as any).summaryHi : chapter.summary}
                 </p>
 
                 {/* Key Teachings */}
                 {activeChapter === chapter.number && (
                   <div className="mb-4 animate-fade-in-up">
                     <div className="text-xs uppercase text-gray-600 font-semibold tracking-wider mb-2">
-                      Key Teachings
+                      {t('gita.card.key_teachings')}
                     </div>
                     <ul className="space-y-1">
                       {chapter.keyThemes.map((teaching, index) => (
@@ -122,7 +123,7 @@ const BhagavadGitaPage = () => {
                   href={`/scriptures/bhagavad-gita/${chapter.number}`}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-orange-600 hover:text-orange-700 group-hover:gap-3 transition-all"
                 >
-                  <span>Study Chapter</span>
+                  <span>{t('gita.card.study_chapter')}</span>
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -135,35 +136,29 @@ const BhagavadGitaPage = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6">
-            How to Study the Gita
+            {t('gita.study.title')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Book className="w-6 h-6 text-blue-600" />
               </div>
-              <h4 className="font-semibold text-blue-900 mb-2">Read Sanskrit</h4>
-              <p className="text-blue-700 text-sm">
-                Experience the original verses in Devanagari script with proper pronunciation guides.
-              </p>
+              <h4 className="font-semibold text-blue-900 mb-2">{t('gita.study.read.title')}</h4>
+              <p className="text-blue-700 text-sm">{t('gita.study.read.desc')}</p>
             </div>
             <div className="p-6">
               <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Star className="w-6 h-6 text-orange-600" />
               </div>
-              <h4 className="font-semibold text-blue-900 mb-2">Understand Translation</h4>
-              <p className="text-blue-700 text-sm">
-                Clear English translations that preserve the depth and meaning of Krishna's teachings.
-              </p>
+              <h4 className="font-semibold text-blue-900 mb-2">{t('gita.study.translate.title')}</h4>
+              <p className="text-blue-700 text-sm">{t('gita.study.translate.desc')}</p>
             </div>
             <div className="p-6">
               <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Play className="w-6 h-6 text-green-600" />
               </div>
-              <h4 className="font-semibold text-blue-900 mb-2">Apply Wisdom</h4>
-              <p className="text-blue-700 text-sm">
-                Detailed explanations show how to apply these timeless principles in daily life.
-              </p>
+              <h4 className="font-semibold text-blue-900 mb-2">{t('gita.study.apply.title')}</h4>
+              <p className="text-blue-700 text-sm">{t('gita.study.apply.desc')}</p>
             </div>
           </div>
         </div>

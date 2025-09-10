@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { Star, Play, Search, ArrowRight } from 'lucide-react'
+import SearchComponent from './SearchComponent'
 
 const HeroSection = () => {
-  const [searchQuery, setSearchQuery] = useState('')
   const heroRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
@@ -133,10 +134,10 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <button className="opacity-0 translate-y-8 transition-all duration-1000 ease-out group flex items-center gap-2 bg-gradient-to-r from-orange-600 to-yellow-400 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+          <Link href="/journey" className="opacity-0 translate-y-8 transition-all duration-1000 ease-out group flex items-center gap-2 bg-gradient-to-r from-orange-600 to-yellow-400 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
             Start Your Journey
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
           
           <button className="opacity-0 translate-y-8 transition-all duration-1000 ease-out group flex items-center gap-2 bg-white border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50">
             <Play className="w-5 h-5" />
@@ -148,8 +149,8 @@ const HeroSection = () => {
         <div className="relative">
           <div ref={imageRef} className="opacity-0 translate-y-16 scale-95 transition-all duration-1200 ease-out relative overflow-hidden rounded-2xl">
             <img
-              src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1200&q=80"
-              alt="Ancient temple with spiritual ambiance"
+              src="https://wxprzwoylqjzozhezttc.supabase.co/storage/v1/object/public/website_images/hero-section.png"
+              alt="Spiritual journey - Finding peaceful answers through ancient wisdom"
               className="w-full h-[400px] sm:h-[500px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
@@ -197,20 +198,8 @@ const HeroSection = () => {
           </div>
 
           {/* Search Bar */}
-          <div ref={searchRef} className="opacity-0 translate-y-8 scale-95 transition-all duration-1000 ease-out absolute left-1/2 -translate-x-1/2 -bottom-6 w-[90%] sm:w-[400px]">
-            <div className="flex items-center bg-white shadow-2xl rounded-full px-6 py-4 border border-orange-100">
-              <Search className="w-5 h-5 text-blue-700 mr-3" />
-              <input
-                type="text"
-                placeholder="Search for mantras, practices, deities..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 text-sm border-0 focus:ring-0 placeholder-blue-400 bg-transparent focus:outline-none"
-              />
-              <button className="bg-gradient-to-r from-orange-600 to-yellow-400 text-white p-2 rounded-full hover:shadow-md transition-all">
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+          <div ref={searchRef} className="opacity-0 translate-y-8 scale-95 transition-all duration-1000 ease-out absolute left-1/2 -translate-x-1/2 -bottom-6 w-[90%] sm:w-[500px] z-[9999]">
+            <SearchComponent />
           </div>
         </div>
       </div>

@@ -16,55 +16,62 @@ interface TickerAnnouncement {
   is_active: boolean
 }
 
+// Fallback static data - moved outside component to prevent re-renders
+const fallbackAnnouncements: TickerAnnouncement[] = [
+  {
+    id: '1',
+    festival_name: 'Jivit Putrika Vrat',
+    hindi_text: '🪔 जीवित पुत्रिका व्रत 14 सितंबर को आ रहा है। कहानियाँ और विधि जानने के लिए यहाँ क्लिक करें',
+    english_text: '🪔 Jivit Putrika Vrat is coming on September 14th. Click here to read stories and rituals',
+    icon: '🪔',
+    link_url: '/festivals/jivit-putrika',
+    start_date: '2025-09-01',
+    end_date: '2025-09-15',
+    is_active: true
+  }
+]
+
 export default function FestivalTicker({ announcements: propAnnouncements, speed, pauseOnHover = true, className }: FestivalTickerProps) {
   const [announcements, setAnnouncements] = useState<TickerAnnouncement[]>([])
-
-  // Fallback static data
-  const fallbackAnnouncements: TickerAnnouncement[] = [
-    {
-      id: '1',
-      festival_name: 'Jivit Putrika Vrat',
-      hindi_text: '🪔 जीवित पुत्रिका व्रत 14 सितंबर को आ रहा है। कहानियाँ और विधि जानने के लिए यहाँ क्लिक करें',
-      english_text: '🪔 Jivit Putrika Vrat is coming on September 14th. Click here to read stories and rituals',
-      icon: '🪔',
-      link_url: '/festivals/jivit-putrika',
-      start_date: '2025-09-01',
-      end_date: '2025-09-15',
-      is_active: true
-    }
-  ]
+  const [hasFetched, setHasFetched] = useState(false)
 
   useEffect(() => {
     // If announcements are passed as props, use them
     if (propAnnouncements && propAnnouncements.length > 0) {
       setAnnouncements(propAnnouncements)
+      setHasFetched(true)
       return
     }
 
-    const fetchAnnouncements = async () => {
-      try {
-        const response = await fetch('/api/festival-announcements')
-        if (response.ok) {
-          const data = await response.json()
-          if (data && data.length > 0) {
-            setAnnouncements(data)
+    // Only fetch once if not already fetched
+    if (!hasFetched) {
+      const fetchAnnouncements = async () => {
+        try {
+          const response = await fetch('/api/festival-announcements')
+          if (response.ok) {
+            const data = await response.json()
+            if (data && data.length > 0) {
+              setAnnouncements(data)
+            } else {
+              // Use fallback if no data returned
+              setAnnouncements(fallbackAnnouncements)
+            }
           } else {
-            // Use fallback if no data returned
+            // Use fallback if API fails
             setAnnouncements(fallbackAnnouncements)
           }
-        } else {
-          // Use fallback if API fails
+        } catch (error) {
+          console.error('Error fetching announcements:', error)
+          // Use fallback if error occurs
           setAnnouncements(fallbackAnnouncements)
+        } finally {
+          setHasFetched(true)
         }
-      } catch (error) {
-        console.error('Error fetching announcements:', error)
-        // Use fallback if error occurs
-        setAnnouncements(fallbackAnnouncements)
       }
-    }
 
-    fetchAnnouncements()
-  }, [propAnnouncements, fallbackAnnouncements])
+      fetchAnnouncements()
+    }
+  }, [propAnnouncements, hasFetched])
 
   if (announcements.length === 0) {
     return null

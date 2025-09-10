@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Functionality Test - PeacefulAnswers</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            line-height: 1.6;
+            background: linear-gradient(to br, #fef3e2, #fef9c3, #fce7f3);
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            color: #ea580c; 
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section { 
+            margin: 30px 0; 
+            padding: 20px; 
+            border: 2px solid #fed7aa; 
+            border-radius: 10px; 
+            background: #fef3e2;
+        }
+        .test-item { 
+            margin: 15px 0; 
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #ea580c;
+        }
+        a { 
+            color: #ea580c; 
+            text-decoration: none; 
+            font-weight: bold;
+        }
+        a:hover { 
+            text-decoration: underline; 
+        }
+        .status { 
+            display: inline-block; 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: bold;
+        }
+        .success { 
+            background: #dcfce7; 
+            color: #166534; 
+        }
+        .info { 
+            background: #dbeafe; 
+            color: #1d4ed8; 
+        }
+        .api-test {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 PeacefulAnswers Search Functionality Test</h1>
+        <p style="text-align: center; color: #6b7280; margin-bottom: 40px;">
+            Server running on <strong>http://localhost:3002</strong>
+        </p>
+
+        <div class="test-section">
+            <h2>✅ Implementation Status</h2>
+            
+            <div class="test-item">
+                <h3>📊 Database Setup</h3>
+                <span class="status success">COMPLETED</span>
+                <p>Created <code>hindu.search_content</code> table with full-text search capabilities</p>
+                <ul>
+                    <li>✅ Hindu schema structure implemented</li>
+                    <li>✅ Search indexes created for optimal performance</li>
+                    <li>✅ Row Level Security policies configured</li>
+                </ul>
+            </div>
+
+            <div class="test-item">
+                <h3>🗃️ Content Population</h3>
+                <span class="status success">COMPLETED</span>
+                <p>Populated database with all existing pages and content</p>
+                <ul>
+                    <li>✅ <strong>15+ content items</strong> added to search database</li>
+                    <li>✅ Deities (Ganesha, Shiva, Krishna, Rama, etc.)</li>
+                    <li>✅ Festivals (Ganesh Chaturthi, Maha Shivaratri)</li>
+                    <li>✅ Practices (Ganapati Puja, Surya Namaskara, Ganesha Arti)</li>
+                    <li>✅ Pages (Home, Deities index, Festivals index, etc.)</li>
+                </ul>
+            </div>
+
+            <div class="test-item">
+                <h3>🔧 API Implementation</h3>
+                <span class="status success">COMPLETED</span>
+                <p>Created search API endpoint with multiple search strategies</p>
+                <ul>
+                    <li>✅ <code>/api/search</code> endpoint implemented</li>
+                    <li>✅ Title matching with priority ranking</li>
+                    <li>✅ Description search capability</li>
+                    <li>✅ Full-text search with PostgreSQL</li>
+                    <li>✅ Content type filtering</li>
+                    <li>✅ Result deduplication and prioritization</li>
+                </ul>
+            </div>
+
+            <div class="test-item">
+                <h3>💻 UI Components</h3>
+                <span class="status success">COMPLETED</span>
+                <p>Built real-time search component with suggestions</p>
+                <ul>
+                    <li>✅ <code>SearchComponent</code> with real-time suggestions</li>
+                    <li>✅ Keyboard navigation (↑/↓/Enter/Esc)</li>
+                    <li>✅ Click-outside to close results</li>
+                    <li>✅ Content type icons and colors</li>
+                    <li>✅ Integrated into homepage hero section</li>
+                </ul>
+            </div>
+
+            <div class="test-item">
+                <h3>📄 Search Results Page</h3>
+                <span class="status success">COMPLETED</span>
+                <p>Comprehensive search results page with filtering</p>
+                <ul>
+                    <li>✅ <code>/search</code> page with full results</li>
+                    <li>✅ Content type filtering</li>
+                    <li>✅ No results handling</li>
+                    <li>✅ Search suggestions for empty results</li>
+                    <li>✅ Responsive design</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🧪 Manual Testing</h2>
+            
+            <div class="test-item">
+                <h3>Homepage Search</h3>
+                <p><strong>Test:</strong> <a href="http://localhost:3002/" target="_blank">Visit Homepage</a></p>
+                <p>Try searching for: <code>ganesha</code>, <code>meditation</code>, <code>festival</code>, <code>shiva</code></p>
+                <p><span class="status info">Expected:</span> Real-time suggestions appear as you type</p>
+            </div>
+
+            <div class="test-item">
+                <h3>Search Results Page</h3>
+                <p><strong>Test:</strong> <a href="http://localhost:3002/search?q=ganesha" target="_blank">Search for "ganesha"</a></p>
+                <p><span class="status info">Expected:</span> Multiple results including Lord Ganesha deity page, Ganapati Puja practice, and Ganesh Chaturthi festival</p>
+            </div>
+
+            <div class="test-item">
+                <h3>Content Type Filtering</h3>
+                <p><strong>Test:</strong> <a href="http://localhost:3002/search?q=spiritual" target="_blank">Search for "spiritual"</a> and use filters</p>
+                <p><span class="status info">Expected:</span> Filter buttons show counts, clicking filters results by content type</p>
+            </div>
+
+            <div class="test-item">
+                <h3>No Results Handling</h3>
+                <p><strong>Test:</strong> <a href="http://localhost:3002/search?q=randomnonexistentterm" target="_blank">Search for non-existent term</a></p>
+                <p><span class="status info">Expected:</span> Friendly no results message with search suggestions</p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📋 Search Content Database</h2>
+            <p>The following content is searchable:</p>
+            
+            <div class="api-test">
+                <strong>Deities:</strong> Lord Ganesha, Lord Shiva, Lord Krishna, Lord Rama, Lord Vishnu, Lord Hanuman<br>
+                <strong>Festivals:</strong> Ganesh Chaturthi, Maha Shivaratri<br>
+                <strong>Practices:</strong> Ganapati Puja, Surya Namaskara, Complete Ganesha Arti Collection<br>
+                <strong>Pages:</strong> Home, Deities Index, Festivals Index, Practices Index<br><br>
+                <strong>Search Examples:</strong><br>
+                • "ganesha" → Lord Ganesha deity + Ganapati Puja + Ganesh Chaturthi<br>
+                • "meditation" → Various practices and spiritual content<br>
+                • "festival" → All festival-related content<br>
+                • "puja" → Worship practices and methods<br>
+                • "shiva" → Lord Shiva + Maha Shivaratri
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 Key Features Implemented</h2>
+            
+            <div class="test-item">
+                <h3>Multi-Strategy Search</h3>
+                <ul>
+                    <li><strong>Title Priority:</strong> Exact title matches rank highest</li>
+                    <li><strong>Description Search:</strong> Searches in content descriptions</li>
+                    <li><strong>Full-Text Search:</strong> PostgreSQL tsvector search across all text</li>
+                    <li><strong>Tag Matching:</strong> Matches content tags and keywords</li>
+                </ul>
+            </div>
+
+            <div class="test-item">
+                <h3>Smart UI Features</h3>
+                <ul>
+                    <li><strong>Real-time Suggestions:</strong> Results appear as you type (300ms debounce)</li>
+                    <li><strong>Keyboard Navigation:</strong> Arrow keys, Enter, Escape support</li>
+                    <li><strong>Visual Indicators:</strong> Content type icons and color coding</li>
+                    <li><strong>Quick Actions:</strong> Direct navigation to content pages</li>
+                </ul>
+            </div>
+
+            <div class="test-item">
+                <h3>Performance Optimizations</h3>
+                <ul>
+                    <li><strong>Database Indexes:</strong> GIN index on tsvector for fast full-text search</li>
+                    <li><strong>Query Optimization:</strong> Parallel search strategies with result merging</li>
+                    <li><strong>Client-side Debouncing:</strong> Reduces API calls during typing</li>
+                    <li><strong>Result Caching:</strong> Component-level state management</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #ea580c, #f59e0b); color: white; border-radius: 10px;">
+            <h3>🚀 Search Implementation Complete!</h3>
+            <p>The search functionality is fully implemented and ready for testing.<br>
+            All content is stored in the Hindu schema as requested.</p>
+        </div>
+    </div>
+</body>
+</html>

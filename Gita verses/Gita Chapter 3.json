@@ -1,0 +1,3025 @@
+{
+  "verses": [
+    {
+      "chapter_number": 3,
+      "verse_number": 1,
+      "sanskrit_text": "अर्जुन उवाच।\nज्यायसी चेत्कर्मणस्ते मता बुद्धिर्जनार्दन।\nतत्किं कर्मणि घोरे मां नियोजयसि केशव।।",
+      "transliteration": "arjuna uvāca\njyāyasī cet karmaṇas te matā buddhir janārdana\ntat kiṁ karmaṇi ghore māṁ niyojayasi keśava",
+      "translation": "Arjuna said: O Janardana (Krishna), if you think that knowledge is superior to action, why do you urge me to engage in this terrible act of war, O Keshava?",
+      "word_meanings": [
+        {
+          "word": "arjunaḥ uvāca",
+          "meaning": "Arjuna said"
+        },
+        {
+          "word": "jyāyasī",
+          "meaning": "superior"
+        },
+        {
+          "word": "cet",
+          "meaning": "if"
+        },
+        {
+          "word": "karmaṇaḥ",
+          "meaning": "than action"
+        },
+        {
+          "word": "te",
+          "meaning": "by you"
+        },
+        {
+          "word": "matā",
+          "meaning": "is considered"
+        },
+        {
+          "word": "buddhiḥ",
+          "meaning": "knowledge, intellect"
+        },
+        {
+          "word": "janārdana",
+          "meaning": "O Janardana (Krishna)"
+        },
+        {
+          "word": "tat kim",
+          "meaning": "then why"
+        },
+        {
+          "word": "karmaṇi",
+          "meaning": "in action"
+        },
+        {
+          "word": "ghore",
+          "meaning": "terrible, dreadful"
+        },
+        {
+          "word": "mām",
+          "meaning": "me"
+        },
+        {
+          "word": "niyojayasi",
+          "meaning": "you engage"
+        },
+        {
+          "word": "keśava",
+          "meaning": "O Keshava (Krishna)"
+        }
+      ],
+      "commentary": "Arjuna begins this chapter by raising a fundamental question that arises from Krishna's previous teachings. In Chapter 2, Krishna praised the path of knowledge and a resolute intellect (buddhi) while also urging Arjuna to fight. Arjuna, misunderstanding Krishna's point, sees this as a contradiction. He argues that if knowledge is superior, he should renounce action, not engage in a 'terrible' war. This verse sets the stage for a detailed explanation of Karma Yoga.",
+      "key_concepts": [
+        "arjuna's confusion",
+        "knowledge vs. action",
+        "karma yoga"
+      ],
+      "tags": [
+        "arjuna",
+        "krishna",
+        "karma yoga",
+        "confusion"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 2,
+      "sanskrit_text": "व्यामिश्रेणेव वाक्येन बुद्धिं मोहयसीव मे।\nतदेकं वद निश्चित्य येन श्रेयोऽहमाप्नुयाम्।।",
+      "transliteration": "vyāmiśreṇeva vākyena buddhiṁ mohayasīva me\ntad ekaṁ vada niścitya yena śreyo 'ham āpnuyām",
+      "translation": "With what seem to be contradictory words, you are bewildering my intellect. Therefore, please tell me for certain one path by which I may attain the highest good.",
+      "word_meanings": [
+        {
+          "word": "vyāmiśreṇa iva",
+          "meaning": "with mixed or confusing, as if"
+        },
+        {
+          "word": "vākyena",
+          "meaning": "by words"
+        },
+        {
+          "word": "buddhim",
+          "meaning": "intellect"
+        },
+        {
+          "word": "mohayasi iva",
+          "meaning": "you seem to delude"
+        },
+        {
+          "word": "me",
+          "meaning": "my"
+        },
+        {
+          "word": "tat",
+          "meaning": "therefore"
+        },
+        {
+          "word": "ekam",
+          "meaning": "one"
+        },
+        {
+          "word": "vada",
+          "meaning": "please tell"
+        },
+        {
+          "word": "niścitya",
+          "meaning": "for certain"
+        },
+        {
+          "word": "yena",
+          "meaning": "by which"
+        },
+        {
+          "word": "śreyaḥ",
+          "meaning": "the highest good"
+        },
+        {
+          "word": "aham",
+          "meaning": "I"
+        },
+        {
+          "word": "āpnuyām",
+          "meaning": "may attain"
+        }
+      ],
+      "commentary": "Arjuna's confusion is made explicit. He finds Krishna's words 'vyāmiśreṇa' (confusing or ambiguous). He wants a clear, 'ekam' (one), definitive path to liberation, whether it is the path of knowledge (Jñāna Yoga) or the path of action (Karma Yoga). This direct plea for clarity from his Guru sets the stage for Krishna's detailed exposition on Karma Yoga, which harmonizes these two seemingly contradictory paths.",
+      "key_concepts": [
+        "confusion",
+        "desire for clarity",
+        "highest good"
+      ],
+      "tags": [
+        "arjuna",
+        "krishna",
+        "doubt",
+        "karma yoga"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 3,
+      "sanskrit_text": "श्रीभगवानुवाच।\nलोकेऽस्मिन्द्विविधा निष्ठा पुरा प्रोक्ता मयानघ।\nज्ञानयोगेन साङ्ख्यानां कर्मयोगेन योगिनाम्।।",
+      "transliteration": "śrī-bhagavān uvāca\nloke 'smin dvi-vidhā niṣṭhā purā proktā mayānagha\njñāna-yogena sāṅkhyānāṁ karma-yogena yoginām",
+      "translation": "The Supreme Lord said: O sinless one, in this world a two-fold path was previously explained by Me: the path of knowledge for the Sankhyas (the contemplative ones) and the path of action for the Yogis (the active ones).",
+      "word_meanings": [
+        {
+          "word": "śrī-bhagavān uvāca",
+          "meaning": "The Supreme Lord said"
+        },
+        {
+          "word": "loke",
+          "meaning": "in the world"
+        },
+        {
+          "word": "asmin",
+          "meaning": "this"
+        },
+        {
+          "word": "dvi-vidhā",
+          "meaning": "two kinds of"
+        },
+        {
+          "word": "niṣṭhā",
+          "meaning": "path"
+        },
+        {
+          "word": "purā",
+          "meaning": "previously"
+        },
+        {
+          "word": "proktā",
+          "meaning": "has been explained"
+        },
+        {
+          "word": "mayā",
+          "meaning": "by Me"
+        },
+        {
+          "word": "anagha",
+          "meaning": "O sinless one (Arjuna)"
+        },
+        {
+          "word": "jñāna-yogena",
+          "meaning": "by the path of knowledge"
+        },
+        {
+          "word": "sāṅkhyānām",
+          "meaning": "for the Sankhyas"
+        },
+        {
+          "word": "karma-yogena",
+          "meaning": "by the path of action"
+        },
+        {
+          "word": "yoginām",
+          "meaning": "for the Yogis"
+        }
+      ],
+      "commentary": "Krishna clarifies that there is no contradiction in his teachings. He explains that there are two distinct paths to spiritual realization: 'Jñāna Yoga' for those of a contemplative nature (Sankhyas) and 'Karma Yoga' for those of an active nature (Yogis). He is preparing to show Arjuna that both paths can lead to the same goal, but for a person of Arjuna's nature (a warrior), the path of 'Karma Yoga' is more suitable.",
+      "key_concepts": [
+        "two-fold path",
+        "jnana yoga",
+        "karma yoga",
+        "contemplative vs. active"
+      ],
+      "tags": [
+        "krishna",
+        "philosophy",
+        "karma yoga",
+        "jnana yoga"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 4,
+      "sanskrit_text": "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।\nन च सन्न्यसनादेव सिद्धिं समधिगच्छति।।",
+      "transliteration": "na karmaṇām anārambhān naiṣkarmyaṁ puruṣo 'śnute\nna ca sannyasanād eva siddhiṁ samadhigacchati",
+      "translation": "One does not achieve freedom from reaction by merely not performing actions, nor does one attain perfection by renunciation alone.",
+      "word_meanings": [
+        {
+          "word": "na",
+          "meaning": "not"
+        },
+        {
+          "word": "karmaṇām",
+          "meaning": "of actions"
+        },
+        {
+          "word": "anārambhāt",
+          "meaning": "by non-commencement"
+        },
+        {
+          "word": "naiṣkarmyam",
+          "meaning": "freedom from action"
+        },
+        {
+          "word": "puruṣaḥ",
+          "meaning": "a person"
+        },
+        {
+          "word": "aśnute",
+          "meaning": "attains"
+        },
+        {
+          "word": "na ca",
+          "meaning": "and not"
+        },
+        {
+          "word": "sannyasanāt eva",
+          "meaning": "by renunciation alone"
+        },
+        {
+          "word": "siddhim",
+          "meaning": "perfection"
+        },
+        {
+          "word": "samadhigacchati",
+          "meaning": "attains"
+        }
+      ],
+      "commentary": "Krishna directly refutes Arjuna's desire for inaction. He states that simply giving up action physically does not lead to 'naiṣkarmyaṁ' (freedom from action's consequences) or 'siddhi' (perfection). True renunciation is not about physical inactivity but about a change in one's mindset. This is a crucial point in Karma Yoga, as it shows that one cannot escape the responsibilities of life simply by running away from them.",
+      "key_concepts": [
+        "inaction vs. renunciation",
+        "naiṣkarmyaṁ",
+        "siddhi",
+        "physical vs. mental renunciation"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "renunciation",
+        "philosophy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 5,
+      "sanskrit_text": "न हि कश्चित्क्षणमपि जातु तिष्ठत्यकर्मकृत्।\nकार्यते ह्यवशः कर्म सर्वः प्रकृतिजैर्गुणैः।।",
+      "transliteration": "na hi kaścit kṣaṇam api jātu tiṣṭhaty akarma-kṛt\nkāryate hy avaśaḥ karma sarvaḥ prakṛti-jair guṇaiḥ",
+      "translation": "Indeed, no one can remain without performing action even for a moment; for everyone is forced to act helplessly by the qualities born of nature.",
+      "word_meanings": [
+        {
+          "word": "na hi",
+          "meaning": "not indeed"
+        },
+        {
+          "word": "kaścit",
+          "meaning": "anyone"
+        },
+        {
+          "word": "kṣaṇam api",
+          "meaning": "even for a moment"
+        },
+        {
+          "word": "jātu",
+          "meaning": "at any time"
+        },
+        {
+          "word": "tiṣṭhati",
+          "meaning": "remains"
+        },
+        {
+          "word": "akarma-kṛt",
+          "meaning": "without performing action"
+        },
+        {
+          "word": "kāryate",
+          "meaning": "is made to act"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "avaśaḥ",
+          "meaning": "helplessly"
+        },
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "sarvaḥ",
+          "meaning": "everyone"
+        },
+        {
+          "word": "prakṛti-jaiḥ",
+          "meaning": "born of nature"
+        },
+        {
+          "word": "guṇaiḥ",
+          "meaning": "by the qualities (gunas)"
+        }
+      ],
+      "commentary": "Krishna provides a scientific and metaphysical reason for the inevitability of action. He explains that all beings are compelled to act by the 'guṇas' (modes of nature) of their body and mind. Since no one can escape their own nature, physical inaction is impossible. This argument further reinforces that true freedom is not found in physical inactivity but in a change of consciousness while acting.",
+      "key_concepts": [
+        "inevitability of action",
+        "gunas",
+        "helplessness",
+        "nature"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "philosophy",
+        "action"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 6,
+      "sanskrit_text": "कर्मेन्द्रियाणि संयम्य य आस्ते मनसा स्मरन्।\nइन्द्रियार्थान्विमूढात्मा मिथ्याचारः स उच्यते।।",
+      "transliteration": "karmendriyāṇi saṁyamya ya āste manasā smaran\nindriyārthān vimūḍhātmā mithyācāraḥ sa ucyate",
+      "translation": "He who, having restrained his organs of action, sits with his mind dwelling on the objects of the senses, is a person of deluded mind and is called a hypocrite.",
+      "word_meanings": [
+        {
+          "word": "karma-indriyāṇi",
+          "meaning": "the organs of action"
+        },
+        {
+          "word": "saṁyamya",
+          "meaning": "having restrained"
+        },
+        {
+          "word": "yaḥ",
+          "meaning": "who"
+        },
+        {
+          "word": "āste",
+          "meaning": "sits"
+        },
+        {
+          "word": "manasā",
+          "meaning": "with the mind"
+        },
+        {
+          "word": "smaran",
+          "meaning": "remembering"
+        },
+        {
+          "word": "indriya-arthān",
+          "meaning": "the objects of the senses"
+        },
+        {
+          "word": "vimūḍha-ātmā",
+          "meaning": "with a deluded mind"
+        },
+        {
+          "word": "mithyācāraḥ",
+          "meaning": "a hypocrite"
+        },
+        {
+          "word": "saḥ",
+          "meaning": "that person"
+        },
+        {
+          "word": "ucyate",
+          "meaning": "is called"
+        }
+      ],
+      "commentary": "Krishna warns against a false form of renunciation. He states that a person who gives up external actions but whose mind is still consumed by desires is a 'mithyācāraḥ' (hypocrite). This person is deluding themselves and is not making any real spiritual progress. True renunciation is not about outward appearances but about inner purity and control of the mind and senses.",
+      "key_concepts": [
+        "hypocrisy",
+        "false renunciation",
+        "mind control",
+        "sense objects"
+      ],
+      "tags": [
+        "krishna",
+        "renunciation",
+        "mind",
+        "hypocrisy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 7,
+      "sanskrit_text": "यस्त्विन्द्रियाणि मनसा नियम्यारभतेऽर्जुन।\nकर्मेन्द्रियैः कर्मयोगमसक्तः स विशिष्यते।।",
+      "transliteration": "yas tv indriyāṇi manasā niyamyārabhate 'rjuna\nkarmendriyaiḥ karma-yogam asaktaḥ sa viśiṣyate",
+      "translation": "But he who, controlling the senses by the mind, O Arjuna, engages his organs of action in Karma Yoga without attachment, is by far superior.",
+      "word_meanings": [
+        {
+          "word": "yaḥ tu",
+          "meaning": "but he who"
+        },
+        {
+          "word": "indriyāṇi",
+          "meaning": "the senses"
+        },
+        {
+          "word": "manasā",
+          "meaning": "by the mind"
+        },
+        {
+          "word": "niyamya",
+          "meaning": "having controlled"
+        },
+        {
+          "word": "ārabhate",
+          "meaning": "engages in"
+        },
+        {
+          "word": "arjuna",
+          "meaning": "O Arjuna"
+        },
+        {
+          "word": "karma-indriyaiḥ",
+          "meaning": "with the organs of action"
+        },
+        {
+          "word": "karma-yogam",
+          "meaning": "Karma Yoga"
+        },
+        {
+          "word": "asaktaḥ",
+          "meaning": "without attachment"
+        },
+        {
+          "word": "saḥ",
+          "meaning": "that person"
+        },
+        {
+          "word": "viśiṣyate",
+          "meaning": "is superior"
+        }
+      ],
+      "commentary": "Krishna presents the ideal of a true 'Karma Yogi.' This person is not in a state of physical inaction but is actively engaged in the world. The key difference is that they control their senses and mind and act 'asaktaḥ' (without attachment). This is a direct contrast to the hypocrite and a clear instruction for Arjuna: the path to liberation is not renunciation of action, but renunciation of the desire for results.",
+      "key_concepts": [
+        "karma yogi",
+        "sense control",
+        "non-attachment"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "detachment",
+        "action"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 8,
+      "sanskrit_text": "नियतं कुरु कर्म त्वं कर्म ज्यायो ह्यकर्मणः।\nशरीरयात्रापि च ते न प्रसिद्ध्येदकर्मणः।।",
+      "transliteration": "niyataṁ kuru karma tvaṁ karma jyāyo hy akarmaṇaḥ\nśarīra-yātrāpi ca te na prasiddhyed akarmaṇaḥ",
+      "translation": "Perform your prescribed duty, for action is superior to inaction. Even the maintenance of your body would not be possible for you without action.",
+      "word_meanings": [
+        {
+          "word": "niyatam",
+          "meaning": "prescribed"
+        },
+        {
+          "word": "kuru",
+          "meaning": "perform"
+        },
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "tvam",
+          "meaning": "you"
+        },
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "jyāyaḥ",
+          "meaning": "is superior"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "akarmaṇaḥ",
+          "meaning": "to inaction"
+        },
+        {
+          "word": "śarīra-yātrā",
+          "meaning": "maintenance of the body"
+        },
+        {
+          "word": "api ca",
+          "meaning": "and also"
+        },
+        {
+          "word": "te",
+          "meaning": "your"
+        },
+        {
+          "word": "na prasiddhyet",
+          "meaning": "would not be possible"
+        },
+        {
+          "word": "akarmaṇaḥ",
+          "meaning": "by inaction"
+        }
+      ],
+      "commentary": "Krishna provides a final, practical reason for action. He argues that 'akarmaṇaḥ' (inaction) is not only spiritually flawed but is also practically impossible. Even for the mere survival and 'śarīra-yātrā' (maintenance of the body), one must perform some action. This brings the argument to a simple, logical conclusion, making it impossible for Arjuna to argue against the need for action itself.",
+      "key_concepts": [
+        "action vs. inaction",
+        "prescribed duty",
+        "practicality of action"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "duty",
+        "action"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 9,
+      "sanskrit_text": "यज्ञार्थात्कर्मणोऽन्यत्र लोकोऽयं कर्मबन्धनः।\nतदर्थं कर्म कौन्तेय मुक्तसङ्गः समाचर।।",
+      "transliteration": "yajñārthāt karmaṇo 'nyatra loko 'yaṁ karma-bandhanaḥ\ntad-arthaṁ karma kaunteya mukta-saṅgaḥ samācara",
+      "translation": "The world is bound by actions other than those performed for the sake of sacrifice (Yajna). Therefore, O son of Kunti, perform your prescribed duties for that sake alone, free from attachment.",
+      "word_meanings": [
+        {
+          "word": "yajña-arthāt",
+          "meaning": "for the sake of sacrifice"
+        },
+        {
+          "word": "karmaṇaḥ",
+          "meaning": "than action"
+        },
+        {
+          "word": "anyatra",
+          "meaning": "otherwise"
+        },
+        {
+          "word": "lokaḥ",
+          "meaning": "the world"
+        },
+        {
+          "word": "ayam",
+          "meaning": "this"
+        },
+        {
+          "word": "karma-bandhanaḥ",
+          "meaning": "is bound by action"
+        },
+        {
+          "word": "tat-artham",
+          "meaning": "for that sake"
+        },
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "kaunteya",
+          "meaning": "O son of Kunti"
+        },
+        {
+          "word": "mukta-saṅgaḥ",
+          "meaning": "free from attachment"
+        },
+        {
+          "word": "samācara",
+          "meaning": "perform properly"
+        }
+      ],
+      "commentary": "Krishna provides the key to performing action without being bound by it. He introduces the concept of 'Yajña' (sacrifice). Actions performed for personal gain lead to 'karma-bandhanaḥ' (bondage), but actions performed as a sacrifice for a higher purpose do not. He advises Arjuna to perform his duty 'mukta-saṅgaḥ' (free from attachment), which is the essence of Karma Yoga.",
+      "key_concepts": [
+        "yajna",
+        "karma-bandhanaḥ",
+        "non-attachment",
+        "prescribed duty"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "duty",
+        "detachment"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 10,
+      "sanskrit_text": "सहयज्ञाः प्रजाः सृष्ट्वा पुरोवाच प्रजापतिः।\nअनेन प्रसविष्यध्वमेष वोऽस्त्विष्टकामधुक्।।",
+      "transliteration": "saha-yajñāḥ prajāḥ sṛṣṭvā purovāca prajāpatiḥ\nanena prasaviṣyadhvam eṣa vo 'stv iṣṭa-kāma-dhuk",
+      "translation": "In the beginning, the Creator (Prajapati) created mankind along with sacrifice and said: 'By this shall you prosper, and may this be the fulfiller of all your desires.'",
+      "word_meanings": [
+        {
+          "word": "saha-yajñāḥ",
+          "meaning": "along with sacrifice"
+        },
+        {
+          "word": "prajāḥ",
+          "meaning": "beings"
+        },
+        {
+          "word": "sṛṣṭvā",
+          "meaning": "having created"
+        },
+        {
+          "word": "purā uvāca",
+          "meaning": "in the past, said"
+        },
+        {
+          "word": "prajāpatiḥ",
+          "meaning": "the creator"
+        },
+        {
+          "word": "anena",
+          "meaning": "by this"
+        },
+        {
+          "word": "prasaviṣyadhvam",
+          "meaning": "you shall prosper"
+        },
+        {
+          "word": "eṣaḥ",
+          "meaning": "this"
+        },
+        {
+          "word": "vaḥ",
+          "meaning": "for you"
+        },
+        {
+          "word": "astu",
+          "meaning": "let it be"
+        },
+        {
+          "word": "iṣṭa-kāma-dhuk",
+          "meaning": "the fulfiller of desires"
+        }
+      ],
+      "commentary": "Krishna provides a mythological and theological basis for the concept of 'Yajña' (sacrifice). He says that the Creator (Prajapati) created humanity along with the principle of sacrifice. This means that action performed as a sacrifice is not just a human invention but a divine law. The verse highlights that this sacrificial action is the very key to prosperity and the fulfillment of all desires, as intended by the Creator.",
+      "key_concepts": [
+        "yajna as divine law",
+        "creation",
+        "fulfillment of desires"
+      ],
+      "tags": [
+        "krishna",
+        "yajna",
+        "creation",
+        "philosophy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 11,
+      "sanskrit_text": "देवान्भावयतानेन ते देवा भावयन्तु वः।\nपरस्परं भावयन्तः श्रेयः परमवाप्स्यथ।।",
+      "transliteration": "devān bhāvayatānena te devā bhāvayantu vaḥ\nparasparaṁ bhāvayantaḥ śreyaḥ param avāpsyatha",
+      "translation": "Nourish the gods (celestial beings) with this, and may those gods nourish you. Thus, by nourishing one another, you shall attain the highest good.",
+      "word_meanings": [
+        {
+          "word": "devān",
+          "meaning": "the gods"
+        },
+        {
+          "word": "bhāvayatā",
+          "meaning": "nourish"
+        },
+        {
+          "word": "anena",
+          "meaning": "by this"
+        },
+        {
+          "word": "te",
+          "meaning": "those"
+        },
+        {
+          "word": "devāḥ",
+          "meaning": "gods"
+        },
+        {
+          "word": "bhāvayantu",
+          "meaning": "may they nourish"
+        },
+        {
+          "word": "vaḥ",
+          "meaning": "you"
+        },
+        {
+          "word": "parasparam",
+          "meaning": "mutually"
+        },
+        {
+          "word": "bhāvayantaḥ",
+          "meaning": "nourishing"
+        },
+        {
+          "word": "śreyaḥ",
+          "meaning": "the highest good"
+        },
+        {
+          "word": "param",
+          "meaning": "supreme"
+        },
+        {
+          "word": "avāpsyatha",
+          "meaning": "you will attain"
+        }
+      ],
+      "commentary": "Krishna explains the cosmic cycle of giving and receiving. By performing 'Yajña' (selfless action), humans can 'nourish' the gods, who in turn provide the necessary resources for human life (e.g., rain, food). This mutual relationship is the foundation of a harmonious existence. He teaches that by participating in this cycle, one attains the 'highest good' ('śreyaḥ'), which is not just material prosperity but also spiritual progress.",
+      "key_concepts": [
+        "cosmic cycle",
+        "giving and receiving",
+        "highest good",
+        "yajna"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "yajna",
+        "philosophy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 12,
+      "sanskrit_text": "इष्टान्भोगान्हि वो देवा दास्यन्ते यज्ञभाविताः।\nतैर्दत्तानप्रदायैभ्यो यो भुङ्क्ते स्तेन एव सः।।",
+      "transliteration": "iṣṭān bhogān hi vo devā dāsyante yajña-bhāvitāḥ\ntair dattān apradāyaibhyo yo bhuṅkte stena eva saḥ",
+      "translation": "The gods, nourished by sacrifice, will indeed give you the desired enjoyments. He who enjoys these gifts without offering them in return is a thief.",
+      "word_meanings": [
+        {
+          "word": "iṣṭān",
+          "meaning": "desired"
+        },
+        {
+          "word": "bhogān",
+          "meaning": "enjoyments"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "vaḥ",
+          "meaning": "to you"
+        },
+        {
+          "word": "devāḥ",
+          "meaning": "the gods"
+        },
+        {
+          "word": "dāsyante",
+          "meaning": "will give"
+        },
+        {
+          "word": "yajña-bhāvitāḥ",
+          "meaning": "nourished by sacrifice"
+        },
+        {
+          "word": "taiḥ",
+          "meaning": "by them"
+        },
+        {
+          "word": "dattān",
+          "meaning": "given"
+        },
+        {
+          "word": "apradāya",
+          "meaning": "without offering in return"
+        },
+        {
+          "word": "ebhyaḥ",
+          "meaning": "to them"
+        },
+        {
+          "word": "yaḥ",
+          "meaning": "whoever"
+        },
+        {
+          "word": "bhuṅkte",
+          "meaning": "enjoys"
+        },
+        {
+          "word": "stenaḥ",
+          "meaning": "a thief"
+        },
+        {
+          "word": "eva saḥ",
+          "meaning": "he is indeed"
+        }
+      ],
+      "commentary": "Krishna establishes a strong moral principle. He calls a person who enjoys the 'bhogān' (enjoyments) given by nature and the gods without giving back in a spirit of 'Yajña' (sacrifice) a 'stena' (thief). This verse emphasizes the need for a selfless and grateful attitude in all our actions. It is a powerful ethical statement that lays the foundation for a selfless society.",
+      "key_concepts": [
+        "thief",
+        "selflessness",
+        "gratitude",
+        "cosmic debt"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "ethics",
+        "yajna"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 13,
+      "sanskrit_text": "यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः।\nभुञ्जते ते त्वघं पापा ये पचन्त्यात्मकारणात्।।",
+      "transliteration": "yajña-śiṣṭāśinaḥ santo mucyante sarva-kilbiṣaiḥ\nbhuñjate te tv aghaṁ pāpā ye pacanty ātma-kāraṇāt",
+      "translation": "The righteous who eat the remnants of the sacrifice are freed from all sins; but those sinful ones who cook food solely for their own sake eat only sin.",
+      "word_meanings": [
+        {
+          "word": "yajña-śiṣṭa-āśinaḥ",
+          "meaning": "those who eat the remnants of the sacrifice"
+        },
+        {
+          "word": "santaḥ",
+          "meaning": "the righteous"
+        },
+        {
+          "word": "mucyante",
+          "meaning": "are freed"
+        },
+        {
+          "word": "sarva-kilbiṣaiḥ",
+          "meaning": "from all sins"
+        },
+        {
+          "word": "bhuñjate",
+          "meaning": "they eat"
+        },
+        {
+          "word": "te tu",
+          "meaning": "but they"
+        },
+        {
+          "word": "agham",
+          "meaning": "sin"
+        },
+        {
+          "word": "pāpāḥ",
+          "meaning": "the sinful"
+        },
+        {
+          "word": "ye",
+          "meaning": "who"
+        },
+        {
+          "word": "pacanti",
+          "meaning": "cook"
+        },
+        {
+          "word": "ātma-kāraṇāt",
+          "meaning": "for their own sake"
+        }
+      ],
+      "commentary": "Krishna makes a distinction between a selfless act and a selfish one, using the simple example of cooking food. A person who prepares food as a 'Yajña' (offering) is freed from sin and their actions lead to liberation. In contrast, a person who cooks only for 'ātma-kāraṇāt' (their own sake) is eating 'agham' (sin). This verse emphasizes that the motive behind an action is what determines its karmic consequence.",
+      "key_concepts": [
+        "selfless vs. selfish action",
+        "sin",
+        "motive",
+        "yajna"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "ethics",
+        "motive"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 14,
+      "sanskrit_text": "अन्नाद्भवन्ति भूतानि पर्जन्यादन्नसम्भवः।\nयज्ञाद्भवति पर्जन्यो यज्ञः कर्मसमुद्भवः।।",
+      "transliteration": "annād bhavanti bhūtāni parjanyād anna-sambhavaḥ\nyajñād bhavati parjanyo yajñaḥ karma-samudbhavaḥ",
+      "translation": "From food, living beings are born. From rain, food is produced. From sacrifice (Yajna), rain is produced. And sacrifice is born of action.",
+      "word_meanings": [
+        {
+          "word": "annāt",
+          "meaning": "from food"
+        },
+        {
+          "word": "bhavanti",
+          "meaning": "are born"
+        },
+        {
+          "word": "bhūtāni",
+          "meaning": "living beings"
+        },
+        {
+          "word": "parjanyāt",
+          "meaning": "from rain"
+        },
+        {
+          "word": "anna-sambhavaḥ",
+          "meaning": "the production of food"
+        },
+        {
+          "word": "yajñāt",
+          "meaning": "from sacrifice"
+        },
+        {
+          "word": "bhavati",
+          "meaning": "is produced"
+        },
+        {
+          "word": "parjanyaḥ",
+          "meaning": "rain"
+        },
+        {
+          "word": "yajñaḥ",
+          "meaning": "sacrifice"
+        },
+        {
+          "word": "karma-samudbhavaḥ",
+          "meaning": "is born of action"
+        }
+      ],
+      "commentary": "Krishna lays out a detailed cosmic chain of cause and effect. He explains that life is interconnected and dependent on a cycle that begins with selfless action ('Yajña'). This is a metaphysical justification for the importance of 'Karma Yoga' and 'Yajña', showing that an individual's action is not an isolated event but a part of a larger cosmic and societal cycle.",
+      "key_concepts": [
+        "cosmic cycle",
+        "yajna",
+        "interconnectedness",
+        "cause and effect"
+      ],
+      "tags": [
+        "krishna",
+        "yajna",
+        "philosophy",
+        "ecology"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 15,
+      "sanskrit_text": "कर्म ब्रह्मोद्भवं विद्धि ब्रह्माक्षरसमुद्भवम्।\nतस्मात्सर्वगतं ब्रह्म नित्यं यज्ञे प्रतिष्ठितम्।।",
+      "transliteration": "karma brahmodbhavaṁ viddhi brahmākṣara-samudbhavam\ntasmāt sarva-gataṁ brahma nityaṁ yajñe pratiṣṭhitam",
+      "translation": "Know that action comes from Brahman, and Brahman comes from the Imperishable. Therefore, the all-pervading Brahman is eternally situated in sacrifice.",
+      "word_meanings": [
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "brahma-udbhavam",
+          "meaning": "born of Brahman"
+        },
+        {
+          "word": "viddhi",
+          "meaning": "know"
+        },
+        {
+          "word": "brahma",
+          "meaning": "Brahman"
+        },
+        {
+          "word": "akṣara-samudbhavam",
+          "meaning": "born of the Imperishable"
+        },
+        {
+          "word": "tasmāt",
+          "meaning": "therefore"
+        },
+        {
+          "word": "sarva-gatam",
+          "meaning": "all-pervading"
+        },
+        {
+          "word": "brahma",
+          "meaning": "Brahman"
+        },
+        {
+          "word": "nityam",
+          "meaning": "eternally"
+        },
+        {
+          "word": "yajñe",
+          "meaning": "in sacrifice"
+        },
+        {
+          "word": "pratiṣṭhitam",
+          "meaning": "is established"
+        }
+      ],
+      "commentary": "Krishna traces the origin of action back to the highest reality. He states that action originates from 'Brahman' (the cosmic creative principle), which in turn comes from the 'Akṣara' (the Imperishable, or the Supreme Being). He concludes that the 'sarva-gataṁ brahma' (all-pervading Brahman) is 'nityaṁ yajñe pratiṣṭhitam' (eternally established in sacrifice). This is a profound statement that elevates 'Yajña' from a mere ritual to a divine and cosmic act.",
+      "key_concepts": [
+        "brahman",
+        "imperishable",
+        "yajna as divine act",
+        "cosmic law"
+      ],
+      "tags": [
+        "krishna",
+        "philosophy",
+        "yajna",
+        "metaphysics"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 16,
+      "sanskrit_text": "एवं प्रवर्तितं चक्रं नानुवर्तयतीह यः।\nअघायुरिन्द्रियारामो मोघं पार्थ स जीवति।।",
+      "transliteration": "evaṁ pravartitaṁ cakraṁ nānuvartayatīha yaḥ\naghāyur indriyārāmo moghaṁ pārtha sa jīvati",
+      "translation": "O son of Pritha, he who does not follow the wheel of creation thus set in motion, who is of sinful life and delights in the senses, lives in vain.",
+      "word_meanings": [
+        {
+          "word": "evam",
+          "meaning": "thus"
+        },
+        {
+          "word": "pravartitam",
+          "meaning": "set in motion"
+        },
+        {
+          "word": "cakram",
+          "meaning": "wheel"
+        },
+        {
+          "word": "na anuvartayati",
+          "meaning": "does not follow"
+        },
+        {
+          "word": "iha",
+          "meaning": "here"
+        },
+        {
+          "word": "yaḥ",
+          "meaning": "he who"
+        },
+        {
+          "word": "agha-āyuḥ",
+          "meaning": "of sinful life"
+        },
+        {
+          "word": "indriya-ārāmaḥ",
+          "meaning": "delighting in the senses"
+        },
+        {
+          "word": "mogham",
+          "meaning": "in vain"
+        },
+        {
+          "word": "pārtha",
+          "meaning": "O son of Pritha"
+        },
+        {
+          "word": "saḥ",
+          "meaning": "he"
+        },
+        {
+          "word": "jīvati",
+          "meaning": "lives"
+        }
+      ],
+      "commentary": "Krishna warns of the negative consequences of not participating in the cosmic 'cakram' (wheel) of action and sacrifice. A person who lives only for sensual pleasure ('indriya-ārāmaḥ') and does not perform their duty is 'aghāyuḥ' (of sinful life) and their life is 'mogham' (in vain). This is a strong argument for Arjuna to re-engage with his duty, as inaction and a selfish life are spiritually and ethically void.",
+      "key_concepts": [
+        "cosmic wheel",
+        "sinful life",
+        "sensual pleasure",
+        "living in vain"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "dharma",
+        "ethics"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 17,
+      "sanskrit_text": "यस्त्वात्मरतिरेव स्यात् आत्मतृप्तश्च मानवः।\nआत्मन्येव च सन्तुष्टस्तस्य कार्यं न विद्यते।।",
+      "transliteration": "yas tv ātma-ratir eva syād ātma-tṛptaś ca mānavaḥ\nātmany eva ca santuṣṭas tasya kāryaṁ na vidyate",
+      "translation": "But for that person who rejoices only in the Self, who is satisfied with the Self and is content in the Self alone, for him there is no duty to perform.",
+      "word_meanings": [
+        {
+          "word": "yaḥ tu",
+          "meaning": "but he who"
+        },
+        {
+          "word": "ātma-ratiḥ",
+          "meaning": "rejoicing in the Self"
+        },
+        {
+          "word": "eva syāt",
+          "meaning": "is indeed"
+        },
+        {
+          "word": "ātma-tṛptaḥ",
+          "meaning": "satisfied in the Self"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "mānavaḥ",
+          "meaning": "a person"
+        },
+        {
+          "word": "ātmani eva",
+          "meaning": "in the Self alone"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "santuṣṭaḥ",
+          "meaning": "content"
+        },
+        {
+          "word": "tasya",
+          "meaning": "for him"
+        },
+        {
+          "word": "kāryam",
+          "meaning": "duty"
+        },
+        {
+          "word": "na vidyate",
+          "meaning": "is not there"
+        }
+      ],
+      "commentary": "Krishna introduces the exception to the rule of action. A person who is 'ātma-ratiḥ' (rejoicing in the Self) and 'ātma-tṛptaḥ' (satisfied in the Self) has no personal 'kāryam' (duty) to perform. This is the state of a fully realized being, a 'jñāni' who is beyond the need for action to purify their mind. This verse is an important distinction that clarifies who needs to perform Karma Yoga and who does not.",
+      "key_concepts": [
+        "self-realization",
+        "no duty",
+        "contentment in the Self"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "enlightenment",
+        "jñāni"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 18,
+      "sanskrit_text": "नैव तस्य कृतेनार्थो नाकृतेनेह कश्चन।\nन चास्य सर्वभूतेषु कश्चिदर्थव्यपाश्रयः।।",
+      "transliteration": "naiva tasya kṛtenārtho nākṛteneha kaścana\nna cāsya sarva-bhūteṣu kaścid artha-vyapāśrayaḥ",
+      "translation": "For him, there is no purpose to be gained by action, nor any loss by inaction; nor does he need to depend on any living being for any purpose.",
+      "word_meanings": [
+        {
+          "word": "na eva",
+          "meaning": "certainly not"
+        },
+        {
+          "word": "tasya",
+          "meaning": "for him"
+        },
+        {
+          "word": "kṛtena",
+          "meaning": "by performing action"
+        },
+        {
+          "word": "arthaḥ",
+          "meaning": "purpose, gain"
+        },
+        {
+          "word": "na akṛtena",
+          "meaning": "nor by not performing action"
+        },
+        {
+          "word": "iha",
+          "meaning": "here"
+        },
+        {
+          "word": "kaścana",
+          "meaning": "any"
+        },
+        {
+          "word": "na ca",
+          "meaning": "and not"
+        },
+        {
+          "word": "asya",
+          "meaning": "his"
+        },
+        {
+          "word": "sarva-bhūteṣu",
+          "meaning": "in all living beings"
+        },
+        {
+          "word": "kaścit",
+          "meaning": "any"
+        },
+        {
+          "word": "artha-vyapāśrayaḥ",
+          "meaning": "reason for dependence"
+        }
+      ],
+      "commentary": "This verse further describes the state of a liberated person. Since they are content in the Self, they are not motivated by the results of action, whether positive or negative. They are also completely self-sufficient and do not depend on others. This state is the opposite of Arjuna's current predicament, who is dependent on the war for his kingdom and is emotionally distraught by its consequences. Krishna is showing him the ultimate state of freedom.",
+      "key_concepts": [
+        "freedom from results",
+        "self-sufficiency",
+        "non-dependence"
+      ],
+      "tags": [
+        "krishna",
+        "enlightenment",
+        "detachment",
+        "jñāni"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 19,
+      "sanskrit_text": "तस्मादसक्तः सततं कार्यं कर्म समाचर।\nअसक्तो ह्याचरन्कर्म परमाप्नोति पूरुषः।।",
+      "transliteration": "tasmād asaktaḥ satataṁ kāryaṁ karma samācara\nasakto hy ācaran karma param āpnoti pūruṣaḥ",
+      "translation": "Therefore, always perform your duty without attachment. For by performing action without attachment, one attains the Supreme.",
+      "word_meanings": [
+        {
+          "word": "tasmāt",
+          "meaning": "therefore"
+        },
+        {
+          "word": "asaktaḥ",
+          "meaning": "without attachment"
+        },
+        {
+          "word": "satatam",
+          "meaning": "always"
+        },
+        {
+          "word": "kāryam",
+          "meaning": "what should be done"
+        },
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "samācara",
+          "meaning": "perform well"
+        },
+        {
+          "word": "asaktaḥ",
+          "meaning": "without attachment"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "ācaran",
+          "meaning": "performing"
+        },
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "param",
+          "meaning": "the Supreme"
+        },
+        {
+          "word": "āpnoti",
+          "meaning": "attains"
+        },
+        {
+          "word": "pūruṣaḥ",
+          "meaning": "a person"
+        }
+      ],
+      "commentary": "This verse is a direct and powerful command to Arjuna. It is a concise summary of the entire concept of 'Karma Yoga.' Krishna tells Arjuna to perform his duty, not with a desire for results, but as a 'kāryaṁ' (what should be done) and 'asaktaḥ' (without attachment). This single verse provides a complete roadmap for how Arjuna can act in the world without being bound by the war's consequences.",
+      "key_concepts": [
+        "karma yoga",
+        "non-attachment",
+        "prescribed duty",
+        "attaining the supreme"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "duty",
+        "detachment"
+      ],
+      "is_featured": true,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 20,
+      "sanskrit_text": "कर्मणैव हि संसिद्धिमास्थिता जनकादयः।\nलोकसंग्रहमेवापि सम्पश्यन्कर्तुमर्हसि।।",
+      "transliteration": "karmaṇaiva hi saṁsiddhim āsthitā janakādayaḥ\nloka-saṅgraham evāpi sampaśyan kartum arhasi",
+      "translation": "Indeed, Janaka and others attained perfection by action. You should also perform action for the welfare of the world.",
+      "word_meanings": [
+        {
+          "word": "karmaṇā eva",
+          "meaning": "by action alone"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "saṁsiddhim",
+          "meaning": "perfection"
+        },
+        {
+          "word": "āsthitāḥ",
+          "meaning": "attained"
+        },
+        {
+          "word": "janaka-ādayaḥ",
+          "meaning": "Janaka and others"
+        },
+        {
+          "word": "loka-saṅgraham",
+          "meaning": "the welfare of the world"
+        },
+        {
+          "word": "eva api",
+          "meaning": "also indeed"
+        },
+        {
+          "word": "sampaśyan",
+          "meaning": "seeing, considering"
+        },
+        {
+          "word": "kartum",
+          "meaning": "to perform"
+        },
+        {
+          "word": "arhasi",
+          "meaning": "you ought"
+        }
+      ],
+      "commentary": "Krishna provides historical examples to support his argument. He cites King Janaka, a self-realized king who still performed his duties for the 'loka-saṅgraham' (welfare of the world). This shows that even an enlightened person has a duty to act, not for personal gain but to set a good example for others. This verse is a powerful moral and social argument for Arjuna to re-engage with his duty.",
+      "key_concepts": [
+        "janaka",
+        "loka-saṅgraham",
+        "role model",
+        "social duty"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "duty",
+        "society"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 21,
+      "sanskrit_text": "यद्यदाचरति श्रेष्ठस्तत्तदेवेतरो जनः।\nस यत्प्रमाणं कुरुते लोकस्तदनुवर्तते।।",
+      "transliteration": "yad yad ācarati śreṣṭhas tat tad evetaro janaḥ\nsa yat pramāṇaṁ kurute lokas tad anuvartate",
+      "translation": "Whatever a great man does, others also do. Whatever standard he sets, the world follows.",
+      "word_meanings": [
+        {
+          "word": "yat yat",
+          "meaning": "whatever"
+        },
+        {
+          "word": "ācarati",
+          "meaning": "does"
+        },
+        {
+          "word": "śreṣṭhaḥ",
+          "meaning": "a great man"
+        },
+        {
+          "word": "tat tat eva",
+          "meaning": "that and that only"
+        },
+        {
+          "word": "itaraḥ",
+          "meaning": "other"
+        },
+        {
+          "word": "janaḥ",
+          "meaning": "person"
+        },
+        {
+          "word": "saḥ",
+          "meaning": "he"
+        },
+        {
+          "word": "yat",
+          "meaning": "what"
+        },
+        {
+          "word": "pramāṇam",
+          "meaning": "standard"
+        },
+        {
+          "word": "kurute",
+          "meaning": "establishes"
+        },
+        {
+          "word": "lokaḥ",
+          "meaning": "the world"
+        },
+        {
+          "word": "tat",
+          "meaning": "that"
+        },
+        {
+          "word": "anuvartate",
+          "meaning": "follows"
+        }
+      ],
+      "commentary": "This verse is a profound statement on the power of leadership. Krishna explains that the actions of a 'śreṣṭha' (great person) serve as a standard for the rest of society. He is telling Arjuna that his decision to fight or not will have a profound impact on everyone else. If a great warrior like Arjuna abandons his duty, it will set a negative precedent for all others, leading to chaos and unrighteousness in society.",
+      "key_concepts": [
+        "power of example",
+        "leadership",
+        "standard for society"
+      ],
+      "tags": [
+        "krishna",
+        "leadership",
+        "dharma",
+        "society"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 22,
+      "sanskrit_text": "न मे पार्थास्ति कर्तव्यं त्रिषु लोकेषु किञ्चन।\nनानावाप्तमवाप्तव्यं वर्त एव च कर्मणि।।",
+      "transliteration": "na me pārthāsti kartavyaṁ triṣu lokeṣu kiñcana\nnānavāptam avāptavyaṁ varta eva ca karmaṇi",
+      "translation": "O son of Pritha, there is no duty prescribed for Me in the three worlds. There is nothing unattained by Me that I need to attain, yet I am always engaged in action.",
+      "word_meanings": [
+        {
+          "word": "na me",
+          "meaning": "not to me"
+        },
+        {
+          "word": "pārtha",
+          "meaning": "O son of Pritha"
+        },
+        {
+          "word": "asti",
+          "meaning": "is"
+        },
+        {
+          "word": "kartavyam",
+          "meaning": "duty to be done"
+        },
+        {
+          "word": "triṣu",
+          "meaning": "in the three"
+        },
+        {
+          "word": "lokeṣu",
+          "meaning": "worlds"
+        },
+        {
+          "word": "kiñcana",
+          "meaning": "anything"
+        },
+        {
+          "word": "na anavāptam",
+          "meaning": "nor anything unattained"
+        },
+        {
+          "word": "avāptavyam",
+          "meaning": "to be attained"
+        },
+        {
+          "word": "varte",
+          "meaning": "I am engaged"
+        },
+        {
+          "word": "eva ca",
+          "meaning": "certainly also"
+        },
+        {
+          "word": "karmaṇi",
+          "meaning": "in action"
+        }
+      ],
+      "commentary": "Krishna uses himself as the ultimate example of a 'Karma Yogi.' As the Supreme Lord, he is beyond the need for action as he has no desires to fulfill. Yet, he is 'vartate' (engaged) in 'karma' (action). This is a powerful demonstration that action is not about personal gain but about cosmic responsibility. This example of God's action is meant to inspire Arjuna to perform his duty without being attached to the results.",
+      "key_concepts": [
+        "krishna as role model",
+        "cosmic responsibility",
+        "duty without need"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "divine action",
+        "philosophy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 23,
+      "sanskrit_text": "यदि ह्यहं न वर्तेयं जातु कर्मण्यतन्द्रितः।\nमम वर्त्मानुवर्तन्ते मनुष्याः पार्थ सर्वशः।।",
+      "transliteration": "yadi hy ahaṁ na varteyaṁ jātu karmaṇy atandritaḥ\nmama vartmānuvartante manuṣyāḥ pārtha sarvaśaḥ",
+      "translation": "For if I were not to be engaged in action, O son of Pritha, all men would in every way follow my path.",
+      "word_meanings": [
+        {
+          "word": "yadi",
+          "meaning": "if"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "aham",
+          "meaning": "I"
+        },
+        {
+          "word": "na varteyam",
+          "meaning": "I would not be engaged"
+        },
+        {
+          "word": "jātu",
+          "meaning": "at any time"
+        },
+        {
+          "word": "karmaṇi",
+          "meaning": "in action"
+        },
+        {
+          "word": "atandritaḥ",
+          "meaning": "without weariness"
+        },
+        {
+          "word": "mama",
+          "meaning": "my"
+        },
+        {
+          "word": "vartma",
+          "meaning": "path"
+        },
+        {
+          "word": "anuvartante",
+          "meaning": "would follow"
+        },
+        {
+          "word": "manuṣyāḥ",
+          "meaning": "men"
+        },
+        {
+          "word": "pārtha",
+          "meaning": "O son of Pritha"
+        },
+        {
+          "word": "sarvaśaḥ",
+          "meaning": "in every way"
+        }
+      ],
+      "commentary": "Krishna explains the direct consequence of his own potential inaction. He warns Arjuna that if the Supreme Being were to stop acting, all of humanity would follow suit. This verse emphasizes the importance of a leader's example and how a lack of action from a position of power would lead to a catastrophic breakdown of order and duty in the world.",
+      "key_concepts": [
+        "consequences of divine inaction",
+        "leader's example",
+        "breakdown of order"
+      ],
+      "tags": [
+        "krishna",
+        "duty",
+        "leadership",
+        "society"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 24,
+      "sanskrit_text": "उत्सीदेयुरिमे लोका न कुर्यां कर्म चेदहम्।\nसङ्करस्य च कर्ता स्यामुपह न्यामिमाः प्रजाः।।",
+      "transliteration": "utsīdeyur ime lokā na kuryāṁ karma ced aham\nsaṅkarasya ca kartā syām upahanyām imāḥ prajāḥ",
+      "translation": "These worlds would perish if I did not perform action. I would be the cause of creating unwanted population and would destroy these beings.",
+      "word_meanings": [
+        {
+          "word": "utsīdeyuḥ",
+          "meaning": "would perish"
+        },
+        {
+          "word": "ime",
+          "meaning": "these"
+        },
+        {
+          "word": "lokāḥ",
+          "meaning": "worlds"
+        },
+        {
+          "word": "na kuryām",
+          "meaning": "I would not perform"
+        },
+        {
+          "word": "karma",
+          "meaning": "action"
+        },
+        {
+          "word": "cet",
+          "meaning": "if"
+        },
+        {
+          "word": "aham",
+          "meaning": "I"
+        },
+        {
+          "word": "saṅkarasya",
+          "meaning": "of the mixing of classes"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "kartā",
+          "meaning": "the creator"
+        },
+        {
+          "word": "syām",
+          "meaning": "I would be"
+        },
+        {
+          "word": "upahanyām",
+          "meaning": "I would destroy"
+        },
+        {
+          "word": "imāḥ",
+          "meaning": "these"
+        },
+        {
+          "word": "prajāḥ",
+          "meaning": "beings"
+        }
+      ],
+      "commentary": "Krishna's argument against inaction is taken to a cosmic scale. He states that his own inaction would lead to 'utsīdeyuḥ' (perishing of the worlds) and 'saṅkarasya' (mixing of social orders). This is a powerful and final argument against Arjuna's desire for inaction, showing him that his choice is not just a personal one but has cosmic consequences. His duty is not optional; it is essential for the preservation of the universe.",
+      "key_concepts": [
+        "cosmic consequence",
+        "destruction of worlds",
+        "social order",
+        "preservation"
+      ],
+      "tags": [
+        "krishna",
+        "duty",
+        "cosmology",
+        "philosophy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 25,
+      "sanskrit_text": "सक्ताः कर्मण्यविद्वांसो यथा कुर्वन्ति भारत।\nकुर्याद्विद्वांस्तथासक्तश्चिकीर्षुर्लोकसंग्रहम्।।",
+      "transliteration": "saktāḥ karmaṇy avidvāṁso yathā kurvanti bhārata\nkuryād vidvāṁs tathāsaktaś cikīrṣur loka-saṅgraham",
+      "translation": "O Bharata, just as the ignorant act with attachment to action, so should the wise act, but without attachment, desiring to maintain the welfare of the world.",
+      "word_meanings": [
+        {
+          "word": "saktāḥ",
+          "meaning": "attached"
+        },
+        {
+          "word": "karmaṇi",
+          "meaning": "in action"
+        },
+        {
+          "word": "avidvāṁsaḥ",
+          "meaning": "the ignorant"
+        },
+        {
+          "word": "yathā",
+          "meaning": "just as"
+        },
+        {
+          "word": "kurvanti",
+          "meaning": "they do"
+        },
+        {
+          "word": "bhārata",
+          "meaning": "O Bharata"
+        },
+        {
+          "word": "kuryāt",
+          "meaning": "should perform"
+        },
+        {
+          "word": "vidvān",
+          "meaning": "the wise"
+        },
+        {
+          "word": "tathā",
+          "meaning": "similarly"
+        },
+        {
+          "word": "asaktaḥ",
+          "meaning": "without attachment"
+        },
+        {
+          "word": "cikīrṣuḥ",
+          "meaning": "desiring to do"
+        },
+        {
+          "word": "loka-saṅgraham",
+          "meaning": "the welfare of the world"
+        }
+      ],
+      "commentary": "Krishna provides a direct instruction on how to perform 'Karma Yoga.' He explains that a wise person ('vidvān') performs the same actions as an ignorant person ('avidvāṁsaḥ'), but the difference lies in their attitude. The wise person acts 'asaktaḥ' (without attachment), and their goal is 'loka-saṅgraham' (welfare of the world). This is the key to transforming ordinary action into a spiritual practice.",
+      "key_concepts": [
+        "wise vs. ignorant",
+        "non-attachment",
+        "welfare of the world"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "duty",
+        "society"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 26,
+      "sanskrit_text": "न बुद्धिभेदं जनयेदज्ञानां कर्मसङ्गिनाम्।\nजोषयेत्सर्वकर्माणि विद्वान्युक्तः समाचरन्।।",
+      "transliteration": "na buddhi-bhedaṁ janayed ajñānāṁ karma-saṅginām\njoṣayet sarva-karmāṇi vidvān yuktaḥ samācaran",
+      "translation": "The wise man should not disturb the minds of the ignorant who are attached to actions. He should encourage them to perform all actions, himself acting with devotion.",
+      "word_meanings": [
+        {
+          "word": "na",
+          "meaning": "not"
+        },
+        {
+          "word": "buddhi-bhedam",
+          "meaning": "a division of intellect"
+        },
+        {
+          "word": "janayet",
+          "meaning": "should cause"
+        },
+        {
+          "word": "ajñānām",
+          "meaning": "of the ignorant"
+        },
+        {
+          "word": "karma-saṅginām",
+          "meaning": "who are attached to action"
+        },
+        {
+          "word": "joṣayet",
+          "meaning": "should encourage"
+        },
+        {
+          "word": "sarva-karmāṇi",
+          "meaning": "all actions"
+        },
+        {
+          "word": "vidvān",
+          "meaning": "the wise"
+        },
+        {
+          "word": "yuktaḥ",
+          "meaning": "united"
+        },
+        {
+          "word": "samācaran",
+          "meaning": "performing properly"
+        }
+      ],
+      "commentary": "Krishna provides a practical instruction on how an enlightened person should interact with society. He warns against causing a 'buddhi-bhedaṁ' (division of intellect) among the ignorant. A wise person should not confuse others by telling them to give up action, as this would lead them astray. Instead, the wise should continue to perform their duty perfectly to serve as a role model, gently guiding others toward the right path.",
+      "key_concepts": [
+        "social responsibility",
+        "not disturbing the ignorant",
+        "role model"
+      ],
+      "tags": [
+        "krishna",
+        "leadership",
+        "society",
+        "duty"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 27,
+      "sanskrit_text": "प्रकृतेः क्रियमाणानि गुणैः कर्माणि सर्वशः।\nअहंकारविमूढात्मा कर्ताहमिति मन्यते।।",
+      "transliteration": "prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ\nahaṅkāra-vimūḍhātmā kartāham iti manyate",
+      "translation": "All actions are performed by the modes of material nature. He who is deluded by ego thinks, 'I am the doer.'",
+      "word_meanings": [
+        {
+          "word": "prakṛteḥ",
+          "meaning": "of nature"
+        },
+        {
+          "word": "kriyamāṇāni",
+          "meaning": "are being performed"
+        },
+        {
+          "word": "guṇaiḥ",
+          "meaning": "by the modes"
+        },
+        {
+          "word": "karmāṇi",
+          "meaning": "actions"
+        },
+        {
+          "word": "sarvaśaḥ",
+          "meaning": "completely"
+        },
+        {
+          "word": "ahaṅkāra-vimūḍha-ātmā",
+          "meaning": "with an intellect deluded by ego"
+        },
+        {
+          "word": "kartā",
+          "meaning": "the doer"
+        },
+        {
+          "word": "aham",
+          "meaning": "I"
+        },
+        {
+          "word": "iti",
+          "meaning": "thus"
+        },
+        {
+          "word": "manyate",
+          "meaning": "he thinks"
+        }
+      ],
+      "commentary": "Krishna explains the illusion of being the 'doer.' He states that all actions are performed by the 'guṇas' (modes of nature). It is only the ego-deluded mind that thinks 'I am the doer' ('kartāham'). This is a profound metaphysical statement that provides the basis for detaching from the results of one's actions. If one is not the doer, one cannot be held responsible for the consequences.",
+      "key_concepts": [
+        "non-doership",
+        "ego",
+        "gunas",
+        "delusion"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "philosophy",
+        "ego"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 28,
+      "sanskrit_text": "तत्त्ववित्तु महाबाहो गुणकर्मविभागयोः।\nगुणा गुणेषु वर्तन्त इति मत्वा न सज्जते।।",
+      "transliteration": "tattva-vit tu mahā-bāho guṇa-karma-vibhāgayoḥ\nguṇā guṇeṣu vartanta iti matvā na sajjate",
+      "translation": "But, O mighty-armed (Arjuna), the knower of the truth of the distinction between the modes and actions, knowing that the modes are acting on the modes, does not become attached.",
+      "word_meanings": [
+        {
+          "word": "tattva-vit",
+          "meaning": "the knower of the truth"
+        },
+        {
+          "word": "tu",
+          "meaning": "but"
+        },
+        {
+          "word": "mahā-bāho",
+          "meaning": "O mighty-armed"
+        },
+        {
+          "word": "guṇa-karma-vibhāgayoḥ",
+          "meaning": "of the distinction between the modes and actions"
+        },
+        {
+          "word": "guṇāḥ",
+          "meaning": "the modes"
+        },
+        {
+          "word": "guṇeṣu",
+          "meaning": "on the modes"
+        },
+        {
+          "word": "vartante",
+          "meaning": "act"
+        },
+        {
+          "word": "iti",
+          "meaning": "thus"
+        },
+        {
+          "word": "matvā",
+          "meaning": "knowing"
+        },
+        {
+          "word": "na sajjate",
+          "meaning": "does not become attached"
+        }
+      ],
+      "commentary": "Krishna explains the state of a true 'tattva-vit' (knower of the truth). This person understands that it is the 'guṇas' (modes) that are interacting with other 'guṇas' and that the Self is a detached observer. This knowledge allows them to act without attachment, as they know that they are not the true doer. This is the intellectual basis for performing 'Karma Yoga' in its truest form.",
+      "key_concepts": [
+        "knower of truth",
+        "guṇa",
+        "non-attachment"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "philosophy",
+        "enlightenment"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 29,
+      "sanskrit_text": "प्रकृतेर्गुणसंमूढाः सज्जन्ते गुणकर्मसु।\nतानकृत्स्नविदो मन्दान्कृत्स्नविन्न विचालयेत्।।",
+      "transliteration": "prakṛter guṇa-saṁmūḍhāḥ sajjante guṇa-karmasu\ntān akṛtsna-vido mandān kṛtsna-vin na vicālayet",
+      "translation": "Those who are deluded by the modes of nature become attached to the actions of the modes. The wise person, who knows the whole truth, should not disturb these ignorant people of slow understanding.",
+      "word_meanings": [
+        {
+          "word": "prakṛteḥ",
+          "meaning": "of nature"
+        },
+        {
+          "word": "guṇa-saṁmūḍhāḥ",
+          "meaning": "deluded by the modes"
+        },
+        {
+          "word": "sajjante",
+          "meaning": "they become attached"
+        },
+        {
+          "word": "guṇa-karmasu",
+          "meaning": "to the actions of the modes"
+        },
+        {
+          "word": "tān",
+          "meaning": "those"
+        },
+        {
+          "word": "akṛtsna-vidaḥ",
+          "meaning": "of incomplete knowledge"
+        },
+        {
+          "word": "mandān",
+          "meaning": "of slow understanding"
+        },
+        {
+          "word": "kṛtsna-vit",
+          "meaning": "the knower of the whole truth"
+        },
+        {
+          "word": "na vicālayet",
+          "meaning": "should not disturb"
+        }
+      ],
+      "commentary": "Krishna re-emphasizes the social responsibility of the wise. He explains that those who are 'guṇa-saṁmūḍhāḥ' (deluded by the modes) are attached to action because of their ignorance. The 'kṛtsna-vit' (knower of the whole truth) should not disrupt their lives by telling them to abandon action, as this would be a disservice to them. The wise person acts as an example, not as a radical reformer.",
+      "key_concepts": [
+        "social responsibility",
+        "ignorant vs. wise",
+        "delusion",
+        "non-interference"
+      ],
+      "tags": [
+        "krishna",
+        "leadership",
+        "dharma",
+        "society"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 30,
+      "sanskrit_text": "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा।\nनिराशीर्निर्ममो भूत्वा युध्यस्व विगतज्वरः।।",
+      "transliteration": "mayi sarvāṇi karmāṇi saṁnyasyādhyātma-cetasā\nnirāśīr nirmamo bhūtvā yudhyasva vigata-jvaraḥ",
+      "translation": "Surrendering all your actions to Me, with your mind fixed on the Self, free from hope and a sense of 'mine,' and without feverish anxiety, fight!",
+      "word_meanings": [
+        {
+          "word": "mayi",
+          "meaning": "in Me"
+        },
+        {
+          "word": "sarvāṇi",
+          "meaning": "all"
+        },
+        {
+          "word": "karmāṇi",
+          "meaning": "actions"
+        },
+        {
+          "word": "saṁnyasya",
+          "meaning": "surrendering"
+        },
+        {
+          "word": "adhyātma-cetasā",
+          "meaning": "with a spiritual mind"
+        },
+        {
+          "word": "nirāśīḥ",
+          "meaning": "free from hope"
+        },
+        {
+          "word": "nirmamaḥ",
+          "meaning": "without a sense of 'mine'"
+        },
+        {
+          "word": "bhūtvā",
+          "meaning": "having become"
+        },
+        {
+          "word": "yudhyasva",
+          "meaning": "fight"
+        },
+        {
+          "word": "vigata-jvaraḥ",
+          "meaning": "without feverish anxiety"
+        }
+      ],
+      "commentary": "This verse is a powerful summary and direct command from Krishna. It brings together all the previous teachings on Karma Yoga. He instructs Arjuna to surrender his actions to God ('mayi sarvāṇi karmāṇi saṁnyasya'), to be free from hope for results ('nirāśīḥ'), and to be without a sense of possessiveness ('nirmamaḥ'). The final command is 'yudhyasva' (fight), showing that this spiritual path is fully compatible with action in the world.",
+      "key_concepts": [
+        "surrender to god",
+        "non-attachment",
+        "freedom from anxiety",
+        "karma yoga"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "duty",
+        "surrender"
+      ],
+      "is_featured": true,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 31,
+      "sanskrit_text": "ये मे मतमिदं नित्यमनुतिष्ठन्ति मानवाः।\nश्रद्धावन्तोऽनसूयन्तो मुच्यन्ते तेऽपि कर्मभिः।।",
+      "transliteration": "ye me matam idaṁ nityam anutiṣṭhanti mānavāḥ\nśraddhāvanto 'nasūyanto mucyante te 'pi karmabhiḥ",
+      "translation": "Those human beings who, full of faith and without envy, constantly practice this teaching of Mine, are also freed from the bondage of their actions.",
+      "word_meanings": [
+        {
+          "word": "ye",
+          "meaning": "those who"
+        },
+        {
+          "word": "me",
+          "meaning": "My"
+        },
+        {
+          "word": "matam",
+          "meaning": "teaching"
+        },
+        {
+          "word": "idam",
+          "meaning": "this"
+        },
+        {
+          "word": "nityam",
+          "meaning": "constantly"
+        },
+        {
+          "word": "anutiṣṭhanti",
+          "meaning": "practice"
+        },
+        {
+          "word": "mānavāḥ",
+          "meaning": "human beings"
+        },
+        {
+          "word": "śraddhā-vantaḥ",
+          "meaning": "full of faith"
+        },
+        {
+          "word": "anasūyantaḥ",
+          "meaning": "without envy"
+        },
+        {
+          "word": "mucyante",
+          "meaning": "are freed"
+        },
+        {
+          "word": "te api",
+          "meaning": "they also"
+        },
+        {
+          "word": "karmabhiḥ",
+          "meaning": "from the bondage of actions"
+        }
+      ],
+      "commentary": "Krishna provides the spiritual benefits for those who follow his teachings. He says that those who practice 'Karma Yoga' with 'śraddhā' (faith) and 'anasūyanto' (without envy) will be 'mucyante' (freed) from the bondage of 'karma.' This verse shows that the path of 'Karma Yoga' is not a difficult intellectual exercise but a path of devotion and faith that leads to ultimate liberation.",
+      "key_concepts": [
+        "faith",
+        "freedom from bondage",
+        "lack of envy"
+      ],
+      "tags": [
+        "krishna",
+        "karma yoga",
+        "liberation",
+        "devotion"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 32,
+      "sanskrit_text": "ये त्वेतदभ्यसूयन्तो नानुतिष्ठन्ति मे मतम्।\nसर्वज्ञानविमूढांस्तान्विद्धि नष्टानचेतसः।।",
+      "transliteration": "ye tv etad abhyasūyanto nānutiṣṭhanti me matam\nsarva-jñāna-vimūḍhāṁs tān viddhi naṣṭān acetasaḥ",
+      "translation": "But those who, out of envy, disregard this teaching of Mine and do not practice it, know them to be completely deluded in all knowledge, senseless, and lost.",
+      "word_meanings": [
+        {
+          "word": "ye tu",
+          "meaning": "but those who"
+        },
+        {
+          "word": "etat",
+          "meaning": "this"
+        },
+        {
+          "word": "abhyasūyantaḥ",
+          "meaning": "out of envy"
+        },
+        {
+          "word": "na anutiṣṭhanti",
+          "meaning": "do not practice"
+        },
+        {
+          "word": "me",
+          "meaning": "My"
+        },
+        {
+          "word": "matam",
+          "meaning": "teaching"
+        },
+        {
+          "word": "sarva-jñāna-vimūḍhān",
+          "meaning": "deluded in all knowledge"
+        },
+        {
+          "word": "tān",
+          "meaning": "them"
+        },
+        {
+          "word": "viddhi",
+          "meaning": "know"
+        },
+        {
+          "word": "naṣṭān",
+          "meaning": "lost"
+        },
+        {
+          "word": "acetasaḥ",
+          "meaning": "senseless"
+        }
+      ],
+      "commentary": "Krishna provides a strong warning against rejecting his teachings. He states that those who do so out of 'abhyasūyanto' (envy or jealousy) are 'sarva-jñāna-vimūḍhāṁs' (completely deluded in all knowledge). This is a strong statement that shows Krishna is not just giving a philosophical opinion but is revealing a universal truth. By rejecting it, one is not just rejecting a philosophy but is rejecting the very truth of their own being.",
+      "key_concepts": [
+        "envy",
+        "delusion",
+        "rejection of truth"
+      ],
+      "tags": [
+        "krishna",
+        "philosophy",
+        "ignorance",
+        "wisdom"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 33,
+      "sanskrit_text": "सदृशं चेष्टते स्वस्याः प्रकृतेर्ज्ञानवानपि।\nप्रकृतिं यान्ति भूतानि निग्रहः किं करिष्यति।।",
+      "transliteration": "sadṛśaṁ ceṣṭate svasyāḥ prakṛter jñānavān api\nprakṛtiṁ yānti bhūtāni nigrahaḥ kiṁ kariṣyati",
+      "translation": "Even a wise person acts according to his own nature. All beings follow their own nature. What can repression accomplish?",
+      "word_meanings": [
+        {
+          "word": "sadṛśam",
+          "meaning": "according to"
+        },
+        {
+          "word": "ceṣṭate",
+          "meaning": "acts"
+        },
+        {
+          "word": "svasyāḥ",
+          "meaning": "his own"
+        },
+        {
+          "word": "prakṛteḥ",
+          "meaning": "nature"
+        },
+        {
+          "word": "jñāna-vān api",
+          "meaning": "even a wise person"
+        },
+        {
+          "word": "prakṛtim",
+          "meaning": "nature"
+        },
+        {
+          "word": "yānti",
+          "meaning": "follow"
+        },
+        {
+          "word": "bhūtāni",
+          "meaning": "beings"
+        },
+        {
+          "word": "nigrahaḥ",
+          "meaning": "repression, control"
+        },
+        {
+          "word": "kim",
+          "meaning": "what"
+        },
+        {
+          "word": "kariṣyati",
+          "meaning": "will it do"
+        }
+      ],
+      "commentary": "Krishna explains that all beings, even the wise, are compelled to act according to their nature ('prakṛti'). He states that a person cannot force themselves to be something they are not. This is a crucial point that goes against the idea of mere suppression ('nigrahaḥ'). The solution is not to repress one's nature but to purify it and channel its energy in the right direction, which is the very essence of 'Karma Yoga'.",
+      "key_concepts": [
+        "nature (prakrti)",
+        "inevitability of nature",
+        "repression",
+        "self-purification"
+      ],
+      "tags": [
+        "krishna",
+        "philosophy",
+        "nature",
+        "self-control"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 34,
+      "sanskrit_text": "इन्द्रियस्येन्द्रियस्यार्थे रागद्वेषौ व्यवस्थितौ।\nतयोर्न वशमागच्छेत्तौ ह्यस्य परिपन्थिनौ।।",
+      "transliteration": "indriyasyendriyasyārthe rāga-dveṣau vyavasthitau\ntayor na vaśam āgacchet tau hy asya paripanthinau",
+      "translation": "Attachment and aversion for the objects of the senses are located in each and every sense. One should not come under their control, for they are one's enemies on the path.",
+      "word_meanings": [
+        {
+          "word": "indriyasya indriyasya",
+          "meaning": "of each and every sense"
+        },
+        {
+          "word": "arthe",
+          "meaning": "in the object"
+        },
+        {
+          "word": "rāga-dveṣau",
+          "meaning": "attachment and aversion"
+        },
+        {
+          "word": "vyavasthitau",
+          "meaning": "are situated"
+        },
+        {
+          "word": "tayoḥ",
+          "meaning": "of them"
+        },
+        {
+          "word": "na vaśam",
+          "meaning": "not under control"
+        },
+        {
+          "word": "āgacchet",
+          "meaning": "one should come"
+        },
+        {
+          "word": "tau",
+          "meaning": "they"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "asya",
+          "meaning": "of this person"
+        },
+        {
+          "word": "paripanthinau",
+          "meaning": "are the enemies"
+        }
+      ],
+      "commentary": "Krishna identifies the real enemies on the spiritual path: 'rāga' (attachment) and 'dveṣa' (aversion). These dualities are the root cause of all suffering and the reason why a person is bound by their actions. Krishna warns Arjuna to not come under their control, as they are the true obstacles to liberation. The battle he needs to fight is not on the external battlefield but within his own mind against these internal enemies.",
+      "key_concepts": [
+        "attachment and aversion",
+        "internal enemies",
+        "dualities"
+      ],
+      "tags": [
+        "krishna",
+        "philosophy",
+        "detachment",
+        "mind"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 35,
+      "sanskrit_text": "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वधर्मे निधनं श्रेयः परधर्मो भयावहः।।",
+      "transliteration": "śreyān sva-dharmo viguṇaḥ para-dharmāt su-anuṣṭhitāt\nsva-dharme nidhanaṁ śreyaḥ para-dharmo bhayāvahaḥ",
+      "translation": "It is far better to perform one's own duty, even imperfectly, than to perform another's duty, even perfectly. It is better to die in the performance of one's own duty, for the duty of another is dangerous.",
+      "word_meanings": [
+        {
+          "word": "śreyān",
+          "meaning": "better"
+        },
+        {
+          "word": "sva-dharmaḥ",
+          "meaning": "one's own duty"
+        },
+        {
+          "word": "viguṇaḥ",
+          "meaning": "imperfectly performed"
+        },
+        {
+          "word": "para-dharmāt",
+          "meaning": "than another's duty"
+        },
+        {
+          "word": "su-anuṣṭhitāt",
+          "meaning": "well-performed"
+        },
+        {
+          "word": "sva-dharme",
+          "meaning": "in one's own duty"
+        },
+        {
+          "word": "nidhanam",
+          "meaning": "death"
+        },
+        {
+          "word": "śreyaḥ",
+          "meaning": "is better"
+        },
+        {
+          "word": "para-dharmaḥ",
+          "meaning": "another's duty"
+        },
+        {
+          "word": "bhayāvahaḥ",
+          "meaning": "is dangerous"
+        }
+      ],
+      "commentary": "This is a key verse on the concept of 'Svadharma' (one's own duty). Krishna states that it is more virtuous to perform one's own natural duty, even with flaws, than to perform someone else's perfectly. He says that to die while performing 'svadharma' is a higher path. This is a direct answer to Arjuna's crisis, as it tells him that his duty as a warrior is his sacred path, and to abandon it for the 'dharma' of a renunciate would be 'bhayāvahaḥ' (dangerous) and spiritually counterproductive.",
+      "key_concepts": [
+        "svadharma",
+        "duty",
+        "danger of other's duty",
+        "warrior's path"
+      ],
+      "tags": [
+        "krishna",
+        "dharma",
+        "duty",
+        "karma yoga"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 36,
+      "sanskrit_text": "अर्जुन उवाच।\nअथ केन प्रयुक्तोऽयं पापं चरति पूरुषः।\nअनिच्छन्नपि वार्ष्णेय बलादिव नियोजितः।।",
+      "transliteration": "arjuna uvāca\natha kena prayukto 'yaṁ pāpaṁ carati pūruṣaḥ\nanicchann api vārṣṇeya balād iva niyojitaḥ",
+      "translation": "Arjuna said: O descendant of Vrishni (Krishna), what is it that impels a person to commit sinful acts, even unwillingly, as if by force?",
+      "word_meanings": [
+        {
+          "word": "arjunaḥ uvāca",
+          "meaning": "Arjuna said"
+        },
+        {
+          "word": "atha",
+          "meaning": "now"
+        },
+        {
+          "word": "kena",
+          "meaning": "by what"
+        },
+        {
+          "word": "prayuktaḥ",
+          "meaning": "impelled"
+        },
+        {
+          "word": "ayam",
+          "meaning": "this"
+        },
+        {
+          "word": "pāpam",
+          "meaning": "sin"
+        },
+        {
+          "word": "carati",
+          "meaning": "commits"
+        },
+        {
+          "word": "pūruṣaḥ",
+          "meaning": "a person"
+        },
+        {
+          "word": "anicchann api",
+          "meaning": "even unwillingly"
+        },
+        {
+          "word": "vārṣṇeya",
+          "meaning": "O descendant of Vrishni (Krishna)"
+        },
+        {
+          "word": "balāt iva",
+          "meaning": "as if by force"
+        },
+        {
+          "word": "niyojitaḥ",
+          "meaning": "compelled"
+        }
+      ],
+      "commentary": "Arjuna, having listened to Krishna's teachings on duty and the modes of nature, now asks a new question. He acknowledges that people commit sins, but he wants to know the psychological root of this behavior. He asks what 'impels' a person to act against their will, as if by 'balāt' (force). This question leads Krishna to a new topic: the nature of desire and anger.",
+      "key_concepts": [
+        "sin",
+        "impulsion",
+        "unwilling action",
+        "psychological root of sin"
+      ],
+      "tags": [
+        "arjuna",
+        "krishna",
+        "psychology",
+        "sin"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 37,
+      "sanskrit_text": "श्रीभगवानुवाच।\nकाम एष क्रोध एष रजोगुणसमुद्भवः।\nमहाशनो महापाप्मा विद्ध्येनमिह वैरिणम्।।",
+      "transliteration": "śrī-bhagavān uvāca\nkāma eṣa krodha eṣa rajo-guṇa-samudbhavaḥ\nmahāśano mahā-pāpmā viddhy enam iha vairiṇam",
+      "translation": "The Supreme Lord said: It is desire, it is anger, born of the mode of passion, which is a great consumer and a great sinner. Know this to be the enemy here.",
+      "word_meanings": [
+        {
+          "word": "śrī-bhagavān uvāca",
+          "meaning": "The Supreme Lord said"
+        },
+        {
+          "word": "kāmaḥ",
+          "meaning": "desire"
+        },
+        {
+          "word": "eṣaḥ",
+          "meaning": "this"
+        },
+        {
+          "word": "krodhaḥ",
+          "meaning": "anger"
+        },
+        {
+          "word": "eṣaḥ",
+          "meaning": "this"
+        },
+        {
+          "word": "rajaḥ-guṇa-samudbhavaḥ",
+          "meaning": "born of the mode of passion"
+        },
+        {
+          "word": "mahāśanaḥ",
+          "meaning": "a great consumer, insatiable"
+        },
+        {
+          "word": "mahā-pāpmā",
+          "meaning": "a great sinner"
+        },
+        {
+          "word": "viddhi",
+          "meaning": "know"
+        },
+        {
+          "word": "enam",
+          "meaning": "this"
+        },
+        {
+          "word": "iha",
+          "meaning": "here"
+        },
+        {
+          "word": "vairiṇam",
+          "meaning": "as the enemy"
+        }
+      ],
+      "commentary": "Krishna directly answers Arjuna's question. He identifies 'kāma' (desire) and 'krodha' (anger) as the real culprits behind sinful actions. He states that they are born of the 'rajo-guṇa' (mode of passion) and are 'mahā-pāpmā' (great sinners) and 'mahāśanaḥ' (insatiable). This verse provides the psychological explanation for Arjuna's turmoil and identifies the true enemy that he must fight, which is within him, not on the battlefield.",
+      "key_concepts": [
+        "desire and anger",
+        "mode of passion",
+        "insatiable enemy"
+      ],
+      "tags": [
+        "krishna",
+        "psychology",
+        "desire",
+        "sin"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 38,
+      "sanskrit_text": "धूमेनाव्रियते वह्निर्यथादर्शो मलेन च।\nयथोल्बेनावृतो गर्भस्तथा तेनेदमावृतम्।।",
+      "transliteration": "dhūmenāvriyate vahnir yathādarśo malena ca\nyatholbenāvṛto garbhas tathā tenedam āvṛtam",
+      "translation": "Just as fire is covered by smoke, a mirror by dust, or an embryo is covered by the womb, so too is this knowledge covered by that (desire).",
+      "word_meanings": [
+        {
+          "word": "dhūmena",
+          "meaning": "by smoke"
+        },
+        {
+          "word": "āvriyate",
+          "meaning": "is covered"
+        },
+        {
+          "word": "vahniḥ",
+          "meaning": "fire"
+        },
+        {
+          "word": "yathā",
+          "meaning": "as"
+        },
+        {
+          "word": "ādarśaḥ",
+          "meaning": "a mirror"
+        },
+        {
+          "word": "malena",
+          "meaning": "by dust"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "yathā",
+          "meaning": "as"
+        },
+        {
+          "word": "ulbena",
+          "meaning": "by the womb"
+        },
+        {
+          "word": "āvṛtaḥ",
+          "meaning": "covered"
+        },
+        {
+          "word": "garbhaḥ",
+          "meaning": "an embryo"
+        },
+        {
+          "word": "tathā",
+          "meaning": "so also"
+        },
+        {
+          "word": "tena",
+          "meaning": "by that (desire)"
+        },
+        {
+          "word": "idam",
+          "meaning": "this (knowledge)"
+        },
+        {
+          "word": "āvṛtam",
+          "meaning": "is covered"
+        }
+      ],
+      "commentary": "Krishna uses three powerful analogies to explain how 'desire' covers knowledge. The covering of fire by smoke is temporary, the covering of a mirror by dust is a bit more difficult to remove, and the covering of an embryo by the womb is almost complete. This shows that desire can obscure one's knowledge of the Self to varying degrees. Krishna is providing a clear and relatable understanding of the subtle ways in which desire operates.",
+      "key_concepts": [
+        "analogies for desire",
+        "covering of knowledge",
+        "degrees of delusion"
+      ],
+      "tags": [
+        "krishna",
+        "desire",
+        "philosophy",
+        "analogy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 39,
+      "sanskrit_text": "आवृतं ज्ञानमेतेन ज्ञानिनो नित्यवैरिणा।\nकामरूपेण कौन्तेय दुष्पूरेणानलेन च।।",
+      "transliteration": "āvṛtaṁ jñānam etena jñānino nitya-vairiṇā\nkāma-rūpeṇa kaunteya duṣpūreṇānalena ca",
+      "translation": "O son of Kunti, the knowledge of the wise is covered by this eternal enemy in the form of desire, which is insatiable like fire.",
+      "word_meanings": [
+        {
+          "word": "āvṛtam",
+          "meaning": "covered"
+        },
+        {
+          "word": "jñānam",
+          "meaning": "knowledge"
+        },
+        {
+          "word": "etena",
+          "meaning": "by this"
+        },
+        {
+          "word": "jñāninaḥ",
+          "meaning": "of the wise"
+        },
+        {
+          "word": "nitya-vairiṇā",
+          "meaning": "by the eternal enemy"
+        },
+        {
+          "word": "kāma-rūpeṇa",
+          "meaning": "in the form of desire"
+        },
+        {
+          "word": "kaunteya",
+          "meaning": "O son of Kunti"
+        },
+        {
+          "word": "duṣpūreṇa",
+          "meaning": "insatiable"
+        },
+        {
+          "word": "analena",
+          "meaning": "like fire"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        }
+      ],
+      "commentary": "Krishna explicitly names 'desire' ('kāma-rūpeṇa') as the 'nitya-vairiṇā' (eternal enemy). He says it is 'duṣpūreṇa' (insatiable) like a fire, which only grows when fuel is added to it. This verse drives home the point that desire is not a friend to be indulged but an enemy to be conquered. The battle Arjuna needs to fight is a spiritual one against this inner enemy.",
+      "key_concepts": [
+        "desire as eternal enemy",
+        "insatiable nature of desire",
+        "spiritual battle"
+      ],
+      "tags": [
+        "krishna",
+        "desire",
+        "enemy",
+        "spiritual battle"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 40,
+      "sanskrit_text": "इन्द्रियाणि मनो बुद्धिरस्याधिष्ठानमुच्यते।\nएतैर्विमोहयत्येष ज्ञानमावृत्य देहिनम्।।",
+      "transliteration": "indriyāṇi mano buddhir asyādhiṣṭhānam ucyate\netair vimohayaty eṣa jñānam āvṛtya dehinam",
+      "translation": "The senses, the mind, and the intellect are said to be its abode. Through these, this desire, covering knowledge, deludes the embodied soul.",
+      "word_meanings": [
+        {
+          "word": "indriyāṇi",
+          "meaning": "the senses"
+        },
+        {
+          "word": "manaḥ",
+          "meaning": "the mind"
+        },
+        {
+          "word": "buddhiḥ",
+          "meaning": "the intellect"
+        },
+        {
+          "word": "asya",
+          "meaning": "of this"
+        },
+        {
+          "word": "adhiṣṭhānam",
+          "meaning": "the abode"
+        },
+        {
+          "word": "ucyate",
+          "meaning": "is said"
+        },
+        {
+          "word": "etaiḥ",
+          "meaning": "by these"
+        },
+        {
+          "word": "vimohayati",
+          "meaning": "it deludes"
+        },
+        {
+          "word": "eṣaḥ",
+          "meaning": "this (desire)"
+        },
+        {
+          "word": "jñānam",
+          "meaning": "knowledge"
+        },
+        {
+          "word": "āvṛtya",
+          "meaning": "having covered"
+        },
+        {
+          "word": "dehinam",
+          "meaning": "the embodied soul"
+        }
+      ],
+      "commentary": "Krishna provides the 'adhiṣṭhānam' (abode or headquarters) of desire: the senses, the mind, and the intellect. This verse gives a clear psychological framework for spiritual practice. To conquer desire, one must start at its source—the mind and senses—rather than trying to fight it at a physical level. This is a practical instruction for Arjuna on how to begin his inner battle.",
+      "key_concepts": [
+        "abode of desire",
+        "senses, mind, intellect",
+        "delusion"
+      ],
+      "tags": [
+        "krishna",
+        "psychology",
+        "mind",
+        "desire"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 41,
+      "sanskrit_text": "तस्मात्त्वमिन्द्रियाण्यादौ नियम्य भरतर्षभ।\nपाप्मानं प्रजहि ह्येनं ज्ञानविज्ञाननाशनम्।।",
+      "transliteration": "tasmāt tvam indriyāṇy ādau niyamya bharatarṣabha\npāpmānaṁ prajahi hy enaṁ jñāna-vijñāna-nāśanam",
+      "translation": "Therefore, O best of the Bharatas (Arjuna), first of all, control the senses and strike down this great sinner, the destroyer of knowledge and realization.",
+      "word_meanings": [
+        {
+          "word": "tasmāt",
+          "meaning": "therefore"
+        },
+        {
+          "word": "tvam",
+          "meaning": "you"
+        },
+        {
+          "word": "indriyāṇi",
+          "meaning": "the senses"
+        },
+        {
+          "word": "ādau",
+          "meaning": "at first"
+        },
+        {
+          "word": "niyamya",
+          "meaning": "having controlled"
+        },
+        {
+          "word": "bharatarṣabha",
+          "meaning": "O best of the Bharatas (Arjuna)"
+        },
+        {
+          "word": "pāpmānam",
+          "meaning": "the great sinner"
+        },
+        {
+          "word": "prajahi",
+          "meaning": "strike down"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "enam",
+          "meaning": "this"
+        },
+        {
+          "word": "jñāna-vijñāna-nāśanam",
+          "meaning": "the destroyer of knowledge and realization"
+        }
+      ],
+      "commentary": "Krishna provides a direct, actionable instruction for Arjuna. He tells him to 'first of all, control the senses' ('indriyāṇy ādau niyamya') and then to 'strike down this great sinner' ('pāpmānaṁ prajahi'). This is a clear metaphor for Arjuna's spiritual battle. He is being told that to win the external war, he must first win the internal one by conquering desire, the destroyer of all knowledge and wisdom.",
+      "key_concepts": [
+        "practical instruction",
+        "sense control",
+        "internal battle"
+      ],
+      "tags": [
+        "krishna",
+        "self-control",
+        "duty",
+        "spiritual practice"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 42,
+      "sanskrit_text": "इन्द्रियाणि पराण्याहुरिन्द्रियेभ्यः परं मनः।\nमनसस्तु परा बुद्धिर्यो बुद्धेः परतस्तु सः।।",
+      "transliteration": "indriyāṇi parāṇy āhur indriyebhyaḥ paraṁ manaḥ\nmanasas tu parā buddhir yo buddheḥ paratas tu saḥ",
+      "translation": "The senses are superior to the body, the mind is superior to the senses, and the intellect is superior to the mind. But the Self is superior to the intellect.",
+      "word_meanings": [
+        {
+          "word": "indriyāṇi",
+          "meaning": "the senses"
+        },
+        {
+          "word": "parāṇi",
+          "meaning": "superior"
+        },
+        {
+          "word": "āhuḥ",
+          "meaning": "are said"
+        },
+        {
+          "word": "indriyebhyaḥ",
+          "meaning": "than the senses"
+        },
+        {
+          "word": "param",
+          "meaning": "superior"
+        },
+        {
+          "word": "manaḥ",
+          "meaning": "the mind"
+        },
+        {
+          "word": "manasaḥ tu",
+          "meaning": "but than the mind"
+        },
+        {
+          "word": "parā",
+          "meaning": "superior"
+        },
+        {
+          "word": "buddhiḥ",
+          "meaning": "the intellect"
+        },
+        {
+          "word": "yaḥ",
+          "meaning": "who"
+        },
+        {
+          "word": "buddheḥ",
+          "meaning": "than the intellect"
+        },
+        {
+          "word": "parataḥ tu",
+          "meaning": "but superior"
+        },
+        {
+          "word": "saḥ",
+          "meaning": "He (the Self)"
+        }
+      ],
+      "commentary": "Krishna provides a psychological hierarchy of control. He explains that the mind is more powerful than the senses, the intellect is more powerful than the mind, but the Self is the most powerful of all. This is a roadmap for inner control. By knowing this hierarchy, Arjuna can understand that to control his senses, he must first control his mind and intellect, and ultimately, he must fix his consciousness on the Self.",
+      "key_concepts": [
+        "hierarchy of control",
+        "senses, mind, intellect",
+        "supremacy of Self"
+      ],
+      "tags": [
+        "krishna",
+        "philosophy",
+        "psychology",
+        "self-control"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 3,
+      "verse_number": 43,
+      "sanskrit_text": "एवं बुद्धेः परं बुद्ध्वा संस्तभ्यात्मानमात्मना।\nजहि शत्रुं महाबाहो कामरूपं दुरासदम्।।",
+      "transliteration": "evaṁ buddheḥ paraṁ buddhvā saṁstabhya ātmānam ātmanā\njahi śatruṁ mahā-bāho kāma-rūpaṁ durāsadam",
+      "translation": "Thus, knowing the Self to be superior to the intellect, O mighty-armed (Arjuna), restrain the lower self by the higher self and kill this enemy in the form of desire, which is difficult to conquer.",
+      "word_meanings": [
+        {
+          "word": "evam",
+          "meaning": "thus"
+        },
+        {
+          "word": "buddheḥ",
+          "meaning": "than the intellect"
+        },
+        {
+          "word": "param",
+          "meaning": "superior"
+        },
+        {
+          "word": "buddhvā",
+          "meaning": "knowing"
+        },
+        {
+          "word": "saṁstabhya",
+          "meaning": "having controlled"
+        },
+        {
+          "word": "ātmānam",
+          "meaning": "the self"
+        },
+        {
+          "word": "ātmanā",
+          "meaning": "by the Self"
+        },
+        {
+          "word": "jahi",
+          "meaning": "kill"
+        },
+        {
+          "word": "śatrum",
+          "meaning": "the enemy"
+        },
+        {
+          "word": "mahā-bāho",
+          "meaning": "O mighty-armed"
+        },
+        {
+          "word": "kāma-rūpam",
+          "meaning": "in the form of desire"
+        },
+        {
+          "word": "durāsadam",
+          "meaning": "difficult to conquer"
+        }
+      ],
+      "commentary": "This is the concluding verse of Chapter 3, and it provides the final instruction for Arjuna. Krishna tells him to use his intellect, which is superior to the mind, to control his lower self. The ultimate goal is to 'kill' the 'kāma-rūpaṁ' (enemy in the form of desire). This verse summarizes the entire chapter, showing that the real battle is not the one on the field but the internal one against desire. It is a powerful message that links action, knowledge, and self-control to achieve the ultimate spiritual goal.",
+      "key_concepts": [
+        "self-control",
+        "intellect and Self",
+        "conquering desire"
+      ],
+      "tags": [
+        "krishna",
+        "duty",
+        "spiritual battle",
+        "desire"
+      ],
+      "is_featured": false,
+      "status": "published"
+    }
+  ]
+}

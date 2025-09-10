@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Component Rendering</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .debug-section { margin-bottom: 30px; border: 2px solid #ccc; padding: 20px; }
+        .debug-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .debug-item { padding: 15px; border: 1px solid #999; border-radius: 8px; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>Debug: Component Rendering Test</h1>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const DebugComponent = () => {
+            // Mock data similar to your component
+            const practices = [
+                { id: '1', title: 'Ganapati Puja', description: 'Sacred worship of Ganesha' },
+                { id: '2', title: 'Surya Namaskara', description: 'Sun salutation sequence' },
+                { id: '3', title: 'Bhagavad Gita Study', description: 'Study of sacred text' }
+            ];
+            
+            const deities = [
+                { id: '4', title: 'Lord Shiva', description: 'The transformer deity' },
+                { id: '5', title: 'Lord Krishna', description: 'The divine cowherd' },
+                { id: '6', title: 'Lord Rama', description: 'The ideal king' }
+            ];
+            
+            const festivals = [
+                { id: '7', title: 'Ganesh Chaturthi', description: 'Celebration of Ganesha' },
+                { id: '8', title: 'Diwali', description: 'Festival of lights' },
+                { id: '9', title: 'Maha Shivaratri', description: 'Great night of Shiva' }
+            ];
+            
+            console.log('Debug - Practices:', practices.length, practices.map(p => p.title));
+            console.log('Debug - Deities:', deities.length, deities.map(d => d.title));
+            console.log('Debug - Festivals:', festivals.length, festivals.map(f => f.title));
+            
+            return (
+                <div>
+                    {/* Practices Section */}
+                    {practices.length > 0 && (
+                        <div className="debug-section">
+                            <h3>Recommended Practices ({practices.length})</h3>
+                            <div className="debug-grid">
+                                {practices.map((item, index) => (
+                                    <div 
+                                        key={`practice-${item.id}-${index}`}
+                                        className="debug-item"
+                                    >
+                                        <h4>{item.title}</h4>
+                                        <p>{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Deities Section */}
+                    {deities.length > 0 && (
+                        <div className="debug-section">
+                            <h3>Related Deities ({deities.length})</h3>
+                            <div className="debug-grid">
+                                {deities.map((item, index) => (
+                                    <div 
+                                        key={`deity-${item.id}-${index}`}
+                                        className="debug-item"
+                                    >
+                                        <h4>{item.title}</h4>
+                                        <p>{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Festivals Section */}
+                    {festivals.length > 0 && (
+                        <div className="debug-section">
+                            <h3>Sacred Festivals ({festivals.length})</h3>
+                            <div className="debug-grid">
+                                {festivals.map((item, index) => (
+                                    <div 
+                                        key={`festival-${item.id}-${index}`}
+                                        className="debug-item"
+                                    >
+                                        <h4>{item.title}</h4>
+                                        <p>{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        ReactDOM.render(<DebugComponent />, document.getElementById('root'));
+    </script>
+</body>
+</html>

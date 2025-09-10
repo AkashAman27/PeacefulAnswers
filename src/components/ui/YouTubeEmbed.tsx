@@ -4,12 +4,13 @@ import { useState } from 'react'
 import { Play, ExternalLink } from 'lucide-react'
 
 interface YouTubeEmbedProps {
-  url: string
+  url?: string
+  videoId?: string
   title?: string
   className?: string
 }
 
-export function YouTubeEmbed({ url, title = 'Video', className = '' }: YouTubeEmbedProps) {
+function YouTubeEmbed({ url, videoId: providedVideoId, title = 'Video', className = '' }: YouTubeEmbedProps) {
   const [isLoaded, setIsLoaded] = useState(false)
   
   // Extract video ID from YouTube URL
@@ -19,12 +20,13 @@ export function YouTubeEmbed({ url, title = 'Video', className = '' }: YouTubeEm
     return match ? match[1] : null
   }
 
-  const videoId = getVideoId(url)
+  const videoId = providedVideoId || (url ? getVideoId(url) : null)
+  const videoUrl = url || (videoId ? `https://www.youtube.com/watch?v=${videoId}` : null)
   
   if (!videoId) {
     return (
       <div className={`bg-gray-200 rounded-lg p-8 text-center ${className}`}>
-        <p className="text-gray-600">Invalid YouTube URL</p>
+        <p className="text-gray-600">Invalid YouTube URL or Video ID</p>
       </div>
     )
   }
@@ -37,7 +39,7 @@ export function YouTubeEmbed({ url, title = 'Video', className = '' }: YouTubeEm
   }
 
   const openInNewTab = () => {
-    window.open(url, '_blank', 'noopener,noreferrer')
+    window.open(videoUrl, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -88,3 +90,5 @@ export function YouTubeEmbed({ url, title = 'Video', className = '' }: YouTubeEm
     </div>
   )
 }
+
+export default YouTubeEmbed

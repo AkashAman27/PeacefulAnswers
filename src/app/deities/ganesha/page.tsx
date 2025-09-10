@@ -19,6 +19,10 @@ import {
 } from 'lucide-react'
 import { hinduSupabase } from '@/lib/supabase'
 import { Metadata } from 'next'
+import SmartRecommendationsSimple from '@/components/SmartRecommendationsSimple'
+import ContextualNavigation, { QuickNavigation } from '@/components/ContextualNavigation'
+import { peacefulAnswersContentDatabase, getContentById } from '@/data/contentDatabase'
+import GaneshaPageWrapper from '@/components/GaneshaPageWrapper'
 
 export const metadata: Metadata = {
   title: 'Lord Ganesha - The Remover of Obstacles | Hindu Deity Guide | PeacefulAnswers',
@@ -53,6 +57,31 @@ async function getGanesha() {
 }
 
 export default async function GaneshaPage() {
+  // Get current content for recommendations
+  const ganeshaContent = getContentById('ganesha')!
+  
+  // Get related content for navigation
+  const relatedContent = [
+    getContentById('shiva')!,
+    getContentById('durga')!,
+    getContentById('ganesh-chaturthi')!,
+    getContentById('ganapati-puja')!
+  ].filter(Boolean)
+
+  // Quick navigation sections
+  const quickNavSections = [
+    { id: 'overview', title: 'Overview' },
+    { id: 'story', title: 'Sacred Story' },
+    { id: 'iconography', title: 'Sacred Iconography' },
+    { id: 'stories', title: 'Divine Stories' },
+    { id: 'symbolism', title: 'Divine Symbolism' },
+    { id: 'festivals', title: 'Festivals' },
+    { id: 'temples', title: 'Sacred Temples' },
+    { id: 'mantras', title: 'Sacred Mantras' },
+    { id: 'facts', title: 'Essential Facts' },
+    { id: 'recommendations', title: 'Related Content' }
+  ]
+
   let deity = await getGanesha()
   
   // Comprehensive fallback data - merge with database data or use as complete fallback
@@ -210,7 +239,15 @@ export default async function GaneshaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-red-50 via-pink-50 to-orange-50">
+    <GaneshaPageWrapper ganeshaContent={ganeshaContent}>
+      <main className="min-h-screen bg-gradient-to-br from-red-50 via-pink-50 to-orange-50">
+
+      {/* Quick Navigation Sidebar - Desktop Only */}
+      <QuickNavigation 
+        sections={quickNavSections}
+        className="hidden xl:block"
+      />
+
       {/* Back Navigation */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -225,7 +262,7 @@ export default async function GaneshaPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-red-600 via-pink-600 to-orange-600 text-white py-20">
+      <section id="overview" className="relative overflow-hidden bg-gradient-to-r from-red-600 via-pink-600 to-orange-600 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -234,6 +271,18 @@ export default async function GaneshaPage() {
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                 <Crown className="w-4 h-4 mr-2" />
                 <span className="text-sm font-medium">Vighna Harta</span>
+              </div>
+              
+              {/* Quick Engagement Metrics */}
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1">
+                  <Star className="w-4 h-4" />
+                  <span className="text-xs">Shaivism Tradition</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1">
+                  <Calendar className="w-4 h-4" />
+                  <span className="text-xs">Festival: Ganesh Chaturthi</span>
+                </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4 font-sanskrit">
                 {deity.sanskrit_name || 'गणेश'}
@@ -272,7 +321,7 @@ export default async function GaneshaPage() {
         
         {/* Story Section */}
         {deity.story && (
-          <section className="animate-fadeIn">
+          <section id="story" className="animate-fadeIn">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Story</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-orange-600 mx-auto mb-8"></div>
@@ -305,45 +354,27 @@ export default async function GaneshaPage() {
 
         {/* Sacred Iconography Section */}
         {deity.sacred_iconography && deity.sacred_iconography.length > 0 && (
-          <section className="animate-fadeIn animate-delay-200">
+          <section id="iconography" className="animate-fadeIn animate-delay-200">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Sacred Iconography</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-orange-600 to-red-600 mx-auto mb-8"></div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {deity.sacred_iconography.map((item: any, index: number) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 className="font-bold text-gray-900 mb-2">{item.name}</h3>
-                    <p className="text-sm text-red-600 mb-3">{item.sanskrit}</p>
-                    <p className="text-gray-700 text-sm mb-3">{item.meaning}</p>
-                    <p className="text-gray-600 text-xs leading-relaxed">{item.significance}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="relative">
-                {deity.youtube_videos?.sacred_iconography ? (
-                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${deity.youtube_videos.sacred_iconography}`}
-                      title="Sacred Iconography Video"
-                      className="w-full h-full"
-                      allowFullScreen
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-video bg-gradient-to-br from-orange-50 to-red-50 rounded-xl flex items-center justify-center">
-                    <p className="text-gray-500">Video content coming soon</p>
-                  </div>
-                )}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {deity.sacred_iconography.map((item: any, index: number) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="font-bold text-gray-900 mb-2">{item.name}</h3>
+                  <p className="text-sm text-red-600 mb-3">{item.sanskrit}</p>
+                  <p className="text-gray-700 text-sm mb-3">{item.meaning}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">{item.significance}</p>
+                </div>
+              ))}
             </div>
           </section>
         )}
 
         {/* Sacred Stories Section */}
         {deity.sacred_stories && deity.sacred_stories.length > 0 && (
-          <section className="animate-fadeIn animate-delay-300">
+          <section id="stories" className="animate-fadeIn animate-delay-300">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Sacred Stories</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto mb-8"></div>
@@ -361,43 +392,25 @@ export default async function GaneshaPage() {
 
         {/* Divine Symbolism Section */}
         {deity.divine_symbolism && deity.divine_symbolism.length > 0 && (
-          <section className="animate-fadeIn animate-delay-400">
+          <section id="symbolism" className="animate-fadeIn animate-delay-400">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Divine Symbolism</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8"></div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="grid grid-cols-1 gap-6">
-                {deity.divine_symbolism.map((symbol: any, index: number) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 className="font-bold text-gray-900 mb-3">{symbol.aspect}</h3>
-                    <p className="text-gray-700 leading-relaxed">{symbol.meaning}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="relative">
-                {deity.youtube_videos?.divine_symbolism ? (
-                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${deity.youtube_videos.divine_symbolism}`}
-                      title="Divine Symbolism Video"
-                      className="w-full h-full"
-                      allowFullScreen
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-video bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl flex items-center justify-center">
-                    <p className="text-gray-500">Video content coming soon</p>
-                  </div>
-                )}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {deity.divine_symbolism.map((symbol: any, index: number) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="font-bold text-gray-900 mb-3">{symbol.aspect}</h3>
+                  <p className="text-gray-700 leading-relaxed">{symbol.meaning}</p>
+                </div>
+              ))}
             </div>
           </section>
         )}
 
         {/* Festivals & Celebrations Section */}
         {deity.festivals && deity.festivals.length > 0 && (
-          <section className="animate-fadeIn animate-delay-500">
+          <section id="festivals" className="animate-fadeIn animate-delay-500">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Festivals & Celebrations</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-orange-600 mx-auto mb-8"></div>
@@ -417,7 +430,7 @@ export default async function GaneshaPage() {
 
         {/* Famous/Sacred Temples Section */}
         {deity.temples && deity.temples.length > 0 && (
-          <section className="animate-fadeIn animate-delay-600">
+          <section id="temples" className="animate-fadeIn animate-delay-600">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Famous/Sacred Temples</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-600 to-orange-600 mx-auto mb-8"></div>
@@ -436,7 +449,7 @@ export default async function GaneshaPage() {
 
         {/* Sacred Mantras and Prayers Section */}
         {deity.mantras && deity.mantras.length > 0 && (
-          <section className="animate-fadeIn animate-delay-700">
+          <section id="mantras" className="animate-fadeIn animate-delay-700">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Sacred Mantras and Prayers</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-8"></div>
@@ -460,7 +473,7 @@ export default async function GaneshaPage() {
 
         {/* Essential Facts Section */}
         {deity.essential_facts && deity.essential_facts.length > 0 && (
-          <section className="animate-fadeIn animate-delay-800">
+          <section id="facts" className="animate-fadeIn animate-delay-800">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Essential Facts</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-blue-600 mx-auto mb-8"></div>
@@ -475,7 +488,48 @@ export default async function GaneshaPage() {
             </div>
           </section>
         )}
+        
+        {/* Smart Recommendations Section */}
+        <section id="recommendations" className="animate-fadeIn animate-delay-900">
+          <SmartRecommendationsSimple 
+            currentContent={ganeshaContent}
+            contentDatabase={peacefulAnswersContentDatabase}
+          />
+        </section>
+
+        {/* Engagement Call-to-Action */}
+        <section className="mt-16 animate-fadeIn animate-delay-1000">
+          <div className="bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 text-white rounded-3xl p-12 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6">
+              🙏 Ready to Begin Your Journey with Ganesha?
+            </h3>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Start with a simple daily practice and experience the transformative power of connecting with the beloved obstacle-remover.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/practices/ganapati-puja"
+                className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              >
+                🪔 Learn Ganapati Puja
+              </Link>
+              <Link
+                href="/festivals/ganesh-chaturthi"
+                className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-full font-bold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              >
+                🎊 Explore Ganesh Chaturthi
+              </Link>
+              <Link
+                href="/scriptures/ganesha-mantras"
+                className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-full font-bold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              >
+                🕉️ Sacred Mantras
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
+    </GaneshaPageWrapper>
   )
 }

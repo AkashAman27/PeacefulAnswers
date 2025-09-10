@@ -308,33 +308,15 @@ export default async function KrishnaPage() {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Sacred Iconography</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {deity.sacred_iconography.map((item: any, index: number) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 className="font-bold text-gray-900 mb-2">{item.name}</h3>
-                    <p className="text-sm text-blue-600 mb-3">{item.sanskrit}</p>
-                    <p className="text-gray-700 text-sm mb-3">{item.meaning}</p>
-                    <p className="text-gray-600 text-xs leading-relaxed">{item.significance}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="relative">
-                {deity.youtube_videos?.sacred_iconography ? (
-                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${deity.youtube_videos.sacred_iconography}`}
-                      title="Sacred Iconography Video"
-                      className="w-full h-full"
-                      allowFullScreen
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-video bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl flex items-center justify-center">
-                    <p className="text-gray-500">Video content coming soon</p>
-                  </div>
-                )}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {deity.sacred_iconography.map((item: any, index: number) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="font-bold text-gray-900 mb-2">{item.name}</h3>
+                  <p className="text-sm text-blue-600 mb-3">{item.sanskrit}</p>
+                  <p className="text-gray-700 text-sm mb-3">{item.meaning}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">{item.significance}</p>
+                </div>
+              ))}
             </div>
           </section>
         )}
@@ -364,31 +346,13 @@ export default async function KrishnaPage() {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Divine Symbolism</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-8"></div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div className="grid grid-cols-1 gap-6">
-                {deity.divine_symbolism.map((symbol: any, index: number) => (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 className="font-bold text-gray-900 mb-3">{symbol.aspect}</h3>
-                    <p className="text-gray-700 leading-relaxed">{symbol.meaning}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="relative">
-                {deity.youtube_videos?.divine_symbolism ? (
-                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${deity.youtube_videos.divine_symbolism}`}
-                      title="Divine Symbolism Video"
-                      className="w-full h-full"
-                      allowFullScreen
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-video bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl flex items-center justify-center">
-                    <p className="text-gray-500">Video content coming soon</p>
-                  </div>
-                )}
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {deity.divine_symbolism.map((symbol: any, index: number) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="font-bold text-gray-900 mb-3">{symbol.aspect}</h3>
+                  <p className="text-gray-700 leading-relaxed">{symbol.meaning}</p>
+                </div>
+              ))}
             </div>
           </section>
         )}

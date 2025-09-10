@@ -1,83 +1,109 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Book, Heart, Users, Calendar, MapPin, MessageCircle } from 'lucide-react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const FeaturesSection = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
+  const ctaRef = useRef<HTMLDivElement>(null)
   
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 }
+    const section = sectionRef.current
+    const title = titleRef.current
+    const cards = cardsRef.current
+    const cta = ctaRef.current
+
+    if (!section || !title || !cards || !cta) return
+
+    // Create timeline for the section
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 75%',
+        end: 'bottom 25%',
+        toggleActions: 'play none none reverse'
+      }
+    })
+
+    // Animate title first
+    tl.fromTo(title, 
+      { 
+        opacity: 0, 
+        y: 40,
+        scale: 0.95
+      }, 
+      { 
+        opacity: 1, 
+        y: 0,
+        scale: 1,
+        duration: 0.7, 
+        ease: 'power2.out' 
+      }
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
+    // Animate cards with subtle stagger
+    const featureCards = cards.children
+    tl.fromTo(featureCards, 
+      { 
+        opacity: 0, 
+        y: 30,
+        scale: 0.95
+      }, 
+      { 
+        opacity: 1, 
+        y: 0,
+        scale: 1,
+        duration: 0.6, 
+        stagger: 0.1,
+        ease: 'power2.out'
+      }, 
+      '-=0.4'
+    )
 
-    return () => observer.disconnect()
+    // Animate CTA section
+    tl.fromTo(cta, 
+      { 
+        opacity: 0, 
+        y: 20 
+      }, 
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.5, 
+        ease: 'power2.out' 
+      }, 
+      '-=0.2'
+    )
+
+    // Add subtle floating animation to cards (only after main animation completes)
+    tl.call(() => {
+      Array.from(featureCards).forEach((card, index) => {
+        gsap.to(card, {
+          y: Math.sin(index) * 3,
+          duration: 3 + (index * 0.3),
+          repeat: -1,
+          yoyo: true,
+          ease: 'power1.inOut',
+          delay: index * 0.2
+        })
+      })
+    })
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.trigger === section) {
+          trigger.kill()
+        }
+      })
+    }
   }, [])
-
-  useEffect(() => {
-    if (isVisible) {
-      // Title animation
-      setTimeout(() => {
-        if (titleRef.current) {
-          titleRef.current.style.opacity = '1'
-          titleRef.current.style.transform = 'translateY(0px)'
-          titleRef.current.style.transition = 'all 0.8s ease-out'
-        }
-      }, 200)
-
-      // First row cards (0, 1, 2) - animate from bottom up
-      const firstRowCards = document.querySelectorAll('.feature-card-row1')
-      firstRowCards.forEach((card, index) => {
-        const element = card as HTMLElement
-        // Ensure initial state
-        element.style.opacity = '0'
-        element.style.transform = 'translateY(60px)'
-        element.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)'
-        
-        setTimeout(() => {
-          element.style.opacity = '1'
-          element.style.transform = 'translateY(0px)'
-        }, 500 + (index * 200))
-      })
-
-      // Second row cards (3, 4, 5) - animate from bottom up
-      const secondRowCards = document.querySelectorAll('.feature-card-row2')
-      secondRowCards.forEach((card, index) => {
-        const element = card as HTMLElement
-        // Ensure initial state
-        element.style.opacity = '0'
-        element.style.transform = 'translateY(60px)'
-        element.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)'
-        
-        setTimeout(() => {
-          element.style.opacity = '1'
-          element.style.transform = 'translateY(0px)'
-        }, 1100 + (index * 200))
-      })
-
-      // CTA section
-      setTimeout(() => {
-        const ctaSection = document.querySelector('.cta-section') as HTMLElement
-        if (ctaSection) {
-          ctaSection.style.transition = 'all 0.8s ease-out'
-          ctaSection.style.opacity = '1'
-          ctaSection.style.transform = 'translateY(0px)'
-        }
-      }, 1800)
-    }
-  }, [isVisible])
 
   const features = [
     {
@@ -134,7 +160,7 @@ const FeaturesSection = () => {
     <section ref={sectionRef} className="py-16 sm:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div ref={titleRef} className="text-center mb-16" style={{ opacity: 0, transform: 'translateY(40px)' }}>
+        <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
             Explore the{' '}
             <span className="bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent">
@@ -151,14 +177,11 @@ const FeaturesSection = () => {
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
             const IconComponent = feature.icon
-            const isFirstRow = index < 3
-            const rowClass = isFirstRow ? 'feature-card-row1' : 'feature-card-row2'
             
             return (
               <div
                 key={feature.title}
-                className={`feature-card ${rowClass} group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-orange-200 hover:-translate-y-2`}
-                style={{ opacity: 0, transform: 'translateY(60px)' }}
+                className="feature-card group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-orange-200 hover:-translate-y-2 transition-all duration-300"
               >
                 {/* Background gradient on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
@@ -194,7 +217,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="cta-section mt-16 text-center" style={{ opacity: 0, transform: 'translateY(40px)' }}>
+        <div ref={ctaRef} className="mt-16 text-center">
           <div className="inline-flex items-center gap-4">
             <button className="bg-gradient-to-r from-orange-600 to-yellow-400 text-white font-semibold rounded-full px-8 py-4 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
               Start exploring wisdom

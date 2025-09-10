@@ -1,0 +1,3124 @@
+{
+  "verses": [
+    {
+      "chapter_number": 1,
+      "verse_number": 1,
+      "sanskrit_text": "धृतराष्ट्र उवाच।\nधर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः।\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय।।",
+      "transliteration": "dhṛtarāṣṭra uvāca\ndharma-kṣetre kuru-kṣetre samavetā yuyutsavaḥ\nmāmakāḥ pāṇḍavāś caiva kim akurvata sañjaya",
+      "translation": "Dhritarashtra said: O Sanjaya, what did my sons and the sons of Pandu, desiring to fight, do after assembling on the holy field of Kurukshetra?",
+      "word_meanings": [
+        {
+          "word": "dhṛtarāṣṭra uvāca",
+          "meaning": "Dhritarashtra said"
+        },
+        {
+          "word": "dharma-kṣetre",
+          "meaning": "in the field of dharma (righteousness)"
+        },
+        {
+          "word": "kuru-kṣetre",
+          "meaning": "in the field of the Kurus"
+        },
+        {
+          "word": "samavetāḥ",
+          "meaning": "assembled"
+        },
+        {
+          "word": "yuyutsavaḥ",
+          "meaning": "desiring to fight"
+        },
+        {
+          "word": "māmakāḥ",
+          "meaning": "my sons (the Kauravas)"
+        },
+        {
+          "word": "pāṇḍavāḥ ca eva",
+          "meaning": "and the Pandavas as well"
+        },
+        {
+          "word": "kim akurvata",
+          "meaning": "what did they do"
+        },
+        {
+          "word": "sañjaya",
+          "meaning": "O Sanjaya"
+        }
+      ],
+      "commentary": "This opening verse sets the scene for the entire Bhagavad Gita. The blind King Dhritarashtra, representing ignorance and attachment, asks his minister Sanjaya about the events on the battlefield of Kurukshetra, a place already sanctified as a 'dharma-kṣetra' (field of righteousness). His question 'what did my sons... do' reveals his partiality and anxiety, highlighting the conflict between his own family (Kauravas) and their cousins (Pandavas).",
+      "key_concepts": [
+        "dhritarashtra's anxiety",
+        "dharma-kshetra",
+        "kurukshetra",
+        "opening dialogue"
+      ],
+      "tags": [
+        "opening",
+        "dhritarashtra",
+        "sanjaya",
+        "battlefield",
+        "kurukshetra"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 2,
+      "sanskrit_text": "सञ्जय उवाच।\nदृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा।\nआचार्यमुपसङ्गम्य राजा वचनमब्रवीत्।।",
+      "transliteration": "sañjaya uvāca\ndṛṣṭvā tu pāṇḍavānīkaṁ vyūḍhaṁ duryodhanas tadā\nācāryam upasaṅgamya rājā vacanam abravīt",
+      "translation": "Sanjaya said: On seeing the army of the Pandavas in military formation, King Duryodhana approached his preceptor Dronacharya and spoke these words.",
+      "word_meanings": [
+        {
+          "word": "sañjayaḥ uvāca",
+          "meaning": "Sanjaya said"
+        },
+        {
+          "word": "dṛṣṭvā",
+          "meaning": "after seeing"
+        },
+        {
+          "word": "tu",
+          "meaning": "but"
+        },
+        {
+          "word": "pāṇḍava-anīkam",
+          "meaning": "the army of the Pandavas"
+        },
+        {
+          "word": "vyūḍham",
+          "meaning": "arranged in a military phalanx"
+        },
+        {
+          "word": "duryodhanaḥ",
+          "meaning": "Duryodhana"
+        },
+        {
+          "word": "tadā",
+          "meaning": "at that time"
+        },
+        {
+          "word": "ācāryam",
+          "meaning": "to the teacher (Dronacharya)"
+        },
+        {
+          "word": "upasaṅgamya",
+          "meaning": "approaching"
+        },
+        {
+          "word": "rājā",
+          "meaning": "the king"
+        },
+        {
+          "word": "vacanam",
+          "meaning": "words"
+        },
+        {
+          "word": "abravīt",
+          "meaning": "spoke"
+        }
+      ],
+      "commentary": "Sanjaya begins his reply by describing the reaction of Duryodhana, the leader of the Kauravas. Upon seeing the well-organized and powerful Pandava army, Duryodhana becomes anxious. He immediately approaches his preceptor and commander-in-chief, Dronacharya, to express his concerns, which marks the beginning of the detailed description of the armies.",
+      "key_concepts": [
+        "duryodhana's anxiety",
+        "dronacharya",
+        "military formation",
+        "battle preparation"
+      ],
+      "tags": [
+        "duryodhana",
+        "dronacharya",
+        "pandava army",
+        "military formation",
+        "sanjaya"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 3,
+      "sanskrit_text": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम्।\nव्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता।।",
+      "transliteration": "paśyaitāṁ pāṇḍu-putrāṇām ācārya mahatīṁ camūm\nvyūḍhāṁ drupada-putreṇa tava śiṣyeṇa dhīmatā",
+      "translation": "O my teacher, behold this mighty army of the sons of Pandu, so expertly arranged by your intelligent disciple, the son of Drupada.",
+      "word_meanings": [
+        {
+          "word": "paśya",
+          "meaning": "behold"
+        },
+        {
+          "word": "etām",
+          "meaning": "this"
+        },
+        {
+          "word": "pāṇḍu-putrāṇām",
+          "meaning": "of the sons of Pandu"
+        },
+        {
+          "word": "ācārya",
+          "meaning": "O teacher"
+        },
+        {
+          "word": "mahatīm",
+          "meaning": "mighty"
+        },
+        {
+          "word": "camūm",
+          "meaning": "army"
+        },
+        {
+          "word": "vyūḍhām",
+          "meaning": "arrayed"
+        },
+        {
+          "word": "drupada-putreṇa",
+          "meaning": "by the son of Drupada (Dhristadyumna)"
+        },
+        {
+          "word": "tava",
+          "meaning": "your"
+        },
+        {
+          "word": "śiṣyeṇa",
+          "meaning": "by the disciple"
+        },
+        {
+          "word": "dhīmatā",
+          "meaning": "the intelligent"
+        }
+      ],
+      "commentary": "Duryodhana's words to Dronacharya are filled with sarcasm and veiled accusation. He points out that the Pandava army is expertly arranged by Dhrishtadyumna, who happens to be Dronacharya's own disciple. This statement is intended to remind Drona of his duty and question his loyalty, given that Dhrishtadyumna was destined to be his slayer.",
+      "key_concepts": [
+        "duryodhana's taunt",
+        "dronacharya",
+        "dhristadyumna",
+        "military strategy"
+      ],
+      "tags": [
+        "duryodhana",
+        "dronacharya",
+        "dhrishtadyumna",
+        "pandava army"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 4,
+      "sanskrit_text": "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि।\nयुयुधानो विराटश्च द्रुपदश्च महारथः।।",
+      "transliteration": "atra śūrā maheṣvāsā bhīmārjuna-samā yudhi\nyuyudhāno virāṭaś ca drupadaś ca mahā-rathaḥ",
+      "translation": "Here in this army are heroes with great bows, equal in battle to Bhima and Arjuna; there are also Yuyudhana, Virata, and the great warrior Drupada.",
+      "word_meanings": [
+        {
+          "word": "atra",
+          "meaning": "here"
+        },
+        {
+          "word": "śūrāḥ",
+          "meaning": "heroes"
+        },
+        {
+          "word": "mahā-iṣv-āsāḥ",
+          "meaning": "with great bows"
+        },
+        {
+          "word": "bhīma-arjuna-samāḥ",
+          "meaning": "equal to Bhima and Arjuna"
+        },
+        {
+          "word": "yudhi",
+          "meaning": "in battle"
+        },
+        {
+          "word": "yuyudhānaḥ",
+          "meaning": "Yuyudhana (Satyaki)"
+        },
+        {
+          "word": "virāṭaḥ ca",
+          "meaning": "and Virata"
+        },
+        {
+          "word": "drupadaḥ ca",
+          "meaning": "and Drupada"
+        },
+        {
+          "word": "mahā-rathaḥ",
+          "meaning": "a great chariot-warrior"
+        }
+      ],
+      "commentary": "Duryodhana continues his speech, listing the prominent heroes of the Pandava army to emphasize its strength and intimidate Dronacharya. He first mentions those who are on par with Bhima and Arjuna and then names other key figures, demonstrating his awareness of the formidable opposition he faces.",
+      "key_concepts": [
+        "pandava heroes",
+        "duryodhana's fear",
+        "military strength"
+      ],
+      "tags": [
+        "pandava army",
+        "heroes",
+        "duryodhana",
+        "battlefield"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 5,
+      "sanskrit_text": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान्।\nपुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः।।",
+      "transliteration": "dhṛṣṭaketuś cekitānaḥ kāśirājaś ca vīryavān\npurujit kuntibhojaś ca śaibyaś ca nara-puṅgavaḥ",
+      "translation": "Also present are Dhrishtaketu, Chekitana, the valiant king of Kashi, Purujit, Kuntibhoja, and Shaibya, the best of men.",
+      "word_meanings": [
+        {
+          "word": "dhṛṣṭaketuḥ",
+          "meaning": "Dhrishtaketu"
+        },
+        {
+          "word": "cekitānaḥ",
+          "meaning": "Chekitana"
+        },
+        {
+          "word": "kāśi-rājaḥ ca",
+          "meaning": "and the king of Kashi"
+        },
+        {
+          "word": "vīryavān",
+          "meaning": "the powerful"
+        },
+        {
+          "word": "purujit",
+          "meaning": "Purujit"
+        },
+        {
+          "word": "kuntibhojaḥ ca",
+          "meaning": "and Kuntibhoja"
+        },
+        {
+          "word": "śaibyaḥ ca",
+          "meaning": "and Shaibya"
+        },
+        {
+          "word": "nara-puṅgavaḥ",
+          "meaning": "the best among men"
+        }
+      ],
+      "commentary": "Duryodhana continues his enumeration of the Pandava army's leading warriors, proving that their forces are not only mighty but also well-supported by powerful kings and leaders. His detailed list shows a mixture of fear and respect for his enemies.",
+      "key_concepts": [
+        "pandava allies",
+        "military alliances",
+        "battlefield composition"
+      ],
+      "tags": [
+        "pandava army",
+        "duryodhana",
+        "heroes",
+        "alliances"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 6,
+      "sanskrit_text": "युधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान्।\nसौभद्रो द्रौपदेयाश्च सर्व एव महारथाः।।",
+      "transliteration": "yudhāmanyuś ca vikrānta uttamaujāś ca vīryavān\nsaubhadro draupadeyāś ca sarva eva mahā-rathāḥ",
+      "translation": "There are also the valiant Yudhamanyu and the powerful Uttamauja, the son of Subhadra (Abhimanyu), and the sons of Draupadi—all of them are great chariot-warriors.",
+      "word_meanings": [
+        {
+          "word": "yudhāmanyuḥ ca",
+          "meaning": "and Yudhamanyu"
+        },
+        {
+          "word": "vikrāntaḥ",
+          "meaning": "the valiant"
+        },
+        {
+          "word": "uttamaujāḥ ca",
+          "meaning": "and Uttamauja"
+        },
+        {
+          "word": "vīryavān",
+          "meaning": "the powerful"
+        },
+        {
+          "word": "saubhadraḥ",
+          "meaning": "the son of Subhadra (Abhimanyu)"
+        },
+        {
+          "word": "draupadeyāḥ ca",
+          "meaning": "and the sons of Draupadi"
+        },
+        {
+          "word": "sarve",
+          "meaning": "all"
+        },
+        {
+          "word": "eva",
+          "meaning": "certainly"
+        },
+        {
+          "word": "mahā-rathāḥ",
+          "meaning": "great chariot-warriors"
+        }
+      ],
+      "commentary": "Duryodhana concludes his list of the Pandava's key warriors. He mentions Yudhamanyu and Uttamauja, who serve as protectors of Arjuna's chariot, as well as the young but formidable Abhimanyu (son of Arjuna) and the five sons of Draupadi. This shows that the Pandavas' army is not just strong but also includes a younger, highly skilled generation of warriors.",
+      "key_concepts": [
+        "pandava's youth",
+        "generational conflict",
+        "battlefield heroes"
+      ],
+      "tags": [
+        "pandava army",
+        "abhimanyu",
+        "draupadi's sons",
+        "maharatha"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 7,
+      "sanskrit_text": "अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम।\nनायका मम सैन्यस्य संज्ञार्थं तान्ब्रवीमि ते।।",
+      "transliteration": "asmākaṁ tu viśiṣṭā ye tān nibodha dvijottama\nnāyakā mama sainyasya saṁjñārthaṁ tān bravīmi te",
+      "translation": "O best of the twice-born (Dronacharya), now hear about the prominent warriors on our side, the leaders of my army. I will name them for your information.",
+      "word_meanings": [
+        {
+          "word": "asmākam",
+          "meaning": "of our side"
+        },
+        {
+          "word": "tu",
+          "meaning": "but"
+        },
+        {
+          "word": "viśiṣṭāḥ",
+          "meaning": "the distinguished ones"
+        },
+        {
+          "word": "ye",
+          "meaning": "who"
+        },
+        {
+          "word": "tān",
+          "meaning": "them"
+        },
+        {
+          "word": "nibodha",
+          "meaning": "know"
+        },
+        {
+          "word": "dvija-uttama",
+          "meaning": "O best of the twice-born"
+        },
+        {
+          "word": "nāyakāḥ",
+          "meaning": "the leaders"
+        },
+        {
+          "word": "mama sainyasya",
+          "meaning": "of my army"
+        },
+        {
+          "word": "saṁjñārtham",
+          "meaning": "for the sake of information"
+        },
+        {
+          "word": "tān",
+          "meaning": "them"
+        },
+        {
+          "word": "bravīmi",
+          "meaning": "I am telling"
+        },
+        {
+          "word": "te",
+          "meaning": "to you"
+        }
+      ],
+      "commentary": "After listing the Pandavas' strengths, Duryodhana shifts to his own army. He addresses Dronacharya with the respectful title 'dvijottama' (best of the twice-born) to regain his loyalty and confidence. He then proceeds to list the key warriors on the Kaurava side, intending to reassure himself and Drona that their force is equally, if not more, powerful.",
+      "key_concepts": [
+        "kaurava army",
+        "duryodhana's confidence",
+        "battlefield leadership"
+      ],
+      "tags": [
+        "duryodhana",
+        "dronacharya",
+        "kaurava army",
+        "military leaders"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 8,
+      "sanskrit_text": "भवान्भीष्मश्च कर्णश्च कृपश्च समितिञ्जयः।\nअश्वत्थामा विकर्णश्च सौमदत्तिस्तथैव च।।",
+      "transliteration": "bhavān bhīṣmaś ca karṇaś ca kṛpaś ca samitiṁ-jayaḥ\naśvatthāmā vikarṇaś ca saumadattis tathaiva ca",
+      "translation": "There is yourself, and Bhishma, and Karna, and Kripa, who is always victorious in battle; Ashwatthama, Vikarna, and the son of Somadatta (Bhurishravas).",
+      "word_meanings": [
+        {
+          "word": "bhavān",
+          "meaning": "yourself (Dronacharya)"
+        },
+        {
+          "word": "bhīṣmaḥ ca",
+          "meaning": "and Bhishma"
+        },
+        {
+          "word": "karṇaḥ ca",
+          "meaning": "and Karna"
+        },
+        {
+          "word": "kṛpaḥ ca",
+          "meaning": "and Kripa"
+        },
+        {
+          "word": "samitiṁ-jayaḥ",
+          "meaning": "ever victorious in battle"
+        },
+        {
+          "word": "aśvatthāmā",
+          "meaning": "Ashwatthama"
+        },
+        {
+          "word": "vikarṇaḥ ca",
+          "meaning": "and Vikarna"
+        },
+        {
+          "word": "saumadattiḥ",
+          "meaning": "the son of Somadatta (Bhurishravas)"
+        },
+        {
+          "word": "tathā eva ca",
+          "meaning": "and also"
+        }
+      ],
+      "commentary": "Duryodhana begins his list of the Kaurava army's commanders by naming Dronacharya himself, followed by Bhishma, Karna, and others. This list is a showcase of the most formidable warriors in the Mahabharata war, demonstrating the immense power of the Kaurava side and Duryodhana's confidence in their ability to defeat the Pandavas.",
+      "key_concepts": [
+        "kaurava heroes",
+        "military strength",
+        "warriors"
+      ],
+      "tags": [
+        "kaurava army",
+        "duryodhana",
+        "dronacharya",
+        "bhishma",
+        "karna"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 9,
+      "sanskrit_text": "अन्ये च बहवः शूरा मदर्थे त्यक्तजीविताः।\nनानाशस्त्रप्रहरणाः सर्वे युद्धविशारदाः।।",
+      "transliteration": "anye ca bahavaḥ śūrā mad-arthe tyakta-jīvitāḥ\nnānā-śastra-praharaṇāḥ sarve yuddha-viśāradāḥ",
+      "translation": "And there are many other heroes, who are ready to give up their lives for my sake. They are equipped with various weapons and are all experts in warfare.",
+      "word_meanings": [
+        {
+          "word": "anye",
+          "meaning": "others"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "bahavaḥ",
+          "meaning": "many"
+        },
+        {
+          "word": "śūrāḥ",
+          "meaning": "heroes"
+        },
+        {
+          "word": "mat-arthe",
+          "meaning": "for my sake"
+        },
+        {
+          "word": "tyakta-jīvitāḥ",
+          "meaning": "who have given up their lives"
+        },
+        {
+          "word": "nānā-śastra-praharaṇāḥ",
+          "meaning": "armed with various weapons"
+        },
+        {
+          "word": "sarve",
+          "meaning": "all"
+        },
+        {
+          "word": "yuddha-viśāradāḥ",
+          "meaning": "experts in warfare"
+        }
+      ],
+      "commentary": "Duryodhana concludes his list by mentioning a vast number of other unnamed warriors who are loyal to him and ready to sacrifice their lives. This statement underscores the sheer size and unwavering loyalty of his army, bolstering his own confidence and further reinforcing the gravity of the impending battle.",
+      "key_concepts": [
+        "loyalty",
+        "sacrifice",
+        "military expertise"
+      ],
+      "tags": [
+        "duryodhana",
+        "kaurava army",
+        "heroes",
+        "battlefield"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 10,
+      "sanskrit_text": "अपर्याप्तं तदस्माकं बलं भीष्माभिरक्षितम्।\nपर्याप्तं त्विदमेतेषां बलं भीमाभिरक्षितम्।।",
+      "transliteration": "aparyāptaṁ tad asmākaṁ balaṁ bhīṣmābhirakṣitam\nparyāptaṁ tv idam eteṣāṁ balaṁ bhīmābhirakṣitam",
+      "translation": "Our army, protected by Bhishma, is unlimited, while their army, protected by Bhima, is limited.",
+      "word_meanings": [
+        {
+          "word": "aparyāptam",
+          "meaning": "unlimited"
+        },
+        {
+          "word": "tat",
+          "meaning": "that"
+        },
+        {
+          "word": "asmākam",
+          "meaning": "our"
+        },
+        {
+          "word": "balam",
+          "meaning": "strength"
+        },
+        {
+          "word": "bhīṣma-abhirakṣitam",
+          "meaning": "protected by Bhishma"
+        },
+        {
+          "word": "paryāptam",
+          "meaning": "limited"
+        },
+        {
+          "word": "tu",
+          "meaning": "but"
+        },
+        {
+          "word": "idam",
+          "meaning": "this"
+        },
+        {
+          "word": "eteṣām",
+          "meaning": "of theirs"
+        },
+        {
+          "word": "balam",
+          "meaning": "strength"
+        },
+        {
+          "word": "bhīma-abhirakṣitam",
+          "meaning": "protected by Bhima"
+        }
+      ],
+      "commentary": "Duryodhana, in his overconfidence, makes a key assessment. He believes his army, under the command of the great Bhishma, is invincible, while the Pandava army, led by Bhima, is weak and easily conquerable. This verse shows his arrogance and misjudgment, which will ultimately lead to his downfall. He sees physical might (Bhishma) as a greater advantage than the righteousness (Bhima) of the Pandavas.",
+      "key_concepts": [
+        "duryodhana's arrogance",
+        "bhishma",
+        "bhima",
+        "military assessment"
+      ],
+      "tags": [
+        "duryodhana",
+        "bhishma",
+        "bhima",
+        "military strategy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 11,
+      "sanskrit_text": "अयनेषु च सर्वेषु यथाभागमवस्थिताः।\nभीष्ममेवाभिरक्षन्तु भवन्तः सर्व एव हि।।",
+      "transliteration": "ayaneṣu ca sarveṣu yathā-bhāgam avasthitāḥ\nbhīṣmam evābhirakṣantu bhavantaḥ sarva eva hi",
+      "translation": "Therefore, all of you, remaining in your respective positions on all fronts, must protect Bhishma from all sides.",
+      "word_meanings": [
+        {
+          "word": "ayaneṣu",
+          "meaning": "in the entrances"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "sarveṣu",
+          "meaning": "in all"
+        },
+        {
+          "word": "yathā-bhāgam",
+          "meaning": "in your respective positions"
+        },
+        {
+          "word": "avasthitāḥ",
+          "meaning": "being situated"
+        },
+        {
+          "word": "bhīṣmam",
+          "meaning": "Bhishma"
+        },
+        {
+          "word": "eva",
+          "meaning": "certainly"
+        },
+        {
+          "word": "abhirakṣantu",
+          "meaning": "protect"
+        },
+        {
+          "word": "bhavantaḥ",
+          "meaning": "you all"
+        },
+        {
+          "word": "sarve",
+          "meaning": "all"
+        },
+        {
+          "word": "eva hi",
+          "meaning": "certainly indeed"
+        }
+      ],
+      "commentary": "Despite his previous boast, Duryodhana's underlying anxiety is revealed here. He directs his entire army to focus on protecting Bhishma, their commander. This shows that he is fully aware of Bhishma's importance and the potential vulnerability of his army without him. This command, however, also reveals a lack of faith in the overall strength of his army.",
+      "key_concepts": [
+        "duryodhana's anxiety",
+        "bhishma's importance",
+        "military strategy"
+      ],
+      "tags": [
+        "duryodhana",
+        "bhishma",
+        "military command",
+        "strategy"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 12,
+      "sanskrit_text": "तस्य सञ्जनयन्हर्षं कुरुवृद्धः पितामहः।\nसिंहनादं विनद्योच्चैः शङ्खं दध्मौ प्रतापवान्।।",
+      "transliteration": "tasya sañjanayan harṣaṁ kuru-vṛddhaḥ pitāmahaḥ\nsiṁha-nādaṁ vinadyoccaiḥ śaṅkhaṁ dadhmau pratāpavān",
+      "translation": "Then, to cheer up Duryodhana, the mighty and oldest among the Kurus, Bhishma, the grandfather, roared like a lion and blew his conch shell very loudly.",
+      "word_meanings": [
+        {
+          "word": "tasya",
+          "meaning": "his (Duryodhana's)"
+        },
+        {
+          "word": "sañjanayan",
+          "meaning": "creating"
+        },
+        {
+          "word": "harṣam",
+          "meaning": "joy"
+        },
+        {
+          "word": "kuru-vṛddhaḥ",
+          "meaning": "the oldest of the Kurus"
+        },
+        {
+          "word": "pitāmahaḥ",
+          "meaning": "the grandfather (Bhishma)"
+        },
+        {
+          "word": "siṁha-nādam",
+          "meaning": "a lion's roar"
+        },
+        {
+          "word": "vinadya",
+          "meaning": "roaring"
+        },
+        {
+          "word": "uccaiḥ",
+          "meaning": "loudly"
+        },
+        {
+          "word": "śaṅkham",
+          "meaning": "conch shell"
+        },
+        {
+          "word": "dadhmau",
+          "meaning": "blew"
+        },
+        {
+          "word": "pratāpavān",
+          "meaning": "the mighty"
+        }
+      ],
+      "commentary": "Sanjaya continues his narration. In response to Duryodhana's fears, the great Bhishma blows his conch shell with a roar, signaling the start of the war. This act is meant to boost the morale of the Kaurava army and show his commitment to the war, despite his personal affection for the Pandavas.",
+      "key_concepts": [
+        "bhishma's roar",
+        "conch shell",
+        "start of war",
+        "morale"
+      ],
+      "tags": [
+        "bhishma",
+        "conch shell",
+        "battlefield",
+        "war"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 13,
+      "sanskrit_text": "ततः शङ्खाश्च भेर्यश्च पणवानकगोमुखाः।\nसहसैवाभ्यहन्यन्त स शब्दस्तुमुलोऽभवत्।।",
+      "transliteration": "tataḥ śaṅkhāś ca bheryaś ca paṇavānaka-gomukhāḥ\nsahasaivābhyahanyanta sa śabdas tumulo ’bhavat",
+      "translation": "After that, conches, kettle-drums, cymbals, drums, and cow-horns were all sounded at once. The sound was tumultuous.",
+      "word_meanings": [
+        {
+          "word": "tataḥ",
+          "meaning": "then"
+        },
+        {
+          "word": "śaṅkhāḥ",
+          "meaning": "conch shells"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "bheryaḥ",
+          "meaning": "kettle-drums"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "paṇava-ānaka-gomukhāḥ",
+          "meaning": "panavas, anaks, and gomukhas"
+        },
+        {
+          "word": "sahasā eva",
+          "meaning": "suddenly"
+        },
+        {
+          "word": "abhyahanyanta",
+          "meaning": "resounded"
+        },
+        {
+          "word": "saḥ śabdaḥ",
+          "meaning": "that sound"
+        },
+        {
+          "word": "tumulaḥ",
+          "meaning": "tumultuous"
+        },
+        {
+          "word": "abhavat",
+          "meaning": "became"
+        }
+      ],
+      "commentary": "This verse describes the grand, chaotic sound of war drums and musical instruments from the Kaurava side in response to Bhishma's conch. The tumultuous sound signifies the immense scale of the army and the full-throttle commencement of hostilities, creating an atmosphere of anticipation and dread.",
+      "key_concepts": [
+        "battle sounds",
+        "start of war",
+        "military display"
+      ],
+      "tags": [
+        "battlefield",
+        "kaurava army",
+        "war"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 14,
+      "sanskrit_text": "ततः श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ।\nमाधवः पाण्डवश्चैव दिव्यौ शङ्खौ प्रदध्मतुः।।",
+      "transliteration": "tataḥ śvetair hayair yukte mahati syandane sthitau\nmādhavaḥ pāṇḍavaś caiva divyau śaṅkhau pradadhmatuḥ",
+      "translation": "Then, seated in a great chariot yoked with white horses, Madhava (Krishna) and the son of Pandu (Arjuna) blew their divine conch shells.",
+      "word_meanings": [
+        {
+          "word": "tataḥ",
+          "meaning": "then"
+        },
+        {
+          "word": "śvetaiḥ",
+          "meaning": "with white"
+        },
+        {
+          "word": "hayaiḥ",
+          "meaning": "horses"
+        },
+        {
+          "word": "yukte",
+          "meaning": "yoked"
+        },
+        {
+          "word": "mahati",
+          "meaning": "great"
+        },
+        {
+          "word": "syandane",
+          "meaning": "chariot"
+        },
+        {
+          "word": "sthitau",
+          "meaning": "situated"
+        },
+        {
+          "word": "mādhavaḥ",
+          "meaning": "Madhava (Krishna)"
+        },
+        {
+          "word": "pāṇḍavaḥ ca eva",
+          "meaning": "and the Pandava (Arjuna) as well"
+        },
+        {
+          "word": "divyau",
+          "meaning": "divine"
+        },
+        {
+          "word": "śaṅkhau",
+          "meaning": "conch shells"
+        },
+        {
+          "word": "pradadhmatuḥ",
+          "meaning": "blew"
+        }
+      ],
+      "commentary": "In a direct response to the Kauravas, the Pandava side also sounds their conches. The description of Krishna and Arjuna's chariot with white horses symbolizes purity and righteousness. The blowing of their divine conches sets a spiritual tone for the battle and demonstrates their readiness to face the conflict.",
+      "key_concepts": [
+        "krishna's role",
+        "arjuna's chariot",
+        "divine conches",
+        "righteousness"
+      ],
+      "tags": [
+        "arjuna",
+        "krishna",
+        "chariot",
+        "conch shell"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 15,
+      "sanskrit_text": "पाञ्चजन्यं हृषीकेशो देवदत्तं धनञ्जयः।\nपौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदरः।।",
+      "transliteration": "pāñcajanyaṁ hṛṣīkeśo devadattaṁ dhanañ-jayaḥ\npauṇḍraṁ dadhmau mahā-śaṅkhaṁ bhīma-karmā vṛkodaraḥ",
+      "translation": "Hrishikesha (Krishna) blew his conch named Panchajanya, Dhananjaya (Arjuna) blew his Devadatta, and Bhima, the doer of terrible deeds, blew his great conch named Paundra.",
+      "word_meanings": [
+        {
+          "word": "pāñcajanyam",
+          "meaning": "Panchajanya (name of Krishna's conch)"
+        },
+        {
+          "word": "hṛṣīkeśaḥ",
+          "meaning": "Hrishikesha (Krishna, master of the senses)"
+        },
+        {
+          "word": "devadattam",
+          "meaning": "Devadatta (name of Arjuna's conch)"
+        },
+        {
+          "word": "dhanañ-jayaḥ",
+          "meaning": "Dhananjaya (Arjuna, conqueror of wealth)"
+        },
+        {
+          "word": "pauṇḍram",
+          "meaning": "Paundra (name of Bhima's conch)"
+        },
+        {
+          "word": "dadhmau",
+          "meaning": "blew"
+        },
+        {
+          "word": "mahā-śaṅkham",
+          "meaning": "the great conch"
+        },
+        {
+          "word": "bhīma-karmā",
+          "meaning": "of fearful deeds"
+        },
+        {
+          "word": "vṛkodaraḥ",
+          "meaning": "Vrikodara (Bhima, the wolf-bellied)"
+        }
+      ],
+      "commentary": "The sounding of the conches is personalized here, with each warrior having their own named conch. This signifies their individual prowess and identity. Krishna's 'Panchajanya' symbolizes the five elements, Arjuna's 'Devadatta' means God-given, and Bhima's 'Paundra' signifies his immense, terrifying strength. This detail highlights the spiritual and personal dimensions of the conflict.",
+      "key_concepts": [
+        "conch symbolism",
+        "krishna's divinity",
+        "arjuna's prowess",
+        "bhima's strength"
+      ],
+      "tags": [
+        "krishna",
+        "arjuna",
+        "bhima",
+        "conch shell",
+        "symbolism"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 16,
+      "sanskrit_text": "अनन्तविजयं राजा कुन्तीपुत्रो युधिष्ठिरः।\nनकुलः सहदेवश्च सुघोषमणिपुष्पकौ।।",
+      "transliteration": "ananta-vijayaṁ rājā kuntī-putro yudhiṣṭhiraḥ\nnakulaḥ sahadevaś ca sughoṣa-maṇi-puṣpakau",
+      "translation": "King Yudhishthira, the son of Kunti, blew his conch Anantavijaya; Nakula and Sahadeva blew their conches Sughosha and Manipushpaka.",
+      "word_meanings": [
+        {
+          "word": "ananta-vijayam",
+          "meaning": "Anantavijaya (name of Yudhishthira's conch)"
+        },
+        {
+          "word": "rājā",
+          "meaning": "king"
+        },
+        {
+          "word": "kuntī-putraḥ",
+          "meaning": "the son of Kunti (Yudhishthira)"
+        },
+        {
+          "word": "yudhiṣṭhiraḥ",
+          "meaning": "Yudhishthira"
+        },
+        {
+          "word": "nakulaḥ",
+          "meaning": "Nakula"
+        },
+        {
+          "word": "sahadevaḥ ca",
+          "meaning": "and Sahadeva"
+        },
+        {
+          "word": "sughoṣa",
+          "meaning": "Sughosha (name of Nakula's conch)"
+        },
+        {
+          "word": "maṇi-puṣpakau",
+          "meaning": "Manipushpaka (name of Sahadeva's conch)"
+        }
+      ],
+      "commentary": "The list of conches continues with the other Pandava brothers. Yudhishthira's conch, 'Anantavijaya', symbolizes endless victory, reflecting his unwavering commitment to dharma. Nakula and Sahadeva's conches, 'Sughosha' (auspicious sound) and 'Manipushpaka' (jewel-blossom), signify beauty, prosperity, and the harmonious nature of the younger twins. This further highlights the moral and spiritual significance of the Pandava side.",
+      "key_concepts": [
+        "pandava brothers",
+        "conch symbolism",
+        "righteousness",
+        "yudhishthira"
+      ],
+      "tags": [
+        "yudhishthira",
+        "nakula",
+        "sahadeva",
+        "conch shell"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 17,
+      "sanskrit_text": "काश्यश्च परमेष्वासः शिखण्डी च महारथः।\nधृष्टद्युम्नो विराटश्च सात्यकिश्चापराजितः।।",
+      "transliteration": "kāśyaś ca parameṣv-āsaḥ śikhaṇḍī ca mahā-rathaḥ\ndhṛṣṭadyumno virāṭaś ca sātyakiś cāparājitaḥ",
+      "translation": "The King of Kashi, a supreme archer, and the great warrior Shikhandi, Dhrishtadyumna, Virata, and the unconquerable Satyaki, all blew their conches.",
+      "word_meanings": [
+        {
+          "word": "kāśyaḥ ca",
+          "meaning": "and the King of Kashi"
+        },
+        {
+          "word": "parama-iṣv-āsaḥ",
+          "meaning": "the supreme archer"
+        },
+        {
+          "word": "śikhaṇḍī ca",
+          "meaning": "and Shikhandi"
+        },
+        {
+          "word": "mahā-rathaḥ",
+          "meaning": "the great warrior"
+        },
+        {
+          "word": "dhṛṣṭadyumnaḥ",
+          "meaning": "Dhrishtadyumna"
+        },
+        {
+          "word": "virāṭaḥ ca",
+          "meaning": "and Virata"
+        },
+        {
+          "word": "sātyakiḥ ca",
+          "meaning": "and Satyaki"
+        },
+        {
+          "word": "aparājitaḥ",
+          "meaning": "the unconquered"
+        }
+      ],
+      "commentary": "Sanjaya continues to list the Pandava's allies who also blew their conches. The mention of Shikhandi, who is destined to be the cause of Bhishma's death, adds a layer of irony and fate. The sounding of all these conches represents the collective will and unity of the Pandava army, a powerful contrast to the infighting and doubt within the Kaurava ranks.",
+      "key_concepts": [
+        "pandava allies",
+        "shikhandi",
+        "collective unity"
+      ],
+      "tags": [
+        "pandava army",
+        "heroes",
+        "shikhandi",
+        "conch shell"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 18,
+      "sanskrit_text": "द्रुपदो द्रौपदेयाश्च सर्वशः पृथिवीपते।\nसौभद्रश्च महाबाहुः शङ्खान्दध्मुः पृथक्पृथक्।।",
+      "transliteration": "drupado draupadeyāś ca sarvaśaḥ pṛthivī-pate\nsaubhadraś ca mahā-bāhuḥ śaṅkhān dadhmuḥ pṛthak pṛthak",
+      "translation": "O king (Dhritarashtra), Drupada, the sons of Draupadi, and the mighty-armed son of Subhadra (Abhimanyu) all blew their respective conches from all sides.",
+      "word_meanings": [
+        {
+          "word": "drupadaḥ",
+          "meaning": "Drupada"
+        },
+        {
+          "word": "draupadeyāḥ ca",
+          "meaning": "and the sons of Draupadi"
+        },
+        {
+          "word": "sarvaśaḥ",
+          "meaning": "all around"
+        },
+        {
+          "word": "pṛthivī-pate",
+          "meaning": "O king of the earth"
+        },
+        {
+          "word": "saubhadraḥ ca",
+          "meaning": "and the son of Subhadra (Abhimanyu)"
+        },
+        {
+          "word": "mahā-bāhuḥ",
+          "meaning": "the mighty-armed"
+        },
+        {
+          "word": "śaṅkhān",
+          "meaning": "conch shells"
+        },
+        {
+          "word": "dadhmuḥ",
+          "meaning": "blew"
+        },
+        {
+          "word": "pṛthak pṛthak",
+          "meaning": "separately"
+        }
+      ],
+      "commentary": "Sanjaya concludes his description of the Pandava side's conch-blowing, naming Drupada, the sons of Draupadi, and Abhimanyu. The phrase 'all blew their respective conches from all sides' highlights the Pandava army's organized and unified response, contrasting with the Kauravas' initial roar of confidence. This aural spectacle marks the symbolic start of the battle.",
+      "key_concepts": [
+        "pandava unity",
+        "drupada",
+        "abhimanyu",
+        "battlefield sounds"
+      ],
+      "tags": [
+        "pandava army",
+        "heroes",
+        "conch shell",
+        "battlefield"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 19,
+      "sanskrit_text": "स घोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्।\nनभश्च पृथिवीं चैव तुमुलो व्यनुनादयन्।।",
+      "transliteration": "sa ghoṣo dhārtarāṣṭrāṇāṁ hṛdayāni vyadārayat\nnabhaś ca pṛthivīṁ caiva tumulo vyanunādayan",
+      "translation": "That great sound, resounding in the sky and on the earth, tore apart the hearts of the Dhritarashtra's sons (the Kauravas).",
+      "word_meanings": [
+        {
+          "word": "saḥ ghoṣaḥ",
+          "meaning": "that sound"
+        },
+        {
+          "word": "dhārtarāṣṭrāṇām",
+          "meaning": "of the sons of Dhritarashtra"
+        },
+        {
+          "word": "hṛdayāni",
+          "meaning": "the hearts"
+        },
+        {
+          "word": "vyadārayat",
+          "meaning": "shattered"
+        },
+        {
+          "word": "nabhaḥ ca",
+          "meaning": "the sky and"
+        },
+        {
+          "word": "pṛthivīm ca eva",
+          "meaning": "and the earth also"
+        },
+        {
+          "word": "tumulaḥ",
+          "meaning": "tumultuous"
+        },
+        {
+          "word": "vyanunādayan",
+          "meaning": "reverberating"
+        }
+      ],
+      "commentary": "This verse dramatically illustrates the psychological impact of the Pandava's conch-blowing. The powerful, unified sound not only reverberates through the environment but also shatters the confidence and morale of the Kauravas. It shows that despite their numerical and military advantage, the Kauravas are filled with fear and a sense of impending doom, setting the stage for Arjuna's crisis of conscience.",
+      "key_concepts": [
+        "psychological impact",
+        "kaurava's fear",
+        "moral conflict"
+      ],
+      "tags": [
+        "duryodhana",
+        "kaurava army",
+        "fear",
+        "battlefield"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 20,
+      "sanskrit_text": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान् कपिध्वजः।\nप्रवृत्ते शस्त्रसम्पाते धनुरुद्यम्य पाण्डवः।।",
+      "transliteration": "atha vyavasthitān dṛṣṭvā dhārtarāṣṭrān kapi-dhvajaḥ\npravṛtte śastra-sampāte dhanur udyamya pāṇḍavaḥ",
+      "translation": "Then, O king (Dhritarashtra), the Pandava (Arjuna), whose flag bears the emblem of Hanuman, on seeing your sons arrayed for battle and the weapons about to be discharged, raised his bow.",
+      "word_meanings": [
+        {
+          "word": "atha",
+          "meaning": "now"
+        },
+        {
+          "word": "vyavasthitān",
+          "meaning": "arrayed"
+        },
+        {
+          "word": "dṛṣṭvā",
+          "meaning": "seeing"
+        },
+        {
+          "word": "dhārtarāṣṭrān",
+          "meaning": "the sons of Dhritarashtra"
+        },
+        {
+          "word": "kapi-dhvajaḥ",
+          "meaning": "he whose flag has a monkey (Hanuman)"
+        },
+        {
+          "word": "pravṛtte",
+          "meaning": "at the beginning"
+        },
+        {
+          "word": "śastra-sampāte",
+          "meaning": "of the clashing of weapons"
+        },
+        {
+          "word": "dhanuḥ",
+          "meaning": "bow"
+        },
+        {
+          "word": "udyamya",
+          "meaning": "raising"
+        },
+        {
+          "word": "pāṇḍavaḥ",
+          "meaning": "the son of Pandu (Arjuna)"
+        }
+      ],
+      "commentary": "This is a pivotal moment in the Gita. Sanjaya shifts the focus to Arjuna, who is about to begin the fight. The mention of his 'kapi-dhvaja' (Hanuman banner) symbolizes his strength, devotion, and righteousness. As the battle is about to start, Arjuna's action of raising his bow signifies his readiness, but it is at this very moment that his doubt and moral crisis begin.",
+      "key_concepts": [
+        "arjuna's dilemma",
+        "hanuman banner",
+        "start of battle"
+      ],
+      "tags": [
+        "arjuna",
+        "battlefield",
+        "hanuman",
+        "moral crisis"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 21,
+      "sanskrit_text": "हृषीकेशं तदा वाक्यमिदमाह महीपते।\nसेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत।।",
+      "transliteration": "hṛṣīkeśaṁ tadā vākyam idam āha mahī-pate\nsenayor ubhayor madhye rathaṁ sthāpaya me 'cyuta",
+      "translation": "And, O king (Dhritarashtra), spoke these words to Hrishikesha (Krishna): 'O Infallible One, please place my chariot between the two armies.'",
+      "word_meanings": [
+        {
+          "word": "hṛṣīkeśam",
+          "meaning": "to Hrishikesha (Krishna)"
+        },
+        {
+          "word": "tadā",
+          "meaning": "then"
+        },
+        {
+          "word": "vākyam",
+          "meaning": "words"
+        },
+        {
+          "word": "idam",
+          "meaning": "these"
+        },
+        {
+          "word": "āha",
+          "meaning": "said"
+        },
+        {
+          "word": "mahī-pate",
+          "meaning": "O king"
+        },
+        {
+          "word": "senayoḥ",
+          "meaning": "of the armies"
+        },
+        {
+          "word": "ubhayoḥ",
+          "meaning": "of both"
+        },
+        {
+          "word": "madhye",
+          "meaning": "in the middle"
+        },
+        {
+          "word": "ratham",
+          "meaning": "chariot"
+        },
+        {
+          "word": "sthāpaya",
+          "meaning": "place"
+        },
+        {
+          "word": "me",
+          "meaning": "my"
+        },
+        {
+          "word": "acyuta",
+          "meaning": "O Infallible One (Krishna)"
+        }
+      ],
+      "commentary": "Arjuna's first words in the Gita are a command to Krishna. He asks Krishna to place his chariot in the middle of the two armies. This request is driven by a desire to get a clear view of the enemy, which he still sees as his relatives and teachers. This marks the beginning of the central dialogue of the Bhagavad Gita.",
+      "key_concepts": [
+        "arjuna's request",
+        "krishna as charioteer",
+        "battlefield position"
+      ],
+      "tags": [
+        "arjuna",
+        "krishna",
+        "chariot",
+        "battlefield"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 22,
+      "sanskrit_text": "यावदेतान्निरीक्षेऽहं योद्धुकामानवस्थितान्।\nकैर्मया सह योद्धव्यमस्मिन् रणसमुद्यमे।।",
+      "transliteration": "yāvad etān nirīkṣe 'haṁ yoddhu-kāmān avasthitān\nkair mayā saha yoddhavyam asmin raṇa-samudyame",
+      "translation": "So that I may see those who are assembled here, eager for battle, and with whom I must fight in this great war.",
+      "word_meanings": [
+        {
+          "word": "yāvat",
+          "meaning": "as long as"
+        },
+        {
+          "word": "etān",
+          "meaning": "these"
+        },
+        {
+          "word": "nirīkṣe",
+          "meaning": "I may see"
+        },
+        {
+          "word": "aham",
+          "meaning": "I"
+        },
+        {
+          "word": "yoddhu-kāmān",
+          "meaning": "desiring to fight"
+        },
+        {
+          "word": "avasthitān",
+          "meaning": "arrayed"
+        },
+        {
+          "word": "kaiḥ",
+          "meaning": "with whom"
+        },
+        {
+          "word": "mayā",
+          "meaning": "by me"
+        },
+        {
+          "word": "saha",
+          "meaning": "with"
+        },
+        {
+          "word": "yoddhavyam",
+          "meaning": "is to be fought"
+        },
+        {
+          "word": "asmin",
+          "meaning": "in this"
+        },
+        {
+          "word": "raṇa-samudyame",
+          "meaning": "great endeavor of war"
+        }
+      ],
+      "commentary": "Arjuna clarifies his request. He wants to survey the battlefield to identify the key warriors on the opposing side. His desire to see 'with whom I must fight' indicates his focus on his duty as a warrior, but this is a momentary thought that will soon give way to his moral crisis upon seeing his relatives.",
+      "key_concepts": [
+        "arjuna's motivation",
+        "warrior's duty",
+        "battlefield survey"
+      ],
+      "tags": [
+        "arjuna",
+        "battlefield",
+        "dharma",
+        "warrior"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 23,
+      "sanskrit_text": "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः।\nधार्तराष्ट्रस्य दुर्बुद्धेर्युद्धे प्रियचिकीर्षवः।।",
+      "transliteration": "yotsyamānān avekṣe 'haṁ ya ete 'tra samāgatāḥ\ndhārtarāṣṭrasya durbuddher yuddhe priya-cikīrṣavaḥ",
+      "translation": "I wish to observe those who have gathered here to fight, intending to please the evil-minded son of Dhritarashtra.",
+      "word_meanings": [
+        {
+          "word": "yotsyamānān",
+          "meaning": "those who will fight"
+        },
+        {
+          "word": "avekṣe",
+          "meaning": "I wish to see"
+        },
+        {
+          "word": "aham",
+          "meaning": "I"
+        },
+        {
+          "word": "ye",
+          "meaning": "who"
+        },
+        {
+          "word": "ete",
+          "meaning": "these"
+        },
+        {
+          "word": "atra",
+          "meaning": "here"
+        },
+        {
+          "word": "samāgatāḥ",
+          "meaning": "assembled"
+        },
+        {
+          "word": "dhārtarāṣṭrasya",
+          "meaning": "of the son of Dhritarashtra"
+        },
+        {
+          "word": "durbuddheḥ",
+          "meaning": "the evil-minded"
+        },
+        {
+          "word": "yuddhe",
+          "meaning": "in battle"
+        },
+        {
+          "word": "priya-cikīrṣavaḥ",
+          "meaning": "desiring to please"
+        }
+      ],
+      "commentary": "Arjuna's words reveal his perspective. He sees the Kaurava army as allies of the 'evil-minded' Duryodhana. This moral judgment is a precursor to his later emotional turmoil, as he begins to see the human cost of the war and question the righteousness of the fight. This verse sets the stage for his descent into moral despair.",
+      "key_concepts": [
+        "arjuna's perspective",
+        "duryodhana's evil",
+        "moral conflict"
+      ],
+      "tags": [
+        "arjuna",
+        "duryodhana",
+        "battlefield",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 24,
+      "sanskrit_text": "सञ्जय उवाच।\nएवमुक्तो हृषीकेशो गुडाकेशेन भारत।\nसेनयोरुभयोर्मध्ये स्थापयित्वा रथोत्तमम्।।",
+      "transliteration": "sañjaya uvāca\nevam ukto hṛṣīkeśo guḍākeśena bhārata\nsenayor ubhayor madhye sthāpayitvā rathottamam",
+      "translation": "Sanjaya said: O descendant of Bharata (Dhritarashtra), having been addressed thus by Gudakesha (Arjuna), Hrishikesha (Krishna) placed that best of chariots in the middle of the two armies.",
+      "word_meanings": [
+        {
+          "word": "sañjayaḥ uvāca",
+          "meaning": "Sanjaya said"
+        },
+        {
+          "word": "evam",
+          "meaning": "thus"
+        },
+        {
+          "word": "uktaḥ",
+          "meaning": "being spoken to"
+        },
+        {
+          "word": "hṛṣīkeśaḥ",
+          "meaning": "Hrishikesha (Krishna)"
+        },
+        {
+          "word": "guḍākeśena",
+          "meaning": "by Gudakesha (Arjuna, conqueror of sleep)"
+        },
+        {
+          "word": "bhārata",
+          "meaning": "O descendant of Bharata"
+        },
+        {
+          "word": "senayoḥ",
+          "meaning": "of the armies"
+        },
+        {
+          "word": "ubhayoḥ",
+          "meaning": "of both"
+        },
+        {
+          "word": "madhye",
+          "meaning": "in the middle"
+        },
+        {
+          "word": "sthāpayitvā",
+          "meaning": "placing"
+        },
+        {
+          "word": "ratha-uttamam",
+          "meaning": "the best of chariots"
+        }
+      ],
+      "commentary": "Sanjaya confirms that Krishna, acting as Arjuna's charioteer, fulfills his request. The use of 'Gudakesha' (conqueror of sleep) to describe Arjuna is significant, hinting at his spiritual awakening which will soon follow. Krishna, as the supreme charioteer, places the chariot at the precise spot where Arjuna's ultimate test will begin.",
+      "key_concepts": [
+        "krishna as charioteer",
+        "arjuna's epithet",
+        "pivotal moment"
+      ],
+      "tags": [
+        "sanjaya",
+        "arjuna",
+        "krishna",
+        "chariot"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 25,
+      "sanskrit_text": "भीष्मद्रोणप्रमुखतः सर्वेषां च महीक्षिताम्।\nउवाच पार्थ पश्यैतान् समवेतान् कुरूनिति।।",
+      "transliteration": "bhīṣma-droṇa-pramukhataḥ sarveṣāṁ ca mahī-kṣitām\nuvāca pārtha paśyaitān samavetān kurūn iti",
+      "translation": "In front of Bhishma, Drona, and all the kings of the world, he (Krishna) said, 'O son of Pritha (Arjuna), behold all these Kurus assembled here.'",
+      "word_meanings": [
+        {
+          "word": "bhīṣma-droṇa-pramukhataḥ",
+          "meaning": "in front of Bhishma and Drona"
+        },
+        {
+          "word": "sarveṣām ca",
+          "meaning": "and of all"
+        },
+        {
+          "word": "mahī-kṣitām",
+          "meaning": "the kings of the earth"
+        },
+        {
+          "word": "uvāca",
+          "meaning": "said"
+        },
+        {
+          "word": "pārtha",
+          "meaning": "O son of Pritha (Arjuna)"
+        },
+        {
+          "word": "paśya",
+          "meaning": "behold"
+        },
+        {
+          "word": "etān",
+          "meaning": "these"
+        },
+        {
+          "word": "samavetān",
+          "meaning": "assembled"
+        },
+        {
+          "word": "kurūn",
+          "meaning": "Kurus"
+        },
+        {
+          "word": "iti",
+          "meaning": "thus"
+        }
+      ],
+      "commentary": "Krishna parks the chariot in the most conspicuous spot, directly in front of the key figures of the Kaurava army: Bhishma and Dronacharya. This act is deliberate, forcing Arjuna to confront the reality of whom he is about to fight. Krishna's command, 'behold all these Kurus,' is the direct trigger for Arjuna's emotional breakdown and the beginning of the philosophical discourse.",
+      "key_concepts": [
+        "krishna's strategic placement",
+        "bhishma and drona",
+        "arjuna's confrontation"
+      ],
+      "tags": [
+        "krishna",
+        "arjuna",
+        "bhishma",
+        "dronacharya"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 26,
+      "sanskrit_text": "तत्रापश्यत्स्थितान्पार्थः पितॄनथ पितामहान्।\nआचार्यान्मातुलान्भ्रातॄन्पुत्रान्पौत्रान्सखींस्तथा।।",
+      "transliteration": "tatrāpaśyat sthitān pārthaḥ pitṝn atha pitāmahān\nācāryān mātulān bhrātṝn putrān pautrān sakhīṁs tathā",
+      "translation": "There, the son of Pritha (Arjuna) saw his fathers, grandfathers, teachers, maternal uncles, brothers, sons, grandsons, and also his friends.",
+      "word_meanings": [
+        {
+          "word": "tatra",
+          "meaning": "there"
+        },
+        {
+          "word": "apaśyat",
+          "meaning": "he saw"
+        },
+        {
+          "word": "sthitān",
+          "meaning": "situated"
+        },
+        {
+          "word": "pārthaḥ",
+          "meaning": "the son of Pritha (Arjuna)"
+        },
+        {
+          "word": "pitṝn",
+          "meaning": "fathers"
+        },
+        {
+          "word": "atha",
+          "meaning": "then"
+        },
+        {
+          "word": "pitāmahān",
+          "meaning": "grandfathers"
+        },
+        {
+          "word": "ācāryān",
+          "meaning": "teachers"
+        },
+        {
+          "word": "mātulān",
+          "meaning": "maternal uncles"
+        },
+        {
+          "word": "bhrātṝn",
+          "meaning": "brothers"
+        },
+        {
+          "word": "putrān",
+          "meaning": "sons"
+        },
+        {
+          "word": "pautrān",
+          "meaning": "grandsons"
+        },
+        {
+          "word": "sakhīn",
+          "meaning": "friends"
+        },
+        {
+          "word": "tathā",
+          "meaning": "and also"
+        }
+      ],
+      "commentary": "This verse marks the climax of Arjuna's internal conflict. He is no longer seeing an anonymous army but a collection of his most beloved relatives and revered mentors. This deeply personal sight breaks his resolve and brings him to a state of profound grief and confusion, leading to his famous discourse with Krishna.",
+      "key_concepts": [
+        "arjuna's grief",
+        "moral crisis",
+        "relatives",
+        "battlefield"
+      ],
+      "tags": [
+        "arjuna",
+        "family",
+        "dharma",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 27,
+      "sanskrit_text": "श्वशुरान्सुहृदश्चैव सेनयोरुभयोरपि।\nतान्समीक्ष्य स कौन्तेयः सर्वान्बन्धूनवस्थितान्।।",
+      "transliteration": "śvaśurān suhṛdaś caiva senayor ubhayor api\ntān samīkṣya sa kaunteyaḥ sarvān bandhūn avasthitān",
+      "translation": "He (Arjuna) saw his fathers-in-law and well-wishers in both armies. Seeing all these relatives arrayed, the son of Kunti (Arjuna)...",
+      "word_meanings": [
+        {
+          "word": "śvaśurān",
+          "meaning": "fathers-in-law"
+        },
+        {
+          "word": "suhṛdaḥ ca eva",
+          "meaning": "and well-wishers as well"
+        },
+        {
+          "word": "senayoḥ",
+          "meaning": "in the armies"
+        },
+        {
+          "word": "ubhayoḥ api",
+          "meaning": "of both as well"
+        },
+        {
+          "word": "tān",
+          "meaning": "those"
+        },
+        {
+          "word": "samīkṣya",
+          "meaning": "seeing"
+        },
+        {
+          "word": "saḥ",
+          "meaning": "he"
+        },
+        {
+          "word": "kaunteyaḥ",
+          "meaning": "the son of Kunti (Arjuna)"
+        },
+        {
+          "word": "sarvān",
+          "meaning": "all"
+        },
+        {
+          "word": "bandhūn",
+          "meaning": "relatives"
+        },
+        {
+          "word": "avasthitān",
+          "meaning": "situated"
+        }
+      ],
+      "commentary": "This verse continues the list of Arjuna's family members and well-wishers, extending his moral dilemma to include not just his brothers and teachers, but also his in-laws. This shows the all-encompassing nature of the war and how deeply it is tied to personal relationships, making Arjuna's conflict even more intense.",
+      "key_concepts": [
+        "arjuna's relationships",
+        "family conflict",
+        "moral crisis"
+      ],
+      "tags": [
+        "arjuna",
+        "family",
+        "moral dilemma",
+        "battlefield"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 28,
+      "sanskrit_text": "कृपया परयाविष्टो विषीदन्निदमब्रवीत्।\nदृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम्।।",
+      "transliteration": "kṛpayā parayāviṣṭo viṣīdann idam abravīt\ndṛṣṭvemāṁ sva-janaṁ kṛṣṇa yuyutsuṁ samupasthitam",
+      "translation": "Filled with great compassion and sorrow, Arjuna spoke these words: 'O Krishna, seeing these kinsmen of mine standing before me, eager to fight…'",
+      "word_meanings": [
+        {
+          "word": "kṛpayā",
+          "meaning": "with compassion"
+        },
+        {
+          "word": "parayā",
+          "meaning": "great"
+        },
+        {
+          "word": "āviṣṭaḥ",
+          "meaning": "overwhelmed"
+        },
+        {
+          "word": "viṣīdan",
+          "meaning": "lamenting"
+        },
+        {
+          "word": "idam",
+          "meaning": "these"
+        },
+        {
+          "word": "abravīt",
+          "meaning": "spoke"
+        },
+        {
+          "word": "dṛṣṭvā",
+          "meaning": "having seen"
+        },
+        {
+          "word": "imam",
+          "meaning": "this"
+        },
+        {
+          "word": "sva-janam",
+          "meaning": "my own people"
+        },
+        {
+          "word": "kṛṣṇa",
+          "meaning": "O Krishna"
+        },
+        {
+          "word": "yuyutsum",
+          "meaning": "desiring to fight"
+        },
+        {
+          "word": "samupasthitam",
+          "meaning": "standing before"
+        }
+      ],
+      "commentary": "This verse marks the beginning of Arjuna's lamentation. He is overcome by 'karuna' (compassion) and 'vishada' (sorrow). The sight of his 'sva-jana' (kinsmen) ready for battle makes him question the very purpose of the war. This emotional state of Arjuna is the central theme of Chapter 1, setting the stage for Krishna's profound teachings.",
+      "key_concepts": [
+        "arjuna's sorrow",
+        "compassion",
+        "kinsmen",
+        "moral dilemma"
+      ],
+      "tags": [
+        "arjuna",
+        "grief",
+        "moral crisis",
+        "battlefield"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 29,
+      "sanskrit_text": "सीदन्ति मम गात्राणि मुखं च परिशुष्यति।\nवेपथुश्च शरीरे मे रोमहर्षश्च जायते।।",
+      "transliteration": "sīdanti mama gātrāṇi mukhaṁ ca pariśuṣyati\nvepathuś ca śarīre me roma-harṣaś ca jāyate",
+      "translation": "My limbs are weakening, my mouth is drying up, my body is trembling, and my hairs are standing on end.",
+      "word_meanings": [
+        {
+          "word": "sīdanti",
+          "meaning": "are sinking down"
+        },
+        {
+          "word": "mama",
+          "meaning": "my"
+        },
+        {
+          "word": "gātrāṇi",
+          "meaning": "limbs"
+        },
+        {
+          "word": "mukham",
+          "meaning": "mouth"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "pariśuṣyati",
+          "meaning": "is drying up"
+        },
+        {
+          "word": "vepathuḥ ca",
+          "meaning": "and trembling"
+        },
+        {
+          "word": "śarīre",
+          "meaning": "in the body"
+        },
+        {
+          "word": "me",
+          "meaning": "my"
+        },
+        {
+          "word": "roma-harṣaḥ ca",
+          "meaning": "and hairs standing on end"
+        },
+        {
+          "word": "jāyate",
+          "meaning": "is happening"
+        }
+      ],
+      "commentary": "Arjuna's distress manifests physically. He describes the classic symptoms of shock, fear, and grief: a dry mouth, trembling, and a feeling of weakness. This physical reaction emphasizes the depth of his emotional and moral crisis, showing that his dilemma is not merely intellectual but deeply personal and visceral.",
+      "key_concepts": [
+        "physical symptoms of grief",
+        "arjuna's distress",
+        "emotional turmoil"
+      ],
+      "tags": [
+        "arjuna",
+        "grief",
+        "physical reaction",
+        "anxiety"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 30,
+      "sanskrit_text": "गाण्डीवं स्रंसते हस्तात्त्वक्चैव परिदह्यते।\nन च शक्नोम्यवस्थातुं भ्रमतीव च मे मनः।।",
+      "transliteration": "gāṇḍīvaṁ sraṁsate hastāt tvak caiva paridahyate\nna ca śaknomi avasthātuṁ bhramatīva ca me manaḥ",
+      "translation": "My bow, Gandiva, is slipping from my hand, and my skin is burning. I am unable to stand steady, and my mind is reeling.",
+      "word_meanings": [
+        {
+          "word": "gāṇḍīvam",
+          "meaning": "the Gandiva (Arjuna's bow)"
+        },
+        {
+          "word": "sraṁsate",
+          "meaning": "is slipping"
+        },
+        {
+          "word": "hastāt",
+          "meaning": "from the hand"
+        },
+        {
+          "word": "tvak",
+          "meaning": "skin"
+        },
+        {
+          "word": "ca eva",
+          "meaning": "and also"
+        },
+        {
+          "word": "paridahyate",
+          "meaning": "is burning"
+        },
+        {
+          "word": "na ca śaknomi",
+          "meaning": "nor am I able"
+        },
+        {
+          "word": "avasthātum",
+          "meaning": "to stand steady"
+        },
+        {
+          "word": "bhramati iva",
+          "meaning": "is reeling as if"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "me",
+          "meaning": "my"
+        },
+        {
+          "word": "manaḥ",
+          "meaning": "mind"
+        }
+      ],
+      "commentary": "Arjuna's physical and mental collapse is complete. His bow, the Gandiva, a symbol of his warrior identity, is falling from his hands. This represents his loss of will to fight. His mind is 'reeling,' signifying his utter confusion and inability to think clearly. This state of 'vishada' (despair) is the foundation upon which Krishna will build his philosophical teachings.",
+      "key_concepts": [
+        "arjuna's mental state",
+        "symbolism of gandiva",
+        "collapse"
+      ],
+      "tags": [
+        "arjuna",
+        "grief",
+        "mental state",
+        "gandiva"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 31,
+      "sanskrit_text": "निमित्तानि च पश्यामि विपरीतानि केशव।\nन च श्रेयोऽनुपश्यामि हत्वा स्वजनमाहवे।।",
+      "transliteration": "nimittāni ca paśyāmi viparītāni keśava\nna ca śreyo 'nupaśyāmi hatvā sva-janam āhave",
+      "translation": "And, O Keshava (Krishna), I see bad omens, and I do not foresee any good from killing my own kinsmen in battle.",
+      "word_meanings": [
+        {
+          "word": "nimittāni",
+          "meaning": "omens"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "paśyāmi",
+          "meaning": "I see"
+        },
+        {
+          "word": "viparītāni",
+          "meaning": "ominous"
+        },
+        {
+          "word": "keśava",
+          "meaning": "O Keshava (Krishna)"
+        },
+        {
+          "word": "na ca",
+          "meaning": "and not"
+        },
+        {
+          "word": "śreyaḥ",
+          "meaning": "good"
+        },
+        {
+          "word": "anupaśyāmi",
+          "meaning": "I see"
+        },
+        {
+          "word": "hatvā",
+          "meaning": "by killing"
+        },
+        {
+          "word": "sva-janam",
+          "meaning": "my own people"
+        },
+        {
+          "word": "āhave",
+          "meaning": "in battle"
+        }
+      ],
+      "commentary": "Arjuna's despair turns into a moral argument. He believes that fighting his own family is not only against 'dharma' (righteous conduct) but will also bring about negative consequences. He sees the omens as unfavorable and the outcome of the war, even if victorious, as a source of misery. This sets the stage for his main philosophical question to Krishna: what is the true nature of 'dharma'?",
+      "key_concepts": [
+        "arjuna's moral argument",
+        "dharma",
+        "bad omens",
+        "consequences of war"
+      ],
+      "tags": [
+        "arjuna",
+        "moral dilemma",
+        "dharma",
+        "war"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 32,
+      "sanskrit_text": "न काङ्क्षे विजयं कृष्ण न च राज्यं सुखानि च।\nकिं नो राज्येन गोविन्द किं भोगैर्जीवितेन वा।।",
+      "transliteration": "na kāṅkṣe vijayaṁ kṛṣṇa na ca rājyaṁ sukhāni ca\nkiṁ no rājyena govinda kiṁ bhogair jīvitena vā",
+      "translation": "O Krishna, I desire neither victory nor a kingdom nor happiness. O Govinda, what is the use of a kingdom, or of material enjoyments, or even life itself?",
+      "word_meanings": [
+        {
+          "word": "na",
+          "meaning": "not"
+        },
+        {
+          "word": "kāṅkṣe",
+          "meaning": "I desire"
+        },
+        {
+          "word": "vijayam",
+          "meaning": "victory"
+        },
+        {
+          "word": "kṛṣṇa",
+          "meaning": "O Krishna"
+        },
+        {
+          "word": "na ca",
+          "meaning": "and not"
+        },
+        {
+          "word": "rājyam",
+          "meaning": "kingdom"
+        },
+        {
+          "word": "sukhāni",
+          "meaning": "happiness"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "kim",
+          "meaning": "what"
+        },
+        {
+          "word": "naḥ",
+          "meaning": "for us"
+        },
+        {
+          "word": "rājyena",
+          "meaning": "with a kingdom"
+        },
+        {
+          "word": "govinda",
+          "meaning": "O Govinda (Krishna)"
+        },
+        {
+          "word": "kim",
+          "meaning": "what"
+        },
+        {
+          "word": "bhogaiḥ",
+          "meaning": "with enjoyments"
+        },
+        {
+          "word": "jīvitena",
+          "meaning": "with life"
+        },
+        {
+          "word": "vā",
+          "meaning": "or"
+        }
+      ],
+      "commentary": "Arjuna's argument becomes more radical. He rejects the very reasons for which the war is being fought: a kingdom, wealth, and happiness. He sees these material gains as worthless if they come at the cost of killing his own family. This shows his deep disillusionment and his search for a higher purpose beyond worldly possessions and power.",
+      "key_concepts": [
+        "rejection of material gains",
+        "nihilism",
+        "arjuna's despair"
+      ],
+      "tags": [
+        "arjuna",
+        "detachment",
+        "moral dilemma",
+        "materialism"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 33,
+      "sanskrit_text": "येषामर्थे काङ्क्षितं नो राज्यं भोगाः सुखानि च।\nत इमेऽवस्थिता युद्धे प्राणान्स्त्यक्त्वा धनानि च।।",
+      "transliteration": "yeṣām arthe kāṅkṣitaṁ no rājyaṁ bhogāḥ sukhāni ca\nta ime 'vasthitā yuddhe prāṇāṁs tyaktvā dhanāni ca",
+      "translation": "Those for whose sake we desire a kingdom, enjoyments, and happiness are standing before us, ready to abandon their lives and their riches.",
+      "word_meanings": [
+        {
+          "word": "yeṣām",
+          "meaning": "for whose"
+        },
+        {
+          "word": "arthe",
+          "meaning": "sake"
+        },
+        {
+          "word": "kāṅkṣitam",
+          "meaning": "is desired"
+        },
+        {
+          "word": "naḥ",
+          "meaning": "by us"
+        },
+        {
+          "word": "rājyam",
+          "meaning": "kingdom"
+        },
+        {
+          "word": "bhogāḥ",
+          "meaning": "enjoyments"
+        },
+        {
+          "word": "sukhāni",
+          "meaning": "happiness"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "te",
+          "meaning": "they"
+        },
+        {
+          "word": "ime",
+          "meaning": "these"
+        },
+        {
+          "word": "avasthitāḥ",
+          "meaning": "are situated"
+        },
+        {
+          "word": "yuddhe",
+          "meaning": "in battle"
+        },
+        {
+          "word": "prāṇān",
+          "meaning": "lives"
+        },
+        {
+          "word": "tyaktvā",
+          "meaning": "having given up"
+        },
+        {
+          "word": "dhanāni ca",
+          "meaning": "and riches"
+        }
+      ],
+      "commentary": "Arjuna's argument is that the people he is fighting are the very ones who would benefit from his victory. They are prepared to die for their allegiance to Duryodhana. Killing them would make the victory hollow and meaningless. This emphasizes the paradox of his position: what is the value of a kingdom if it is ruled over a pile of corpses of one's own family?",
+      "key_concepts": [
+        "paradox of victory",
+        "moral paradox",
+        "consequences of war"
+      ],
+      "tags": [
+        "arjuna",
+        "family",
+        "moral dilemma",
+        "war"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 34,
+      "sanskrit_text": "आचार्याः पितरः पुत्रास्तथैव च पितामहाः।\nमातुलाः श्वशुराः पौत्राः श्यालाः सम्बन्धिनस्तथा।।",
+      "transliteration": "ācāryāḥ pitaraḥ putrās tathaiva ca pitāmahāḥ\nmātulāḥ śvaśurāḥ pautrāḥ śyālāḥ sambandhinas tathā",
+      "translation": "Teachers, fathers, sons, and also grandfathers; maternal uncles, fathers-in-law, grandsons, brothers-in-law, and other relatives.",
+      "word_meanings": [
+        {
+          "word": "ācāryāḥ",
+          "meaning": "teachers"
+        },
+        {
+          "word": "pitaraḥ",
+          "meaning": "fathers"
+        },
+        {
+          "word": "putrāḥ",
+          "meaning": "sons"
+        },
+        {
+          "word": "tathā eva ca",
+          "meaning": "and also"
+        },
+        {
+          "word": "pitāmahāḥ",
+          "meaning": "grandfathers"
+        },
+        {
+          "word": "mātulāḥ",
+          "meaning": "maternal uncles"
+        },
+        {
+          "word": "śvaśurāḥ",
+          "meaning": "fathers-in-law"
+        },
+        {
+          "word": "pautrāḥ",
+          "meaning": "grandsons"
+        },
+        {
+          "word": "śyālāḥ",
+          "meaning": "brothers-in-law"
+        },
+        {
+          "word": "sambandhinaḥ",
+          "meaning": "relatives"
+        },
+        {
+          "word": "tathā",
+          "meaning": "and also"
+        }
+      ],
+      "commentary": "Arjuna repeats the list of his relatives, driving home the point that the opposing army is not made up of enemies but of his own flesh and blood. This repetition emphasizes the profound emotional and moral weight of his predicament, showing that he is truly at a loss for how to proceed with the war.",
+      "key_concepts": [
+        "arjuna's emotional state",
+        "repetition",
+        "family bonds"
+      ],
+      "tags": [
+        "arjuna",
+        "family",
+        "grief",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 35,
+      "sanskrit_text": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन।\nअपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते।।",
+      "transliteration": "etān na hantum icchāmi ghnato 'pi madhusūdana\napi trailokya-rājyasya hetoḥ kiṁ nu mahī-kṛte",
+      "translation": "Even if they kill me, O Madhusudana (Krishna), I do not wish to kill them, not even for the sake of the kingdom of the three worlds, let alone for this earth.",
+      "word_meanings": [
+        {
+          "word": "etān",
+          "meaning": "these"
+        },
+        {
+          "word": "na hantum",
+          "meaning": "not to kill"
+        },
+        {
+          "word": "icchāmi",
+          "meaning": "I wish"
+        },
+        {
+          "word": "ghnataḥ api",
+          "meaning": "even if they kill"
+        },
+        {
+          "word": "madhusūdana",
+          "meaning": "O Madhusudana (Krishna)"
+        },
+        {
+          "word": "api",
+          "meaning": "even"
+        },
+        {
+          "word": "trailokya-rājyasya",
+          "meaning": "of the kingdom of the three worlds"
+        },
+        {
+          "word": "hetoḥ",
+          "meaning": "for the sake of"
+        },
+        {
+          "word": "kim nu",
+          "meaning": "how much more then"
+        },
+        {
+          "word": "mahī-kṛte",
+          "meaning": "for the sake of this earth"
+        }
+      ],
+      "commentary": "Arjuna's resolve against fighting reaches its peak. He expresses a desire for non-violence, even if it means his own death. He argues that the stakes are not high enough to justify the immense cost of killing his family. He states that even the 'kingdom of the three worlds' would be a poor trade for the lives of his relatives, which is a powerful statement about the value of human relationships.",
+      "key_concepts": [
+        "non-violence",
+        "value of relationships",
+        "rejection of power"
+      ],
+      "tags": [
+        "arjuna",
+        "moral dilemma",
+        "ahimsa",
+        "non-violence"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 36,
+      "sanskrit_text": "निहत्य धार्तराष्ट्रान्नः का प्रीतिः स्याज्जनार्दन।\nपापमेवाश्रयेदस्मान्हत्वैतानाततायिनः।।",
+      "transliteration": "nihatya dhārtarāṣṭrān naḥ kā prītiḥ syāj janārdana\npāpam evāśrayed asmān hatvaitān ātatāyinaḥ",
+      "translation": "By killing the sons of Dhritarashtra, what pleasure can we get, O Janardana (Krishna)? Sin alone will come upon us by killing these aggressors.",
+      "word_meanings": [
+        {
+          "word": "nihatya",
+          "meaning": "by killing"
+        },
+        {
+          "word": "dhārtarāṣṭrān",
+          "meaning": "the sons of Dhritarashtra"
+        },
+        {
+          "word": "naḥ",
+          "meaning": "for us"
+        },
+        {
+          "word": "kā",
+          "meaning": "what"
+        },
+        {
+          "word": "prītiḥ",
+          "meaning": "pleasure"
+        },
+        {
+          "word": "syāt",
+          "meaning": "will be"
+        },
+        {
+          "word": "janārdana",
+          "meaning": "O Janardana (Krishna)"
+        },
+        {
+          "word": "pāpam",
+          "meaning": "sin"
+        },
+        {
+          "word": "eva",
+          "meaning": "alone"
+        },
+        {
+          "word": "āśrayet",
+          "meaning": "will take hold of"
+        },
+        {
+          "word": "asmān",
+          "meaning": "us"
+        },
+        {
+          "word": "hatvā",
+          "meaning": "by killing"
+        },
+        {
+          "word": "etān",
+          "meaning": "these"
+        },
+        {
+          "word": "ātatāyinaḥ",
+          "meaning": "aggressors"
+        }
+      ],
+      "commentary": "Arjuna raises the moral and ethical argument of 'sin' (papa). He knows that according to the law, aggressors ('atatayina') must be killed, but he argues that the 'sin' of killing one's family, especially for a kingdom, far outweighs any legal justification. This highlights his inner conflict between social duty ('dharma') and personal moral feelings.",
+      "key_concepts": [
+        "sin (papa)",
+        "moral argument",
+        "aggressors",
+        "dharma"
+      ],
+      "tags": [
+        "arjuna",
+        "sin",
+        "moral dilemma",
+        "dharma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 37,
+      "sanskrit_text": "तस्मान्नार्हा वयं हन्तुं धार्तराष्ट्रान्सबान्धवान्।\nस्वजनं हि कथं हत्वा सुखिनः स्याम माधव।।",
+      "transliteration": "tasmān nār-hā vayaṁ hantuṁ dhārtarāṣṭrān sa-bāndhavān\nsva-janaṁ hi kathaṁ hatvā sukhinaḥ syāma mādhava",
+      "translation": "Therefore, it is not right for us to kill the sons of Dhritarashtra, our own kinsmen. O Madhava (Krishna), how can we be happy after killing our own people?",
+      "word_meanings": [
+        {
+          "word": "tasmāt",
+          "meaning": "therefore"
+        },
+        {
+          "word": "na arhāḥ",
+          "meaning": "are not worthy"
+        },
+        {
+          "word": "vayam",
+          "meaning": "we"
+        },
+        {
+          "word": "hantum",
+          "meaning": "to kill"
+        },
+        {
+          "word": "dhārtarāṣṭrān",
+          "meaning": "the sons of Dhritarashtra"
+        },
+        {
+          "word": "sa-bāndhavān",
+          "meaning": "with relatives"
+        },
+        {
+          "word": "sva-janam",
+          "meaning": "our own people"
+        },
+        {
+          "word": "hi",
+          "meaning": "certainly"
+        },
+        {
+          "word": "katham",
+          "meaning": "how"
+        },
+        {
+          "word": "hatvā",
+          "meaning": "by killing"
+        },
+        {
+          "word": "sukhinaḥ",
+          "meaning": "happy"
+        },
+        {
+          "word": "syāma",
+          "meaning": "can we be"
+        },
+        {
+          "word": "mādhava",
+          "meaning": "O Madhava (Krishna)"
+        }
+      ],
+      "commentary": "Arjuna concludes his main argument against fighting: the lack of happiness that would result from winning a war by killing his own family. He is concerned not just about the external consequences (a kingdom) but the internal, psychological toll. This shows his deep emotional bond with his family, which stands in direct opposition to his duty as a warrior.",
+      "key_concepts": [
+        "happiness vs. duty",
+        "moral conflict",
+        "family bonds"
+      ],
+      "tags": [
+        "arjuna",
+        "moral dilemma",
+        "family",
+        "dharma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 38,
+      "sanskrit_text": "यद्यप्येते न पश्यन्ति लोभोपहतचेतसः।\nकुलक्षयकृतं दोषं मित्रद्रोहे च पातकम्।।",
+      "transliteration": "yady apy ete na paśyanti lobhopahata-cetasaḥ\nkula-kṣaya-kṛtaṁ doṣaṁ mitra-drohe ca pātakam",
+      "translation": "Although they, with their minds clouded by greed, do not see the sin in destroying their lineage and the crime in betraying their friends...",
+      "word_meanings": [
+        {
+          "word": "yadi api",
+          "meaning": "although"
+        },
+        {
+          "word": "ete",
+          "meaning": "they"
+        },
+        {
+          "word": "na paśyanti",
+          "meaning": "do not see"
+        },
+        {
+          "word": "lobha-upahata-cetasaḥ",
+          "meaning": "with minds overcome by greed"
+        },
+        {
+          "word": "kula-kṣaya-kṛtam",
+          "meaning": "done by the destruction of the family"
+        },
+        {
+          "word": "doṣam",
+          "meaning": "the fault"
+        },
+        {
+          "word": "mitra-drohe",
+          "meaning": "in the betrayal of friends"
+        },
+        {
+          "word": "ca",
+          "meaning": "and"
+        },
+        {
+          "word": "pātakam",
+          "meaning": "the sin"
+        }
+      ],
+      "commentary": "Arjuna makes a moral judgment against the Kauravas. He attributes their willingness to fight to their greed, which has blinded them to the 'sin' (dosa) of destroying their own family. He sees himself as a superior, moral being who, unlike them, recognizes the terrible consequences of such an act. This sets up his plea for a different, more righteous path.",
+      "key_concepts": [
+        "moral superiority",
+        "greed",
+        "destruction of family",
+        "sin"
+      ],
+      "tags": [
+        "arjuna",
+        "moral dilemma",
+        "dharma",
+        "family"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 39,
+      "sanskrit_text": "कथं न ज्ञेयमस्माभिः पापादस्मान्निवर्तितुम्।\nकुलक्षयकृतं दोषं प्रपश्यद्भिर्जनार्दन।।",
+      "transliteration": "kathaṁ na jñeyam asmābhiḥ pāpād asmān nivartitum\nkula-kṣaya-kṛtaṁ doṣaṁ prapaśyadbhir janārdana",
+      "translation": "O Janardana (Krishna), why should we not know how to turn away from this sin, when we clearly see the fault in the destruction of our family?",
+      "word_meanings": [
+        {
+          "word": "katham",
+          "meaning": "why"
+        },
+        {
+          "word": "na",
+          "meaning": "not"
+        },
+        {
+          "word": "jñeyam",
+          "meaning": "should be known"
+        },
+        {
+          "word": "asmābhiḥ",
+          "meaning": "by us"
+        },
+        {
+          "word": "pāpāt",
+          "meaning": "from sin"
+        },
+        {
+          "word": "asmāt",
+          "meaning": "this"
+        },
+        {
+          "word": "nivartitum",
+          "meaning": "to turn away"
+        },
+        {
+          "word": "kula-kṣaya-kṛtam",
+          "meaning": "from the destruction of the family"
+        },
+        {
+          "word": "doṣam",
+          "meaning": "the fault"
+        },
+        {
+          "word": "prapaśyadbhiḥ",
+          "meaning": "clearly seeing"
+        },
+        {
+          "word": "janārdana",
+          "meaning": "O Janardana (Krishna)"
+        }
+      ],
+      "commentary": "Arjuna's argument becomes a direct appeal to Krishna. He presents his moral clarity as a reason to avoid the war. He believes that since he sees the 'sin' (dosa) and 'fault' of killing his family, he has a moral obligation to 'turn away' from it. This shows that he is seeking Krishna's validation for his decision to not fight.",
+      "key_concepts": [
+        "arjuna's moral clarity",
+        "moral obligation",
+        "avoiding sin"
+      ],
+      "tags": [
+        "arjuna",
+        "moral dilemma",
+        "dharma",
+        "sin"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 40,
+      "sanskrit_text": "कुलक्षये प्रणश्यन्ति कुलधर्माः सनातनाः।\nधर्मे नष्टे कुलं कृत्स्नमधर्मोऽभिभवत्युत।।",
+      "transliteration": "kula-kṣaye praṇaśyanti kula-dharmāḥ sanātanāḥ\ndharme naṣṭe kulaṁ kṛtsnam adharmo 'bhibhavaty uta",
+      "translation": "With the destruction of the family, the eternal family traditions perish. When tradition is lost, impiety overcomes the entire family.",
+      "word_meanings": [
+        {
+          "word": "kula-kṣaye",
+          "meaning": "in the destruction of the family"
+        },
+        {
+          "word": "praṇaśyanti",
+          "meaning": "perish"
+        },
+        {
+          "word": "kula-dharmāḥ",
+          "meaning": "family traditions"
+        },
+        {
+          "word": "sanātanāḥ",
+          "meaning": "eternal"
+        },
+        {
+          "word": "dharme",
+          "meaning": "in righteousness"
+        },
+        {
+          "word": "naṣṭe",
+          "meaning": "being lost"
+        },
+        {
+          "word": "kulam",
+          "meaning": "the family"
+        },
+        {
+          "word": "kṛtsnam",
+          "meaning": "the entire"
+        },
+        {
+          "word": "adharmaḥ",
+          "meaning": "unrighteousness"
+        },
+        {
+          "word": "abhibhavati",
+          "meaning": "overcomes"
+        },
+        {
+          "word": "uta",
+          "meaning": "and"
+        }
+      ],
+      "commentary": "Arjuna's argument now turns to the sociological and religious consequences of the war. He argues that killing his family will destroy the 'kula-dharma' (family tradition) which in turn will lead to 'adharma' (unrighteousness). This shows his concern not only for the present but also for the future, believing that a moral and social breakdown will inevitably follow a battle fought on family lines.",
+      "key_concepts": [
+        "kula-dharma",
+        "adharma",
+        "social consequences",
+        "moral breakdown"
+      ],
+      "tags": [
+        "arjuna",
+        "dharma",
+        "social order",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 41,
+      "sanskrit_text": "अधर्माभिभवात्कृष्ण प्रदुष्यन्ति कुलस्त्रियः।\nस्त्रीषु दुष्टासु वार्ष्णेय जायते वर्णसङ्करः।।",
+      "transliteration": "adharma-abhibhavāt kṛṣṇa praduṣyanti kula-striyaḥ\nstrīṣu duṣṭāsu vārṣṇeya jāyate varṇa-saṅkaraḥ",
+      "translation": "O Krishna, when impiety prevails, the women of the family become corrupted. And from the corruption of women, O Varshneya (Krishna), results the intermingling of social classes.",
+      "word_meanings": [
+        {
+          "word": "adharma-abhibhavāt",
+          "meaning": "from the prevalence of unrighteousness"
+        },
+        {
+          "word": "kṛṣṇa",
+          "meaning": "O Krishna"
+        },
+        {
+          "word": "praduṣyanti",
+          "meaning": "become corrupted"
+        },
+        {
+          "word": "kula-striyaḥ",
+          "meaning": "the women of the family"
+        },
+        {
+          "word": "strīṣu",
+          "meaning": "in the women"
+        },
+        {
+          "word": "duṣṭāsu",
+          "meaning": "being corrupted"
+        },
+        {
+          "word": "vārṣṇeya",
+          "meaning": "O descendant of Vrishni (Krishna)"
+        },
+        {
+          "word": "jāyate",
+          "meaning": "is born"
+        },
+        {
+          "word": "varṇa-saṅkaraḥ",
+          "meaning": "the intermingling of castes"
+        }
+      ],
+      "commentary": "Arjuna continues his sociological argument, outlining a cascading series of negative consequences. He believes that the loss of male family members in war will corrupt the women, which in turn will lead to 'varna-sankara' or a degradation of social and caste order. This shows his deep concern for the societal structure and the preservation of 'dharma'.",
+      "key_concepts": [
+        "social order",
+        "varna-sankara",
+        "adharma",
+        "consequences of war"
+      ],
+      "tags": [
+        "arjuna",
+        "social order",
+        "dharma",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 42,
+      "sanskrit_text": "सङ्करो नरकायैव कुलघ्नानां कुलस्य च।\nपतन्ति पितरो ह्येषां लुप्तपिण्डोदकक्रियाः।।",
+      "transliteration": "saṅkaro narakāyaiva kula-ghnānāṁ kulasya ca\npatanti pitaro hy eṣāṁ lupta-piṇḍodaka-kriyāḥ",
+      "translation": "This intermingling of classes leads to hell for the destroyers of the family as well as for the family itself. Their ancestors also fall, deprived of their ritual offerings of food and water.",
+      "word_meanings": [
+        {
+          "word": "saṅkaraḥ",
+          "meaning": "intermingling of classes"
+        },
+        {
+          "word": "narakāya eva",
+          "meaning": "certainly to hell"
+        },
+        {
+          "word": "kula-ghnānām",
+          "meaning": "of the destroyers of the family"
+        },
+        {
+          "word": "kulasya ca",
+          "meaning": "and of the family"
+        },
+        {
+          "word": "patanti",
+          "meaning": "fall"
+        },
+        {
+          "word": "pitaraḥ",
+          "meaning": "the ancestors"
+        },
+        {
+          "word": "hi",
+          "meaning": "indeed"
+        },
+        {
+          "word": "eṣām",
+          "meaning": "of these"
+        },
+        {
+          "word": "lupta-piṇḍa-udaka-kriyāḥ",
+          "meaning": "deprived of the offerings of food and water"
+        }
+      ],
+      "commentary": "Arjuna's argument extends beyond the social to the spiritual. He claims that the consequence of 'varna-sankara' is not only social chaos but also spiritual damnation ('naraka'). He mentions that the ancestors, who are sustained by ritual offerings ('pinda-udaka'), will fall from grace if their male descendants are killed, adding a deeply religious layer to his moral crisis.",
+      "key_concepts": [
+        "hell (naraka)",
+        "ancestors",
+        "religious consequences",
+        "ritual"
+      ],
+      "tags": [
+        "arjuna",
+        "spiritual consequences",
+        "dharma",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 43,
+      "sanskrit_text": "दोषैरेतैः कुलघ्नानां वर्णसङ्करकारकैः।\nउत्साद्यन्ते जातिधर्माः कुलधर्माश्च शाश्वताः।।",
+      "transliteration": "doṣair etaiḥ kula-ghnānāṁ varṇa-saṅkara-kārakaiḥ\nutsādyante jāti-dharmāḥ kula-dharmāś ca śāśvatāḥ",
+      "translation": "Due to these sins of the destroyers of the family, which cause the intermingling of classes, the eternal family and caste traditions are destroyed.",
+      "word_meanings": [
+        {
+          "word": "doṣaiḥ",
+          "meaning": "by the sins"
+        },
+        {
+          "word": "etaiḥ",
+          "meaning": "these"
+        },
+        {
+          "word": "kula-ghnānām",
+          "meaning": "of the destroyers of the family"
+        },
+        {
+          "word": "varṇa-saṅkara-kārakaiḥ",
+          "meaning": "which cause the intermingling of classes"
+        },
+        {
+          "word": "utsādyante",
+          "meaning": "are destroyed"
+        },
+        {
+          "word": "jāti-dharmāḥ",
+          "meaning": "caste traditions"
+        },
+        {
+          "word": "kula-dharmāḥ ca",
+          "meaning": "and family traditions"
+        },
+        {
+          "word": "śāśvatāḥ",
+          "meaning": "eternal"
+        }
+      ],
+      "commentary": "Arjuna re-emphasizes his main point. He sees the destruction of family and the intermingling of social classes as the ultimate moral catastrophe. He believes that the war will not only kill his family but also destroy the 'eternal' traditions ('dharma') that have been upheld for generations, leading to a complete breakdown of social and religious order.",
+      "key_concepts": [
+        "eternal dharma",
+        "destruction of tradition",
+        "moral consequences"
+      ],
+      "tags": [
+        "arjuna",
+        "dharma",
+        "social order",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 44,
+      "sanskrit_text": "उत्सन्नकुलधर्माणां मनुष्याणां जनार्दन।\nनरके नियतं वासो भवतीत्यनुशुश्रुम।।",
+      "transliteration": "utsanna-kula-dharmāṇāṁ manuṣyāṇāṁ janārdana\nnarake niyataṁ vāso bhavatīty anuśuśruma",
+      "translation": "O Janardana, we have heard that for those whose family traditions are destroyed, there will certainly be a place in hell.",
+      "word_meanings": [
+        {
+          "word": "utsanna-kula-dharmāṇām",
+          "meaning": "of those whose family traditions are destroyed"
+        },
+        {
+          "word": "manuṣyāṇām",
+          "meaning": "for men"
+        },
+        {
+          "word": "janārdana",
+          "meaning": "O Janardana (Krishna)"
+        },
+        {
+          "word": "narake",
+          "meaning": "in hell"
+        },
+        {
+          "word": "niyatam",
+          "meaning": "certainly"
+        },
+        {
+          "word": "vāsaḥ",
+          "meaning": "residence"
+        },
+        {
+          "word": "bhavati",
+          "meaning": "is"
+        },
+        {
+          "word": "iti",
+          "meaning": "thus"
+        },
+        {
+          "word": "anuśuśruma",
+          "meaning": "we have heard"
+        }
+      ],
+      "commentary": "Arjuna reinforces his point by quoting traditional belief. He states that the consequence of destroying family traditions is an inescapable fate in hell. The phrase 'we have heard' shows that his argument is based on a well-established tradition, which he now feels compelled to uphold, even at the cost of his 'dharma' as a warrior. This creates the central tension of the Gita.",
+      "key_concepts": [
+        "hell (naraka)",
+        "traditional belief",
+        "consequences of actions",
+        "dharma"
+      ],
+      "tags": [
+        "arjuna",
+        "hell",
+        "moral dilemma",
+        "dharma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 45,
+      "sanskrit_text": "अहो बत महत्पापं कर्तुं व्यवसिता वयम्।\nयद्राज्यसुखलोभेन हन्तुं स्वजनमुद्यताः।।",
+      "transliteration": "aho bata mahat pāpaṁ kartuṁ vyavasitā vayam\nyad rājya-sukha-lobhena hantuṁ sva-janam udyatāḥ",
+      "translation": "Alas! We are intent on committing a great sin, because we are preparing to kill our own kinsmen out of greed for the joys of a kingdom.",
+      "word_meanings": [
+        {
+          "word": "aho bata",
+          "meaning": "alas!"
+        },
+        {
+          "word": "mahat",
+          "meaning": "great"
+        },
+        {
+          "word": "pāpam",
+          "meaning": "sin"
+        },
+        {
+          "word": "kartum",
+          "meaning": "to commit"
+        },
+        {
+          "word": "vyavasitāḥ",
+          "meaning": "intent on"
+        },
+        {
+          "word": "vayam",
+          "meaning": "we"
+        },
+        {
+          "word": "yat",
+          "meaning": "because"
+        },
+        {
+          "word": "rājya-sukha-lobhena",
+          "meaning": "by the greed for the happiness of a kingdom"
+        },
+        {
+          "word": "hantum",
+          "meaning": "to kill"
+        },
+        {
+          "word": "sva-janam",
+          "meaning": "our own people"
+        },
+        {
+          "word": "udyatāḥ",
+          "meaning": "prepared"
+        }
+      ],
+      "commentary": "Arjuna concludes his internal monologue with an exclamation of despair. He judges his and his brothers' actions as a 'great sin' driven by 'greed' for a kingdom. This self-condemnation reveals the depth of his crisis, as he sees himself as no different from the 'evil-minded' Duryodhana, and his desire for a righteous kingdom as a corrupting force.",
+      "key_concepts": [
+        "arjuna's despair",
+        "greed",
+        "self-condemnation",
+        "sin"
+      ],
+      "tags": [
+        "arjuna",
+        "grief",
+        "moral dilemma",
+        "sin"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 46,
+      "sanskrit_text": "यदि मामप्रतीकारमशस्त्रं शस्त्रपाणयः।\nधार्तराष्ट्रा रणे हन्युस्तन्मे क्षेमतरं भवेत्।।",
+      "transliteration": "yadi mām apratīkāram aśastraṁ śastra-pāṇayaḥ\ndhārtarāṣṭrā raṇe hanyus tan me kṣema-taraṁ bhavet",
+      "translation": "It would be better for me if the sons of Dhritarashtra, with weapons in their hands, would kill me in battle, unarmed and unresisting.",
+      "word_meanings": [
+        {
+          "word": "yadi",
+          "meaning": "if"
+        },
+        {
+          "word": "mām",
+          "meaning": "me"
+        },
+        {
+          "word": "apratīkāram",
+          "meaning": "unresisting"
+        },
+        {
+          "word": "aśastram",
+          "meaning": "unarmed"
+        },
+        {
+          "word": "śastra-pāṇayaḥ",
+          "meaning": "with weapons in their hands"
+        },
+        {
+          "word": "dhārtarāṣṭrāḥ",
+          "meaning": "the sons of Dhritarashtra"
+        },
+        {
+          "word": "raṇe",
+          "meaning": "in battle"
+        },
+        {
+          "word": "hanyuḥ",
+          "meaning": "would kill"
+        },
+        {
+          "word": "tat",
+          "meaning": "that"
+        },
+        {
+          "word": "me",
+          "meaning": "for me"
+        },
+        {
+          "word": "kṣema-taram",
+          "meaning": "more auspicious"
+        },
+        {
+          "word": "bhavet",
+          "meaning": "would be"
+        }
+      ],
+      "commentary": "Arjuna's despair reaches its lowest point. He proposes surrendering and dying on the battlefield, which he sees as a more 'auspicious' path than winning a kingdom by killing his family. This extreme stance of non-violence, or 'renunciation,' marks the end of his lamentation and sets the stage for Krishna's teachings on 'karma yoga' and the true nature of 'dharma'.",
+      "key_concepts": [
+        "renunciation",
+        "non-resistance",
+        "moral surrender"
+      ],
+      "tags": [
+        "arjuna",
+        "despair",
+        "non-violence",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    },
+    {
+      "chapter_number": 1,
+      "verse_number": 47,
+      "sanskrit_text": "सञ्जय उवाच।\nएवमुक्त्वार्जुनः सङ्ख्ये रथोपस्थ उपाविशत्।\nविसृज्य सशरं चापं शोकसंविग्नमानसः।।",
+      "transliteration": "sañjaya uvāca\nevam uktvārjunaḥ saṅkhye rathopastha upāviśat\nvisṛjya sa-śaraṁ cāpaṁ śoka-saṁvigna-mānasaḥ",
+      "translation": "Sanjaya said: Having spoken thus on the battlefield, Arjuna, with a mind overwhelmed by sorrow, cast aside his bow and arrow and sat down on the seat of the chariot.",
+      "word_meanings": [
+        {
+          "word": "sañjayaḥ uvāca",
+          "meaning": "Sanjaya said"
+        },
+        {
+          "word": "evam",
+          "meaning": "thus"
+        },
+        {
+          "word": "uktvā",
+          "meaning": "having spoken"
+        },
+        {
+          "word": "arjunaḥ",
+          "meaning": "Arjuna"
+        },
+        {
+          "word": "saṅkhye",
+          "meaning": "in the battle"
+        },
+        {
+          "word": "ratha-upasthe",
+          "meaning": "on the seat of the chariot"
+        },
+        {
+          "word": "upāviśat",
+          "meaning": "sat down"
+        },
+        {
+          "word": "visṛjya",
+          "meaning": "casting aside"
+        },
+        {
+          "word": "sa-śaram",
+          "meaning": "with arrows"
+        },
+        {
+          "word": "cāpam",
+          "meaning": "bow"
+        },
+        {
+          "word": "śoka-saṁvigna-mānasaḥ",
+          "meaning": "with a mind overwhelmed by sorrow"
+        }
+      ],
+      "commentary": "This concluding verse of Chapter 1 marks the end of Arjuna's lamentation and the beginning of the central philosophical dialogue. Arjuna's physical act of casting aside his bow and sitting down symbolizes his complete surrender to despair and his refusal to fight. He is no longer a warrior but a seeker, ready to receive the divine wisdom from his charioteer, Krishna. This sets the stage for the rest of the Bhagavad Gita.",
+      "key_concepts": [
+        "arjuna's surrender",
+        "end of lamentation",
+        "beginning of dialogue",
+        "despair"
+      ],
+      "tags": [
+        "arjuna",
+        "end of chapter 1",
+        "sorrow",
+        "moral dilemma"
+      ],
+      "is_featured": false,
+      "status": "published"
+    }
+  ]
+}

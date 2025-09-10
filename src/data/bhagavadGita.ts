@@ -3,17 +3,25 @@ export interface Verse {
   sanskrit: string;
   transliteration: string;
   translation: string;
+  // Optional localized fields
+  translationHi?: string;
   explanation: string;
+  explanationHi?: string;
   wordMeaning: Record<string, string>;
+  wordMeaningHi?: Record<string, string>;
   significance?: string;
 }
 
 export interface Chapter {
   number: number;
   title: string;
+  // Optional localized fields
+  titleHi?: string;
   sanskrit: string;
   theme: string;
+  themeHi?: string;
   summary: string;
+  summaryHi?: string;
   keyThemes: string[];
   verses: Verse[];
   verseCount: number;
@@ -24,10 +32,13 @@ export const bhagavadGitaData: Chapter[] = [
   // Chapter 1 - Complete
   {
     number: 1,
-    title: "Arjuna's Dilemma", 
+    title: "Arjuna's Dilemma",
+    titleHi: "अर्जुन का विषाद",
     sanskrit: "अर्जुनविषादयोग",
     theme: "Crisis of Duty and Dharma",
+    themeHi: "धर्म और कर्तव्य का संकट",
     summary: "The first chapter sets the stage for the entire Bhagavad Gita. On the battlefield of Kurukshetra, seeing his relatives, teachers, and friends on both sides of the war, Arjuna is overcome with compassion and moral confusion. This emotional and ethical crisis creates the perfect opportunity for Krishna to share the profound spiritual wisdom.",
+    summaryHi: "पहला अध्याय पूरी भगवद्गीता की पृष्ठभूमि तैयार करता है। कुरुक्षेत्र के रण में अपने स्वजन, गुरु और मित्रों को दोनों पक्षों में देखकर अर्जुन करुणा और नैतिक उलझन से भर जाता है। यही भावनात्मक और नैतिक संकट श्रीकृष्ण के दिव्य ज्ञान के प्रकट होने का अवसर बनता है।",
     keyThemes: [
       "Dharmic duty versus personal emotions",
       "The nature of righteous action",
@@ -41,6 +52,7 @@ export const bhagavadGitaData: Chapter[] = [
         sanskrit: "धृतराष्ट्र उवाच। धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः। मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय।।",
         transliteration: "dhṛtarāṣṭra uvāca | dharma-kṣetre kuru-kṣetre samavetā yuyutsavaḥ | māmakāḥ pāṇḍavāścaiva kimakurvata sañjaya ||",
         translation: "Dhritarashtra said: O Sanjaya, what did my sons and the sons of Pandu do when they assembled on the holy field of Kurukshetra, eager for battle?",
+        translationHi: "धृतराष्ट्र बोले: हे संजय, धर्मक्षेत्र कुरुक्षेत्र में युद्ध की इच्छा से एकत्र हुए मेरे पुत्र और पाण्डु के पुत्रों ने क्या किया?",
         explanation: "This opening verse immediately establishes the setting and introduces the key players. The term 'dharma-kshetra' (field of dharma) suggests this is not merely a physical battlefield, but a place where righteousness will be determined.",
         wordMeaning: {
           "धर्मक्षेत्रे": "on the field of dharma/righteousness",
@@ -56,6 +68,7 @@ export const bhagavadGitaData: Chapter[] = [
         sanskrit: "अर्जुन उवाच। दृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम्। सीदन्ति मम गात्राणि मुखं च परिशुष्यति।।",
         transliteration: "arjuna uvāca | dṛṣṭvemaṃ svajanaṃ kṛṣṇa yuyutsuṃ samupasthitam | sīdanti mama gātrāṇi mukhaṃ ca pariśuṣyati ||",
         translation: "Arjuna said: O Krishna, seeing my own kinsmen assembled here and eager for battle, my limbs are giving way and my mouth is drying up.",
+        translationHi: "अर्जुन बोले: हे कृष्ण, यहाँ युद्ध के लिए उपस्थित अपने स्वजनों को देखकर मेरे अंग शिथिल हो रहे हैं और मुख सूख रहा है।",
         explanation: "Arjuna's physical and emotional reaction to seeing his relatives prepared for war. This verse shows how even great warriors can be overwhelmed when faced with moral dilemmas involving loved ones.",
         wordMeaning: {
           "दृष्ट्वा": "seeing",
@@ -73,6 +86,7 @@ export const bhagavadGitaData: Chapter[] = [
         sanskrit: "एवमुक्त्वार्जुनः संख्ये रथोपस्थ उपाविशत्। विसृज्य सशरं चापं शोकसंविग्नमानसः।।",
         transliteration: "evam uktvārjunaḥ saṅkhye rathopastha upāviśat | visṛjya sa-śaraṃ cāpaṃ śoka-saṃvigna-mānasaḥ ||",
         translation: "Having spoken thus on the battlefield, Arjuna cast aside his bow and arrows and sat down on the chariot seat, his mind overwhelmed with grief.",
+        translationHi: "इस प्रकार कहकर अर्जुन रणभूमि में अपना धनुष-बाण त्यागकर रथ में बैठ गया, उसका मन शोक से व्याकुल था।",
         explanation: "The concluding verse shows Arjuna's complete emotional breakdown. Despite being a great warrior, he is paralyzed by grief and moral confusion, setting the perfect stage for Krishna's divine teachings.",
         wordMeaning: {
           "एवम्": "thus",

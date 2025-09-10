@@ -49,7 +49,44 @@ export const translations: Record<Language, Record<string, string>> = {
     'features.places.title': 'Sacred Places',
     'features.places.desc': 'Explore pilgrimage sites, temples, and the spiritual geography of Bharatvarsha.',
     'features.cta': 'Start exploring wisdom',
-    'features.browse_all': 'Browse all sections'
+    'features.browse_all': 'Browse all sections',
+
+    // Gita: Shared/UI
+    'gita.badge': 'Sacred Scripture',
+    'gita.title': 'Bhagavad Gita',
+    'gita.subtitle': "The timeless dialogue between Prince Arjuna and Lord Krishna on the battlefield of Kurukshetra. Discover the profound wisdom that has guided seekers for millennia.",
+    'gita.stats.chapters': 'Chapters',
+    'gita.stats.verses': 'Verses',
+    'gita.stats.years_old': 'Years Old',
+    'gita.stats.lives_changed': 'Lives Changed',
+    'gita.explore.title': 'Explore All 18 Chapters',
+    'gita.explore.subtitle': 'Each chapter reveals profound teachings on dharma, karma, devotion, and the path to liberation.',
+    'gita.card.verses': 'verses',
+    'gita.card.key_teachings': 'Key Teachings',
+    'gita.card.study_chapter': 'Study Chapter',
+    'gita.study.title': 'How to Study the Gita',
+    'gita.study.read.title': 'Read Sanskrit',
+    'gita.study.read.desc': 'Experience the original verses in Devanagari script with proper pronunciation guides.',
+    'gita.study.translate.title': 'Understand Translation',
+    'gita.study.translate.desc': "Clear English translations that preserve the depth and meaning of Krishna's teachings.",
+    'gita.study.apply.title': 'Apply Wisdom',
+    'gita.study.apply.desc': 'Detailed explanations show how to apply these timeless principles in daily life.',
+
+    // Gita: Chapter Viewer
+    'gita.nav.back': 'Back to Chapters',
+    'gita.chapter': 'Chapter',
+    'gita.verses': 'Verses',
+    'gita.total': 'total',
+    'gita.verse': 'Verse',
+    'gita.translation': 'Translation',
+    'gita.transliteration': 'Transliteration',
+    'gita.sanskrit_heading': 'Sanskrit (Devanagari)',
+    'gita.word_meaning.heading': 'Word-by-Word Meaning',
+    'gita.commentary.heading': 'Detailed Commentary',
+    'gita.prev_verse': 'Previous Verse',
+    'gita.next_verse': 'Next Verse',
+    'gita.prev_chapter': 'Previous Chapter',
+    'gita.next_chapter': 'Next Chapter'
   },
   hi: {
     // Navigation
@@ -83,7 +120,44 @@ export const translations: Record<Language, Record<string, string>> = {
     'features.places.title': 'पवित्र स्थान',
     'features.places.desc': 'तीर्थ स्थल, मंदिर और भारतवर्ष के आध्यात्मिक भूगोल का अन्वेषण करें।',
     'features.cta': 'ज्ञान की खोज शुरू करें',
-    'features.browse_all': 'सभी अनुभाग देखें'
+    'features.browse_all': 'सभी अनुभाग देखें',
+
+    // Gita: Shared/UI
+    'gita.badge': 'पवित्र शास्त्र',
+    'gita.title': 'भगवद्गीता',
+    'gita.subtitle': 'कुरुक्षेत्र के रणक्षेत्र में अर्जुन और श्रीकृष्ण के बीच हुआ अमर संवाद। वह गहन ज्ञान जानें जिसने युगों से साधकों का मार्गदर्शन किया है।',
+    'gita.stats.chapters': 'अध्याय',
+    'gita.stats.verses': 'श्लोक',
+    'gita.stats.years_old': 'वर्ष प्राचीन',
+    'gita.stats.lives_changed': 'जीवन बदले',
+    'gita.explore.title': 'सभी 18 अध्याय देखें',
+    'gita.explore.subtitle': 'हर अध्याय धर्म, कर्म, भक्ति और मुक्ति के पथ पर गहन शिक्षाएँ देता है।',
+    'gita.card.verses': 'श्लोक',
+    'gita.card.key_teachings': 'मुख्य शिक्षाएँ',
+    'gita.card.study_chapter': 'अध्याय पढ़ें',
+    'gita.study.title': 'गीता का अध्ययन कैसे करें',
+    'gita.study.read.title': 'संस्कृत पढ़ें',
+    'gita.study.read.desc': 'देवनागरी लिपि में मूल श्लोक सही उच्चारण-संकेतों के साथ पढ़ें।',
+    'gita.study.translate.title': 'अनुवाद समझें',
+    'gita.study.translate.desc': 'स्पष्ट अनुवाद जो श्रीकृष्ण की शिक्षाओं की गहराई और अर्थ को बनाए रखते हैं।',
+    'gita.study.apply.title': 'ज्ञान को जिएँ',
+    'gita.study.apply.desc': 'विस्तृत व्याख्या दिखाती है कि इन शाश्वत सिद्धांतों को दैनिक जीवन में कैसे लागू करें।',
+
+    // Gita: Chapter Viewer
+    'gita.nav.back': 'अध्याय सूची पर लौटें',
+    'gita.chapter': 'अध्याय',
+    'gita.verses': 'श्लोक',
+    'gita.total': 'कुल',
+    'gita.verse': 'श्लोक',
+    'gita.translation': 'हिंदी अनुवाद',
+    'gita.transliteration': 'उच्चारण (Transliteration)',
+    'gita.sanskrit_heading': 'संस्कृत (देवनागरी)',
+    'gita.word_meaning.heading': 'पदच्छेद अर्थ',
+    'gita.commentary.heading': 'विस्तृत व्याख्या',
+    'gita.prev_verse': 'पिछला श्लोक',
+    'gita.next_verse': 'अगला श्लोक',
+    'gita.prev_chapter': 'पिछला अध्याय',
+    'gita.next_chapter': 'अगला अध्याय'
   },
   mr: {
     // Navigation

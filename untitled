@@ -1,0 +1,30 @@
+lets Templatatize for Deity all page: These pages should have these sections...Most of them are already correct, rest you fix them.
+
+Use this link http://localhost:3000/deities/vishnu/avatars/kurma for reference...the content section start has a placeholder for image, that should hold Youtube videos link
+
+use this http://localhost:3000/deities/vishnu for seeing how the Hero section should look like...The hero section will have option to add image.
+
+Hero Section having images on the right in square box and texts on the left with slide in left animation 
+
+Colors what you are maintaining for individual images is perfect based on theme
+
+use your intelligence as well to create and arrange them...
+
+Make the same template section avaialble in admin CMS section as well.
+
+Story
+
+Sacred Iconography
+
+Sacred Stories
+
+Divine Symbolism of the Dance
+
+Festivals & celebrations
+
+famous/Sacred temples
+
+Sacred mantras and prayers
+
+Essential facts 
+

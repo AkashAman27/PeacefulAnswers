@@ -52,10 +52,11 @@ const navigationItems = [
     href: '/festivals',
     icon: Calendar,
     dropdown: [
+      { name: 'Ganesh Chaturthi', href: '/festivals/ganesh-chaturthi' },
+      { name: 'Maha Shivaratri', href: '/festivals/maha-shivaratri' },
       { name: 'Diwali', href: '/festivals/diwali' },
       { name: 'Holi', href: '/festivals/holi' },
       { name: 'Navratri', href: '/festivals/navratri' },
-      { name: 'Ganesh Chaturthi', href: '/festivals/ganesh-chaturthi' },
       { name: 'All Festivals', href: '/festivals' }
     ]
   },
@@ -64,10 +65,9 @@ const navigationItems = [
     href: '/practices',
     icon: Heart,
     dropdown: [
-      { name: 'Meditation', href: '/practices/meditation' },
-      { name: 'Yoga', href: '/practices/yoga' },
-      { name: 'Puja Rituals', href: '/practices/puja' },
-      { name: 'Mantras', href: '/practices/mantras' },
+      { name: 'Ganapati Puja', href: '/practices/ganapati-puja' },
+      { name: 'Surya Namaskara', href: '/practices/surya-namaskara' },
+      { name: 'Bhagavad Gita Study', href: '/scriptures/bhagavad-gita' },
       { name: 'All Practices', href: '/practices' }
     ]
   },

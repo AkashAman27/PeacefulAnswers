@@ -41,6 +41,8 @@ export const metadata: Metadata = {
   robots: 'index, follow',
 }
 
+import ClientLayout from '@/components/ClientLayout'
+
 export default function RootLayout({
   children,
 }: {
@@ -71,11 +73,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} ${notoSansDevanagari.variable} antialiased`}>
-        <LanguageProvider>
-          <Navigation />
+        <ClientLayout>
           {children}
-          <Footer />
-        </LanguageProvider>
+        </ClientLayout>
       </body>
     </html>
   )
