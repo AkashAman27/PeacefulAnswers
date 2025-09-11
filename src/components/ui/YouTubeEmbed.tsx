@@ -39,7 +39,9 @@ function YouTubeEmbed({ url, videoId: providedVideoId, title = 'Video', classNam
   }
 
   const openInNewTab = () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer')
+    if (videoUrl) {
+      window.open(videoUrl, '_blank', 'noopener,noreferrer')
+    }
   }
 
   return (

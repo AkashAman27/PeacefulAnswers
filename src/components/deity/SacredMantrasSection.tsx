@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Heart, Volume2, Copy, Check, Play, Pause } from 'lucide-react'
-import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed'
+import YouTubeEmbed from '@/components/ui/YouTubeEmbed'
 
 interface Mantra {
   sanskrit: string

@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if entry already exists
-    const { data: existingEntry, error: checkError } = await supabaseAdmin
+    const { data: existingEntry, error: checkError } = await (supabaseAdmin as any)
       .schema('hindu')
       .from('search_content')
       .select('id')
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     let result
     if (existingEntry) {
       // Update existing entry
-      const { data, error } = await supabaseAdmin
+      const { data, error } = await (supabaseAdmin as any)
         .schema('hindu')
         .from('search_content')
         .update({
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       result = { action: 'updated', data: data[0] }
     } else {
       // Insert new entry
-      const { data, error } = await supabaseAdmin
+      const { data, error } = await (supabaseAdmin as any)
         .schema('hindu')
         .from('search_content')
         .insert([{

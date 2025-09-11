@@ -89,7 +89,7 @@ export default function SmartRecommendations({
         {/* Recommendation Sections */}
         <div className="space-y-12">
           {recommendations.map((section) => (
-            <div key={`${section.type}-${section.title}`} className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div key={`${section.reasoning}-${section.title}`} className="bg-white rounded-3xl shadow-xl overflow-hidden">
               {/* Section Header */}
               <div className={`bg-gradient-to-r ${getSectionColor(section.reasoning)} text-white p-8`}>
                 <div className="flex items-center gap-4 mb-4">
@@ -107,7 +107,7 @@ export default function SmartRecommendations({
                 {/* Engagement Hooks */}
                 <div className="flex flex-wrap gap-3 mt-4">
                   {section.engagementHooks.slice(0, 2).map((hook, hookIndex) => (
-                    <span key={`hook-${section.type}-${hookIndex}`} className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
+                    <span key={`hook-${section.reasoning}-${hookIndex}`} className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                       {hook}
                     </span>
                   ))}
@@ -119,7 +119,7 @@ export default function SmartRecommendations({
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {section.items.slice(0, 6).map((item, itemIndex) => (
                     <Link 
-                      key={`${section.type}-${item.id}-${itemIndex}`}
+                      key={`${section.reasoning}-${item.id}-${itemIndex}`}
                       href={`/${item.type}s/${item.slug}`}
                       className="group bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-orange-100"
                     >

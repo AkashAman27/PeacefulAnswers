@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Drama, Clock, Star } from 'lucide-react'
-import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed'
+import YouTubeEmbed from '@/components/ui/YouTubeEmbed'
 
 interface StoryItem {
   title: string

@@ -342,7 +342,7 @@ const ChapterViewer: React.FC<ChapterViewerProps> = ({ chapter, prevChapter, nex
                           {sanskrit}:
                         </div>
                         <div className="text-blue-800 min-w-0">
-                          {meaning}
+                          {meaning as string}
                         </div>
                       </div>
                     ))}

@@ -1,7 +1,7 @@
 'use client'
 
 import { Church, MapPin, Clock, Star, Camera } from 'lucide-react'
-import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed'
+import YouTubeEmbed from '@/components/ui/YouTubeEmbed'
 import Image from 'next/image'
 
 interface Temple {

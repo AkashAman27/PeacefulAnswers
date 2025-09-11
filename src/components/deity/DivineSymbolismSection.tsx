@@ -1,7 +1,7 @@
 'use client'
 
 import { Sparkles, Layers, Info } from 'lucide-react'
-import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed'
+import YouTubeEmbed from '@/components/ui/YouTubeEmbed'
 
 interface SymbolismItem {
   aspect: string

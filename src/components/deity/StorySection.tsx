@@ -1,7 +1,7 @@
 'use client'
 
 import { BookOpen } from 'lucide-react'
-import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed'
+import YouTubeEmbed from '@/components/ui/YouTubeEmbed'
 
 interface StorySectionProps {
   story: string

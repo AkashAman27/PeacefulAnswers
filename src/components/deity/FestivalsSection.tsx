@@ -1,7 +1,7 @@
 'use client'
 
 import { Calendar, MapPin, Star, Clock } from 'lucide-react'
-import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed'
+import YouTubeEmbed from '@/components/ui/YouTubeEmbed'
 
 interface Festival {
   name: string

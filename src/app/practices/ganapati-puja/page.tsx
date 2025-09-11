@@ -204,7 +204,7 @@ export default function GanapatiPujaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-pink-800 mb-2">Continued:</h4>
-                      <ol className="list-decimal list-inside space-y-1 text-sm text-gray-700" start="9">
+                      <ol className="list-decimal list-inside space-y-1 text-sm text-gray-700" start={9}>
                         <li>Gandha (Sandalwood paste)</li>
                         <li>Pushpa (Flowers)</li>
                         <li>Dhupa (Incense)</li>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Eye, ChevronDown, ChevronUp } from 'lucide-react'
-import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed'
+import YouTubeEmbed from '@/components/ui/YouTubeEmbed'
 import Image from 'next/image'
 
 interface IconographyItem {
