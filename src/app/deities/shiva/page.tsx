@@ -160,9 +160,9 @@ export default async function ShivaPage() {
       name: 'Shiva',
       sanskrit_name: 'महादेव शिव',
       title: 'The Supreme Lord of Transformation',
-      description: 'The Supreme Lord of paradoxes - the fierce destroyer and benevolent protector, the detached ascetic and devoted householder, the cosmic dancer and eternal meditator',
+      description: 'The Supreme Lord of paradoxes - the fierce destroyer and benevolent protector, the detached ascetic and devoted householder, the cosmic dancer and eternal meditator. Known as Mahadeva (Great God), Neelkanth (Blue-throated), and Nataraja (King of Dance), Shiva represents the dynamic aspect of consciousness.',
       image_url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop',
-      story: 'Lord Shiva embodies the ultimate paradox of existence. He is simultaneously the fierce destroyer who ends cosmic cycles and the compassionate protector who saves the universe from poison. As the master ascetic dwelling in deep meditation on Mount Kailash, he represents detachment, yet as a devoted husband to Parvati and father to Ganesha and Kartikeya, he exemplifies the householder ideal.',
+      story: 'Lord Shiva embodies the ultimate paradox of existence, representing the dynamic aspect of pure consciousness. From his origins as the fierce Vedic storm god Rudra to his evolution as the supreme deity of transformation, Shiva encompasses all dualities within his divine nature. He is simultaneously the fierce destroyer who brings cosmic cycles to an end and the compassionate protector who saves the universe from destruction. As the master ascetic (Mahayogi) dwelling in eternal meditation on the sacred Mount Kailash, he represents perfect detachment from worldly concerns. Yet as a devoted husband to Parvati and loving father to Ganesha and Kartikeya, he exemplifies the ideal householder. This divine paradox teaches us that true spiritual realization comes not from rejecting one aspect of existence for another, but from integrating all aspects into a unified whole.',
       sacred_iconography: [
         {
           name: 'Third Eye',
@@ -185,12 +185,36 @@ export default async function ShivaPage() {
       ],
       sacred_stories: [
         {
-          title: 'The Cosmic Trinity',
-          content: 'As part of the Hindu Trimurti, Shiva represents the transformative aspect of divinity. While often called the Destroyer, he is more accurately the Transformer - dissolving the old to make way for new creation in the eternal cosmic cycle.'
+          title: 'The Story of Neelkanth - The Blue-Throated Savior',
+          content: 'During the cosmic churning of the ocean (Samudra Manthan), when gods and demons sought the nectar of immortality, a deadly poison called Halahala emerged first. This poison threatened to destroy the entire universe. Seeing creation in peril, Lord Shiva, in his infinite compassion, consumed the poison to save all beings. Goddess Parvati, fearing for her beloved husband, quickly pressed his throat to prevent the poison from descending to his stomach. The poison remained in Shiva\'s throat, turning it blue forever. Thus, Shiva became known as Neelkanth, the blue-throated one, symbolizing his willingness to absorb the world\'s negativity to protect creation.'
         },
         {
-          title: 'From Rudra to Shiva',
-          content: 'Evolving from the Vedic storm god Rudra, Shiva became the supreme deity of Shaivism, incorporating both fearsome and benevolent aspects into a complex, all-encompassing divine personality that embraces the full spectrum of existence.'
+          title: 'Shiva as Nataraja - The Cosmic Dancer',
+          content: 'In the golden hall of Chidambaram, Shiva performs his eternal cosmic dance called Tandava. This divine dance represents the five cosmic activities: creation (Srishti), preservation (Sthiti), destruction (Samhara), illusion (Tirobhava), and grace (Anugraha). Dancing on the demon Apasmara (ignorance), Shiva\'s dance maintains the rhythm of the universe. His four arms hold the damaru (drum of creation), fire (element of destruction), and display mudras of fearlessness and blessing. The ring of fire surrounding him represents the eternal cycle of time and the boundary of the cosmos.'
+        },
+        {
+          title: 'The Marriage of Shiva and Parvati',
+          content: 'When Sati immolated herself in her father Daksha\'s sacrifice, Shiva withdrew into deep meditation, causing imbalance in the cosmos. Sati was reborn as Parvati, daughter of the mountain king Himavan. Through years of intense penance and devotion, Parvati won Shiva\'s heart. Their divine marriage represents the perfect union of consciousness (Shiva) and energy (Shakti), Purusha and Prakriti, the static and dynamic aspects of existence. This union is essential for the continuation of creation and the cosmic order.'
+        },
+        {
+          title: 'Shiva and the Ganga - The Descent of the Holy River',
+          content: 'When King Bhagiratha performed severe penance to bring the celestial river Ganga to earth to purify his ancestors\' ashes, the gods agreed, but worried about the devastating force of Ganga\'s descent. Shiva agreed to catch the mighty river in his matted locks (jata) to break her fall. For years, Ganga remained entangled in Shiva\'s hair, until Bhagiratha\'s continued prayers convinced Shiva to release her gently onto the earth. Thus, the sacred Ganges flows from Shiva\'s hair, carrying his blessings and purifying power to humanity.'
+        },
+        {
+          title: 'The Birth of Ganesha - The Devoted Son',
+          content: 'When Parvati created Ganesha from the sandalwood paste of her body to guard her privacy while bathing, the child faithfully performed his duty. When Shiva returned and was denied entry by this unknown boy, an enraged battle ensued, resulting in Ganesha\'s beheading. Seeing Parvati\'s grief, Shiva immediately sent his ganas to bring the head of the first creature they encountered - an elephant. Shiva restored Ganesha\'s life with the elephant head and declared him the remover of obstacles and the lord of beginnings, to be worshipped before all other deities.'
+        },
+        {
+          title: 'The Destruction of Tripura - The Cosmic Archer',
+          content: 'Three demon brothers, granted invincible cities (Tripura) by Brahma, began terrorizing the universe. These cities could only be destroyed by a single arrow shot by one who had never known defeat. Shiva, as Tripurantaka, mounted a cosmic chariot with Brahma as charioteer, Vishnu as the arrow, and the Meru mountain as his bow. At the precise moment when the three cities aligned, Shiva released the cosmic arrow, destroying the demon cities and restoring cosmic balance. This legend symbolizes the destruction of ego, desire, and ignorance (the three cities of the mind).'
+        },
+        {
+          title: 'Shiva as Bhairava - The Guardian of Time',
+          content: 'When Brahma claimed superiority over Vishnu and grew a fifth head to look down upon him, Shiva manifested as the terrible Bhairava and severed Brahma\'s fifth head with his fingernail. As punishment for this brahminicide, the head stuck to Bhairava\'s hand, and he was condemned to wander as a beggar until reaching Varanasi. This form represents Shiva as Kala-Bhairava, the guardian of time, and teaches that even divine beings must face consequences for their actions. Bhairava is also the fierce guardian of Shiva temples and protector of devotees.'
+        },
+        {
+          title: 'The Lingam of Light - Shiva\'s Infinite Nature',
+          content: 'When Brahma and Vishnu argued about their supremacy, Shiva appeared as an infinite pillar of light (Jyotirlinga) stretching beyond the cosmos. Brahma, taking the form of a swan, flew upward to find its top, while Vishnu, as a boar, dug downward to find its base. Both failed after eons of searching. Vishnu humbly accepted defeat, but Brahma falsely claimed to have found the pillar\'s end. Shiva appeared and cursed Brahma to have no temples, while blessing Vishnu for his honesty. The twelve Jyotirlingas across India commemorate this manifestation of Shiva\'s infinite, formless nature.'
         }
       ],
       divine_symbolism: [
