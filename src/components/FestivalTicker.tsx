@@ -20,13 +20,13 @@ interface TickerAnnouncement {
 const fallbackAnnouncements: TickerAnnouncement[] = [
   {
     id: '1',
-    festival_name: 'Jivit Putrika Vrat',
-    hindi_text: '🪔 जीवित पुत्रिका व्रत 14 सितंबर को आ रहा है। कहानियाँ और विधि जानने के लिए यहाँ क्लिक करें',
-    english_text: '🪔 Jivit Putrika Vrat is coming on September 14th. Click here to read stories and rituals',
-    icon: '🪔',
-    link_url: '/festivals/jivit-putrika',
-    start_date: '2025-09-01',
-    end_date: '2025-09-15',
+    festival_name: 'Durga Puja',
+    hindi_text: '🏮 दुर्गा पूजा 21 सितंबर से शुरू हो रहा है - महालया! माँ दुर्गा की महिमा जानने के लिए यहाँ क्लिक करें',
+    english_text: '🏮 Durga Puja is starting from 21st September - Mahalaya! Click here to know more about the glory of Maa Durga',
+    icon: '🏮',
+    link_url: '/festivals/durga-puja',
+    start_date: '2025-09-15',
+    end_date: '2025-10-15',
     is_active: true
   }
 ]

@@ -4,6 +4,7 @@ import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'] })
 const notoSansDevanagari = Noto_Sans_Devanagari({ 
@@ -48,12 +49,45 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+  const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#1E3A8A" />
+        
+        {/* Google Site Verification */}
+        {GOOGLE_SITE_VERIFICATION && (
+          <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+        )}
+        
+        {/* Google Analytics */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                    page_title: document.title,
+                    page_location: window.location.href,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -73,6 +107,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} ${notoSansDevanagari.variable} antialiased`}>
+        {/* Google Analytics Component for client-side navigation tracking */}
+        {GA_MEASUREMENT_ID && <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />}
+        
         <ClientLayout>
           {children}
         </ClientLayout>

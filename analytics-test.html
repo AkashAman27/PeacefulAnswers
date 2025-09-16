@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🔍 Analytics Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+        .test-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .test-btn:hover { background: #218838; }
+        .code {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .success { background: rgba(40, 167, 69, 0.8); }
+        .error { background: rgba(220, 53, 69, 0.8); }
+        .info { background: rgba(23, 162, 184, 0.8); }
+    </style>
+</head>
+<body>
+    <h1>🔍 Google Analytics Testing for PeacefulAnswers</h1>
+    
+    <div class="card">
+        <h3>📍 Current Test Environment</h3>
+        <p><strong>URL:</strong> http://localhost:3001</p>
+        <p><strong>GA ID:</strong> G-5DS955HKWZ</p>
+        <p><strong>Site Verification:</strong> W4k9yU3T-Vwgn0T1ZBsLb9R3_YB5gF-2ga_0F4ZzDpE</p>
+    </div>
+
+    <div class="card">
+        <h3>🚀 Quick Test Buttons</h3>
+        <button class="test-btn" onclick="testBasics()">1. Test Basics</button>
+        <button class="test-btn" onclick="testEvents()">2. Fire Test Events</button>
+        <button class="test-btn" onclick="testCustomEvents()">3. Test Custom Events</button>
+        <button class="test-btn" onclick="showDataLayer()">4. Show DataLayer</button>
+        <button class="test-btn" onclick="openGA()">5. Open Google Analytics</button>
+    </div>
+
+    <div class="card">
+        <h3>📋 Test Results</h3>
+        <div id="results"></div>
+    </div>
+
+    <div class="card">
+        <h3>💻 Manual Console Commands</h3>
+        <p>Copy and paste these into your browser console (F12):</p>
+        
+        <div class="code">// Check if analytics is loaded
+console.log('gtag:', typeof window.gtag)
+console.log('dataLayer:', window.dataLayer?.length || 'undefined')</div>
+        
+        <div class="code">// Fire a test event
+window.gtag('event', 'test_button_click', {
+  event_category: 'testing',
+  event_label: 'manual_console_test'
+})</div>
+        
+        <div class="code">// Monitor all events in real-time
+window.dataLayer.push(function() {
+  console.log('🔥 Event:', arguments)
+})</div>
+    </div>
+
+    <div class="card">
+        <h3>🎯 Instructions</h3>
+        <ol>
+            <li><strong>Open Developer Tools:</strong> Press F12 (or Cmd+Option+I on Mac)</li>
+            <li><strong>Go to Console Tab:</strong> Click "Console" in DevTools</li>
+            <li><strong>Run Tests:</strong> Click the test buttons above</li>
+            <li><strong>Check Results:</strong> Look at console output and results below</li>
+            <li><strong>Visit Main Site:</strong> Go to <a href="http://localhost:3001" target="_blank">localhost:3001</a> and test there</li>
+        </ol>
+    </div>
+
+    <script>
+        function log(message, type = 'info') {
+            const results = document.getElementById('results')
+            const statusClass = type === 'success' ? 'success' : type === 'error' ? 'error' : 'info'
+            results.innerHTML += `<div class="status ${statusClass}">${message}</div>`
+            console.log(message)
+        }
+
+        function testBasics() {
+            log('🔍 Testing Analytics Basics...', 'info')
+            
+            // Check if gtag exists
+            if (typeof window.gtag === 'function') {
+                log('✅ window.gtag is available', 'success')
+            } else {
+                log('❌ window.gtag is NOT available', 'error')
+                return
+            }
+            
+            // Check dataLayer
+            if (window.dataLayer && Array.isArray(window.dataLayer)) {
+                log(`✅ dataLayer exists with ${window.dataLayer.length} events`, 'success')
+            } else {
+                log('❌ dataLayer is NOT available', 'error')
+                return
+            }
+            
+            // Check for GA script
+            const gaScript = document.querySelector('script[src*="googletagmanager.com"]')
+            if (gaScript) {
+                log('✅ Google Analytics script found in page', 'success')
+            } else {
+                log('❌ Google Analytics script NOT found', 'error')
+            }
+            
+            log('🎉 Basic tests completed!', 'info')
+        }
+
+        function testEvents() {
+            if (typeof window.gtag !== 'function') {
+                log('❌ gtag not available. Load your main site first.', 'error')
+                return
+            }
+            
+            log('🔥 Firing test events...', 'info')
+            
+            // Test page view
+            window.gtag('config', 'G-5DS955HKWZ', {
+                page_path: '/analytics-test',
+                page_title: 'Analytics Test Page'
+            })
+            log('✅ Page view event sent', 'success')
+            
+            // Test custom event
+            window.gtag('event', 'test_interaction', {
+                event_category: 'testing',
+                event_label: 'button_click_test',
+                value: 1
+            })
+            log('✅ Custom interaction event sent', 'success')
+            
+            // Test timing event
+            window.gtag('event', 'timing_complete', {
+                name: 'analytics_test',
+                value: Date.now()
+            })
+            log('✅ Timing event sent', 'success')
+        }
+
+        function testCustomEvents() {
+            if (typeof window.gtag !== 'function') {
+                log('❌ gtag not available. Load your main site first.', 'error')
+                return
+            }
+            
+            log('🕉️ Testing PeacefulAnswers custom events...', 'info')
+            
+            // Festival view
+            window.gtag('event', 'festival_view', {
+                event_category: 'content',
+                event_label: 'Durga Puja',
+                value: 1
+            })
+            log('✅ Festival view event (Durga Puja)', 'success')
+            
+            // Scripture read
+            window.gtag('event', 'scripture_read', {
+                event_category: 'content', 
+                event_label: 'Bhagavad Gita - Chapter 1',
+                value: 1
+            })
+            log('✅ Scripture read event (Bhagavad Gita)', 'success')
+            
+            // Search event
+            window.gtag('event', 'search', {
+                search_term: 'meditation techniques',
+                event_category: 'search',
+                value: 5
+            })
+            log('✅ Search event (meditation techniques)', 'success')
+            
+            // Language change
+            window.gtag('event', 'language_change', {
+                event_category: 'user_preference',
+                event_label: 'hindi'
+            })
+            log('✅ Language change event (Hindi)', 'success')
+        }
+
+        function showDataLayer() {
+            if (!window.dataLayer) {
+                log('❌ dataLayer not available', 'error')
+                return
+            }
+            
+            log(`📊 DataLayer contains ${window.dataLayer.length} events:`, 'info')
+            console.log('Full DataLayer:', window.dataLayer)
+            
+            // Show recent events
+            const recent = window.dataLayer.slice(-5)
+            recent.forEach((event, index) => {
+                log(`Event ${index + 1}: ${JSON.stringify(event).substring(0, 100)}...`, 'info')
+            })
+        }
+
+        function openGA() {
+            window.open('https://analytics.google.com/analytics/web/', '_blank')
+            log('🔗 Opened Google Analytics in new tab', 'info')
+            log('Go to: Real-time → Overview to see live activity', 'info')
+        }
+
+        // Auto-run basic test when page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                log('🚀 Page loaded. Click "Test Basics" to check analytics setup.', 'info')
+            }, 1000)
+        })
+    </script>
+</body>
+</html>

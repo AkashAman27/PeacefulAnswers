@@ -1,17 +1,13 @@
 import { use } from 'react'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
 import { 
   Calendar, 
   Clock, 
   Tag, 
   Share2, 
   BookOpen, 
-  MapPin, 
   Star, 
-  Heart,
-  Eye,
   User
 } from 'lucide-react'
 import { BulkUploadItem } from '@/types/bulkUpload'

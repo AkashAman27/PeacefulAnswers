@@ -232,8 +232,8 @@ export default function DurgaPujaPage() {
             Celebrating the triumph of the Divine Feminine over evil, strength over weakness, and dharma over adharma
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="px-6 py-3 bg-red-700 text-white rounded-full font-semibold">October 9-13, 2024</span>
-            <span className="px-6 py-3 bg-orange-500 text-white rounded-full font-semibold">Five Days</span>
+            <span className="px-6 py-3 bg-red-700 text-white rounded-full font-semibold">September 21st - October 2nd, 2025</span>
+            <span className="px-6 py-3 bg-orange-500 text-white rounded-full font-semibold">Ten Days</span>
             <span className="px-6 py-3 bg-gradient-to-r from-red-700 to-yellow-400 text-white rounded-full font-semibold">Ashwin Month</span>
           </div>
           <div className="w-32 h-1 bg-gradient-to-r from-red-700 via-orange-500 to-yellow-400 mx-auto"></div>
@@ -348,18 +348,37 @@ export default function DurgaPujaPage() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-red-800 mb-12">Nine Divine Forms - Navadurga</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {durgaAvatars.map((avatar, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-red-700 to-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {index + 1}
+            {durgaAvatars.map((avatar, index) => {
+              const formPaths = [
+                '/festivals/durga-puja/shailaputri',
+                '/festivals/durga-puja/brahmacharini', 
+                '/festivals/durga-puja/chandraghanta',
+                '/festivals/durga-puja/kushmanda',
+                '/festivals/durga-puja/skandamata',
+                '/festivals/durga-puja/katyayani',
+                '/festivals/durga-puja/kalaratri',
+                '/festivals/durga-puja/mahagauri',
+                '/festivals/durga-puja/siddhidatri'
+              ]
+              
+              return (
+                <Link key={index} href={formPaths[index]} className="block">
+                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-r from-red-700 to-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-xl font-bold text-red-700">{avatar.name}</h3>
+                    </div>
+                    <p className="text-orange-600 font-semibold mb-3">{avatar.description}</p>
+                    <p className="text-gray-700 text-sm mb-4">{avatar.significance}</p>
+                    <div className="text-blue-600 font-medium text-sm">
+                      Learn more about {avatar.name} →
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-red-700">{avatar.name}</h3>
-                </div>
-                <p className="text-orange-600 font-semibold mb-3">{avatar.description}</p>
-                <p className="text-gray-700 text-sm">{avatar.significance}</p>
-              </div>
-            ))}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>

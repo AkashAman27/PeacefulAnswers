@@ -18,12 +18,17 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      "*.js",
+      "scripts/**/*.js",
+      "jest.config.js",
     ],
   },
   {
     rules: {
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
       "react/no-unescaped-entities": "warn",
       "@next/next/no-img-element": "warn",
       "@next/next/no-html-link-for-pages": "warn",

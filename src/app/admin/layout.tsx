@@ -42,6 +42,10 @@ export default function AdminLayout({
               <a href="/admin/media" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 Media Library
               </a>
+              <a href="/admin/image-generator" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors flex items-center space-x-2">
+                <span>🎨</span>
+                <span>AI Image Generator</span>
+              </a>
               <a href="/admin/translations" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 Translations
               </a>
