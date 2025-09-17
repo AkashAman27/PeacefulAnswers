@@ -62,8 +62,30 @@ export default function AdminLogin() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
+    <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          input[type="email"], input[type="password"], input[type="text"] {
+            color: #000000 !important;
+            -webkit-text-fill-color: #000000 !important;
+            background-color: #ffffff !important;
+            opacity: 1 !important;
+          }
+          input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+            color: #000000 !important;
+            -webkit-text-fill-color: #000000 !important;
+          }
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus {
+            -webkit-text-fill-color: #000000 !important;
+            color: #000000 !important;
+            background-color: #ffffff !important;
+          }
+        `
+      }} />
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center p-4">
+        <div className="max-w-md w-full">
         {/* Logo and Header */}
         <div className="text-center mb-8">
           <div className="mx-auto w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mb-4">
@@ -88,7 +110,16 @@ export default function AdminLogin() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="admin@peacefulanswers.com"
+                style={{ 
+                  color: '#000000 !important', 
+                  WebkitTextFillColor: '#000000 !important',
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'textfield',
+                  backgroundColor: '#ffffff !important',
+                  opacity: '1 !important',
+                  fontSize: '16px'
+                }}
+                placeholder="Enter your email"
                 disabled={isLoading}
               />
             </div>
@@ -106,6 +137,15 @@ export default function AdminLogin() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  style={{ 
+                    color: '#000000 !important', 
+                    WebkitTextFillColor: '#000000 !important',
+                    WebkitAppearance: 'none',
+                    MozAppearance: 'textfield',
+                    backgroundColor: '#ffffff !important',
+                    opacity: '1 !important',
+                    fontSize: '16px'
+                  }}
                   placeholder="Enter your password"
                   disabled={isLoading}
                 />
@@ -147,20 +187,6 @@ export default function AdminLogin() {
               )}
             </button>
           </form>
-
-          {/* Security Notice */}
-          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <div className="flex">
-              <Shield className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-              <div className="ml-3">
-                <h3 className="text-sm font-medium text-blue-800">Security Notice</h3>
-                <p className="text-sm text-blue-700 mt-1">
-                  This area is restricted to authorized administrators only. 
-                  Super admin privileges are required to access the admin panel.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Footer */}
@@ -169,7 +195,8 @@ export default function AdminLogin() {
             © 2024 PeacefulAnswers.com - Admin Portal
           </p>
         </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
