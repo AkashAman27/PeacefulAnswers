@@ -58,3 +58,11 @@ scripts/test-deployment.sh
 # Analytics test files
 analytics-test.html
 debug-analytics.html
+
+# Additional Docker patterns (redundancy for safety)
+**/docker-compose*.yml
+**/Dockerfile*
+**/*.dockerignore
+**/docker-package.*
+**/peacefulanswers-docker-package/**
+
