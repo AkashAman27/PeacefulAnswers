@@ -1,10 +1,16 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { hinduSupabase } from '@/lib/supabase'
 import { ArrowLeft, Save, Plus, X, Loader2 } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+interface Category {
+  id: string
+  name: string
+}
 
 interface DeityForm {
   name: string
@@ -48,7 +54,7 @@ export default function EditDeity() {
   const params = useParams()
   const deityId = params.id as string
 
-  const [categories, setCategories] = useState<any[]>([])
+  const [categories, setCategories] = useState<Category[]>([])
   const [saving, setSaving] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -92,12 +98,7 @@ export default function EditDeity() {
     is_featured: false
   })
 
-  useEffect(() => {
-    fetchDeity()
-    fetchCategories()
-  }, [deityId])
-
-  const fetchDeity = async () => {
+  const fetchDeity = useCallback(async () => {
     try {
       setLoading(true)
       setError(null)
@@ -169,7 +170,12 @@ export default function EditDeity() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [deityId])
+
+  useEffect(() => {
+    fetchDeity()
+    fetchCategories()
+  }, [fetchDeity])
 
   const fetchCategories = async () => {
     try {
@@ -191,7 +197,7 @@ export default function EditDeity() {
     setSaving(true)
 
     try {
-      const { data, error } = await hinduSupabase
+      const { error } = await hinduSupabase
         .from('deities')
         .update({
           ...form,
@@ -213,42 +219,42 @@ export default function EditDeity() {
     }
   }
 
-  const addArrayItem = (field: string, item: any) => {
+  const addArrayItem = (field: keyof DeityForm, item: unknown) => {
     setForm(prev => ({
       ...prev,
-      [field]: [...(prev[field as keyof typeof prev] as any[]), item]
+      [field]: [...(prev[field] as unknown[]), item]
     }))
   }
 
-  const removeArrayItem = (field: string, index: number) => {
+  const removeArrayItem = (field: keyof DeityForm, index: number) => {
     setForm(prev => ({
       ...prev,
-      [field]: (prev[field as keyof typeof prev] as any[]).filter((_, i) => i !== index)
+      [field]: (prev[field] as unknown[]).filter((_, i) => i !== index)
     }))
   }
 
-  const updateArrayItem = (field: string, index: number, item: any) => {
+  const updateArrayItem = (field: keyof DeityForm, index: number, item: unknown) => {
     setForm(prev => ({
       ...prev,
-      [field]: (prev[field as keyof typeof prev] as any[]).map((existing, i) => 
+      [field]: (prev[field] as unknown[]).map((existing, i) => 
         i === index ? item : existing
       )
     }))
   }
 
-  const addStringArrayItem = (field: string, value: string) => {
+  const addStringArrayItem = (field: keyof DeityForm, value: string) => {
     if (value.trim()) {
       setForm(prev => ({
         ...prev,
-        [field]: [...(prev[field as keyof typeof prev] as string[]), value.trim()]
+        [field]: [...(prev[field] as string[]), value.trim()]
       }))
     }
   }
 
-  const removeStringArrayItem = (field: string, index: number) => {
+  const removeStringArrayItem = (field: keyof DeityForm, index: number) => {
     setForm(prev => ({
       ...prev,
-      [field]: (prev[field as keyof typeof prev] as string[]).filter((_, i) => i !== index)
+      [field]: (prev[field] as string[]).filter((_, i) => i !== index)
     }))
   }
 
@@ -584,9 +590,11 @@ export default function EditDeity() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Featured Image Preview
                   </label>
-                  <img
+                  <Image
                     src={form.featured_image_url}
                     alt={form.featured_image_alt}
+                    width={400}
+                    height={192}
                     className="max-w-md h-48 object-cover rounded-lg border"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -666,7 +674,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">⭐</div>
-                      <p>No divine attributes added yet. Click "Add Attribute" to start.</p>
+                      <p>No divine attributes added yet. Click &ldquo;Add Attribute&rdquo; to start.</p>
                     </div>
                   )}
                 </div>
@@ -772,7 +780,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">🙏</div>
-                      <p>No mantras added yet. Click "Add Mantra" to start.</p>
+                      <p>No mantras added yet. Click &ldquo;Add Mantra&rdquo; to start.</p>
                     </div>
                   )}
                 </div>
@@ -885,7 +893,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">🎉</div>
-                      <p>No festivals added yet. Click "Add Festival" to start.</p>
+                      <p>No festivals added yet. Click &ldquo;Add Festival&rdquo; to start.</p>
                     </div>
                   )}
                 </div>
@@ -1012,7 +1020,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">🏛️</div>
-                      <p>No sacred places added yet. Click "Add Place" to start.</p>
+                      <p>No sacred places added yet. Click &ldquo;Add Place&rdquo; to start.</p>
                     </div>
                   )}
                 </div>
@@ -1109,7 +1117,7 @@ export default function EditDeity() {
                   {form.avatars_or_forms.length === 0 && (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">🕉️</div>
-                      <p>No avatars added yet. Click "Add Avatar" to start.</p>
+                      <p>No avatars added yet. Click &ldquo;Add Avatar&rdquo; to start.</p>
                       <p className="text-sm mt-1">Add incarnations like Krishna, Rama, etc. for deities like Vishnu.</p>
                     </div>
                   )}
@@ -1431,7 +1439,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">👁️</div>
-                      <p>No iconography added yet. Click "Add Iconography" to start.</p>
+                      <p>No iconography added yet. Click &ldquo;Add Iconography&rdquo; to start.</p>
                     </div>
                   )}
                 </div>
@@ -1524,7 +1532,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">📚</div>
-                      <p>No sacred stories added yet. Click "Add Story" to start.</p>
+                      <p>No sacred stories added yet. Click &ldquo;Add Story&rdquo; to start.</p>
                     </div>
                   )}
                 </div>
@@ -1607,7 +1615,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">✨</div>
-                      <p>No divine symbolism added yet. Click "Add Symbolism" to start.</p>
+                      <p>No divine symbolism added yet. Click &ldquo;Add Symbolism&rdquo; to start.</p>
                     </div>
                   )}
                 </div>
@@ -1694,7 +1702,7 @@ export default function EditDeity() {
                   )) : (
                     <div className="text-center py-8 text-gray-500">
                       <div className="text-lg mb-2">💡</div>
-                      <p>No essential facts added yet. Click "Add Fact" to start.</p>
+                      <p>No essential facts added yet. Click &ldquo;Add Fact&rdquo; to start.</p>
                     </div>
                   )}
                 </div>

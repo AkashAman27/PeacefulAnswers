@@ -659,7 +659,7 @@ describe('EditDeity Page', () => {
 
     test('shows loading state during form submission', async () => {
       // Create a promise that won't resolve immediately
-      let resolveUpdate: (value: any) => void
+      let resolveUpdate: (value: unknown) => void
       const updatePromise = new Promise(resolve => {
         resolveUpdate = resolve
       })
@@ -731,7 +731,7 @@ describe('EditDeity Page', () => {
       await waitFor(() => {
         const previewImage = screen.getByAltText('Lord Krishna image')
         expect(previewImage).toBeInTheDocument()
-        expect(previewImage).toHaveAttribute('src', 'https://example.com/krishna.jpg')
+        expect(previewImage).toHaveAttribute('src', expect.stringContaining('krishna.jpg'))
       })
     })
 

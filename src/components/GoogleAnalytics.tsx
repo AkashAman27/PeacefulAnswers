@@ -41,8 +41,17 @@ function GoogleAnalyticsInner({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
 
     return () => {
       // Cleanup scripts if component unmounts
-      document.head.removeChild(script1)
-      document.head.removeChild(script2)
+      try {
+        if (script1.parentNode) {
+          document.head.removeChild(script1)
+        }
+        if (script2.parentNode) {
+          document.head.removeChild(script2)
+        }
+      } catch (error) {
+        // Ignore errors during cleanup
+        console.debug('Error cleaning up Google Analytics scripts:', error)
+      }
     }
   }, [GA_MEASUREMENT_ID])
 

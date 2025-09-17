@@ -9,17 +9,35 @@ jest.mock('next/navigation', () => ({
 
 describe('GoogleAnalytics', () => {
   beforeEach(() => {
-    // Clear any existing scripts
-    document.head.innerHTML = ''
-    // Reset window.gtag
-    delete (window as any).gtag
-    delete (window as any).dataLayer
+    // Clean up any existing scripts and window properties
+    const scripts = document.head.querySelectorAll('script')
+    scripts.forEach(script => {
+      try {
+        if (script.parentNode) {
+          script.parentNode.removeChild(script)
+        }
+      } catch (error) {
+        // Ignore cleanup errors
+      }
+    })
+    
+    // Reset window properties
+    ;(window as any).gtag = undefined
+    ;(window as any).dataLayer = undefined
   })
 
   afterEach(() => {
     // Clean up any scripts added during tests
     const scripts = document.head.querySelectorAll('script')
-    scripts.forEach(script => script.remove())
+    scripts.forEach(script => {
+      try {
+        if (script.parentNode) {
+          script.parentNode.removeChild(script)
+        }
+      } catch (error) {
+        // Ignore cleanup errors
+      }
+    })
   })
 
   it('renders without crashing', () => {
