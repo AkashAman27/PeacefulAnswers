@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 declare global {
@@ -14,7 +14,7 @@ interface GoogleAnalyticsProps {
   GA_MEASUREMENT_ID: string
 }
 
-export function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
+function GoogleAnalyticsInner({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -60,6 +60,14 @@ export function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
   }, [pathname, searchParams, GA_MEASUREMENT_ID])
 
   return null
+}
+
+export function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
+  return (
+    <Suspense fallback={null}>
+      <GoogleAnalyticsInner GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
+    </Suspense>
+  )
 }
 
 // Custom hook for tracking events

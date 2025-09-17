@@ -13,11 +13,10 @@
  */
 
 import React from 'react'
-import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { useRouter, useParams } from 'next/navigation'
 import EditDeity from '../page'
-import { supabase } from '@/lib/supabase'
+import { hinduSupabase } from '@/lib/supabase'
 
 // Mock data matching the actual database structure
 const mockDeityData = {
@@ -102,7 +101,7 @@ jest.mock('next/navigation', () => ({
 
 // Mock Supabase client
 jest.mock('@/lib/supabase', () => ({
-  supabase: {
+  hinduSupabase: {
     from: jest.fn(() => ({
       select: jest.fn().mockReturnThis(),
       eq: jest.fn().mockReturnThis(),
@@ -127,7 +126,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockReturnThis(),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockSupabaseChain)
+      ;(hinduSupabase.from as jest.Mock).mockReturnValue(mockSupabaseChain)
 
       render(<EditDeity />)
 
@@ -149,7 +148,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain) // For deity fetch
         .mockReturnValueOnce(mockCategoriesChain) // For categories fetch
 
@@ -171,9 +170,18 @@ describe('EditDeity Page', () => {
           data: null, 
           error: { code: 'PGRST116', message: 'Row not found' } 
         }),
+        order: jest.fn().mockReturnThis(),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockSupabaseChain)
+      const mockCategoriesChain = {
+        select: jest.fn().mockReturnThis(),
+        eq: jest.fn().mockReturnThis(),
+        order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
+      }
+
+      ;(hinduSupabase.from as jest.Mock)
+        .mockReturnValueOnce(mockSupabaseChain) // For deity fetch
+        .mockReturnValueOnce(mockCategoriesChain) // For categories fetch
 
       render(<EditDeity />)
 
@@ -191,9 +199,18 @@ describe('EditDeity Page', () => {
           data: null, 
           error: { code: 'PGRST301', message: 'Database connection error' } 
         }),
+        order: jest.fn().mockReturnThis(),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockSupabaseChain)
+      const mockCategoriesChain = {
+        select: jest.fn().mockReturnThis(),
+        eq: jest.fn().mockReturnThis(),
+        order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
+      }
+
+      ;(hinduSupabase.from as jest.Mock)
+        .mockReturnValueOnce(mockSupabaseChain) // For deity fetch
+        .mockReturnValueOnce(mockCategoriesChain) // For categories fetch
 
       render(<EditDeity />)
 
@@ -218,7 +235,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 
@@ -308,7 +325,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 
@@ -372,7 +389,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 
@@ -479,7 +496,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 
@@ -498,7 +515,7 @@ describe('EditDeity Page', () => {
         single: jest.fn().mockResolvedValue({ data: { ...mockDeityData, name: 'Updated Krishna' }, error: null }),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
+      ;(hinduSupabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
 
       // Update a field
       const nameInput = screen.getByDisplayValue('Krishna')
@@ -527,7 +544,7 @@ describe('EditDeity Page', () => {
         }),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
+      ;(hinduSupabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
       
       // Mock window.alert
       const alertSpy = jest.spyOn(window, 'alert').mockImplementation(() => {})
@@ -550,10 +567,17 @@ describe('EditDeity Page', () => {
         single: jest.fn().mockResolvedValue({ data: { ...mockDeityData, status: 'draft' }, error: null }),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
+      ;(hinduSupabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
 
+      // Click Save Draft button to set status to draft
       const saveDraftButton = screen.getByText('Save Draft')
       fireEvent.click(saveDraftButton)
+
+      // Then submit the form by clicking the form submit button
+      const form = document.querySelector('#deity-form')
+      expect(form).toBeInTheDocument()
+      
+      fireEvent.submit(form!)
 
       // Wait for the form to be submitted
       await waitFor(() => {
@@ -573,7 +597,7 @@ describe('EditDeity Page', () => {
         single: jest.fn().mockResolvedValue({ data: { ...mockDeityData, status: 'published' }, error: null }),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
+      ;(hinduSupabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
 
       const publishButton = screen.getByText('Update & Publish')
       fireEvent.click(publishButton)
@@ -602,7 +626,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 
@@ -647,7 +671,7 @@ describe('EditDeity Page', () => {
         single: jest.fn().mockReturnValue(updatePromise),
       }
 
-      ;(supabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
+      ;(hinduSupabase.from as jest.Mock).mockReturnValue(mockUpdateChain)
 
       const submitButton = screen.getByText('Update & Publish')
       fireEvent.click(submitButton)
@@ -690,7 +714,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 
@@ -736,11 +760,11 @@ describe('EditDeity Page', () => {
 
       const mockCategoriesChain = {
         select: jest.fn().mockReturnThis(),
-        eq: jest.fn().mkReturnThis(),
+        eq: jest.fn().mockReturnThis(),
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 
@@ -765,7 +789,7 @@ describe('EditDeity Page', () => {
         order: jest.fn().mockResolvedValue({ data: mockCategories, error: null }),
       }
 
-      ;(supabase.from as jest.Mock)
+      ;(hinduSupabase.from as jest.Mock)
         .mockReturnValueOnce(mockSupabaseChain)
         .mockReturnValueOnce(mockCategoriesChain)
 

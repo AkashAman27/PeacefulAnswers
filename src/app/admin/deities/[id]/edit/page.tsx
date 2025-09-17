@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { supabase, hinduSupabase } from '@/lib/supabase'
-import { ArrowLeft, Save, Eye, Plus, X, Upload, Image as ImageIcon, Loader2 } from 'lucide-react'
+import { hinduSupabase } from '@/lib/supabase'
+import { ArrowLeft, Save, Plus, X, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 
 interface DeityForm {
@@ -274,7 +274,7 @@ export default function EditDeity() {
     { id: 'seo', label: 'SEO', icon: '🔍' }
   ]
 
-  if (loading || !dataLoaded) {
+  if (loading || (!dataLoaded && !error)) {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="flex items-center space-x-2">

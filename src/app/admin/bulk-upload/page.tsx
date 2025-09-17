@@ -3,12 +3,12 @@
 import { useState, useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { Upload, FileText, CheckCircle, XCircle, AlertTriangle, Download, Eye } from 'lucide-react'
-import { BulkUploadItem, BulkUploadResult, ValidationResult } from '@/types/bulkUpload'
+import { BulkUploadResult, ValidationResult } from '@/types/bulkUpload'
 import { JSONValidator } from '@/utils/jsonValidator'
 
 interface UploadState {
   file: File | null;
-  jsonData: any[] | null;
+  jsonData: Record<string, unknown>[] | null;
   validationResults: ValidationResult[] | null;
   uploadResult: BulkUploadResult | null;
   isProcessing: boolean;
@@ -46,7 +46,7 @@ export default function BulkUploadPage() {
           if (duplicateSlugs.length > 0) {
             alert(`Warning: Duplicate slugs found: ${duplicateSlugs.join(', ')}`)
           }
-        } catch (error) {
+        } catch {
           alert('Invalid JSON file. Please check your file format.')
         }
       }
@@ -196,7 +196,7 @@ export default function BulkUploadPage() {
               return (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
+                  onClick={() => setActiveTab(tab.id as 'upload' | 'schema' | 'examples')}
                   className={`py-4 px-2 border-b-2 font-medium text-sm flex items-center gap-2 ${
                     activeTab === tab.id
                       ? 'border-orange-500 text-orange-600'
@@ -307,7 +307,7 @@ export default function BulkUploadPage() {
                           )}
                           <div className="flex-1 min-w-0">
                             <p className="font-medium text-gray-900">
-                              Item {index + 1}: {uploadState.jsonData?.[index]?.title || 'Unknown'}
+                              Item {index + 1}: {(uploadState.jsonData?.[index] as { title?: string })?.title || 'Unknown'}
                             </p>
                             {result.errors.length > 0 && (
                               <div className="mt-2">
