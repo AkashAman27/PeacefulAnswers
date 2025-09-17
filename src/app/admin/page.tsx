@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
-import { FileText, Book, Users, Calendar, BarChart3, TrendingUp } from 'lucide-react'
+import { useAuth } from '@/hooks/useAuth'
+import { FileText, Book, Users, Calendar, BarChart3, TrendingUp, Shield, User } from 'lucide-react'
 
 export default function AdminDashboard() {
+  const { user, profile } = useAuth()
   const [stats, setStats] = useState({
     pages: 0,
     scriptures: 0,
@@ -19,16 +21,16 @@ export default function AdminDashboard() {
       try {
         // Fetch deities count
         const { count: deitiesCount } = await supabase
-          .from('hindu.deities')
+          .from('deities')
           .select('*', { count: 'exact', head: true })
 
         const { count: publishedDeitiesCount } = await supabase
-          .from('hindu.deities')
+          .from('deities')
           .select('*', { count: 'exact', head: true })
           .eq('status', 'published')
 
         const { count: draftDeitiesCount } = await supabase
-          .from('hindu.deities')
+          .from('deities')
           .select('*', { count: 'exact', head: true })
           .eq('status', 'draft')
 
@@ -110,10 +112,25 @@ export default function AdminDashboard() {
     <div className="space-y-6">
       {/* Welcome Section */}
       <div className="bg-gradient-to-r from-blue-900 to-orange-600 rounded-xl p-8 text-white">
-        <h1 className="text-3xl font-bold mb-2">Welcome to PeacefulAnswers CMS</h1>
-        <p className="text-lg opacity-90">
-          Manage your spiritual content, scriptures, and wisdom teachings
-        </p>
+        <div className="flex justify-between items-start">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">Welcome to PeacefulAnswers CMS</h1>
+            <p className="text-lg opacity-90">
+              Manage your spiritual content, scriptures, and wisdom teachings
+            </p>
+          </div>
+          <div className="text-right">
+            <div className="flex items-center space-x-2 text-blue-100 mb-1">
+              <Shield className="w-4 h-4" />
+              <span className="text-sm">Logged in as</span>
+            </div>
+            <p className="font-semibold">{user?.email}</p>
+            <div className="flex items-center space-x-1 mt-1">
+              <User className="w-3 h-3" />
+              <span className="text-sm text-blue-200">{profile?.role}</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Stats Grid */}

@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
-import { Plus, Search, Filter, Edit, Eye, Trash2, Star, Crown, Heart, BookOpen } from 'lucide-react'
+import { Plus, Search, Filter, Edit, Eye, Trash2, Star, Crown, Heart, BookOpen, Upload } from 'lucide-react'
 import Link from 'next/link'
+import BulkUploadModal from '@/components/admin/BulkUploadModal'
 
 interface Deity {
   id: string
@@ -30,6 +31,7 @@ export default function DeitiesAdmin() {
   const [filterStatus, setFilterStatus] = useState('all')
   const [filterCategory, setFilterCategory] = useState('all')
   const [categories, setCategories] = useState<any[]>([])
+  const [showBulkUpload, setShowBulkUpload] = useState(false)
 
   useEffect(() => {
     fetchDeities()
@@ -169,13 +171,22 @@ export default function DeitiesAdmin() {
           <h1 className="text-3xl font-bold text-gray-900">Deities Management</h1>
           <p className="text-gray-600 mt-1">Manage Hindu deities, their information, and content</p>
         </div>
-        <Link
-          href="/admin/deities/new"
-          className="bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-orange-700 transition-colors"
-        >
-          <Plus className="w-4 h-4" />
-          Add New Deity
-        </Link>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setShowBulkUpload(true)}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors"
+          >
+            <Upload className="w-4 h-4" />
+            Bulk Upload
+          </button>
+          <Link
+            href="/admin/deities/new"
+            className="bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-orange-700 transition-colors"
+          >
+            <Plus className="w-4 h-4" />
+            Add New Deity
+          </Link>
+        </div>
       </div>
 
       {/* Filters */}
@@ -382,6 +393,14 @@ export default function DeitiesAdmin() {
           </div>
         )}
       </div>
+
+      {/* Bulk Upload Modal */}
+      <BulkUploadModal
+        isOpen={showBulkUpload}
+        onClose={() => setShowBulkUpload(false)}
+        contentType="deities"
+        onUploadComplete={fetchDeities}
+      />
     </div>
   )
 }

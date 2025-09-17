@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import { AuthProvider } from '@/contexts/AuthContext';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -14,10 +15,12 @@ export default function ClientLayout({
   const isAdminPage = pathname?.startsWith('/admin');
 
   return (
-    <LanguageProvider>
-      {!isAdminPage && <Navigation />}
-      {children}
-      {!isAdminPage && <Footer />}
-    </LanguageProvider>
+    <AuthProvider>
+      <LanguageProvider>
+        {!isAdminPage && <Navigation />}
+        {children}
+        {!isAdminPage && <Footer />}
+      </LanguageProvider>
+    </AuthProvider>
   );
 }

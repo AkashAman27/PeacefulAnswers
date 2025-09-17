@@ -39,7 +39,7 @@ async function getDeitiesData() {
 
     // Fetch all published deities
     const { data: deities, error: deitiesError } = await supabase
-      .from('hindu.deities')
+      .from('deities')
       .select('*')
       .eq('status', 'published')
       .order('sort_order')

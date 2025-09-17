@@ -1,4 +1,11 @@
+'use client'
+
 import { Inter } from 'next/font/google'
+import { usePathname } from 'next/navigation'
+import AdminRoute from '@/components/auth/AdminRoute'
+import { useAuth } from '@/hooks/useAuth'
+import { LogOut, User, Shield } from 'lucide-react'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -7,8 +14,23 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname()
+  const { user, profile, signOut } = useAuth()
+  
+  // Don't wrap login and unauthorized pages with AdminRoute
+  const publicAdminPages = ['/admin/login', '/admin/unauthorized']
+  const isPublicAdminPage = publicAdminPages.includes(pathname || '')
+
+  const handleSignOut = async () => {
+    await signOut()
+  }
+
+  if (isPublicAdminPage) {
+    return <div className={inter.className}>{children}</div>
+  }
   return (
-    <div className={`${inter.className} min-h-screen bg-gray-50`}>
+    <AdminRoute requireSuperAdmin={true}>
+      <div className={`${inter.className} min-h-screen bg-gray-50`}>
       <div className="flex">
         {/* Sidebar */}
         <div className="w-64 bg-blue-900 text-white min-h-screen">
@@ -36,6 +58,9 @@ export default function AdminLayout({
               <a href="/admin/deities" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 Deities
               </a>
+              <a href="/admin/festivals" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
+                Festivals
+              </a>
               <a href="/admin/practices" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 Practices
               </a>
@@ -52,6 +77,10 @@ export default function AdminLayout({
               <a href="/admin/seo" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 SEO Settings
               </a>
+              <a href="/admin/bulk-upload" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors flex items-center space-x-2">
+                <span>📁</span>
+                <span>Bulk Upload</span>
+              </a>
             </nav>
           </div>
         </div>
@@ -63,11 +92,28 @@ export default function AdminLayout({
             <div className="flex justify-between items-center">
               <h1 className="text-xl font-semibold text-blue-900">Content Management System</h1>
               <div className="flex items-center space-x-4">
-                <button className="text-blue-900 hover:text-orange-600">
+                <Link href="/" className="text-blue-900 hover:text-orange-600 transition-colors">
                   View Site
-                </button>
-                <button className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700">
-                  Publish Changes
+                </Link>
+                
+                {/* User Info */}
+                <div className="flex items-center space-x-3 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <User className="w-4 h-4" />
+                    <span>{user?.email}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <Shield className="w-4 h-4 text-green-600" />
+                    <span className="font-medium text-green-600">{profile?.role}</span>
+                  </div>
+                </div>
+                
+                <button 
+                  onClick={handleSignOut}
+                  className="flex items-center space-x-2 text-red-600 hover:text-red-700 transition-colors"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span>Sign Out</span>
                 </button>
               </div>
             </div>
@@ -79,6 +125,7 @@ export default function AdminLayout({
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </AdminRoute>
   )
 }

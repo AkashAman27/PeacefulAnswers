@@ -1,457 +1,493 @@
 'use client'
 
-import { useState, useCallback } from 'react'
-import { useDropzone } from 'react-dropzone'
-import { Upload, FileText, CheckCircle, XCircle, AlertTriangle, Download, Eye } from 'lucide-react'
-import { BulkUploadResult, ValidationResult } from '@/types/bulkUpload'
-import { JSONValidator } from '@/utils/jsonValidator'
+import { useState } from 'react'
+import { hinduSupabase } from '@/lib/supabase'
+import { Upload, Download, FileText, AlertCircle, CheckCircle, Eye, Loader } from 'lucide-react'
 
-interface UploadState {
-  file: File | null;
-  jsonData: Record<string, unknown>[] | null;
-  validationResults: ValidationResult[] | null;
-  uploadResult: BulkUploadResult | null;
-  isProcessing: boolean;
+interface BulkUploadResult {
+  success: boolean
+  message: string
+  imported: number
+  errors: string[]
 }
 
-export default function BulkUploadPage() {
-  const [uploadState, setUploadState] = useState<UploadState>({
-    file: null,
-    jsonData: null,
-    validationResults: null,
-    uploadResult: null,
-    isProcessing: false
-  })
+export default function BulkUpload() {
+  const [selectedContentType, setSelectedContentType] = useState('deities')
+  const [jsonData, setJsonData] = useState('')
+  const [uploading, setUploading] = useState(false)
+  const [results, setResults] = useState<BulkUploadResult | null>(null)
+  const [previewData, setPreviewData] = useState<any[]>([])
+  const [showPreview, setShowPreview] = useState(false)
 
-  const [activeTab, setActiveTab] = useState<'upload' | 'schema' | 'examples'>('upload')
-
-  const onDrop = useCallback((acceptedFiles: File[]) => {
-    const file = acceptedFiles[0]
-    if (file && file.type === 'application/json') {
-      const reader = new FileReader()
-      reader.onload = (e) => {
-        try {
-          const jsonData = JSON.parse(e.target?.result as string)
-          const validationResults = JSONValidator.validateBulkUpload(jsonData)
-          const duplicateSlugs = JSONValidator.checkForDuplicateSlugs(jsonData)
-          
-          setUploadState({
-            file,
-            jsonData,
-            validationResults,
-            uploadResult: null,
-            isProcessing: false
-          })
-          
-          if (duplicateSlugs.length > 0) {
-            alert(`Warning: Duplicate slugs found: ${duplicateSlugs.join(', ')}`)
-          }
-        } catch {
-          alert('Invalid JSON file. Please check your file format.')
-        }
+  const contentTypes = {
+    deities: {
+      name: 'Deities',
+      table: 'deities',
+      sample: {
+        name: 'Ganesha',
+        sanskrit_name: 'गणेश',
+        slug: 'ganesha',
+        category_id: 'category-uuid',
+        title: 'Remover of Obstacles',
+        subtitle: 'The beloved elephant-headed deity',
+        description: 'Lord Ganesha is one of the most worshipped deities...',
+        featured_image_url: 'https://example.com/ganesha.jpg',
+        divine_attributes: [
+          { icon: 'Crown', title: 'Wisdom', description: 'Divine wisdom and intelligence' }
+        ],
+        mantras: [
+          { sanskrit: 'गं गणपतये नमः', transliteration: 'Gam Ganapataye Namaha', meaning: 'Salutations to Lord Ganesha' }
+        ],
+        status: 'published',
+        is_featured: true
       }
-      reader.readAsText(file)
-    }
-  }, [])
-
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop,
-    accept: {
-      'application/json': ['.json']
     },
-    multiple: false
-  })
-
-  const handleProcessUpload = async () => {
-    if (!uploadState.jsonData || !uploadState.validationResults) return
-
-    setUploadState(prev => ({ ...prev, isProcessing: true }))
-
-    try {
-      const validItems = uploadState.jsonData!.filter((_, index) => 
-        uploadState.validationResults![index].isValid
-      )
-
-      const response = await fetch('/api/admin/bulk-upload', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          items: validItems
-        })
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.error || 'Upload failed')
+    festivals: {
+      name: 'Festivals',
+      table: 'festivals',
+      sample: {
+        name: 'Diwali',
+        sanskrit_name: 'दीपावली',
+        slug: 'diwali',
+        category_id: 'category-uuid',
+        title: 'Festival of Lights',
+        subtitle: 'Celebrating the victory of light over darkness',
+        description: 'Diwali is one of the most important Hindu festivals...',
+        date_type: 'October/November',
+        duration: '5 days',
+        primary_deity: 'Goddess Lakshmi',
+        rituals: [
+          { name: 'Lakshmi Puja', description: 'Worship of Goddess Lakshmi', timing: 'Evening' }
+        ],
+        status: 'published',
+        is_featured: true
       }
-
-      const result: BulkUploadResult = await response.json()
-      
-      setUploadState(prev => ({ 
-        ...prev, 
-        uploadResult: result, 
-        isProcessing: false 
-      }))
-    } catch (error) {
-      alert(`Upload failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
-      setUploadState(prev => ({ ...prev, isProcessing: false }))
+    },
+    practices: {
+      name: 'Practices',
+      table: 'practices',
+      sample: {
+        name: 'Surya Namaskara',
+        sanskrit_name: 'सूर्य नमस्कार',
+        slug: 'surya-namaskara',
+        category_id: 'category-uuid',
+        title: 'Sun Salutation',
+        subtitle: 'Ancient yogic practice to honor the Sun',
+        description: 'Surya Namaskara is a sequence of yoga postures...',
+        duration: '15-30 minutes',
+        difficulty_level: 'Beginner',
+        practice_type: 'Yoga',
+        steps: [
+          { title: 'Pranamasana', description: 'Prayer pose', duration: '30 seconds' }
+        ],
+        benefits: ['Improves flexibility', 'Enhances circulation'],
+        status: 'published',
+        is_featured: false
+      }
+    },
+    scriptures: {
+      name: 'Scriptures',
+      table: 'scriptures',
+      sample: {
+        title: 'Bhagavad Gita',
+        sanskrit_name: 'भगवद्गीता',
+        slug: 'bhagavad-gita',
+        scripture_type: 'Epic',
+        description: 'The Bhagavad Gita is a sacred Hindu text...',
+        total_chapters: 18,
+        total_verses: 700,
+        author: 'Vyasa',
+        period: 'Ancient',
+        language: 'Sanskrit',
+        status: 'published',
+        is_featured: true
+      }
     }
   }
 
-  const downloadSampleJSON = () => {
-    const sampleData = [
-      {
-        slug: "lord-ganesha",
-        title: "Lord Ganesha - The Remover of Obstacles",
-        contentType: "deity",
-        status: "published",
-        shortDescription: "Lord Ganesha, the elephant-headed deity, is revered as the remover of obstacles and the patron of arts and sciences.",
-        description: "Lord Ganesha, also known as Ganapati, is one of the most beloved deities in Hinduism. With his distinctive elephant head and human body, he represents wisdom, prosperity, and good fortune.",
-        longContent: "Extended detailed content about Lord Ganesha's stories, significance, and worship practices...",
-        featuredImage: {
-          url: "https://example.com/ganesha-image.jpg",
-          alt: "Beautiful image of Lord Ganesha",
-          caption: "Lord Ganesha in all his divine glory"
-        },
-        seo: {
-          metaTitle: "Lord Ganesha - Hindu Deity of Wisdom and Prosperity",
-          metaDescription: "Learn about Lord Ganesha, the elephant-headed Hindu deity known as the remover of obstacles and patron of arts and sciences.",
-          keywords: ["Ganesha", "Hindu deity", "elephant god", "Ganapati", "remover of obstacles"]
-        },
-        tags: ["deity", "hindu", "ganesha", "wisdom", "prosperity"],
-        categories: ["deities", "hinduism", "spiritual"],
-        deityInfo: {
-          names: ["Ganesha", "Ganapati", "Vinayaka", "Pillaiyar"],
-          consort: "None",
-          parents: ["Shiva", "Parvati"],
-          children: ["Kshema", "Labha"],
-          mantras: ["Om Gam Ganapataye Namaha"],
-          festivals: ["Ganesh Chaturthi"],
-          regions: ["India", "Nepal", "Sri Lanka"],
-          personalityTraits: {
-            attributes: ["wisdom", "intelligence", "problem-solving"],
-            qualities: ["kind", "benevolent", "protective"],
-            symbols: ["elephant head", "modaka", "axe", "lotus"],
-            colors: ["red", "yellow", "orange"],
-            animals: ["mouse"],
-            vehicles: ["Mushika (mouse)"]
-          },
-          geographicalInfo: {
-            region: "Pan-Indian",
-            temples: ["Siddhivinayak Temple", "Ashtavinayak"],
-            pilgrimage: ["Maharashtra temples"],
-            significance: "Worshipped before starting any new venture"
-          }
-        },
-        language: "en",
-        readingTime: 5
-      }
-    ]
+  const validateJsonData = (data: any[], contentType: string): string[] => {
+    const errors: string[] = []
     
-    const dataStr = JSON.stringify(sampleData, null, 2)
+    if (!Array.isArray(data)) {
+      errors.push('Data must be an array of objects')
+      return errors
+    }
+
+    data.forEach((item, index) => {
+      if (!item.name) {
+        errors.push(`Item ${index + 1}: Missing required field 'name'`)
+      }
+      if (!item.slug) {
+        errors.push(`Item ${index + 1}: Missing required field 'slug'`)
+      }
+      if (!item.title) {
+        errors.push(`Item ${index + 1}: Missing required field 'title'`)
+      }
+      if (!item.status) {
+        item.status = 'draft' // Default to draft
+      }
+      
+      // Content type specific validations
+      if (contentType === 'festivals' && !item.date_type) {
+        errors.push(`Item ${index + 1}: Missing 'date_type' field for festival`)
+      }
+      if (contentType === 'practices' && !item.practice_type) {
+        errors.push(`Item ${index + 1}: Missing 'practice_type' field for practice`)
+      }
+    })
+
+    return errors
+  }
+
+  const previewJson = () => {
+    try {
+      const parsed = JSON.parse(jsonData)
+      const errors = validateJsonData(parsed, selectedContentType)
+      
+      if (errors.length > 0) {
+        setResults({
+          success: false,
+          message: 'Validation errors found',
+          imported: 0,
+          errors
+        })
+        return
+      }
+
+      setPreviewData(parsed)
+      setShowPreview(true)
+      setResults(null)
+    } catch (error) {
+      setResults({
+        success: false,
+        message: 'Invalid JSON format',
+        imported: 0,
+        errors: ['Please check your JSON syntax']
+      })
+    }
+  }
+
+  const performBulkUpload = async () => {
+    if (!jsonData.trim()) {
+      setResults({
+        success: false,
+        message: 'Please enter JSON data',
+        imported: 0,
+        errors: ['No data provided']
+      })
+      return
+    }
+
+    setUploading(true)
+    setResults(null)
+
+    try {
+      const parsed = JSON.parse(jsonData)
+      const errors = validateJsonData(parsed, selectedContentType)
+      
+      if (errors.length > 0) {
+        setResults({
+          success: false,
+          message: 'Validation errors found',
+          imported: 0,
+          errors
+        })
+        setUploading(false)
+        return
+      }
+
+      // Add timestamps and generate UUIDs if needed
+      const dataToInsert = parsed.map((item: any) => ({
+        ...item,
+        id: item.id || crypto.randomUUID(),
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+        published_at: item.status === 'published' ? new Date().toISOString() : null
+      }))
+
+      const { data, error } = await hinduSupabase
+        .from(contentTypes[selectedContentType as keyof typeof contentTypes].table)
+        .insert(dataToInsert)
+        .select()
+
+      if (error) {
+        setResults({
+          success: false,
+          message: `Database error: ${error.message}`,
+          imported: 0,
+          errors: [error.message]
+        })
+      } else {
+        setResults({
+          success: true,
+          message: `Successfully imported ${dataToInsert.length} items`,
+          imported: dataToInsert.length,
+          errors: []
+        })
+        setJsonData('')
+        setPreviewData([])
+        setShowPreview(false)
+      }
+    } catch (error: any) {
+      setResults({
+        success: false,
+        message: 'Import failed',
+        imported: 0,
+        errors: [error.message || 'Unknown error occurred']
+      })
+    } finally {
+      setUploading(false)
+    }
+  }
+
+  const downloadSample = () => {
+    const sample = [contentTypes[selectedContentType as keyof typeof contentTypes].sample]
+    const dataStr = JSON.stringify(sample, null, 2)
     const dataBlob = new Blob([dataStr], { type: 'application/json' })
     const url = URL.createObjectURL(dataBlob)
     const link = document.createElement('a')
     link.href = url
-    link.download = 'sample-bulk-upload.json'
+    link.download = `${selectedContentType}-sample.json`
     link.click()
     URL.revokeObjectURL(url)
   }
 
-  const getValidationSummary = () => {
-    if (!uploadState.validationResults) return null
-    
-    const totalItems = uploadState.validationResults.length
-    const validItems = uploadState.validationResults.filter(result => result.isValid).length
-    const itemsWithWarnings = uploadState.validationResults.filter(result => result.warnings.length > 0).length
-    const itemsWithErrors = uploadState.validationResults.filter(result => result.errors.length > 0).length
-    
-    return { totalItems, validItems, itemsWithWarnings, itemsWithErrors }
+  const exportExisting = async () => {
+    try {
+      const { data, error } = await hinduSupabase
+        .from(contentTypes[selectedContentType as keyof typeof contentTypes].table)
+        .select('*')
+        .limit(10) // Limit to first 10 for sample
+
+      if (error) throw error
+
+      const dataStr = JSON.stringify(data, null, 2)
+      const dataBlob = new Blob([dataStr], { type: 'application/json' })
+      const url = URL.createObjectURL(dataBlob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `${selectedContentType}-export.json`
+      link.click()
+      URL.revokeObjectURL(url)
+    } catch (error: any) {
+      alert(`Export failed: ${error.message}`)
+    }
   }
 
-  const validationSummary = getValidationSummary()
-
   return (
-    <div className="space-y-6">
+    <div className="max-w-6xl mx-auto p-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-900 to-orange-600 rounded-xl p-8 text-white">
-        <h1 className="text-3xl font-bold mb-2">Bulk Content Upload</h1>
-        <p className="text-lg opacity-90">
-          Upload JSON files to create multiple pages for deities, stories, and spiritual content
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900">Bulk Content Upload</h1>
+        <p className="text-gray-600 mt-2">Import content from JSON files or AI-generated data</p>
+      </div>
+
+      {/* Content Type Selection */}
+      <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Select Content Type</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {Object.entries(contentTypes).map(([key, type]) => (
+            <button
+              key={key}
+              onClick={() => {
+                setSelectedContentType(key)
+                setJsonData('')
+                setResults(null)
+                setPreviewData([])
+                setShowPreview(false)
+              }}
+              className={`p-4 rounded-lg border-2 transition-colors ${
+                selectedContentType === key
+                  ? 'border-blue-500 bg-blue-50 text-blue-700'
+                  : 'border-gray-200 hover:border-gray-300'
+              }`}
+            >
+              <div className="text-center">
+                <FileText className={`w-8 h-8 mx-auto mb-2 ${
+                  selectedContentType === key ? 'text-blue-600' : 'text-gray-400'
+                }`} />
+                <div className="font-medium">{type.name}</div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Sample and Export */}
+      <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Templates & Export</h2>
+        <div className="flex gap-4">
+          <button
+            onClick={downloadSample}
+            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
+          >
+            <Download className="w-4 h-4" />
+            Download Sample JSON
+          </button>
+          <button
+            onClick={exportExisting}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+          >
+            <Download className="w-4 h-4" />
+            Export Existing Data
+          </button>
+        </div>
+        <p className="text-sm text-gray-600 mt-2">
+          Download a sample JSON file to see the required format, or export existing data as a template.
         </p>
       </div>
 
-      {/* Tabs */}
-      <div className="bg-white rounded-xl border border-gray-100">
-        <div className="border-b border-gray-100">
-          <nav className="flex space-x-8 px-6">
-            {[
-              { id: 'upload', label: 'Upload', icon: Upload },
-              { id: 'schema', label: 'JSON Schema', icon: FileText },
-              { id: 'examples', label: 'Examples', icon: Eye }
-            ].map(tab => {
-              const IconComponent = tab.icon
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id as 'upload' | 'schema' | 'examples')}
-                  className={`py-4 px-2 border-b-2 font-medium text-sm flex items-center gap-2 ${
-                    activeTab === tab.id
-                      ? 'border-orange-500 text-orange-600'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  }`}
-                >
-                  <IconComponent className="w-4 h-4" />
-                  {tab.label}
-                </button>
-              )
-            })}
-          </nav>
+      {/* JSON Input */}
+      <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          JSON Data for {contentTypes[selectedContentType as keyof typeof contentTypes].name}
+        </h2>
+        
+        <div className="mb-3 p-3 bg-gray-100 rounded-lg">
+          <p className="text-sm font-medium text-gray-900 mb-2">Paste your JSON data below. Example format:</p>
+          <pre className="text-xs text-gray-800 bg-white p-2 rounded border overflow-x-auto">
+{JSON.stringify([contentTypes[selectedContentType as keyof typeof contentTypes].sample], null, 2)}
+          </pre>
         </div>
+        
+        <textarea
+          value={jsonData}
+          onChange={(e) => setJsonData(e.target.value)}
+          className="w-full h-96 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+          placeholder="Paste your JSON data here..."
+        />
+        
+        <div className="flex gap-4 mt-4">
+          <button
+            onClick={previewJson}
+            disabled={!jsonData.trim()}
+            className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center gap-2 disabled:opacity-50"
+          >
+            <Eye className="w-4 h-4" />
+            Preview Data
+          </button>
+          <button
+            onClick={performBulkUpload}
+            disabled={uploading || !jsonData.trim()}
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 disabled:opacity-50"
+          >
+            {uploading ? (
+              <>
+                <Loader className="w-4 h-4 animate-spin" />
+                Uploading...
+              </>
+            ) : (
+              <>
+                <Upload className="w-4 h-4" />
+                Upload Data
+              </>
+            )}
+          </button>
+        </div>
+      </div>
 
-        <div className="p-6">
-          {activeTab === 'upload' && (
-            <div className="space-y-6">
-              {/* Upload Area */}
-              <div
-                {...getRootProps()}
-                className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${
-                  isDragActive
-                    ? 'border-orange-500 bg-orange-50'
-                    : 'border-gray-300 hover:border-gray-400'
-                }`}
-              >
-                <input {...getInputProps()} />
-                <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
-                {isDragActive ? (
-                  <p className="text-lg text-orange-600">Drop your JSON file here...</p>
-                ) : (
-                  <div>
-                    <p className="text-lg text-gray-900 mb-2">
-                      Drag & drop your JSON file here, or click to select
-                    </p>
-                    <p className="text-gray-500">
-                      Only .json files are accepted
-                    </p>
-                  </div>
-                )}
-              </div>
-
-              {/* File Info */}
-              {uploadState.file && (
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <FileText className="w-5 h-5 text-blue-500" />
-                      <div>
-                        <p className="font-medium text-gray-900">{uploadState.file.name}</p>
-                        <p className="text-sm text-gray-500">
-                          {(uploadState.file.size / 1024).toFixed(2)} KB
-                        </p>
-                      </div>
-                    </div>
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                  </div>
-                </div>
-              )}
-
-              {/* Validation Summary */}
-              {validationSummary && (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-blue-900">{validationSummary.totalItems}</div>
-                    <div className="text-blue-600 text-sm">Total Items</div>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-green-900">{validationSummary.validItems}</div>
-                    <div className="text-green-600 text-sm">Valid Items</div>
-                  </div>
-                  <div className="bg-yellow-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-yellow-900">{validationSummary.itemsWithWarnings}</div>
-                    <div className="text-yellow-600 text-sm">With Warnings</div>
-                  </div>
-                  <div className="bg-red-50 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-red-900">{validationSummary.itemsWithErrors}</div>
-                    <div className="text-red-600 text-sm">With Errors</div>
-                  </div>
-                </div>
-              )}
-
-              {/* Validation Results */}
-              {uploadState.validationResults && (
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-gray-900">Validation Results</h3>
-                  <div className="max-h-96 overflow-y-auto space-y-2">
-                    {uploadState.validationResults.map((result, index) => (
-                      <div
-                        key={index}
-                        className={`border rounded-lg p-4 ${
-                          result.isValid
-                            ? result.warnings.length > 0
-                              ? 'border-yellow-200 bg-yellow-50'
-                              : 'border-green-200 bg-green-50'
-                            : 'border-red-200 bg-red-50'
-                        }`}
-                      >
-                        <div className="flex items-start gap-3">
-                          {result.isValid ? (
-                            result.warnings.length > 0 ? (
-                              <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />
-                            ) : (
-                              <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                            )
-                          ) : (
-                            <XCircle className="w-5 h-5 text-red-500 mt-0.5" />
-                          )}
-                          <div className="flex-1 min-w-0">
-                            <p className="font-medium text-gray-900">
-                              Item {index + 1}: {(uploadState.jsonData?.[index] as { title?: string })?.title || 'Unknown'}
-                            </p>
-                            {result.errors.length > 0 && (
-                              <div className="mt-2">
-                                <p className="text-sm font-medium text-red-700">Errors:</p>
-                                <ul className="list-disc list-inside text-sm text-red-600 mt-1">
-                                  {result.errors.map((error, i) => (
-                                    <li key={i}>{error}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                            {result.warnings.length > 0 && (
-                              <div className="mt-2">
-                                <p className="text-sm font-medium text-yellow-700">Warnings:</p>
-                                <ul className="list-disc list-inside text-sm text-yellow-600 mt-1">
-                                  {result.warnings.map((warning, i) => (
-                                    <li key={i}>{warning}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Upload Button */}
-              {uploadState.jsonData && validationSummary && validationSummary.validItems > 0 && (
-                <div className="flex justify-center">
-                  <button
-                    onClick={handleProcessUpload}
-                    disabled={uploadState.isProcessing}
-                    className="bg-orange-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                  >
-                    {uploadState.isProcessing ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
-                        Processing...
-                      </>
-                    ) : (
-                      <>
-                        <Upload className="w-5 h-5" />
-                        Upload {validationSummary.validItems} Valid Items
-                      </>
-                    )}
-                  </button>
-                </div>
-              )}
-
-              {/* Upload Result */}
-              {uploadState.uploadResult && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500" />
-                    <h3 className="text-lg font-semibold text-green-900">Upload Complete!</h3>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                    <div>
-                      <span className="font-medium text-green-700">Total Items:</span>
-                      <span className="ml-2 text-green-900">{uploadState.uploadResult.totalItems}</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-green-700">Successfully Created:</span>
-                      <span className="ml-2 text-green-900">{uploadState.uploadResult.successCount}</span>
-                    </div>
-                    <div>
-                      <span className="font-medium text-green-700">Failed:</span>
-                      <span className="ml-2 text-green-900">{uploadState.uploadResult.failureCount}</span>
-                    </div>
-                  </div>
-                  {uploadState.uploadResult.createdSlugs.length > 0 && (
-                    <div className="mt-4">
-                      <p className="font-medium text-green-700 mb-2">Created Pages:</p>
-                      <div className="max-h-32 overflow-y-auto">
-                        <div className="flex flex-wrap gap-2">
-                          {uploadState.uploadResult.createdSlugs.map(slug => (
-                            <span key={slug} className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">
-                              {slug}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-
-          {activeTab === 'schema' && (
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">JSON Schema Documentation</h3>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <button
-                    onClick={downloadSampleJSON}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 flex items-center gap-2 mb-4"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download Sample JSON
-                  </button>
-                  <div className="prose prose-sm max-w-none">
-                    <h4 className="text-base font-semibold text-gray-900">Required Fields</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">slug</code> - URL-friendly identifier</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">title</code> - Display title</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">contentType</code> - Type of content (deity, story, etc.)</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">status</code> - Publication status</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">shortDescription</code> - Brief summary</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">description</code> - Main content</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">featuredImage</code> - Main image object</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">seo</code> - SEO metadata object</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">tags</code> - Array of tags</li>
-                      <li><code className="bg-gray-100 px-2 py-1 rounded">categories</code> - Array of categories</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'examples' && (
-            <div className="space-y-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Content Type Examples</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  { type: 'Deity', description: 'Gods, Goddesses, Divine beings' },
-                  { type: 'Story', description: 'Mythology, Folk tales, Legends' },
-                  { type: 'Ramayana', description: 'Episodes from the epic Ramayana' },
-                  { type: 'Scripture', description: 'Sacred texts and teachings' },
-                  { type: 'Practice', description: 'Rituals, meditations, ceremonies' },
-                  { type: 'Festival', description: 'Religious celebrations and observances' }
-                ].map(example => (
-                  <div key={example.type} className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">{example.type}</h4>
-                    <p className="text-sm text-gray-600">{example.description}</p>
-                  </div>
+      {/* Preview */}
+      {showPreview && previewData.length > 0 && (
+        <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Data Preview</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Slug</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {previewData.slice(0, 5).map((item, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.name}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.title}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.slug}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                        item.status === 'published' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
+                      }`}>
+                        {item.status}
+                      </span>
+                    </td>
+                  </tr>
                 ))}
+              </tbody>
+            </table>
+            {previewData.length > 5 && (
+              <div className="text-sm text-gray-500 text-center py-2">
+                ... and {previewData.length - 5} more items
               </div>
+            )}
+          </div>
+          <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-blue-700">
+              <strong>Ready to import:</strong> {previewData.length} items validated successfully.
+              Click "Upload Data" to proceed with the import.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Results */}
+      {results && (
+        <div className={`rounded-lg p-6 mb-6 ${
+          results.success ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'
+        }`}>
+          <div className="flex items-start gap-3">
+            {results.success ? (
+              <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+            ) : (
+              <AlertCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+            )}
+            <div className="flex-1">
+              <h3 className={`font-semibold ${results.success ? 'text-green-800' : 'text-red-800'}`}>
+                {results.message}
+              </h3>
+              {results.success && results.imported > 0 && (
+                <p className="text-green-700 mt-1">
+                  Successfully imported {results.imported} items to the {selectedContentType} collection.
+                </p>
+              )}
+              {results.errors.length > 0 && (
+                <div className="mt-3">
+                  <h4 className="font-medium text-red-800 mb-2">Errors:</h4>
+                  <ul className="list-disc list-inside space-y-1">
+                    {results.errors.map((error, index) => (
+                      <li key={index} className="text-red-700 text-sm">{error}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          )}
+          </div>
+        </div>
+      )}
+
+      {/* Instructions */}
+      <div className="bg-gray-50 rounded-lg p-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Instructions</h2>
+        <div className="prose prose-sm max-w-none text-gray-700">
+          <ol className="list-decimal list-inside space-y-2">
+            <li>Select the content type you want to import (Deities, Festivals, Practices, or Scriptures)</li>
+            <li>Download the sample JSON file to see the required data structure</li>
+            <li>Prepare your data in JSON format following the sample structure</li>
+            <li>Paste your JSON data in the text area above</li>
+            <li>Click "Preview Data" to validate your data before importing</li>
+            <li>Click "Upload Data" to import the content to your database</li>
+          </ol>
+          
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+            <h3 className="font-semibold text-blue-800 mb-2">AI Content Integration</h3>
+            <p className="text-blue-700">
+              This bulk upload system is designed to work seamlessly with AI-generated content. 
+              You can use AI tools to generate content in the required JSON format and then import it directly.
+              All imported content will be properly validated and formatted according to your site's schema.
+            </p>
+          </div>
         </div>
       </div>
     </div>
