@@ -18,3 +18,5 @@ FROM information_schema.columns
 WHERE table_schema = 'hindu' 
   AND table_name = 'hindu_festival_announcements'
 ORDER BY ordinal_position;
+
+akash
