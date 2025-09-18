@@ -5,6 +5,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'] })
 const notoSansDevanagari = Noto_Sans_Devanagari({ 
@@ -109,6 +110,9 @@ export default function RootLayout({
       <body className={`${inter.className} ${notoSansDevanagari.variable} antialiased`}>
         {/* Google Analytics Component for client-side navigation tracking */}
         {GA_MEASUREMENT_ID && <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />}
+        
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
         
         <ClientLayout>
           {children}
