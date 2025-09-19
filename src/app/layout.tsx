@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
-  const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'DacXWZZbHAMqTcgB9NvbsvCGlQP1Ux5Aa5UKHYDU_N8'
+  const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION || 'DacXWZZbHAMqTcgB9NvbsvCGlQP1Ux5Aa5UKHYDU_N8'
 
   return (
     <html lang="en" className="scroll-smooth">
@@ -61,9 +61,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1E3A8A" />
 
         {/* Google Site Verification */}
-        {GOOGLE_SITE_VERIFICATION && (
-          <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
-        )}
+        <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
         
         {/* Google Analytics */}
         {GA_MEASUREMENT_ID && (
