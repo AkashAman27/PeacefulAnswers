@@ -202,13 +202,13 @@ const scripturesData = [
 ]
 
 const categories = [
-  { id: 'all', name: 'All Scriptures', icon: BookOpen, count: scripturesData.length },
-  { id: 'vedas', name: 'Vedas', icon: Book, count: scripturesData.filter(s => s.category === 'vedas').length },
-  { id: 'upanishads', name: 'Upanishads', icon: Star, count: scripturesData.filter(s => s.category === 'upanishads').length },
-  { id: 'epics', name: 'Epics', icon: Users, count: scripturesData.filter(s => s.category === 'epics').length },
-  { id: 'puranas', name: 'Puranas', icon: Heart, count: scripturesData.filter(s => s.category === 'puranas').length },
-  { id: 'dharma', name: 'Dharma Texts', icon: Globe, count: scripturesData.filter(s => s.category === 'dharma').length },
-  { id: 'bhakti', name: 'Devotional', icon: Heart, count: scripturesData.filter(s => s.category === 'bhakti').length }
+  { id: 'all', name: 'All Scriptures', icon: 'BookOpen', count: scripturesData.length },
+  { id: 'vedas', name: 'Vedas', icon: 'Book', count: scripturesData.filter(s => s.category === 'vedas').length },
+  { id: 'upanishads', name: 'Upanishads', icon: 'Star', count: scripturesData.filter(s => s.category === 'upanishads').length },
+  { id: 'epics', name: 'Epics', icon: 'Users', count: scripturesData.filter(s => s.category === 'epics').length },
+  { id: 'puranas', name: 'Puranas', icon: 'Heart', count: scripturesData.filter(s => s.category === 'puranas').length },
+  { id: 'dharma', name: 'Dharma Texts', icon: 'Globe', count: scripturesData.filter(s => s.category === 'dharma').length },
+  { id: 'bhakti', name: 'Devotional', icon: 'Heart', count: scripturesData.filter(s => s.category === 'bhakti').length }
 ]
 
 const difficulties = [

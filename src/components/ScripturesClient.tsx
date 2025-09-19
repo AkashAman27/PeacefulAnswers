@@ -38,13 +38,25 @@ interface ScripturesClientProps {
   categories: Array<{
     id: string;
     name: string;
-    icon: any;
+    icon: string;
     count: number;
   }>;
   difficulties: Array<{
     id: string;
     name: string;
   }>;
+}
+
+const getIconComponent = (iconName: string) => {
+  const icons: { [key: string]: any } = {
+    BookOpen,
+    Book,
+    Star,
+    Users,
+    Heart,
+    Globe
+  }
+  return icons[iconName] || Book
 }
 
 export default function ScripturesClient({ scripturesData, categories, difficulties }: ScripturesClientProps) {
@@ -118,7 +130,7 @@ export default function ScripturesClient({ scripturesData, categories, difficult
             {/* Category Filter */}
             <div className="flex gap-2 flex-wrap">
               {categories.map(category => {
-                const IconComponent = category.icon
+                const IconComponent = getIconComponent(category.icon)
                 return (
                   <button
                     key={category.id}
