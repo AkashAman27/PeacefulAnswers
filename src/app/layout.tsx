@@ -50,9 +50,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
-  const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION || 'DacXWZZbHAMqTcgB9NvbsvCGlQP1Ux5Aa5UKHYDU_N8'
-
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -64,28 +61,24 @@ export default function RootLayout({
         <meta name="google-site-verification" content="DacXWZZbHAMqTcgB9NvbsvCGlQP1Ux5Aa5UKHYDU_N8" />
         
         {/* Google Analytics */}
-        {GA_MEASUREMENT_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_MEASUREMENT_ID}', {
-                    page_path: window.location.pathname,
-                    page_title: document.title,
-                    page_location: window.location.href,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-5DS955HKWZ"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5DS955HKWZ', {
+                page_path: window.location.pathname,
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `,
+          }}
+        />
         
         <script
           type="application/ld+json"
@@ -107,7 +100,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} ${notoSansDevanagari.variable} antialiased`}>
         {/* Google Analytics Component for client-side navigation tracking */}
-        {GA_MEASUREMENT_ID && <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />}
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-5DS955HKWZ" />
         
         {/* Vercel Speed Insights */}
         <SpeedInsights />
