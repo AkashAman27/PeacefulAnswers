@@ -1,6 +1,13 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, Calendar, MapPin, Sparkles, Heart } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Kurma Avatar - The Turtle Incarnation of Lord Vishnu | PeacefulAnswers',
+  description: 'Explore Kurma, the divine turtle avatar of Lord Vishnu who supported Mount Mandara during the churning of the cosmic ocean. Learn about this pivotal incarnation and the quest for amrita.',
+  keywords: 'Kurma Avatar, turtle incarnation, Vishnu avatar, churning ocean, Samudra Manthan, Mount Mandara, amrita, cosmic turtle, second avatar, Hindu mythology',
+}
 
 const avatars = [
   { name: 'Matsya', slug: 'matsya', order: 1 },

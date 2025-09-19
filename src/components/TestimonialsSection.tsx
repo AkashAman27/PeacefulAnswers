@@ -198,61 +198,61 @@ export default function TestimonialsSection() {
   }, [])
 
   return (
-    <section 
-      ref={sectionRef} 
-      className="py-20 px-4 bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 overflow-hidden"
+    <section
+      ref={sectionRef}
+      className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2
             ref={titleRef}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6"
           >
             <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
               Spiritual Journeys
             </span>{' '}
             <span className="text-blue-900">Transformed</span>
           </h2>
-          <p 
+          <p
             ref={subtitleRef}
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4 md:px-0"
           >
-            Discover how thousands have deepened their understanding of Hindu philosophy, 
+            Discover how thousands have deepened their understanding of Hindu philosophy,
             deities, and sacred practices through our authentic spiritual content.
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div 
+        <div
           ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
         >
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className={`relative bg-gradient-to-br ${testimonial.bgColor} rounded-3xl p-8 shadow-xl border border-white/50 backdrop-blur-sm transform-gpu`}
+              className={`relative bg-gradient-to-br ${testimonial.bgColor} rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-white/50 backdrop-blur-sm transform-gpu`}
               style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 opacity-20">
-                <Quote className="w-12 h-12 text-gray-600" />
+              <div className="absolute top-4 right-4 sm:top-6 sm:right-6 opacity-20">
+                <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-gray-600" />
               </div>
 
               {/* Category Badge */}
-              <div className={`inline-block px-4 py-2 rounded-full text-xs font-bold ${testimonial.textColor} bg-white/70 mb-6`}>
+              <div className={`inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold ${testimonial.textColor} bg-white/70 mb-4 sm:mb-6`}>
                 {testimonial.category}
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 text-base leading-relaxed mb-6 relative z-10">
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 relative z-10 line-clamp-4 sm:line-clamp-none">
                 "{testimonial.content}"
               </p>
 
               {/* Rating */}
-              <div className="flex items-center mb-6">
+              <div className="flex items-center mb-4 sm:mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 fill-current" />
                 ))}
               </div>
 
@@ -262,39 +262,39 @@ export default function TestimonialsSection() {
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full border-4 border-white shadow-lg object-cover"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 sm:border-3 md:border-4 border-white shadow-lg object-cover"
                   />
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <div className="absolute -bottom-0.5 -right-0.5 sm:-bottom-1 sm:-right-1 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-green-500 rounded-full border sm:border-2 border-white flex items-center justify-center">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
                   </div>
                 </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
-                  <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                <div className="ml-3 sm:ml-4">
+                  <h4 className="font-bold text-gray-900 text-sm sm:text-base md:text-lg">{testimonial.name}</h4>
+                  <p className="text-gray-600 text-xs sm:text-sm">{testimonial.location}</p>
                 </div>
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-white/30 to-transparent rounded-full blur-xl"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-tl from-orange-300/20 to-transparent rounded-full blur-2xl"></div>
+              <div className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-white/30 to-transparent rounded-full blur-xl"></div>
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-6 sm:-right-6 w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-gradient-to-tl from-orange-300/20 to-transparent rounded-full blur-2xl"></div>
             </div>
           ))}
         </div>
 
         {/* Bottom Stats */}
-        <div className="text-center mt-16 p-8 bg-white/60 backdrop-blur-sm rounded-3xl border border-white/50">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="text-center mt-10 sm:mt-12 md:mt-16 p-6 sm:p-8 bg-white/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-white/50">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">5,000+</div>
-              <div className="text-gray-600 font-medium">Spiritual Seekers</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-1 sm:mb-2">5,000+</div>
+              <div className="text-gray-600 font-medium text-sm sm:text-base">Spiritual Seekers</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-gray-600 font-medium">Sacred Topics</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">50+</div>
+              <div className="text-gray-600 font-medium text-sm sm:text-base">Sacred Topics</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">4.9/5</div>
-              <div className="text-gray-600 font-medium">User Rating</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-600 mb-1 sm:mb-2">4.9/5</div>
+              <div className="text-gray-600 font-medium text-sm sm:text-base">User Rating</div>
             </div>
           </div>
         </div>

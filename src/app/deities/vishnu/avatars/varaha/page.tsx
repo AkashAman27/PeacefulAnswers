@@ -1,6 +1,13 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, Calendar, MapPin, Sparkles, Heart, Mountain } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Varaha Avatar - The Boar Incarnation of Lord Vishnu | PeacefulAnswers',
+  description: 'Discover Varaha, the mighty boar avatar of Lord Vishnu who rescued Earth (Bhudevi) from the cosmic ocean depths. Learn about this powerful incarnation and its cosmic significance.',
+  keywords: 'Varaha Avatar, boar incarnation, Vishnu avatar, Earth rescue, Bhudevi, cosmic ocean, third avatar, divine boar, Hindu mythology, cosmic protector',
+}
 
 const avatars = [
   { name: 'Matsya', slug: 'matsya', order: 1 },

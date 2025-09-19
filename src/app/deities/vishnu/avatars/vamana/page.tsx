@@ -1,6 +1,13 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, Calendar, MapPin, Sparkles, Heart, Crown } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Vamana Avatar - The Dwarf Incarnation of Lord Vishnu | PeacefulAnswers',
+  description: 'Discover Vamana, the dwarf brahmin avatar of Lord Vishnu who humbled King Bali with three cosmic steps. Learn about dharma, humility, and the power of divine justice.',
+  keywords: 'Vamana Avatar, dwarf incarnation, Vishnu avatar, King Bali, three steps, cosmic stride, Trivikrama, humility, dharma, fifth avatar, Hindu mythology',
+}
 
 const avatars = [
   { name: 'Matsya', slug: 'matsya', order: 1 },

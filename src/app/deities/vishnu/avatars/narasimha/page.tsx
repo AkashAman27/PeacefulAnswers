@@ -1,6 +1,13 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, Calendar, MapPin, Sparkles, Heart, Shield } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Narasimha Avatar - The Lion-Man Incarnation of Lord Vishnu | PeacefulAnswers',
+  description: 'Explore Narasimha, the fierce lion-man avatar of Lord Vishnu who protected devotee Prahlada and destroyed the demon Hiranyakashipu. Learn about divine protection and unwavering faith.',
+  keywords: 'Narasimha Avatar, lion-man incarnation, Vishnu avatar, Prahlada, Hiranyakashipu, divine protection, fierce avatar, devotee protection, fourth avatar, Hindu mythology',
+}
 
 const avatars = [
   { name: 'Matsya', slug: 'matsya', order: 1 },

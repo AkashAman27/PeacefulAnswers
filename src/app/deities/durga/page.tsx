@@ -23,12 +23,12 @@ import {
 import { hinduSupabase } from '@/lib/supabase'
 
 export const metadata: Metadata = {
-  title: 'Durga - The Divine Mother Warrior | Hindu Deity Guide | PeacefulAnswers',
-  description: 'Discover the sacred teachings of Durga, the Divine Mother Warrior who destroys evil and protects righteousness. Learn about Navratri, stories, mantras, and spiritual significance.',
-  keywords: 'Durga, Devi, divine mother, Navratri, Hindu goddess, Mahishasura, protection, warrior',
+  title: 'Maa Durga - The Unassailable Divine Mother | Complete Guide | PeacefulAnswers',
+  description: 'Comprehensive guide to Maa Durga, the invincible goddess. Explore her origins, nine forms (Navadurga), Das Mahavidyas, iconography, rituals, and profound philosophical significance.',
+  keywords: 'Maa Durga, Divine Mother, Shakti, Navadurga, Nine Forms, Das Mahavidyas, Hindu Goddess, Durga Puja, Divine Feminine, Cosmic Energy, Mahishasuramardini',
   openGraph: {
-    title: 'Durga - The Divine Mother Warrior | Hindu Deity Guide',
-    description: 'The fierce protector goddess who embodies divine feminine power and maternal protection.',
+    title: 'Maa Durga - The Unassailable Divine Mother | Complete Guide',
+    description: 'Discover the profound significance of Maa Durga, her nine forms, mythology, and role as the supreme cosmic energy.',
     type: 'website',
   }
 }
@@ -59,81 +59,145 @@ export default async function DurgaPage() {
   
   // Comprehensive fallback data - merge with database data or use as complete fallback
   const fallbackData = {
-      name: 'Durga',
-      sanskrit_name: 'दुर्गा',
-      title: 'The Invincible Mother',
-      description: 'The fierce and protective mother goddess who destroys evil and protects righteousness, created from the combined energies of all gods.',
+      name: 'Maa Durga',
+      sanskrit_name: 'दुर्गा माता',
+      title: 'The Unassailable Divine Mother',
+      description: 'The supreme cosmic energy manifested as the Divine Mother, representing the ultimate reality itself. Durga transcends being a mere deity to become Adi-Anant - without beginning or end - the source from which the entire pantheon of gods emerges.',
       image_url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=600&fit=crop',
-      story: 'Maa Durga was born from the combined energies of all the gods when the demon Mahishasura terrorized the heavens and earth. Armed with weapons given by each deity, riding a magnificent lion, she fought the buffalo demon for nine days and nights. Her victory represents the triumph of good over evil and the protective power of the Divine Mother who emerges when righteousness is threatened.',
+      story: 'In the cosmic narrative of Shaktism, Durga embodies the primordial Shakti - the active, manifested form of divine energy that enables creation, preservation, and destruction. When the buffalo-demon Mahishasura, representing chaos, ego, and ignorance, threatened the cosmic order with his boon of invincibility, the gods\' combined energies coalesced to create Durga. This central myth is a profound allegory: Mahishasura symbolizes insurmountable darkness, while Durga\'s serene expression during battle represents the triumph of composed wisdom over chaotic forces. Her victory demonstrates that no darkness can withstand the unified power of divine consciousness.',
       sacred_iconography: [
         {
-          name: 'Ten Arms',
-          sanskrit: 'दशभुजा (Dashabhuja)',
-          meaning: 'Multiple arms carrying divine weapons from all gods',
-          significance: 'Represents the combined power of all deities working through the Divine Mother'
+          name: 'Trishul (Trident)',
+          sanskrit: 'त्रिशूल',
+          meaning: 'Gift from Lord Shiva - three-pointed divine weapon',
+          significance: 'Symbolizes courage and the power to overcome the three obstacles of life: ignorance, desire, and ego'
         },
         {
-          name: 'Lion Vehicle',
-          sanskrit: 'सिंहवाहिनी (Simhavahini)',
-          meaning: 'Riding the king of beasts',
-          significance: 'Symbolizes mastery over ego, courage, and untamed power under divine control'
+          name: 'Chakra (Discus)',
+          sanskrit: 'चक्र',
+          meaning: 'Gift from Lord Vishnu - spinning divine weapon',
+          significance: 'Represents dharma (righteous duty) and the wheel of cosmic order'
         },
         {
-          name: 'Trident',
-          sanskrit: 'त्रिशूल (Trishul)',
-          meaning: 'Three-pointed spear of Shiva',
-          significance: 'Represents destruction of ignorance and control over three gunas'
+          name: 'Divine Sword',
+          sanskrit: 'खड्ग',
+          meaning: 'Sharp blade of divine wisdom',
+          significance: 'Symbolizes the sharpness of human intellect needed to overcome negativity and sever attachments'
         },
         {
-          name: 'Divine Radiance',
-          sanskrit: 'दिव्य तेज (Divya Tej)',
-          meaning: 'Brilliant luminous aura',
-          significance: 'The combined brilliance of all gods that destroys darkness and evil'
+          name: 'Sacred Lotus',
+          sanskrit: 'पद्म',
+          meaning: 'Gift from Brahma - pure flower of enlightenment',
+          significance: 'Represents detachment from the material world, blooming in muddy water without being tainted'
+        },
+        {
+          name: 'Lion Mount',
+          sanskrit: 'सिंह वाहन',
+          meaning: 'The king of beasts as divine vehicle',
+          significance: 'Represents fearlessness and mastery over unbridled, animalistic impulses and inner wild nature'
+        },
+        {
+          name: 'Conch Shell',
+          sanskrit: 'शंख',
+          meaning: 'Sacred sound-producing instrument',
+          significance: 'Symbolizes the necessity of performing duties with happiness and cheerfulness'
+        },
+        {
+          name: 'Divine Mace',
+          sanskrit: 'गदा',
+          meaning: 'Gift from Kuvera - powerful club weapon',
+          significance: 'Designed to inspire devotion and loyalty to the goddess'
+        },
+        {
+          name: 'Thunderbolt',
+          sanskrit: 'वज्र',
+          meaning: 'Gift from Indra - indestructible weapon',
+          significance: 'Symbolizes unshakability and instills confidence in followers'
+        },
+        {
+          name: 'Multi-Armed Form',
+          sanskrit: 'बहुभुजा',
+          meaning: 'Eight to eighteen arms holding divine weapons',
+          significance: 'Represents multifarious powers and ability to protect devotees from all directions simultaneously'
         }
       ],
       sacred_stories: [
         {
-          title: 'Birth from Divine Fire',
-          content: 'When the gods could not defeat Mahishasura, their collective anger created a brilliant divine fire from which emerged Durga, more beautiful and powerful than any being. Each god gave her their most potent weapon, creating the ultimate warrior goddess.'
+          title: 'Etymology: The Unassailable One',
+          content: 'The name "Durga" derives from Sanskrit roots dur (difficult) and gam (to pass), meaning "impassable" or "invincible." This linguistic foundation establishes her as a formidable force that cannot be overcome, representing the ultimate protection against all forms of negativity and evil.'
         },
         {
-          title: 'The Great Battle',
-          content: 'For nine days, Durga fought Mahishasura and his demon army. Each time the demon changed his form, she adapted her strategy. On the tenth day, she finally pierced his heart with her trident, ending his reign of terror.'
+          title: 'Ancient Origins: From Indus to Vedas',
+          content: 'Evidence suggests Durga\'s worship dates back to the Indus Valley Civilization (3000 BCE), with a proto-Durga war goddess associated with tigers found on seals at Kalibangan. Her reverence continued through the Devi Suktam hymn in the Rig Veda, establishing continuity of the feminine divine principle for millennia.'
         },
         {
-          title: 'The Protective Mother',
-          content: 'After her victory, the gods praised Durga and she promised to return whenever dharma is threatened. She embodies both the nurturing mother who protects her children and the fierce warrior who destroys evil forces.'
+          title: 'The Mahishasura Myth: Cosmic Allegory',
+          content: 'The central narrative of Durga slaying Mahishasura is a profound allegory. The buffalo-demon, with his boon of invincibility against any man or god, represents insurmountable chaos and ego. Durga\'s serene expression while piercing his heart shows that destruction of evil is not anger but composed wisdom - the triumph of conscious action over unconscious forces.'
+        },
+        {
+          title: 'Shakti vs Durga: Philosophical Distinction',
+          content: 'While often used synonymously, Shakti is the inherent, potential energy of the universe, while Durga is its external, manifested form. This can be understood as a still lake (Shakti) and the gentle breeze (Durga) that makes it ripple and come alive, transforming potential into purposeful, intelligent action.'
+        },
+        {
+          title: 'The Navadurga Journey',
+          content: 'The nine forms of Durga represent a sequential spiritual evolution from material existence to divine liberation. Each form - from Shailaputri\'s foundation to Siddhidatri\'s fulfillment - guides devotees through distinct stages of inner awakening and transformation, offering a tangible roadmap for spiritual seekers.'
+        },
+        {
+          title: 'Sacred Rituals: Living Philosophy',
+          content: 'Unique rituals like using soil from a courtesan\'s house in making Durga idols demonstrate her non-discriminatory nature. Akalbodhan (untimely invocation) by Lord Rama shows sincere devotion transcends rules. These practices embody profound philosophical principles that divinity is universal and responsive to pure devotion.'
         }
       ],
       divine_symbolism: [
         {
-          aspect: 'Mahishasura Mardini',
-          meaning: 'As the slayer of Mahishasura, Durga represents the divine feminine power that emerges to destroy evil when it becomes overwhelming. She shows that the ultimate protection comes from the Divine Mother.'
+          aspect: 'Primordial Shakti - Ultimate Reality',
+          meaning: 'In Shaktism, Durga transcends being a mere deity to become the ultimate reality itself - Adi-Anant (without beginning or end). She is the source from which Brahma, Vishnu, and Shiva are born, embodying maya (illusion), shakti (power), and prakriti (nature) - the fundamental components of the manifested universe.'
         },
         {
-          aspect: 'Shakti Embodiment',
-          meaning: 'Durga is the pure embodiment of Shakti (divine feminine energy) in her most dynamic form. She demonstrates that spiritual power, when awakened, can overcome any obstacle or negative force.'
+          aspect: 'Active Cosmic Energy',
+          meaning: 'While Shakti represents potential energy like a still lake, Durga is the active force - the breeze that makes it ripple. She demonstrates that without this external manifestation, pure consciousness cannot create, protect, or destroy; it just "is." She transforms potential into purposeful, intelligent, compassionate action.'
         },
         {
-          aspect: 'Protective Mother',
-          meaning: 'Despite her fierce appearance, Durga is the loving mother who protects her devotees. Her anger is directed only at evil forces, while she showers compassion and blessings on those who seek her refuge.'
+          aspect: 'Compassionate Destruction',
+          meaning: 'Durga\'s serene expression while destroying demons teaches that necessary destruction should come from wisdom, not anger. Her actions represent composed wisdom overcoming chaotic forces - showing that when confronting negativity, we should act with determined compassion rather than emotional reactivity.'
+        },
+        {
+          aspect: 'Universal Non-Discrimination',
+          meaning: 'Sacred rituals like using soil from socially marginalized spaces powerfully demonstrate that Durga\'s divine presence transcends all societal norms and judgments. Her philosophy teaches that divinity is all-encompassing, inclusive, and present in all places and people regardless of social standing.'
+        },
+        {
+          aspect: 'Mastery Over Inner Nature',
+          meaning: 'Her lion mount represents our inner wild nature and unbridled desires. Durga riding the lion symbolizes the spiritual mastery we must achieve over our inner beast - not by suppressing it, but by directing its immense power toward divine purposes and righteous action.'
+        },
+        {
+          aspect: 'Divine Feminine in Every Woman',
+          meaning: 'The Kumari Puja ritual of worshipping young girls as living goddesses demonstrates the philosophical belief that Shakti - divine feminine energy - resides within every woman. This practice actively connects abstract spiritual philosophy to lived reality, affirming the inherent sacredness of the feminine principle.'
         }
       ],
       festivals: [
         {
-          name: 'Durga Puja',
-          date: 'September/October (Sharad Navratri)',
-          description: 'The most grand celebration of Maa Durga, especially in Bengal, with elaborate artistic pandals, cultural programs, and immersion ceremonies. Celebrates her victory over Mahishasura with great devotion and community participation.'
+          name: 'Sharad Navratri',
+          date: 'September/October (Nine Sacred Nights)',
+          description: 'The most significant celebration honoring Durga\'s nine forms (Navadurga), representing a sequential spiritual journey from material existence to divine liberation. Each night is dedicated to a specific manifestation, with devotees wearing corresponding colors and performing prescribed rituals that guide the soul through stages of awakening.'
+        },
+        {
+          name: 'Durga Puja (Bengal)',
+          date: 'September/October (Last 4 days of Navratri)',
+          description: 'Elaborate celebration especially in Bengal featuring artistic pandals, cultural programs, and community gatherings. UNESCO recognized as Intangible Cultural Heritage, this festival represents the perfect synthesis of art, devotion, and cultural unity in honoring the Divine Mother.'
+        },
+        {
+          name: 'Vijayadashami (Dussehra)',
+          date: 'Tenth day after Navratri',
+          description: 'Celebrates Durga\'s ultimate victory over Mahishasura, symbolizing the triumph of good over evil. Marks the culmination of the nine-day spiritual journey with the celebration of dharma\'s victory over adharma through divine intervention.'
         },
         {
           name: 'Chaitra Navratri',
-          date: 'March/April',
-          description: 'Nine-day spring festival dedicated to nine forms of Durga, observed with fasting, prayers, and worship. Devotees invoke her blessings for protection and spiritual strength.'
+          date: 'March/April (Spring Festival)',
+          description: 'Spring celebration of the nine forms of Durga, observed with fasting, prayers, and spiritual practices. This seasonal festival aligns with nature\'s renewal, invoking the goddess\'s blessings for new beginnings and spiritual growth.'
         },
         {
-          name: 'Durga Ashtami',
-          date: 'Eighth day of Navratri',
-          description: 'Most auspicious day when Durga is worshipped with special rituals, kumari puja, and offerings. Considered the peak day of divine feminine energy.'
+          name: 'Akalbodhan',
+          date: 'Autumn (Untimely Invocation)',
+          description: 'Special autumn worship initiated by Lord Rama when he invoked Durga outside the traditional spring season to gain power to defeat Ravana. This demonstrates that sincere devotion can invoke the divine at any time, transcending conventional rules and seasons.'
         }
       ],
       temples: [
@@ -154,31 +218,64 @@ export default async function DurgaPage() {
         {
           sanskrit: 'ॐ दुं दुर्गायै नमः',
           transliteration: 'Om Dum Durgayai Namah',
-          meaning: 'Salutations to Goddess Durga',
-          benefits: 'Powerful seed mantra for protection from all dangers and negative forces. Invokes the fierce protective energy of the Divine Mother.'
+          meaning: 'Om, salutations to Goddess Durga',
+          benefits: 'Powerful seed mantra for protection from all dangers and negative forces. The bija mantra "Dum" activates the fierce protective energy of the Divine Mother, creating an impenetrable shield around the devotee.'
         },
         {
           sanskrit: 'ॐ गिरिजायै विद्महे शिवप्रियायै धीमहि तन्नो दुर्गा प्रचोदयात्',
           transliteration: 'Om Girijayai Vidmahe Shivapriyayai Dhimahi Tanno Durga Prachodayat',
           meaning: 'We meditate on the daughter of the mountain, beloved of Shiva. May Durga inspire our consciousness',
-          benefits: 'Durga Gayatri Mantra for developing inner strength, courage, and spiritual protection'
+          benefits: 'Durga Gayatri Mantra for developing inner strength, courage, and spiritual protection. Regular recitation awakens the dormant Shakti within and establishes divine connection.'
+        },
+        {
+          sanskrit: 'या देवी सर्वभूतेषु शक्ति रूपेण संस्थिता। नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥',
+          transliteration: 'Ya Devi Sarvabhuteshu Shakti Rupena Samsthita, Namastasyai Namastasyai Namastasyai Namo Namah',
+          meaning: 'The Goddess who resides in all beings in the form of power, salutations to her, salutations to her, salutations to her',
+          benefits: 'Sacred verse from Devi Mahatmya acknowledging the universal presence of divine feminine energy. Cultivates recognition of Shakti in all forms of existence and develops reverence for the cosmic mother.'
+        },
+        {
+          sanskrit: 'सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके। शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते॥',
+          transliteration: 'Sarva Mangala Mangalye Shive Sarvartha Sadhike, Sharanye Tryambake Gauri Narayani Namostute',
+          meaning: 'O auspicious among all auspicious, O Shiva, O fulfiller of all purposes, O refuge, O three-eyed one, O Gauri, O Narayani, salutations to you',
+          benefits: 'Comprehensive prayer recognizing Durga in her various forms and aspects. Invokes complete divine protection and fulfillment of both material and spiritual desires through surrender to the Divine Mother.'
         }
       ],
       essential_facts: [
         {
-          fact: 'Durga was created from the combined energies of all gods to defeat Mahishasura'
+          fact: 'Etymology: "Durga" means "unassailable" from Sanskrit dur (difficult) + gam (to pass), establishing her as an invincible protective force'
         },
         {
-          fact: 'She has multiple arms, each carrying a divine weapon from different deities'
+          fact: 'Ancient Origins: Worship traces back to Indus Valley Civilization (3000 BCE) with proto-Durga seals found at Kalibangan'
         },
         {
-          fact: 'Her lion vehicle represents controlled power and mastery over ego'
+          fact: 'Cosmic Role: In Shaktism, she represents the ultimate reality (Adi-Anant) - the source from which Brahma, Vishnu, and Shiva emerge'
         },
         {
-          fact: 'She is worshipped as the supreme mother goddess across India'
+          fact: 'Philosophical Distinction: While Shakti is potential energy (still lake), Durga is active manifestation (breeze that creates ripples)'
         },
         {
-          fact: 'Durga Puja in Bengal is UNESCO recognized as Intangible Cultural Heritage'
+          fact: 'Navadurga Journey: Her nine forms represent sequential spiritual evolution from material existence to divine liberation'
+        },
+        {
+          fact: 'Das Mahavidyas: She is the first of ten tantric wisdom goddesses, each representing different cosmic powers'
+        },
+        {
+          fact: 'Multi-Armed Symbolism: 8-18 arms carrying divine weapons represent protection from all directions and multifarious divine powers'
+        },
+        {
+          fact: 'Sacred Rituals: Unique practices like using soil from marginalized areas demonstrate her non-discriminatory universal presence'
+        },
+        {
+          fact: 'Mahishasura Allegory: The demon represents ego and chaos; her serene victory shows composed wisdom triumphing over unconscious forces'
+        },
+        {
+          fact: 'Living Philosophy: Kumari Puja worship of young girls as goddesses demonstrates Shakti residing within every woman'
+        },
+        {
+          fact: 'Global Celebration: Durga Puja is UNESCO Intangible Cultural Heritage, celebrated in over 50 countries worldwide'
+        },
+        {
+          fact: 'Cross-Sectional Reverence: Worshipped as Mahamaya in Vaishnavism and as a form of Lakshmi, showing her universal appeal'
         }
       ],
       youtube_videos: {
@@ -441,6 +538,192 @@ export default async function DurgaPage() {
             </div>
           </section>
         )}
+
+        {/* Navadurga - Nine Forms Section */}
+        <section className="animate-fadeIn animate-delay-900">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Navadurga - The Nine Sacred Forms</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-pink-600 mx-auto mb-8"></div>
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+              Experience the complete spiritual journey through the nine manifestations of Maa Durga,
+              each representing a unique stage of inner transformation and divine awakening.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Shailaputri",
+                sanskrit: "शैलपुत्री",
+                day: 1,
+                color: "Red",
+                chakra: "Muladhara",
+                meaning: "Daughter of Mountains",
+                slug: "shailaputri",
+                description: "Foundation of spiritual practice and divine grounding energy",
+                colorClass: "from-red-600 to-red-500"
+              },
+              {
+                name: "Brahmacharini",
+                sanskrit: "ब्रह्मचारिणी",
+                day: 2,
+                color: "Royal Blue",
+                chakra: "Svadhisthana",
+                meaning: "The Ascetic",
+                slug: "brahmacharini",
+                description: "Goddess of spiritual discipline and divine knowledge",
+                colorClass: "from-blue-800 to-blue-600"
+              },
+              {
+                name: "Chandraghanta",
+                sanskrit: "चन्द्रघण्टा",
+                day: 3,
+                color: "Yellow",
+                chakra: "Manipura",
+                meaning: "Bearer of Moon Bell",
+                slug: "chandraghanta",
+                description: "Serene warrior who brings peace through strength",
+                colorClass: "from-yellow-500 to-yellow-400"
+              },
+              {
+                name: "Kushmanda",
+                sanskrit: "कूष्माण्डा",
+                day: 4,
+                color: "Orange",
+                chakra: "Anahata",
+                meaning: "Creator of Universe",
+                slug: "kushmanda",
+                description: "Cosmic creator who manifested the universe with her smile",
+                colorClass: "from-orange-600 to-orange-500"
+              },
+              {
+                name: "Skandamata",
+                sanskrit: "स्कन्दमाता",
+                day: 5,
+                color: "White",
+                chakra: "Vishuddha",
+                meaning: "Mother of Skanda",
+                slug: "skandamata",
+                description: "Divine mother embodying nurturing protection and wisdom",
+                colorClass: "from-gray-100 to-gray-50 text-gray-800 border-2 border-gray-300"
+              },
+              {
+                name: "Katyayani",
+                sanskrit: "कात्यायनी",
+                day: 6,
+                color: "Red",
+                chakra: "Ajna",
+                meaning: "Warrior Slayer",
+                slug: "katyayani",
+                description: "Fierce warrior who destroys evil and grants courage",
+                colorClass: "from-red-700 to-red-600"
+              },
+              {
+                name: "Kalaratri",
+                sanskrit: "कालरात्रि",
+                day: 7,
+                color: "Royal Blue",
+                chakra: "Sahasrara",
+                meaning: "Night of Time",
+                slug: "kalaratri",
+                description: "Dark destroyer of ignorance and negative energies",
+                colorClass: "from-blue-900 to-blue-700"
+              },
+              {
+                name: "Mahagauri",
+                sanskrit: "महागौरी",
+                day: 8,
+                color: "Pink",
+                chakra: "All Chakras",
+                meaning: "The Radiant One",
+                slug: "mahagauri",
+                description: "Pure radiant goddess bringing spiritual purification",
+                colorClass: "from-pink-600 to-pink-500"
+              },
+              {
+                name: "Siddhidatri",
+                sanskrit: "सिद्धिदात्री",
+                day: 9,
+                color: "Purple",
+                chakra: "All Chakras",
+                meaning: "Giver of Siddhis",
+                slug: "siddhidatri",
+                description: "Bestower of supernatural powers and spiritual mastery",
+                colorClass: "from-purple-600 to-purple-500"
+              }
+            ].map((form, index) => (
+              <Link
+                key={index}
+                href={`/deities/durga/${form.slug}`}
+                className="group block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-red-100 overflow-hidden"
+              >
+                <div className={`p-6 bg-gradient-to-r ${form.colorClass} ${form.color === 'White' ? 'text-gray-800' : 'text-white'}`}>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`w-10 h-10 ${form.color === 'White' ? 'bg-gray-800 text-white' : 'bg-white/20'} rounded-full flex items-center justify-center font-bold`}>
+                      {form.day}
+                    </div>
+                    <div className={`text-sm font-medium px-3 py-1 rounded-full ${
+                      form.color === 'White' ? 'bg-gray-800 text-white' : 'bg-white/20'
+                    }`}>
+                      Day {form.day}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{form.name}</h3>
+                  <p className="text-lg font-semibold mb-1">{form.sanskrit}</p>
+                  <p className={`text-sm ${form.color === 'White' ? 'text-gray-600' : 'text-white/80'}`}>{form.meaning}</p>
+                </div>
+
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 leading-relaxed">{form.description}</p>
+
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="font-medium text-gray-600">Color:</span>
+                      <span className="text-gray-800">{form.color}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="font-medium text-gray-600">Chakra:</span>
+                      <span className="text-gray-800">{form.chakra}</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-red-100 flex items-center justify-between">
+                    <span className="text-sm text-red-600 font-medium">
+                      Explore Full Details
+                    </span>
+                    <svg className="w-5 h-5 text-red-500 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-red-100 to-pink-100 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-red-800 mb-4">🌺 Begin Your Spiritual Journey</h3>
+              <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+                Follow the nine-day path of transformation, where each form of Maa Durga guides you
+                through a unique stage of spiritual awakening and inner evolution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/deities/durga/shailaputri"
+                  className="px-8 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+                >
+                  Start with Shailaputri →
+                </Link>
+                <Link
+                  href="/festivals/navratri"
+                  className="px-8 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition-colors"
+                >
+                  Learn About Navratri
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   )

@@ -1,5 +1,12 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Matsya Avatar - The Fish Incarnation of Lord Vishnu | PeacefulAnswers',
+  description: 'Discover Matsya, the first avatar of Lord Vishnu who saved the world from the great deluge. Learn about the divine fish incarnation, its significance, and the cosmic rescue of Vedas and humanity.',
+  keywords: 'Matsya Avatar, fish incarnation, Vishnu avatar, great flood, Pralaya, cosmic deluge, Vedas rescue, Hindu mythology, first avatar, divine fish',
+}
 import { 
   ArrowLeft, 
   ArrowRight, 

@@ -1,9 +1,10 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { 
-  Crown, 
-  Star, 
-  Heart, 
+import {
+  Crown,
+  Star,
+  Heart,
   Calendar,
   MapPin,
   Mouse,
@@ -18,7 +19,6 @@ import {
   BookOpen
 } from 'lucide-react'
 import { hinduSupabase } from '@/lib/supabase'
-import { Metadata } from 'next'
 import SmartRecommendationsSimple from '@/components/SmartRecommendationsSimple'
 import ContextualNavigation, { QuickNavigation } from '@/components/ContextualNavigation'
 import { peacefulAnswersContentDatabase, getContentById } from '@/data/contentDatabase'

@@ -1,6 +1,13 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
+
+export const metadata: Metadata = {
+  title: 'Hindu Deities - Explore the Divine Pantheon | PeacefulAnswers',
+  description: 'Discover the divine pantheon of Hindu deities including the Trinity (Brahma, Vishnu, Shiva), major gods like Ganesha and Hanuman, cosmic forces, and the divine feminine principle. Learn about their stories, symbols, and significance.',
+  keywords: 'Hindu deities, Hindu gods, Hindu goddesses, Trimurti, Brahma, Vishnu, Shiva, Ganesha, Hanuman, Krishna, Rama, Durga, Kali, divine pantheon, Hindu mythology',
+}
 import { 
   Crown, 
   Shield, 
@@ -409,31 +416,31 @@ export default async function DeitiesPage() {
   const categoriesToShow = cmsData.hasCMSData ? cmsData.categories : deityCategories
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-8 sm:py-10 md:py-12">
         {/* Hero Section */}
-        <div className="text-center mb-12 pt-4">
-          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Crown className="w-4 h-4" />
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 pt-2 sm:pt-4">
+          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4">
+            <Crown className="w-3 h-3 sm:w-4 sm:h-4" />
             Divine Pantheon
           </div>
-          
-          <h1 className="text-6xl md:text-7xl font-bold mb-3 bg-gradient-to-r from-orange-200 via-yellow-300 to-red-200 bg-clip-text text-transparent">
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-orange-200 via-yellow-300 to-red-200 bg-clip-text text-transparent">
             हिन्दू देवता
           </h1>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
             Hindu Deities
           </h2>
-          
+
           <div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4 md:px-0">
               Explore the divine pantheon of Hindu deities, each representing different aspects of the supreme reality and guiding devotees on their spiritual journey.
             </p>
           </div>
         </div>
 
         {/* Deity Categories */}
-        <div className="space-y-16">
+        <div className="space-y-10 sm:space-y-12 md:space-y-16">
           {categoriesToShow.map((category, categoryIndex) => {
             // Handle both CMS data format and static data format
             const categoryTitle = category.title || category.name
@@ -442,16 +449,16 @@ export default async function DeitiesPage() {
             
             return (
             <section key={categoryTitle}>
-              <div className="text-center mb-12">
-                <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
+              <div className="text-center mb-6 sm:mb-8 md:mb-12">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2 sm:mb-3 md:mb-4">
                   {categoryTitle}
                 </h3>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0">
                   {categoryDesc}
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 {categoryDeities.map((deity: any, index: number) => {
                   // Handle both static and CMS data formats
                   const IconComponent = deity.icon || iconMap[deity.divine_attributes?.[0]?.icon] || Star
@@ -461,14 +468,14 @@ export default async function DeitiesPage() {
                   const linkPath = `/deities/${deity.slug || deity.id}`
                   
                   return (
-                    <Link 
+                    <Link
                       key={deity.id}
                       href={linkPath}
-                      className="group block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100 overflow-hidden"
+                      className="group block bg-white rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 border border-orange-100 overflow-hidden"
                     >
                       {/* Image Section */}
                       {deityImage ? (
-                        <div className="relative h-48 overflow-hidden">
+                        <div className="relative h-36 sm:h-44 md:h-48 overflow-hidden">
                           <Image
                             src={deityImage}
                             alt={deity.name}
@@ -476,39 +483,39 @@ export default async function DeitiesPage() {
                             className="object-cover group-hover:scale-110 transition-transform duration-300"
                           />
                           <div className={`absolute inset-0 bg-gradient-to-t ${deityColor} opacity-80`} />
-                          <div className="absolute top-4 right-4">
-                            <IconComponent className="w-6 h-6 text-white" />
+                          <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
+                            <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                           </div>
-                          <div className="absolute bottom-4 left-4">
-                            <h4 className="text-2xl font-bold text-white mb-1">{deity.sanskrit || deity.sanskrit_name}</h4>
-                            <p className="text-orange-100 text-sm">{deity.title}</p>
+                          <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
+                            <h4 className="text-xl sm:text-2xl font-bold text-white mb-0.5 sm:mb-1">{deity.sanskrit || deity.sanskrit_name}</h4>
+                            <p className="text-orange-100 text-xs sm:text-sm">{deity.title}</p>
                           </div>
                         </div>
                       ) : (
-                        <div className={`relative h-48 bg-gradient-to-br ${deityColor} flex items-center justify-center`}>
-                          <IconComponent className="w-16 h-16 text-white opacity-50" />
-                          <div className="absolute bottom-4 left-4">
-                            <h4 className="text-2xl font-bold text-white mb-1">{deity.sanskrit || deity.sanskrit_name}</h4>
-                            <p className="text-orange-100 text-sm">{deity.title}</p>
+                        <div className={`relative h-36 sm:h-44 md:h-48 bg-gradient-to-br ${deityColor} flex items-center justify-center`}>
+                          <IconComponent className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-white opacity-50" />
+                          <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
+                            <h4 className="text-xl sm:text-2xl font-bold text-white mb-0.5 sm:mb-1">{deity.sanskrit || deity.sanskrit_name}</h4>
+                            <p className="text-orange-100 text-xs sm:text-sm">{deity.title}</p>
                           </div>
                         </div>
                       )}
 
                       {/* Content Section */}
-                      <div className="p-6">
-                        <div className="flex items-center justify-between mb-3">
-                          <h5 className="text-xl font-bold text-gray-800">{deity.name}</h5>
-                          <ChevronRight className="w-5 h-5 text-orange-500 group-hover:translate-x-1 transition-transform" />
+                      <div className="p-4 sm:p-5 md:p-6">
+                        <div className="flex items-center justify-between mb-2 sm:mb-3">
+                          <h5 className="text-lg sm:text-xl font-bold text-gray-800">{deity.name}</h5>
+                          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500 group-hover:translate-x-1 transition-transform" />
                         </div>
 
-                        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                        <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">
                           {deityDescription}
                         </p>
 
-                        <div className="space-y-2 text-xs text-gray-500">
+                        <div className="space-y-1.5 sm:space-y-2 text-[10px] sm:text-xs text-gray-500">
                           <div className="flex justify-between">
                             <span className="font-medium">Domain:</span>
-                            <span>{deity.domain}</span>
+                            <span className="text-right ml-2">{deity.domain}</span>
                           </div>
                           {deity.consort && (
                             <div className="flex justify-between">
@@ -531,8 +538,8 @@ export default async function DeitiesPage() {
                         </div>
 
                         {deity.hasSubPages && (
-                          <div className="mt-4 pt-3 border-t border-orange-100">
-                            <span className="text-xs text-orange-600 font-medium">
+                          <div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-orange-100">
+                            <span className="text-[10px] sm:text-xs text-orange-600 font-medium">
                               Explore Forms & Avatars →
                             </span>
                           </div>
@@ -547,19 +554,19 @@ export default async function DeitiesPage() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
+        <div className="text-center mt-12 sm:mt-16 md:mt-20">
+          <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-3 sm:mb-4">
               Journey into Divine Wisdom
             </h3>
-            <p className="text-gray-700 text-lg mb-6">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 px-2 sm:px-0">
               Each deity represents a unique aspect of the divine consciousness, offering guidance, protection, and blessings to their devotees.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-orange-700">
-              <span className="bg-orange-200 px-3 py-1 rounded-full">🕉️ Sacred Mantras</span>
-              <span className="bg-yellow-200 px-3 py-1 rounded-full">🏛️ Temple Locations</span>
-              <span className="bg-red-200 px-3 py-1 rounded-full">🎭 Festival Celebrations</span>
-              <span className="bg-pink-200 px-3 py-1 rounded-full">📚 Mythological Stories</span>
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 text-xs sm:text-sm text-orange-700">
+              <span className="bg-orange-200 px-2 sm:px-3 py-1 rounded-full">🕉️ Sacred Mantras</span>
+              <span className="bg-yellow-200 px-2 sm:px-3 py-1 rounded-full">🏛️ Temple Locations</span>
+              <span className="bg-red-200 px-2 sm:px-3 py-1 rounded-full">🎭 Festival Celebrations</span>
+              <span className="bg-pink-200 px-2 sm:px-3 py-1 rounded-full">📚 Mythological Stories</span>
             </div>
           </div>
         </div>

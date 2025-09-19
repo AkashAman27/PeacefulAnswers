@@ -196,15 +196,15 @@ export default function Footer() {
 
       {/* Spiritual Quote Section */}
       <div className="border-t border-blue-800 bg-gradient-to-r from-blue-950 to-indigo-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-          <div className="mb-4">
-            <p className="text-lg text-blue-100 italic leading-relaxed">
-              "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।<br />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 text-center">
+          <div className="mb-3 sm:mb-4">
+            <p className="text-sm sm:text-base md:text-lg text-blue-100 italic leading-relaxed">
+              "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।<br className="hidden sm:block" />
               अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्।।"
             </p>
           </div>
-          <div className="text-blue-200 text-sm">
-            <p className="italic mb-2">
+          <div className="text-blue-200 text-xs sm:text-sm">
+            <p className="italic mb-1 sm:mb-2">
               "Whenever there is decline of dharma and rise of adharma, O Bharata, then I manifest Myself."
             </p>
             <p className="font-medium">— Bhagavad Gita 4.7</p>

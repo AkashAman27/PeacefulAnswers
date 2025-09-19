@@ -1,6 +1,10 @@
 'use client'
 
+import { Metadata } from 'next'
 import { useState, useEffect } from 'react'
+
+// Note: Client components cannot export metadata directly
+// This metadata should be moved to a layout.tsx file or parent component
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
 import { 
@@ -85,22 +89,22 @@ export default function AdminLogin() {
         `
       }} />
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center p-4">
-        <div className="max-w-md w-full">
+        <div className="max-w-md w-full px-4 sm:px-0">
         {/* Logo and Header */}
-        <div className="text-center mb-8">
-          <div className="mx-auto w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mb-4">
-            <Shield className="w-8 h-8 text-white" />
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="mx-auto w-14 h-14 sm:w-16 sm:h-16 bg-orange-600 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+            <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Portal</h1>
-          <p className="text-gray-600">Sign in to access PeacefulAnswers admin panel</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Admin Portal</h1>
+          <p className="text-sm sm:text-base text-gray-600 px-4 sm:px-0">Sign in to access PeacefulAnswers admin panel</p>
         </div>
 
         {/* Login Form */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+          <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                 Email Address
               </label>
               <input
@@ -109,7 +113,7 @@ export default function AdminLogin() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-base"
                 style={{ 
                   color: '#000000 !important', 
                   WebkitTextFillColor: '#000000 !important',
@@ -126,7 +130,7 @@ export default function AdminLogin() {
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                 Password
               </label>
               <div className="relative">
@@ -136,7 +140,7 @@ export default function AdminLogin() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-2 sm:py-2.5 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-base"
                   style={{ 
                     color: '#000000 !important', 
                     WebkitTextFillColor: '#000000 !important',
@@ -155,7 +159,7 @@ export default function AdminLogin() {
                   className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600"
                   disabled={isLoading}
                 >
-                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  {showPassword ? <EyeOff className="w-4 h-4 sm:w-5 sm:h-5" /> : <Eye className="w-4 h-4 sm:w-5 sm:h-5" />}
                 </button>
               </div>
             </div>
@@ -172,7 +176,7 @@ export default function AdminLogin() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-colors"
+              className="w-full bg-orange-600 text-white py-2.5 sm:py-3 px-4 rounded-lg hover:bg-orange-700 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-colors text-sm sm:text-base font-medium"
             >
               {isLoading ? (
                 <>
@@ -190,8 +194,8 @@ export default function AdminLogin() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-gray-500">
+        <div className="text-center mt-6 sm:mt-8">
+          <p className="text-xs sm:text-sm text-gray-500">
             © 2024 PeacefulAnswers.com - Admin Portal
           </p>
         </div>
