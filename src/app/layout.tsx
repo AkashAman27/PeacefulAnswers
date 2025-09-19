@@ -61,7 +61,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1E3A8A" />
 
         {/* Google Site Verification */}
-        <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+        <meta name="google-site-verification" content="DacXWZZbHAMqTcgB9NvbsvCGlQP1Ux5Aa5UKHYDU_N8" />
         
         {/* Google Analytics */}
         {GA_MEASUREMENT_ID && (
