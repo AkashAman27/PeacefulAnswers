@@ -27,7 +27,8 @@ import {
   Home,
   Music,
   Gem,
-  Flame
+  Flame,
+  Clock
 } from 'lucide-react'
 
 export const metadata: Metadata = {
