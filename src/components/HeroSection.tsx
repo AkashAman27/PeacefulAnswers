@@ -4,8 +4,10 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Star, Play, Search, ArrowRight } from 'lucide-react'
 import SearchComponent from './SearchComponent'
+import VideoModal from './VideoModal'
 
 const HeroSection = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
   const heroRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
@@ -139,7 +141,10 @@ const HeroSection = () => {
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
 
-          <button className="opacity-0 translate-y-8 transition-all duration-1000 ease-out group flex items-center gap-2 bg-white border-2 border-blue-900 text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-50 w-full sm:w-auto justify-center">
+          <button
+            onClick={() => setIsVideoModalOpen(true)}
+            className="opacity-0 translate-y-8 transition-all duration-1000 ease-out group flex items-center gap-2 bg-white border-2 border-blue-900 text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-blue-50 w-full sm:w-auto justify-center"
+          >
             <Play className="w-4 h-4 sm:w-5 sm:h-5" />
             Watch Introduction
           </button>
@@ -203,6 +208,19 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        // Option 1: YouTube Video
+        videoType="youtube"
+        videoId="dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+
+        // Option 2: Your own video file (uncomment and use instead)
+        // videoType="direct"
+        // videoUrl="/videos/introduction.mp4" // Path to your video file
+      />
     </section>
   )
 }
