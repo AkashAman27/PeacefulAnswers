@@ -18,7 +18,7 @@ import {
   ChevronRight,
   ArrowLeft,
   Shield,
-  Flower2,
+  Flower,
   Baby,
   Sparkles,
   Target,
@@ -28,9 +28,6 @@ import {
   Music,
   Gem,
   Eye,
-  Lotus,
-  Rose,
-  Infinity,
   Sunrise
 } from 'lucide-react'
 
@@ -413,7 +410,7 @@ export default function SitaFirstSightPage() {
                 <p className="text-gray-700">Divine Recognition</p>
               </div>
               <div className="text-center">
-                <Infinity className="w-12 h-12 text-rose-600 mx-auto mb-4" />
+                <Heart className="w-12 h-12 text-rose-600 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">Significance</h3>
                 <p className="text-gray-700">Eternal Union</p>
               </div>
@@ -448,7 +445,7 @@ export default function SitaFirstSightPage() {
                 <ul className="space-y-2">
                   {gardenSetting.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <Flower2 className="w-4 h-4 text-rose-500 mr-2 mt-1 flex-shrink-0" />
+                      <Flower className="w-4 h-4 text-rose-500 mr-2 mt-1 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
@@ -544,7 +541,7 @@ export default function SitaFirstSightPage() {
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="flex items-center mb-6">
                   <div className={`w-12 h-12 ${index === 0 ? 'bg-blue-500' : 'bg-rose-500'} rounded-full flex items-center justify-center mr-4`}>
-                    {index === 0 ? <Sun className="w-6 h-6 text-white" /> : <Lotus className="w-6 h-6 text-white" />}
+                    {index === 0 ? <Sun className="w-6 h-6 text-white" /> : <Heart className="w-6 h-6 text-white" />}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">{aspect.aspect}</h3>
                 </div>

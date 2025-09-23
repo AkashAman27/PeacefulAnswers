@@ -18,7 +18,7 @@ import {
   ChevronRight,
   ArrowLeft,
   Shield,
-  Flower2,
+  Flower,
   Baby,
   Sparkles,
   Target,
@@ -28,7 +28,7 @@ import {
   Music,
   Gem,
   Clock,
-  Rings
+  Circle
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -292,7 +292,7 @@ export default function DivineMarriagePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                <Rings className="w-4 h-4 mr-2" />
+                <Circle className="w-4 h-4 mr-2" />
                 <span className="text-sm font-medium">💒 Episode 12 - The Sacred Union</span>
               </div>
 
@@ -460,7 +460,7 @@ export default function DivineMarriagePage() {
             {weddingRituals.map((ritual, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="flex items-center mb-4">
-                  <Rings className="w-8 h-8 text-rose-600 mr-3" />
+                  <Circle className="w-8 h-8 text-rose-600 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">{ritual.ritual}</h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-4">{ritual.meaning}</p>

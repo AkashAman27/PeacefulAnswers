@@ -3,24 +3,20 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { 
-  Menu, 
-  X, 
-  BookOpen, 
-  Users, 
-  Calendar, 
-  MessageCircle, 
+import {
+  Menu,
+  X,
+  BookOpen,
+  Users,
+  Calendar,
+  MessageCircle,
   Heart,
   Home,
+  MapPin,
   ChevronDown
 } from 'lucide-react'
 
 const navigationItems = [
-  {
-    name: 'Home',
-    href: '/',
-    icon: Home
-  },
   {
     name: 'Scriptures',
     href: '/scriptures',
@@ -162,6 +158,51 @@ const navigationItems = [
     ]
   },
   {
+    name: 'Sacred Places',
+    href: '/sacred-places',
+    icon: MapPin,
+    dropdown: [
+      {
+        name: 'Char Dham',
+        href: '/sacred-places/char-dham',
+        submenu: [
+          { name: 'Badrinath', href: '/sacred-places/char-dham/badrinath' },
+          { name: 'Dwarka', href: '/sacred-places/char-dham/dwarka' },
+          { name: 'Jagannath Puri', href: '/sacred-places/char-dham/jagannath-puri' },
+          { name: 'Rameswaram', href: '/sacred-places/char-dham/rameswaram' }
+        ]
+      },
+      {
+        name: 'Jyotirlingas',
+        href: '/sacred-places/jyotirlingas',
+        submenu: [
+          { name: 'Somnath', href: '/sacred-places/jyotirlingas/somnath' },
+          { name: 'Mallikarjuna', href: '/sacred-places/jyotirlingas/mallikarjuna' },
+          { name: 'Mahakaleshwar', href: '/sacred-places/jyotirlingas/mahakaleshwar' },
+          { name: 'Omkareshwar', href: '/sacred-places/jyotirlingas/omkareshwar' },
+          { name: 'Kedarnath', href: '/sacred-places/jyotirlingas/kedarnath' },
+          { name: 'Bhimashankar', href: '/sacred-places/jyotirlingas/bhimashankar' }
+        ]
+      },
+      {
+        name: 'Shakti Peethas',
+        href: '/sacred-places/shakti-peethas',
+        submenu: [
+          { name: 'Kamakhya', href: '/sacred-places/shakti-peethas/kamakhya' },
+          { name: 'Vaishno Devi', href: '/sacred-places/shakti-peethas/vaishno-devi' },
+          { name: 'Kalighat', href: '/sacred-places/shakti-peethas/kalighat' },
+          { name: 'Ambaji', href: '/sacred-places/shakti-peethas/ambaji' }
+        ]
+      },
+      { name: 'Vrindavan', href: '/sacred-places/vrindavan' },
+      { name: 'Varanasi', href: '/sacred-places/varanasi' },
+      { name: 'Haridwar', href: '/sacred-places/haridwar' },
+      { name: 'Rishikesh', href: '/sacred-places/rishikesh' },
+      { name: 'Tirupati', href: '/sacred-places/tirupati' },
+      { name: 'All Sacred Places', href: '/sacred-places' }
+    ]
+  },
+  {
     name: 'Questions',
     href: '/questions',
     icon: MessageCircle
@@ -184,11 +225,74 @@ export default function Navigation() {
   const [mobileDropdowns, setMobileDropdowns] = useState<string[]>([])
   const [mobileSubmenus, setMobileSubmenus] = useState<string[]>([])
   const [selectedLanguage, setSelectedLanguage] = useState('en')
+  const [submenuTimeout, setSubmenuTimeout] = useState<NodeJS.Timeout | null>(null)
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null)
   const pathname = usePathname()
 
   const isActivePath = (href: string) => {
     if (href === '/') return pathname === '/'
     return pathname.startsWith(href)
+  }
+
+  const handleDropdownEnter = (name: string) => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout)
+      setDropdownTimeout(null)
+    }
+    if (submenuTimeout) {
+      clearTimeout(submenuTimeout)
+      setSubmenuTimeout(null)
+    }
+    setActiveDropdown(name)
+  }
+
+  const handleDropdownLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null)
+      setActiveSubmenu(null)
+    }, 150)
+    setDropdownTimeout(timeout)
+  }
+
+  const handleSubmenuEnter = (name: string) => {
+    if (submenuTimeout) {
+      clearTimeout(submenuTimeout)
+      setSubmenuTimeout(null)
+    }
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout)
+      setDropdownTimeout(null)
+    }
+    setActiveSubmenu(name)
+  }
+
+  const handleSubmenuLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveSubmenu(null)
+    }, 150)
+    setSubmenuTimeout(timeout)
+  }
+
+  const handleSubmenuContainerEnter = () => {
+    if (submenuTimeout) {
+      clearTimeout(submenuTimeout)
+      setSubmenuTimeout(null)
+    }
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout)
+      setDropdownTimeout(null)
+    }
+  }
+
+  const handleDropdownContainerEnter = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout)
+      setDropdownTimeout(null)
+    }
+    if (submenuTimeout) {
+      clearTimeout(submenuTimeout)
+      setSubmenuTimeout(null)
+    }
   }
 
   const toggleMobileDropdown = (name: string) => {
@@ -209,13 +313,17 @@ export default function Navigation() {
 
   return (
     <nav className="bg-white shadow-lg border-b border-orange-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-orange-600 to-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm sm:text-lg">🕉</span>
+              <div className="w-8 h-8 sm:w-10 sm:h-10">
+                <img
+                  src="/logo.png"
+                  alt="PeacefulAnswers Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                 PeacefulAnswers
@@ -230,7 +338,12 @@ export default function Navigation() {
               const isActive = isActivePath(item.href)
               
               return (
-                <div key={item.name} className="relative group">
+                <div
+                  key={item.name}
+                  className="relative group"
+                  onMouseEnter={() => item.dropdown && handleDropdownEnter(item.name)}
+                  onMouseLeave={() => item.dropdown && handleDropdownLeave()}
+                >
                   <Link
                     href={item.href}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -238,8 +351,6 @@ export default function Navigation() {
                         ? 'text-orange-600 bg-orange-50'
                         : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
                     }`}
-                    onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <IconComponent className="w-4 h-4" />
                     <span>{item.name}</span>
@@ -249,50 +360,68 @@ export default function Navigation() {
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
                     <div
-                      className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg border border-gray-100 py-1 z-50 max-h-96 overflow-y-auto"
-                      onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => {
-                        setActiveDropdown(null)
-                        setActiveSubmenu(null)
-                      }}
+                      className={`absolute top-full left-0 mt-1 bg-white rounded-lg shadow-2xl border border-gray-200 z-50 flex xl:left-0 lg:-left-32 md:-left-48 ${activeSubmenu ? 'min-w-[800px] max-w-[900px]' : 'w-80'}`}
+                      onMouseEnter={handleDropdownContainerEnter}
+                      onMouseLeave={handleDropdownLeave}
                     >
-                      {item.dropdown.map((dropdownItem: any, index: number) => (
-                        <div key={`${item.name}-${dropdownItem.href || dropdownItem.name}-${index}`} className="relative">
-                          {dropdownItem.submenu ? (
+                      {/* Main dropdown column */}
+                      <div className={`w-80 py-3 ${activeSubmenu ? 'border-r border-gray-200' : ''}`}>
+                        <div className="px-4 py-2 border-b border-gray-100 mb-2">
+                          <h3 className="font-semibold text-gray-800 text-sm">{item.name}</h3>
+                        </div>
+                        <div className="max-h-96 overflow-y-auto">
+                          {item.dropdown.map((dropdownItem: any, index: number) => (
                             <div
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors cursor-pointer relative"
-                              onMouseEnter={() => setActiveSubmenu(dropdownItem.name)}
+                              key={`${item.name}-${dropdownItem.href || dropdownItem.name}-${index}`}
+                              className="relative"
+                              onMouseEnter={() => dropdownItem.submenu ? handleSubmenuEnter(dropdownItem.name) : setActiveSubmenu(null)}
+                              onMouseLeave={() => {}}
                             >
-                              <div className="flex items-center justify-between">
-                                <span>{dropdownItem.name}</span>
-                                <ChevronDown className="w-3 h-3 rotate-[-90deg]" />
-                              </div>
-
-                              {/* Submenu */}
-                              {activeSubmenu === dropdownItem.name && (
-                                <div className="mt-2 ml-4 bg-white rounded-md border border-gray-200 py-1">
-                                  {dropdownItem.submenu.map((submenuItem: any, submenuIndex: number) => (
-                                    <Link
-                                      key={`${dropdownItem.name}-${submenuItem.name}-${submenuIndex}`}
-                                      href={submenuItem.href}
-                                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-orange-50 hover:text-orange-600 transition-colors"
-                                    >
-                                      {submenuItem.name}
-                                    </Link>
-                                  ))}
+                              {dropdownItem.submenu ? (
+                                <div className="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer group">
+                                  <span className="font-medium">{dropdownItem.name}</span>
+                                  <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                                  </svg>
                                 </div>
+                              ) : (
+                                <Link
+                                  href={dropdownItem.href}
+                                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                                >
+                                  {dropdownItem.name}
+                                </Link>
                               )}
                             </div>
-                          ) : (
-                            <Link
-                              href={dropdownItem.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
-                            >
-                              {dropdownItem.name}
-                            </Link>
-                          )}
+                          ))}
                         </div>
-                      ))}
+                      </div>
+
+                      {/* Submenu column - only shows when activeSubmenu exists */}
+                      {activeSubmenu && (
+                        <div
+                          className="w-80 py-3 bg-gray-50"
+                          onMouseEnter={handleSubmenuContainerEnter}
+                          onMouseLeave={handleSubmenuLeave}
+                        >
+                          <div className="px-4 py-2 border-b border-gray-200 mb-2">
+                            <h3 className="font-semibold text-gray-800 text-sm">{activeSubmenu}</h3>
+                          </div>
+                          <div className="max-h-80 overflow-y-auto px-2">
+                            {item.dropdown
+                              .find((dropdownItem: any) => dropdownItem.name === activeSubmenu)
+                              ?.submenu?.map((submenuItem: any, submenuIndex: number) => (
+                              <Link
+                                key={`${activeSubmenu}-${submenuItem.name}-${submenuIndex}`}
+                                href={submenuItem.href}
+                                className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-blue-600 transition-colors rounded-md mx-1 my-0.5"
+                              >
+                                {submenuItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
