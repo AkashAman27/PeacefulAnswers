@@ -12,7 +12,6 @@ const testimonials = [
     id: 1,
     name: "Priya Sharma",
     location: "Mumbai, India",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b77c?w=150&h=150&fit=crop&crop=face",
     content: "Reading about Lord Ganesha's significance on PeacefulAnswers transformed my understanding of Hindu traditions. The detailed explanations of Ganapati Puja helped me establish a meaningful daily practice.",
     rating: 5,
     category: "Deity Studies",
@@ -23,7 +22,6 @@ const testimonials = [
     id: 2,
     name: "Rajesh Patel",
     location: "California, USA",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     content: "The Bhagavad Gita explanations here are incredible! As someone living abroad, this website helped me reconnect with Krishna's teachings and apply them to modern challenges. Truly life-changing.",
     rating: 5,
     category: "Bhagavad Gita",
@@ -34,7 +32,6 @@ const testimonials = [
     id: 3,
     name: "Dr. Meera Iyer",
     location: "Bangalore, India",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     content: "The festival guides, especially Maha Shivaratri, enriched our family celebrations. My children now understand the deeper meaning behind our traditions, not just the rituals.",
     rating: 5,
     category: "Festival Wisdom",
@@ -45,7 +42,6 @@ const testimonials = [
     id: 4,
     name: "Arjun Krishnan",
     location: "London, UK",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     content: "Living in the West, I was losing touch with my roots. The practices section, especially Surya Namaskara, brought back the spiritual discipline I was missing. The step-by-step guides are perfect.",
     rating: 5,
     category: "Daily Practices",
@@ -56,7 +52,6 @@ const testimonials = [
     id: 5,
     name: "Sita Devi",
     location: "Delhi, India",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
     content: "The way complex philosophical concepts are explained simply is remarkable. Reading about different avatars of Vishnu deepened my bhakti and understanding of divine love.",
     rating: 5,
     category: "Philosophy",
@@ -67,7 +62,6 @@ const testimonials = [
     id: 6,
     name: "Dev Sharma",
     location: "Toronto, Canada",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
     content: "Started my spiritual journey here by learning about Lord Shiva. The meditation practices and mantras have brought peace to my busy corporate life. Grateful for this resource!",
     rating: 5,
     category: "Spiritual Growth",
@@ -257,21 +251,9 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Author */}
-              <div className="flex items-center">
-                <div className="relative">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 sm:border-3 md:border-4 border-white shadow-lg object-cover"
-                  />
-                  <div className="absolute -bottom-0.5 -right-0.5 sm:-bottom-1 sm:-right-1 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-green-500 rounded-full border sm:border-2 border-white flex items-center justify-center">
-                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
-                  </div>
-                </div>
-                <div className="ml-3 sm:ml-4">
-                  <h4 className="font-bold text-gray-900 text-sm sm:text-base md:text-lg">{testimonial.name}</h4>
-                  <p className="text-gray-600 text-xs sm:text-sm">{testimonial.location}</p>
-                </div>
+              <div className="text-left">
+                <h4 className="font-bold text-gray-900 text-sm sm:text-base md:text-lg">{testimonial.name}</h4>
+                <p className="text-gray-600 text-xs sm:text-sm">{testimonial.location}</p>
               </div>
 
               {/* Decorative Elements */}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Book, Heart, Users, Calendar, MapPin, MessageCircle } from 'lucide-react'
@@ -112,7 +113,8 @@ const FeaturesSection = () => {
       description: 'Explore the Vedas, Upanishads, Bhagavad Gita, and Puranas with authentic translations and insightful commentary.',
       gradient: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50',
-      iconColor: 'text-blue-600'
+      iconColor: 'text-blue-600',
+      href: '/scriptures'
     },
     {
       icon: Heart,
@@ -120,7 +122,8 @@ const FeaturesSection = () => {
       description: 'Learn meditation, pranayama, puja rituals, and vratas to deepen your spiritual journey.',
       gradient: 'from-orange-500 to-orange-600',
       bgColor: 'bg-orange-50',
-      iconColor: 'text-orange-600'
+      iconColor: 'text-orange-600',
+      href: '/practices'
     },
     {
       icon: Users,
@@ -128,7 +131,8 @@ const FeaturesSection = () => {
       description: 'Understand the Trimurti, Devi, Ganesha, and the Dashavatara with their stories and significance.',
       gradient: 'from-red-500 to-red-600',
       bgColor: 'bg-red-50',
-      iconColor: 'text-red-600'
+      iconColor: 'text-red-600',
+      href: '/deities'
     },
     {
       icon: MessageCircle,
@@ -136,7 +140,8 @@ const FeaturesSection = () => {
       description: 'Get answers to questions about dharma, relationships, ethics, and modern spiritual living.',
       gradient: 'from-green-500 to-green-600',
       bgColor: 'bg-green-50',
-      iconColor: 'text-green-600'
+      iconColor: 'text-green-600',
+      href: '/questions'
     },
     {
       icon: Calendar,
@@ -144,7 +149,8 @@ const FeaturesSection = () => {
       description: 'Discover the spiritual significance of festivals, panchang, and auspicious timings.',
       gradient: 'from-yellow-500 to-yellow-600',
       bgColor: 'bg-yellow-50',
-      iconColor: 'text-yellow-600'
+      iconColor: 'text-yellow-600',
+      href: '/festivals'
     },
     {
       icon: MapPin,
@@ -152,7 +158,8 @@ const FeaturesSection = () => {
       description: 'Explore pilgrimage sites, temples, and the spiritual geography of Bharatvarsha.',
       gradient: 'from-purple-500 to-purple-600',
       bgColor: 'bg-purple-50',
-      iconColor: 'text-purple-600'
+      iconColor: 'text-purple-600',
+      href: '/sacred-places'
     }
   ]
 
@@ -179,13 +186,14 @@ const FeaturesSection = () => {
             const IconComponent = feature.icon
             
             return (
-              <div
+              <Link
                 key={feature.title}
-                className="feature-card group relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-300"
+                href={feature.href}
+                className="feature-card group relative bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-300 block"
               >
                 {/* Background gradient on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-                
+
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`feature-icon w-12 h-12 sm:w-14 sm:h-14 ${feature.bgColor} rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6 transition-transform duration-200`}>
@@ -211,7 +219,7 @@ const FeaturesSection = () => {
 
                 {/* Decorative element */}
                 <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity"></div>
-              </div>
+              </Link>
             )
           })}
         </div>
@@ -219,13 +227,19 @@ const FeaturesSection = () => {
         {/* Call to Action */}
         <div ref={ctaRef} className="mt-10 sm:mt-12 md:mt-16 text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <button className="bg-gradient-to-r from-orange-600 to-yellow-400 text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto">
+            <Link
+              href="/scriptures/bhagavad-gita"
+              className="bg-gradient-to-r from-orange-600 to-yellow-400 text-white font-semibold rounded-full px-6 sm:px-8 py-3 sm:py-4 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto inline-block text-center"
+            >
               Start exploring wisdom
-            </button>
+            </Link>
             <span className="text-blue-700 hidden sm:inline">or</span>
-            <button className="text-blue-900 font-semibold hover:text-orange-600 transition-colors text-sm sm:text-base">
+            <Link
+              href="/deities"
+              className="text-blue-900 font-semibold hover:text-orange-600 transition-colors text-sm sm:text-base"
+            >
               Browse all sections →
-            </button>
+            </Link>
           </div>
         </div>
       </div>

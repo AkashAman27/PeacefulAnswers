@@ -217,6 +217,34 @@ const faqs = [
 export default function DurgaPujaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
+      {/* Floating Sidebar */}
+      <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+        <div className="bg-white rounded-xl shadow-lg p-4 border border-red-100">
+          <h3 className="text-lg font-bold text-red-800 mb-4 text-center">Sacred Texts</h3>
+          <div className="space-y-3">
+            <Link
+              href="/practices/durga-stuti"
+              className="block bg-gradient-to-r from-red-700 to-orange-500 text-white text-center py-3 px-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              📖 Read Durga Stuti
+            </Link>
+            <div className="text-center">
+              <span className="text-xs text-gray-500">Complete Sanskrit text with meanings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Floating Button */}
+      <div className="fixed bottom-4 right-4 z-40 lg:hidden">
+        <Link
+          href="/practices/durga-stuti"
+          className="bg-gradient-to-r from-red-700 to-orange-500 text-white py-3 px-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2"
+        >
+          <span>📖</span>
+          <span>Durga Stuti</span>
+        </Link>
+      </div>
       {/* Hero Section */}
       <section className="relative py-20 px-4 text-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-700/20 via-orange-500/20 to-yellow-400/20"></div>

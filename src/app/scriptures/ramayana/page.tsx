@@ -410,7 +410,7 @@ export default function RamayanaPage() {
                       <h4 className="text-lg font-semibold text-orange-700 mb-4">{kanda.title}</h4>
                       <p className="text-gray-700 leading-relaxed mb-6">{kanda.description}</p>
                       
-                      <div>
+                      <div className="mb-6">
                         <h5 className="font-semibold text-gray-800 mb-3">Key Events:</h5>
                         <ul className="space-y-2">
                           {kanda.keyEvents.map((event, idx) => (
@@ -421,6 +421,19 @@ export default function RamayanaPage() {
                           ))}
                         </ul>
                       </div>
+
+                      {/* Navigation Link */}
+                      {kanda.id === 'bala' && (
+                        <div className="flex justify-end">
+                          <Link
+                            href="/scriptures/ramayana/bala-kanda"
+                            className="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg"
+                          >
+                            Read Bala Kanda
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
