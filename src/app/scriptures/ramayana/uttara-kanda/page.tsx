@@ -20,7 +20,7 @@ import {
   Shield,
   Flower2,
   Baby,
-  Horse,
+  Zap,
   Eye,
   Flame,
   Home,

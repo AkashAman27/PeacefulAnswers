@@ -360,15 +360,12 @@ export default function Navigation() {
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
                     <div
-                      className={`absolute top-full left-0 mt-1 bg-white rounded-lg shadow-2xl border border-gray-200 z-50 flex xl:left-0 lg:-left-32 md:-left-48 ${activeSubmenu ? 'min-w-[800px] max-w-[900px]' : 'w-80'}`}
+                      className={`absolute top-full left-0 mt-1 bg-white rounded-lg shadow-2xl border border-gray-200 z-50 flex xl:left-0 lg:-left-32 md:-left-48 ${activeSubmenu && item.dropdown.find((dropdownItem: any) => dropdownItem.name === activeSubmenu)?.submenu ? 'min-w-[800px] max-w-[900px]' : 'w-80'}`}
                       onMouseEnter={handleDropdownContainerEnter}
                       onMouseLeave={handleDropdownLeave}
                     >
                       {/* Main dropdown column */}
-                      <div className={`w-80 py-3 ${activeSubmenu ? 'border-r border-gray-200' : ''}`}>
-                        <div className="px-4 py-2 border-b border-gray-100 mb-2">
-                          <h3 className="font-semibold text-gray-800 text-sm">{item.name}</h3>
-                        </div>
+                      <div className={`w-80 py-3 ${activeSubmenu && item.dropdown.find((dropdownItem: any) => dropdownItem.name === activeSubmenu)?.submenu ? 'border-r border-gray-200' : ''}`}>
                         <div className="max-h-96 overflow-y-auto">
                           {item.dropdown.map((dropdownItem: any, index: number) => (
                             <div
@@ -397,8 +394,8 @@ export default function Navigation() {
                         </div>
                       </div>
 
-                      {/* Submenu column - only shows when activeSubmenu exists */}
-                      {activeSubmenu && (
+                      {/* Submenu column - only shows when activeSubmenu exists AND has actual submenu items */}
+                      {activeSubmenu && item.dropdown.find((dropdownItem: any) => dropdownItem.name === activeSubmenu)?.submenu && (
                         <div
                           className="w-80 py-3 bg-gray-50"
                           onMouseEnter={handleSubmenuContainerEnter}

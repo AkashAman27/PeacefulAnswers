@@ -31,7 +31,8 @@ import {
   Compass,
   Route,
   Footprints,
-  Sunrise
+  Sunrise,
+  Eye
 } from 'lucide-react'
 
 export const metadata: Metadata = {

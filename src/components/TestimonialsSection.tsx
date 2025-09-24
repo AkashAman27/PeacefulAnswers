@@ -267,8 +267,8 @@ export default function TestimonialsSection() {
         <div className="text-center mt-10 sm:mt-12 md:mt-16 p-6 sm:p-8 bg-white/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-white/50">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-1 sm:mb-2">5,000+</div>
-              <div className="text-gray-600 font-medium text-sm sm:text-base">Spiritual Seekers</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-600 mb-1 sm:mb-2">100+</div>
+              <div className="text-gray-600 font-medium text-sm sm:text-base">Sacred Teachings</div>
             </div>
             <div className="text-center">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">50+</div>
