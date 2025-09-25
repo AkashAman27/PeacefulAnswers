@@ -1,0 +1,264 @@
+{
+  "category_slug": "char-dham",
+  "sacred_places": [
+    {
+      "name": "Badrinath",
+      "sanskrit_name": "बदरीनाथ",
+      "slug": "badrinath",
+      "title": "Sacred Abode of Lord Vishnu",
+      "subtitle": "The Northern Dham of Char Dham Yatra",
+      "description": "Badrinath, nestled in the Garhwal Himalayas of Uttarakhand, is one of the most revered pilgrimage sites in Hinduism. This sacred temple, dedicated to Lord Vishnu in his form as Badrinarayan, stands majestically at an altitude of 3,133 meters.",
+
+      "location_details": {
+        "address": "Badrinath, Chamoli District",
+        "city": "Badrinath",
+        "state": "Uttarakhand",
+        "country": "India",
+        "coordinates": {
+          "lat": 30.7433,
+          "lng": 79.4938
+        },
+        "altitude": "3,133 meters (10,279 feet)"
+      },
+
+      "hero_image_url": "/images/sacred-places/badrinath/hero.jpg",
+      "hero_image_alt": "Badrinath Temple in the Himalayas",
+      "featured_image_url": "/images/sacred-places/badrinath/featured.jpg",
+      "featured_image_alt": "Badrinath Temple main entrance",
+
+      "content_sections": [
+        {
+          "title": "Spiritual Significance",
+          "content": "Badrinath is one of the four sacred dhams (Char Dham) and holds immense spiritual significance in Hindu tradition. The temple is dedicated to Lord Vishnu as Badrinarayan, meaning 'Lord of the Badri trees.' According to Hindu beliefs, a pilgrimage to Badrinath cleanses sins and grants moksha (liberation).",
+          "type": "text"
+        },
+        {
+          "title": "Divine History",
+          "content": "The temple's origins trace back thousands of years. It is believed that Adi Shankaracharya established the present temple in the 8th century CE, though the site has been revered much longer. The area is mentioned in ancient texts like the Vishnu Purana and Skanda Purana.",
+          "type": "text"
+        },
+        {
+          "title": "Architecture & Design",
+          "content": "The temple showcases traditional North Indian architecture with its colorful facade and conical spire. The main sanctum houses a black stone idol of Lord Badrinarayan in a meditative posture. The temple's design reflects the harsh mountain climate, built to withstand heavy snowfall.",
+          "type": "text"
+        }
+      ],
+
+      "interesting_facts": [
+        {
+          "title": "Ancient Origins",
+          "description": "The temple is believed to be over 1,200 years old, established by Adi Shankaracharya."
+        },
+        {
+          "title": "Seasonal Closure",
+          "description": "The temple remains closed for 6 months due to heavy snowfall, from November to April."
+        },
+        {
+          "title": "Hot Springs",
+          "description": "Tapt Kund, a natural hot spring, provides warm water for ritual baths even in freezing temperatures."
+        },
+        {
+          "title": "Sacred Grove",
+          "description": "The area was once filled with Badri (jujube) trees, giving the place its name."
+        },
+        {
+          "title": "Helicopter Service",
+          "description": "Helicopter services make the pilgrimage accessible for elderly and physically challenged devotees."
+        }
+      ],
+
+      "religious_significance": "Badrinath is considered one of the holiest sites in Hinduism, particularly for Vaishnavites. It represents the spiritual journey towards moksha and is believed to be the earthly abode of Lord Vishnu. The pilgrimage here is said to cleanse all sins and grant divine blessings.",
+
+      "mythology_stories": [
+        {
+          "title": "The Legend of Badri Trees",
+          "story": "According to legend, Lord Vishnu was meditating here when it started raining heavily. Goddess Lakshmi transformed into a Badri tree to provide shelter to her Lord. Hence the place came to be known as Badrinath (Lord of Badri trees)."
+        },
+        {
+          "title": "Nar-Narayan Ashram",
+          "story": "It is believed that sages Nar and Narayan (incarnations of Arjuna and Krishna) performed severe penance at this site. Lord Vishnu was pleased and decided to reside here eternally as Badrinarayan."
+        }
+      ],
+
+      "temple_architecture": {
+        "style": "North Indian",
+        "height": "15 meters",
+        "main_features": ["Colorful facade", "Conical spire", "Stone construction"],
+        "materials": ["Local stone", "Wood", "Metal ornaments"],
+        "special_chambers": ["Garbhagriha", "Mandapa", "Antarala"]
+      },
+
+      "nearby_attractions": [
+        {
+          "name": "Mana Village",
+          "distance": "3 km",
+          "description": "Last Indian village before Tibet border"
+        },
+        {
+          "name": "Vasudhara Falls",
+          "distance": "9 km",
+          "description": "Sacred waterfall with mythological significance"
+        },
+        {
+          "name": "Bheem Pul",
+          "distance": "1.5 km",
+          "description": "Natural rock bridge over Saraswati River"
+        }
+      ],
+
+      "festivals": [
+        {
+          "name": "Badri-Kedar Festival",
+          "date": "June-July",
+          "description": "Annual celebration marking the opening of both Badrinath and Kedarnath temples after winter closure."
+        },
+        {
+          "name": "Mata Murti Ka Mela",
+          "date": "September",
+          "description": "Festival celebrating the divine mother, with special prayers and cultural programs."
+        }
+      ],
+
+      "rituals_practices": [
+        {
+          "name": "Tapt Kund Bath",
+          "description": "Ritual bath in the natural hot spring before darshan",
+          "timing": "Early morning before temple opening"
+        },
+        {
+          "name": "Abhishek",
+          "description": "Special ritual bathing of the deity with milk, honey, and holy water",
+          "timing": "During main aarti times"
+        },
+        {
+          "name": "Rudrabhishek",
+          "description": "Special worship offered to Lord Vishnu for prosperity and peace",
+          "timing": "On request with advance booking"
+        }
+      ],
+
+      "pilgrimage_info": {
+        "best_time": "May to October (temple open season)",
+        "how_to_reach": {
+          "by_air": "Jolly Grant Airport, Dehradun (317 km) - Helicopter services available",
+          "by_train": "Haridwar Railway Station (324 km) - Well connected to major cities",
+          "by_road": "Regular bus services from Delhi, Haridwar, Rishikesh. Private vehicles allowed."
+        },
+        "accommodation": [
+          "GMVN Tourist Rest Houses",
+          "Private hotels and guesthouses",
+          "Dharamshalas and ashrams",
+          "Camping (with permits)"
+        ],
+        "essential_items": [
+          "Warm clothing (even in summer)",
+          "Comfortable walking shoes",
+          "Rain protection",
+          "Personal medicines",
+          "Identity proof (mandatory)",
+          "Oxygen tablets (for altitude)"
+        ]
+      },
+
+      "temples": [
+        {
+          "name": "Main Badrinath Temple",
+          "deity": "Badrinarayan (Vishnu)",
+          "timing": "4:30 AM - 1:00 PM, 4:00 PM - 9:00 PM",
+          "special_features": "Black stone idol in meditation pose"
+        },
+        {
+          "name": "Tapt Kund",
+          "deity": "Sacred hot spring",
+          "timing": "Open 24 hours",
+          "special_features": "Natural hot water at 45°C"
+        }
+      ],
+
+      "darshan_timings": {
+        "summer": {
+          "morning": "4:30 AM - 1:00 PM",
+          "evening": "4:00 PM - 9:00 PM"
+        },
+        "extended_season": {
+          "morning": "6:00 AM - 12:00 PM",
+          "evening": "4:00 PM - 8:00 PM"
+        },
+        "special_darshan": "Available with advance booking",
+        "vip_darshan": "Early morning 4:30-5:30 AM"
+      },
+
+      "gallery_images": [
+        {
+          "url": "/images/sacred-places/badrinath/temple-front.jpg",
+          "alt": "Front view of Badrinath Temple",
+          "caption": "The colorful facade of Badrinath Temple"
+        },
+        {
+          "url": "/images/sacred-places/badrinath/mountains.jpg",
+          "alt": "Badrinath surrounded by mountains",
+          "caption": "Majestic Himalayan peaks surrounding Badrinath"
+        },
+        {
+          "url": "/images/sacred-places/badrinath/alaknanda.jpg",
+          "alt": "Alaknanda River near Badrinath",
+          "caption": "The sacred Alaknanda River flowing near the temple"
+        },
+        {
+          "url": "/images/sacred-places/badrinath/tapt-kund.jpg",
+          "alt": "Tapt Kund hot springs",
+          "caption": "Devotees taking ritual bath in Tapt Kund"
+        }
+      ],
+
+      "related_places": [
+        "dwarka",
+        "jagannath-puri",
+        "rameswaram",
+        "kedarnath",
+        "gangotri"
+      ],
+
+      "faqs": [
+        {
+          "question": "When is the best time to visit Badrinath?",
+          "answer": "The best time to visit Badrinath is from May to October when the temple is open and weather conditions are favorable. The temple closes during winter months due to heavy snowfall."
+        },
+        {
+          "question": "How can I reach Badrinath?",
+          "answer": "Badrinath can be reached by road from major cities. The nearest airport is Jolly Grant Airport in Dehradun (317 km), and the nearest railway station is Haridwar (324 km). Regular bus services and helicopter services are also available."
+        },
+        {
+          "question": "What are the temple timings?",
+          "answer": "The temple is open from 4:30 AM to 1:00 PM and 4:00 PM to 9:00 PM. During peak season, timings may be extended. Special darshan timings are available for VIP devotees."
+        },
+        {
+          "question": "Is accommodation available near the temple?",
+          "answer": "Yes, various accommodation options are available including dharamshalas, guest houses, and hotels. It's advisable to book in advance, especially during peak pilgrimage season."
+        },
+        {
+          "question": "What should I carry for the pilgrimage?",
+          "answer": "Carry warm clothing, comfortable walking shoes, necessary medicines, identity proof, and rain gear. Due to the high altitude, it's important to acclimatize gradually."
+        },
+        {
+          "question": "Are helicopter services available?",
+          "answer": "Yes, helicopter services operate from Dehradun and Phata to Badrinath during the pilgrimage season, making it accessible for elderly and differently-abled devotees."
+        },
+        {
+          "question": "What is the significance of Tapt Kund?",
+          "answer": "Tapt Kund is a natural hot spring where devotees take a ritual bath before entering the temple. The water remains warm throughout the year, even in freezing temperatures."
+        }
+      ],
+
+      "meta_title": "Badrinath Dham - Sacred Char Dham Pilgrimage | Complete Guide",
+      "meta_description": "Discover Badrinath, one of the holiest Char Dham sites dedicated to Lord Vishnu. Complete pilgrimage guide with temple timings, travel information, and spiritual significance.",
+      "keywords": ["badrinath", "char dham", "vishnu temple", "himalayan pilgrimage", "uttarakhand", "badrinarayan"],
+      "canonical_url": "/sacred-places/char-dham/badrinath",
+
+      "status": "published",
+      "is_featured": true,
+      "sort_order": 1,
+      "view_count": 0
+    }
+  ]
+}

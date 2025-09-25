@@ -58,6 +58,14 @@ export default function AdminLayout({
               <a href="/admin/deities" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 Deities
               </a>
+              <a href="/admin/sacred-places" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors flex items-center space-x-2">
+                <span>🏔️</span>
+                <span>Sacred Places</span>
+              </a>
+              <a href="/admin/ramayana" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors flex items-center space-x-2">
+                <span>📖</span>
+                <span>Ramayana</span>
+              </a>
               <a href="/admin/festivals" className="block px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">
                 Festivals
               </a>
