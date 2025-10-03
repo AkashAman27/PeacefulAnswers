@@ -39,6 +39,7 @@ export async function POST(request: NextRequest) {
       .select('id')
       .eq('slug', searchEntry.slug)
       .single()
+      
 
     if (checkError && checkError.code !== 'PGRST116') {
       console.error('Error checking existing entry:', checkError)

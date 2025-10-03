@@ -97,11 +97,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Test if table is accessible
-    const { data: testData, error: testError } = await supabase
+    const { count, error: testError } = await supabase
       .schema('hindu')
       .from('ramayana_pages')
-      .select('count(*)')
-      .limit(1)
+      .select('*', { count: 'exact', head: true })
 
     if (testError) {
       console.error('Table access test failed:', testError)
@@ -116,7 +115,7 @@ export async function POST(request: NextRequest) {
       success: true,
       message: 'Ramayana pages table is ready',
       tableExists: true,
-      recordCount: testData?.[0]?.count || 0
+      recordCount: count || 0
     })
 
   } catch (error: any) {

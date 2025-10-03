@@ -20,13 +20,13 @@ interface TickerAnnouncement {
 const fallbackAnnouncements: TickerAnnouncement[] = [
   {
     id: '1',
-    festival_name: 'Durga Puja',
-    hindi_text: '🏮 दुर्गा पूजा 21 सितंबर से शुरू हो रहा है - महालया! माँ दुर्गा की महिमा जानने के लिए यहाँ क्लिक करें',
-    english_text: '🏮 Durga Puja is starting from 21st September - Mahalaya! Click here to know more about the glory of Maa Durga',
-    icon: '🏮',
-    link_url: '/festivals/durga-puja',
-    start_date: '2025-09-15',
-    end_date: '2025-10-15',
+    festival_name: 'Diwali',
+    hindi_text: '🪔 दिवाली 20 अक्टूबर को है! प्रकाश के इस पर्व की महिमा जानने के लिए यहाँ क्लिक करें',
+    english_text: '🪔 Diwali is on 20th October! Click here to learn about the Festival of Lights',
+    icon: '🪔',
+    link_url: '/festivals/diwali',
+    start_date: '2025-10-20',
+    end_date: '2025-10-20',
     is_active: true
   }
 ]

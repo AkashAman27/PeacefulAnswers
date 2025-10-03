@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { use, useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { hinduSupabase } from '@/lib/supabase'
 import Link from 'next/link'
@@ -51,7 +51,8 @@ interface Category {
   slug: string
 }
 
-export default function EditSacredPlaceSimple({ params }: { params: { id: string } }) {
+export default function EditSacredPlaceSimple({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
   const router = useRouter()
   const [place, setPlace] = useState<SacredPlace | null>(null)
   const [categories, setCategories] = useState<Category[]>([])
@@ -61,14 +62,14 @@ export default function EditSacredPlaceSimple({ params }: { params: { id: string
   useEffect(() => {
     fetchSacredPlace()
     fetchCategories()
-  }, [params.id])
+  }, [id])
 
   const fetchSacredPlace = async () => {
     try {
       const { data, error } = await hinduSupabase
         .from('sacred_places')
         .select('*')
-        .eq('id', params.id)
+        .eq('id', id)
         .single()
 
       if (error) throw error

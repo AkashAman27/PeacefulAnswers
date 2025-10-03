@@ -212,7 +212,7 @@ export async function DELETE(request: NextRequest) {
 
     // Extract file path from URL
     const urlParts = media.file_url.split('/')
-    const bucketIndex = urlParts.findIndex(part => part === 'sacred-places-images')
+    const bucketIndex = urlParts.findIndex((part: string) => part === 'sacred-places-images')
     const filePath = urlParts.slice(bucketIndex + 1).join('/')
 
     // Delete from storage

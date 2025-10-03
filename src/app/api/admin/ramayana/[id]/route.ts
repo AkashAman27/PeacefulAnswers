@@ -3,14 +3,15 @@ import { supabase } from '@/lib/supabase'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const { data, error } = await supabase
       .schema('hindu')
       .from('ramayana_pages')
       .select('*')
-      .eq('id', params.id)
+      .eq('id', id)
       .single()
 
     if (error) {
@@ -30,9 +31,10 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const body = await request.json()
 
     // Validate required fields
@@ -50,7 +52,7 @@ export async function PUT(
       .select('id')
       .eq('kand', body.kand)
       .eq('slug', body.slug)
-      .neq('id', params.id)
+      .neq('id', id)
       .single()
 
     if (existingPage) {
@@ -69,7 +71,7 @@ export async function PUT(
       .schema('hindu')
       .from('ramayana_pages')
       .update(updateData)
-      .eq('id', params.id)
+      .eq('id', id)
       .select('*')
       .single()
 
@@ -90,14 +92,15 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const { error } = await supabase
       .schema('hindu')
       .from('ramayana_pages')
       .delete()
-      .eq('id', params.id)
+      .eq('id', id)
 
     if (error) {
       console.error('Database error:', error)

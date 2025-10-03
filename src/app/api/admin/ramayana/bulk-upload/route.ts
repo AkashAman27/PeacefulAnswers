@@ -26,6 +26,7 @@ interface RamayanaPageInput {
   meta_title?: string
   meta_description?: string
   keywords?: string[]
+  canonical_url?: string
   status?: 'draft' | 'published' | 'archived'
   is_featured?: boolean
   sort_order?: number
@@ -323,7 +324,7 @@ export async function POST(request: NextRequest) {
 
       try {
         // Check if page already exists
-        const { data: existingPage } = await supabaseAdmin
+        const { data: existingPage } = await (supabaseAdmin as any)
           .schema('hindu')
           .from('ramayana_pages')
           .select('id')
@@ -333,7 +334,7 @@ export async function POST(request: NextRequest) {
 
         if (existingPage) {
           // Update existing page
-          const { error } = await supabaseAdmin
+          const { error } = await (supabaseAdmin as any)
             .schema('hindu')
             .from('ramayana_pages')
             .update({
@@ -353,7 +354,7 @@ export async function POST(request: NextRequest) {
           }
         } else {
           // Insert new page
-          const { error } = await supabaseAdmin
+          const { error } = await (supabaseAdmin as any)
             .schema('hindu')
             .from('ramayana_pages')
             .insert(page)

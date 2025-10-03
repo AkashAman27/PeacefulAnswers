@@ -249,7 +249,7 @@ export default async function BadrinathPage() {
       {/* Main Content */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {badrinathData.content_sections.map((section, index) => (
+          {badrinathData.content_sections.map((section: { title: string; content: string; type: string }, index: number) => (
             <div key={index} className="mb-12">
               <h2 className="text-3xl font-bold text-blue-900 mb-6 flex items-center gap-3">
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
@@ -281,7 +281,7 @@ export default async function BadrinathPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {badrinathData.gallery_images.map((image, index) => (
+            {badrinathData.gallery_images.map((image: { url: string; alt: string; caption: string }, index: number) => (
               <div key={index} className="group relative">
                 <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                   <Image
@@ -315,7 +315,7 @@ export default async function BadrinathPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {badrinathData.interesting_facts.map((fact, index) => (
+            {badrinathData.interesting_facts.map((fact: { title: string; description: string }, index: number) => (
               <div key={index} className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4">
                   <Heart className="w-6 h-6 text-white" />
@@ -345,7 +345,7 @@ export default async function BadrinathPage() {
           </div>
 
           <div className="space-y-4">
-            {badrinathData.faqs.map((faq, index) => (
+            {badrinathData.faqs.map((faq: { question: string; answer: string }, index: number) => (
               <details key={index} className="group bg-white/10 backdrop-blur-sm rounded-2xl">
                 <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-white/5 transition-colors rounded-2xl">
                   <h3 className="text-lg font-semibold text-white pr-4">

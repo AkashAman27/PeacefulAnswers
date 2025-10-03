@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { use, useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
@@ -53,7 +53,8 @@ interface RamayanaPageData {
   updated_at: string
 }
 
-export default function EditRamayanaPage({ params }: { params: { id: string } }) {
+export default function EditRamayanaPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
   const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
@@ -72,7 +73,7 @@ export default function EditRamayanaPage({ params }: { params: { id: string } })
 
   useEffect(() => {
     fetchPage()
-  }, [params.id])
+  }, [id])
 
   const fetchPage = async () => {
     try {
@@ -80,7 +81,7 @@ export default function EditRamayanaPage({ params }: { params: { id: string } })
         .schema('hindu')
         .from('ramayana_pages')
         .select('*')
-        .eq('id', params.id)
+        .eq('id', id)
         .single()
 
       if (error) throw error
@@ -178,7 +179,7 @@ export default function EditRamayanaPage({ params }: { params: { id: string } })
           ...formData,
           updated_at: new Date().toISOString()
         })
-        .eq('id', params.id)
+        .eq('id', id)
         .select('*')
         .single()
 

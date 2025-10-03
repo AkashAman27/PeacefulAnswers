@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { Star, Play, Search, ArrowRight } from 'lucide-react'
+import { Play, ArrowRight } from 'lucide-react'
 import SearchComponent from './SearchComponent'
 import VideoModal from './VideoModal'
 
@@ -12,7 +12,6 @@ const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
   const buttonsRef = useRef<HTMLDivElement>(null)
-  const trustRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
   const leftCardRef = useRef<HTMLDivElement>(null)
   const rightCardRef = useRef<HTMLDivElement>(null)
@@ -21,24 +20,24 @@ const HeroSection = () => {
   useEffect(() => {
     // Simple CSS-based animations with sequential timing
     const animateElements = () => {
-      // Trust indicators
-      setTimeout(() => {
-        if (trustRef.current) {
-          trustRef.current.classList.add('animate-fade-in-up')
-        }
-      }, 200)
-
       // Main title
       setTimeout(() => {
         if (titleRef.current) {
           titleRef.current.classList.add('animate-fade-in-up')
         }
-      }, 400)
+      }, 200)
 
       // Subtitle
       setTimeout(() => {
         if (subtitleRef.current) {
           subtitleRef.current.classList.add('animate-fade-in-up')
+        }
+      }, 400)
+
+      // Search bar (appears after subtitle)
+      setTimeout(() => {
+        if (searchRef.current) {
+          searchRef.current.classList.add('animate-fade-in-up')
         }
       }, 600)
 
@@ -66,58 +65,25 @@ const HeroSection = () => {
         if (leftCardRef.current) {
           leftCardRef.current.classList.add('animate-fade-in-left')
         }
-      }, 1200)
+      }, 1000)
 
       // Right card
       setTimeout(() => {
         if (rightCardRef.current) {
           rightCardRef.current.classList.add('animate-fade-in-right')
         }
-      }, 1400)
-
-      // Search bar
-      setTimeout(() => {
-        if (searchRef.current) {
-          searchRef.current.classList.add('animate-fade-in-up')
-        }
-      }, 1600)
+      }, 1200)
     }
 
     animateElements()
   }, [])
 
   return (
-    <section ref={heroRef} className="relative bg-gradient-to-b from-orange-50 via-white to-blue-50 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 overflow-hidden">
+    <section ref={heroRef} className="relative bg-gradient-to-b from-orange-50 via-white to-blue-50 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 md:py-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        {/* Trust Indicators */}
-        <div ref={trustRef} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
-          <div className="flex -space-x-2">
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-orange-500 border-2 border-white shadow-sm flex items-center justify-center">
-              <span className="text-white text-[10px] sm:text-xs font-bold">ॐ</span>
-            </div>
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-900 border-2 border-white shadow-sm flex items-center justify-center">
-              <span className="text-white text-[10px] sm:text-xs font-bold">🕉</span>
-            </div>
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-red-700 border-2 border-white shadow-sm flex items-center justify-center">
-              <span className="text-white text-[10px] sm:text-xs font-bold">🙏</span>
-            </div>
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-green-800 border-2 border-white shadow-sm flex items-center justify-center">
-              <span className="text-white text-[10px] sm:text-xs font-bold">+5K</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-1">
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
-              ))}
-            </div>
-            <span className="text-xs sm:text-sm text-blue-900 ml-1 sm:ml-2">Trusted by thousands</span>
-          </div>
-        </div>
-
         {/* Main Heading */}
-        <div className="text-center mb-6 sm:mb-8">
-          <h1 ref={titleRef} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-blue-900 mb-4 sm:mb-6">
+        <div className="text-center mb-2 sm:mb-3">
+          <h1 ref={titleRef} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-blue-900 mb-2 sm:mb-3">
             Find{' '}
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent">
@@ -128,17 +94,22 @@ const HeroSection = () => {
             to life's deepest questions
           </h1>
 
-          <p ref={subtitleRef} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-blue-800 mb-6 sm:mb-8 md:mb-10 leading-relaxed px-4 sm:px-0">
+          <p ref={subtitleRef} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-blue-800 mb-3 sm:mb-4 leading-relaxed px-4 sm:px-0">
             Explore the timeless wisdom of the Vedas, Upanishads, and Bhagavad Gita.
             Discover practices, understand deities, and find guidance for modern spiritual living.
           </p>
         </div>
 
+        {/* Search Bar - Prominent Position */}
+        <div ref={searchRef} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out max-w-2xl mx-auto mb-3 sm:mb-4 px-4 sm:px-0 relative z-50">
+          <SearchComponent />
+        </div>
+
         {/* CTA Buttons */}
-        <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 sm:mb-12 md:mb-16">
-          <Link href="/journey" className="opacity-0 translate-y-8 transition-all duration-1000 ease-out group flex items-center gap-2 bg-gradient-to-r from-orange-600 to-yellow-400 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-full sm:w-auto justify-center">
+        <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-4 sm:mb-6 md:mb-8 relative z-10">
+          <Link href="/journey" className="opacity-0 translate-y-8 transition-all duration-1000 ease-out group flex items-center gap-2 bg-gradient-to-r from-orange-600 to-yellow-400 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow-lg w-full sm:w-auto justify-center">
             Start Your Journey
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
 
           <button
@@ -200,11 +171,6 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="text-[10px] sm:text-xs text-green-800 font-medium">All included</div>
-          </div>
-
-          {/* Search Bar */}
-          <div ref={searchRef} className="opacity-0 translate-y-8 scale-95 transition-all duration-1000 ease-out absolute left-1/2 -translate-x-1/2 -bottom-6 w-[85%] sm:w-[90%] md:w-[500px] z-[9999] px-2 sm:px-0">
-            <SearchComponent />
           </div>
         </div>
       </div>
